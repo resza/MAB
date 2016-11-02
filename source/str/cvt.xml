@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!--
+Subversion reference
+$HeadURL: https://svn.ingenico.com/UTAPROJECTS/sea-partner/5W/trunk/ISO5WPH/str/cvt.xml $
+$Id: cvt.xml 1502 2009-02-06 04:42:07Z ajloreto $
+-->
+<uta:converters uta:id="cvt" xmlns:uta="http://www.ingenico.com/xml/uta">
+	<uta:convert uta:id="cvtInvNum" uta:comment='Invoice number NNNNNN'>
+		<uta:dbKey>regInvNum</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenInvNum</uta:length>
+	</uta:convert>
+	<uta:convert uta:id="cvtRspCod" uta:comment='Response code in numeric'>
+		<uta:dbKey>traRspCod</uta:dbKey>
+		<uta:dbFmt>fmtDec</uta:dbFmt>
+		<uta:fmt>fmtNum</uta:fmt>
+		<uta:length>sizeof(card)</uta:length>
+	</uta:convert>
+	<uta:convert uta:id="cvtStanNum" uta:comment='STAN number NNNNNN'>
+		<uta:dbKey>regSTAN</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenInvNum</uta:length>
+	</uta:convert>
+	<uta:convert uta:id="cvtBatNum" uta:comment='Batch number NNNNNN'>
+		<uta:dbKey>acqCurBat</uta:dbKey>
+		<uta:dbFmt>fmtDec</uta:dbFmt>
+		<uta:fmt>fmtNum</uta:fmt>
+		<uta:length>lenInvNum</uta:length>
+	</uta:convert>
+	<uta:convert uta:id="cvtNII" uta:comment='NII NNNN'>
+		<uta:dbKey>acqNII</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>lenNII</uta:length>
+	</uta:convert>
+	<uta:convert uta:id="cvtEmvTc" uta:comment='TC   :09CDFA2DAF4B0D2F'>
+		<uta:dbKey>emvIssTrnCrt</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>	
+	<uta:convert uta:id="cvtEmvTvr" uta:comment='TVR  :400000E040'>
+		<uta:dbKey>emvTVR</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtEmvTsi" uta:comment='TSI  :F800'>
+		<uta:dbKey>emvTSI</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	
+	<uta:convert uta:id="cvtAppNII" uta:comment='NII NNNN'>
+		<uta:dbKey>appNII</uta:dbKey>
+		<uta:dbFmt>fmtHex</uta:dbFmt>
+		<uta:fmt>fmtBin</uta:fmt>
+		<uta:length>lenNII</uta:length>
+	</uta:convert>	
+	<uta:convert uta:id="cvtLogTraceNum" uta:comment='Trace number NNNNNN'>
+		<uta:dbKey>logROC</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenInvNum</uta:length>
+	</uta:convert>
+	<uta:convert uta:id="cvtLogTotalCount" uta:comment='Transaction Type Total Count NNN'>
+		<uta:dbKey>traLogTotalCount</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenLogTotalTxn</uta:length>
+	</uta:convert>
+	<uta:convert uta:id="cvtLogNii" uta:comment='NII NNNN'>
+		<uta:dbKey>acqNII</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>lenNII</uta:length>
+	</uta:convert>	
+	<uta:convert uta:id="cvtRptInvNum" uta:comment='Invoice number NNNNNN'>
+		<uta:dbKey>logROC</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenInvNum</uta:length>
+	</uta:convert>
+	<uta:convert uta:id="cvtRevInvNum" uta:comment='Invoice number NNNNNN'>
+		<uta:dbKey>revInvNum</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenInvNum</uta:length>
+	</uta:convert>
+	<uta:convert uta:id="cvtBaudRate" uta:comment='Baud Rate'>
+		<uta:dbKey>appBaudRate</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>
+	<uta:convert uta:id="cvtAid" uta:comment='Aid NNNNN'>
+		<uta:dbKey>emvAid</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>	
+	<uta:convert uta:id="cvtTMSBuffer" uta:comment='Buffer Size NNN'>
+		<uta:dbKey>appTmsBufSize</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>
+       <!--dewi EMV 22042010 -->
+	<uta:convert uta:id="cvtEmvChdNam" uta:comment='TSI  :F800'>
+		<uta:dbKey>emvChdNam</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>
+	<uta:convert uta:id="cvtDFNam" uta:comment='Aid NNNNN'>
+		<uta:dbKey>emvDFNam</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>	
+	<uta:convert uta:id="cvtAutCodOff" uta:comment='Invoice number NNNNNN'>
+		<uta:dbKey>regAutCodOff</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenAutCod</uta:length>
+	</uta:convert>
+
+	<uta:convert uta:id="cvtCvmr" uta:comment='CVM'>
+		<uta:dbKey>emvCVMRes</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtTACDef" uta:comment='CVM'>
+		<uta:dbKey>emvTACDft</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtTACDen" uta:comment='CVM'>
+		<uta:dbKey>emvTACDen</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtTACOnl" uta:comment='CVM'>
+		<uta:dbKey>emvTACOnl</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtIACDef" uta:comment='IAC Def'>
+		<uta:dbKey>emvIACDft</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtIACDen" uta:comment='IAC Den'>
+		<uta:dbKey>emvIACDnl</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtIACOnl" uta:comment='IAC Onl'>
+		<uta:dbKey>emvIACOnl</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtCID" uta:comment='CID'>
+		<uta:dbKey>emvCID</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtUnpNum" uta:comment='UnpNum'>
+		<uta:dbKey>emvUnpNum</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtIAD" uta:comment='CVM'>
+		<uta:dbKey>emvIAD</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtAIP" uta:comment='AIP'>
+		<uta:dbKey>emvAIP</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtAmtNum" uta:comment='AmtNum'>
+		<uta:dbKey>emvAmtNum</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtAmtOtherNum" uta:comment='AmtOthNum'>
+		<uta:dbKey>emvAmtOthNum</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtIFDSerNum" uta:comment='IFDSerNum'>
+		<uta:dbKey>emvIFDSerNum</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtTrnCurCod" uta:comment='CouCode'>
+		<uta:dbKey>emvTrnCurCod</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtTrmCurCod" uta:comment='CouCode'>
+		<uta:dbKey>emvTrmCntCod</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtTrmTyp" uta:comment='TRmTyp'>
+		<uta:dbKey>emvTrmTyp</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtTrnTyp" uta:comment='TrnTyp'>
+		<uta:dbKey>emvTrnTyp</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtTrnDate" uta:comment='TrnDate'>
+		<uta:dbKey>emvTrnDat</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtExpDate" uta:comment='ExpDate'>
+		<uta:dbKey>emvExpDat</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtTermCap" uta:comment='TermCap'>
+		<uta:dbKey>emvTrmCap</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtAddTermCap" uta:comment='TermCap'>
+		<uta:dbKey>emvAddTrmCap</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtCAPKIdx" uta:comment='TermCap'>
+		<uta:dbKey>emvCapkIdx</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtPAN" uta:comment='PAN'>
+		<uta:dbKey>emvPAN</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtPANSeq" uta:comment='PAN Seq'>
+		<uta:dbKey>emvPANSeq</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtScheme" uta:comment='Scheme'>
+		<uta:dbKey>emvTCC</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtATC" uta:comment='ATC'>
+		<uta:dbKey>emvATC</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtEmvAmtNum" uta:comment='Amt'>
+		<uta:dbKey>emvAmtNum</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="emvAppAmt" uta:comment='Amt'>
+		<uta:dbKey>emvAppAmt</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+
+	<uta:convert uta:id="cvtEmvPrevAmt" uta:comment='Amt'>
+		<uta:dbKey>emvAmtPrv</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtEmvFlrLim" uta:comment='Amt'>
+		<uta:dbKey>emvTrmFlrLim</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtACReq1" uta:comment='1st GEN AC'>
+		<uta:dbKey>emvACReq1</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtACReq2" uta:comment='2nd GEN AC'>
+		<uta:dbKey>traACReq2</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+
+	<uta:convert uta:id="cvtACRsp1" uta:comment='1st GEN AC Rsp'>
+		<uta:dbKey>emvACRsp1</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtACRsp2" uta:comment='2nd GEN AC Rsp'>
+		<uta:dbKey>emvACRsp2</uta:dbKey>
+		<uta:dbFmt>fmtBin</uta:dbFmt>
+		<uta:fmt>fmtHex</uta:fmt>
+		<uta:length>0</uta:length>
+	</uta:convert>		
+	<uta:convert uta:id="cvtTCInvNum" uta:comment='Invoice number NNNNNN'>
+		<uta:dbKey>TCInvNum</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenInvNum</uta:length>
+	</uta:convert>
+
+	<uta:convert uta:id="cvtLogTotalTopupCount" uta:comment='Transaction Type Total Count NNN'>
+		<uta:dbKey>traLogTotalCounTopup</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenLogTotalTxn</uta:length>
+	</uta:convert>
+	
+<!--MINIATM-->
+	<uta:convert uta:id="cvtLogTotalTelkomCount" uta:comment='Transaction Type Total Count NNN'>
+		<uta:dbKey>traLogTotalCounTelkom</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenLogTotalTxn</uta:length>
+	</uta:convert>
+	<uta:convert uta:id="cvtLogTotalSatelindoCount" uta:comment='Transaction Type Total Count NNN'>
+		<uta:dbKey>traLogTotalCounSatelindo</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenLogTotalTxn</uta:length>
+	</uta:convert>
+	<uta:convert uta:id="cvtLogTotalTelkomselCount" uta:comment='Transaction Type Total Count NNN'>
+		<uta:dbKey>traLogTotalCounTelkomsel</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenLogTotalTxn</uta:length>
+	</uta:convert>
+	<uta:convert uta:id="cvtLogTotalExcelcomCount" uta:comment='Transaction Type Total Count NNN'>
+		<uta:dbKey>traLogTotalCounExcelcom</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenLogTotalTxn</uta:length>
+	</uta:convert>
+	<uta:convert uta:id="cvtLogTotalEsiaCount" uta:comment='Transaction Type Total Count NNN'>
+		<uta:dbKey>traLogTotalCounEsia</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenLogTotalTxn</uta:length>
+	</uta:convert>
+	<uta:convert uta:id="cvtLogTotalPLNCount" uta:comment='Transaction Type Total Count NNN'>
+		<uta:dbKey>traLogTotalCounPLN</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenLogTotalTxn</uta:length>
+	</uta:convert>
+	<uta:convert uta:id="cvtLogTotalFirstMediaCount" uta:comment='Transaction Type Total Count NNN'>
+		<uta:dbKey>traLogTotalCounFirstMedia</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenLogTotalTxn</uta:length>
+	</uta:convert>
+	<uta:convert uta:id="cvtLogTotalIndovisionCount" uta:comment='Transaction Type Total Count NNN'>
+		<uta:dbKey>traLogTotalCounIndovision</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenLogTotalTxn</uta:length>
+	</uta:convert>
+	<uta:convert uta:id="cvtLogTotalOtoMultiCount" uta:comment='Transaction Type Total Count NNN'>
+		<uta:dbKey>traLogTotalCounOtoMulti</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenLogTotalTxn</uta:length>
+	</uta:convert>
+
+	<uta:convert uta:id="cvtLogTotalMAtmCount" uta:comment='Transaction Type Total Count NNN'>
+		<uta:dbKey>traLogTotalCounMAtm</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenLogTotalTxn</uta:length>
+	</uta:convert>
+
+	<uta:convert uta:id="cvtLogTotalCommCount" uta:comment='Transaction Type Total Count NNN'>
+		<uta:dbKey>traLogTotalCounComm</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenLogTotalTxn</uta:length>
+	</uta:convert>
+<!--Fasa4-->
+	<uta:convert uta:id="cvtLogTotalTunaiCount" uta:comment='Transaction Type Total Count NNN'>
+		<uta:dbKey>traLogTotalCounTunai</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenLogTotalTxn</uta:length>
+	</uta:convert>
+	<uta:convert uta:id="cvtLogTotalUSDCount" uta:comment='Transaction Type Total Count NNN'>
+		<uta:dbKey>traLogTotalCounTransferUSD</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenLogTotalTxn</uta:length>
+	</uta:convert>
+	<uta:convert uta:id="cvtLogTotalSGDCount" uta:comment='Transaction Type Total Count NNN'>
+		<uta:dbKey>traLogTotalCounTransferSGD</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenLogTotalTxn</uta:length>
+	</uta:convert>
+	<uta:convert uta:id="cvtLogTotalJPNCount" uta:comment='Transaction Type Total Count NNN'>
+		<uta:dbKey>traLogTotalCounTransferJPN</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenLogTotalTxn</uta:length>
+	</uta:convert>
+	<uta:convert uta:id="cvtLogTotalTransferCount" uta:comment='Transaction Type Total Count NNN'>
+		<uta:dbKey>traLogTotalCounTransfer</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenLogTotalTxn</uta:length>
+	</uta:convert>
+	<uta:convert uta:id="cvtLogTotalCCCount" uta:comment='Transaction Type Total Count NNN'>
+		<uta:dbKey>traLogTotalCounCC</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenLogTotalTxn</uta:length>
+	</uta:convert>
+	<uta:convert uta:id="cvtTraInvNum" uta:comment='Invoice number NNNNNN'>
+		<uta:dbKey>traInvNum</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenInvNum</uta:length>
+	</uta:convert>
+<!--
+  <uta:field uta:id='regErrTimeOutConn'  	uta:type='card'   uta:data='0'                        uta:comment='Time Out Connecting - No Answer' />        
+  <uta:field uta:id='regErrTimeOutRecv'  	uta:type='card'   uta:data='0'                        uta:comment='Time Out Receiving' />
+  <uta:field uta:id='regErrLineBusy'  		uta:type='card'   uta:data='0'                        uta:comment='Line Busy' />
+  <uta:field uta:id='regErrNoCarrier'  		uta:type='card'   uta:data='0'                        uta:comment='No Carrier' />
+  <uta:field uta:id='regErrUserCancel'  	uta:type='card'   uta:data='0'                        uta:comment='User Cancel' />  
+  <uta:field uta:id='regErrLineDisconnect'  	uta:type='card'   uta:data='0'                        uta:comment='Line Disconnect' />
+-->
+	<uta:convert uta:id="cvtRptregErrTimeOutConn" uta:comment='Log Error Time Out Connecting NNNNNN'>
+		<uta:dbKey>regErrTimeOutConn</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenInvNum</uta:length>
+	</uta:convert>
+	<uta:convert uta:id="cvtRptregErrTimeOutRecv" uta:comment='Log Error Time Out Receiving NNNNNN'>
+		<uta:dbKey>regErrTimeOutRecv</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenInvNum</uta:length>
+	</uta:convert>
+	<uta:convert uta:id="cvtRptregErrLineBusy" uta:comment='Log Error Line Busy NNNNNN'>
+		<uta:dbKey>regErrLineBusy</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenInvNum</uta:length>
+	</uta:convert>
+	<uta:convert uta:id="cvtRptregErrNoCarrier" uta:comment='Log Error No Carrier NNNNNN'>
+		<uta:dbKey>regErrNoCarrier</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenInvNum</uta:length>
+	</uta:convert>
+	<uta:convert uta:id="cvtRptregErrUserCancel" uta:comment='Log Error User Cancel NNNNNN'>
+		<uta:dbKey>regErrUserCancel</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenInvNum</uta:length>
+	</uta:convert>
+	<uta:convert uta:id="cvtRptregErrLineDisconnect" uta:comment='Log Error Line Disconnect NNNNNN'>
+		<uta:dbKey>regErrLineDisconnect</uta:dbKey>
+		<uta:dbFmt>fmtNum</uta:dbFmt>
+		<uta:fmt>fmtDec</uta:fmt>
+		<uta:length>lenInvNum</uta:length>
+	</uta:convert>
+</uta:converters>

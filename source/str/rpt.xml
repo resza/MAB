@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!--
+Subversion reference
+$HeadURL: https://svn.ingenico.com/UTAPROJECTS/sea-partner/5W/trunk/ISO5WPH/str/rpt.xml $
+$Id: rpt.xml 1854 2009-04-13 15:54:15Z ajloreto $
+-->
+<uta:table uta:id="rpt"	uta:type='ASCII' uta:length="wdtPrt" uta:comment="receipt formatting strings"
+  xmlns:uta="http://www.ingenico.com/xml/uta">
+  <uta:row uta:id="rptSpaces" uta:data='"                                                "' />
+  <uta:row uta:id="rptEmpty" uta:data='""' />
+  <uta:row uta:id="rptSep0"   uta:data='"SIGN X___________________________________________"' />
+  <uta:row uta:id="rptSep01"   uta:data='"________________________________________________"' />
+  <uta:row uta:id="rptSep1"   uta:data='"------------------------------------------------"' />
+  <uta:row uta:id="rptSep2"   uta:data='"================================================"' />
+  <uta:row uta:id="rptSep5"   uta:data='"*************************************************************"' />
+  <uta:row uta:id="rptSep3"   uta:data='"--------------------========--------------------"' />
+  <uta:row uta:id="rptSep4"   uta:data='"--------========--------"' />    
+  <uta:row uta:id="rptGrandTot"   uta:data='"***   GRAND TOTALS   ***"' />
+  <uta:row uta:id="rptTotByHost"   uta:data='"TOTALS BY HOST"' />
+  <uta:row uta:id="rptHostTot"   uta:data='"***    HOST TOTALS   ***"' />
+  <uta:row uta:id="rptTxnLog"   uta:data='"AUDIT REPORT"' />
+  <uta:row uta:id="rptTotByCard"   uta:data='"TOTALS BY CARD"' />
+  <uta:row uta:id="rptTmsConfig"   uta:data='"  TMS CONFIGURATION   "' />
+  <uta:row uta:id="rptCmmConfig"   uta:data='"  COMMS CONFIGURATION  "' />
+  <uta:row uta:id="rptTmsDialup"   uta:data='"DIALUP SETTINGS"' />
+  <uta:row uta:id="rptTmsDialupSep"   uta:data='"---------------"' />
+  <uta:row uta:id="rptHeaderIp"   uta:data='"IP SETTINGS"' />
+  <uta:row uta:id="rptHeaderIpSep"   uta:data='"-----------"' />
+  <uta:row uta:id="rptTmsRS232"   uta:data='"RS232 SETTINGS"' />
+  <uta:row uta:id="rptTmsRS232Sep"   uta:data='"--------------"' />
+  <uta:row uta:id="rptHeaderGprsIp"   uta:data='"GPRS IP SETTINGS"' />
+  <uta:row uta:id="rptHeaderGprsIpSep"   uta:data='"----------------"' />
+  <uta:row uta:id="rptHeaderLine"   uta:data='"LINE SETTINGS"' />
+  <uta:row uta:id="rptHeaderLineSep"   uta:data='"-------------"' />
+  <uta:row uta:id="rptConfig"   uta:data='"      CONFIGURATION     "' />
+  <uta:row uta:id="rptMemory"   uta:data='"MEMORY"' />
+  <uta:row uta:id="rptFree"   uta:data='" FREE"' />
+  <uta:row uta:id="rptSettlement"   uta:data='"***    SETTLEMENT    ***"' />
+  <uta:row uta:id="rptSetConfirm"   uta:data='"  SETTLEMENT CONFIRMED"' />
+  <uta:row uta:id="rptSetClose"   	uta:data='"SETTLEMENT CLOSED"' />
+  <uta:row uta:id="rptNameVersion"   uta:data='"SWM1.I v01.00"' />
+  <uta:row uta:id="rptHdrSiteAddr1"   uta:data='"rptHdrSiteAddr1"' />
+  <uta:row uta:id="rptHdrSiteAddr2"   uta:data='"rptHdrSiteAddr2"' />
+  <uta:row uta:id="rptHdrSiteAddr3"   uta:data='"rptHdrSiteAddr3"' />
+  <uta:row uta:id="rptHdrSiteAddr4"   uta:data='"rptHdrSiteAddr4"' />
+  <uta:row uta:id="rptHdrSiteName"   uta:data='"rptHdrSiteName"' />
+  <uta:row uta:id="rptInitTitle"   uta:data='"***    INITIALISE    ***"' />
+  <uta:row uta:id="rptDatTimBgd" uta:data='"DD/MM/CCYY hh:mm:ss"' />
+  <uta:row uta:id="rptDatTimCtl"   uta:data='"ghCefFabcdKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKijNklQmn"' /> 
+  <uta:row uta:id="rptTrxDatTimBgd" uta:data='"DATETIME:  "' />
+  <uta:row uta:id="rptReportDatBgd" uta:data='", :DATE/"' />
+  <uta:row uta:id="rptReportDatCtl"   uta:data='"DEFGCBghHefHabcd"' />
+  <uta:row uta:id="rptTrxDatTimCtl"   uta:data='"ABCDIKdeJabcKfghiKKKKKKKKKKKKKKKKKEFGHIjkIlmIno"' />
+  <uta:row uta:id="rptTrxDatTimCtl1"   uta:data='"ABCDIKdeJabcKfghiKKKKKKKKKKKKKKKKKKEFGHIjkIlmIno"' />
+  <uta:row uta:id="rptStlDatTimBgd" uta:data='", :DATE/TIME"' />
+  <uta:row uta:id="rptStlDatTimCtl"   uta:data='"DEFGHIJKLBabcBdeABfghiBjkClm"' />
+  <uta:row uta:id="rptAcquirerDetails"   uta:data='"HOST  0069  TestAcq                             "' />
+  <uta:row uta:id="rptFmtAcquirerDetails"   uta:data='"HOST  %s  %s"' />
+  <uta:row uta:id="rptFmtInitTid"		uta:data='"    TID: %s"'/>
+  <uta:row uta:id="rptFmtTid"		uta:data='"TID: %s"'/>
+  <uta:row uta:id="rptFmtMid"		uta:data='"MID: %s"'/>
+  <uta:row uta:id="rptFmtPriSrv"   uta:data='"    PRI# : %s"' />
+  <uta:row uta:id="rptFmtSecSrv"   uta:data='"    SEC# : %s"' />
+  <uta:row uta:id="rptFmtPriIP"   uta:data='"    PRI IP   : %s"' />
+  <uta:row uta:id="rptFmtSecIP"   uta:data='"    SEC IP   : %s"' />
+  <uta:row uta:id="rptEmvDet1"   uta:data='"EMV CREDIT"' />  
+  <uta:row uta:id="rptEmvDet2"   uta:data='"----EMV PARAMATERS-----"' />  
+  <uta:row uta:id="rptEmvDet3"   uta:data='"LOADED AIDS"' />  
+
+  <uta:row uta:id="rptFmtCardTranType"   uta:data='"%s %s"' />
+  <uta:row uta:id="rptCardName"   uta:data='"%s"' />  
+  <uta:row uta:id="rptFmtTraceBatchNum"   uta:data='"INV#  : %s                       BATCH#: %03d"' />
+  <uta:row uta:id="rptFmtTraceNum"   uta:data='"INV#  : %s"' />
+  <uta:row uta:id="rptFmtBatchNum"   uta:data='"BATCH#: %s"' />
+  <uta:row uta:id="rptFmtRefNumApprvCde"   uta:data='"REF NO: %s  APRV  : %s"' />
+  <uta:row uta:id="rptTipAmt"   uta:data='"TIP                                      $100.00"' /> 
+  <uta:row uta:id="rptEqualAmt"   uta:data='"                                --------------------"' />
+  <uta:row uta:id="rptTotAmt"   uta:data='"TOTAL                                   $1100.00"' />  
+  <uta:row uta:id="rptFmtTotAmt"   uta:data='"TOTAL \x1B\x18 %s"' />
+  <uta:row uta:id="rptCrdSig"   uta:data='"CARDHOLDER SIGNATURE"' />  
+  <uta:row uta:id="rptMerCpy"   uta:data='"-- MERCHANT COPY --"' />
+  <uta:row uta:id="rptDupCpy"   uta:data='"-- DUPLICATE COPY --"' /> 
+  <uta:row uta:id="rptCusCpy"   uta:data='"-- CUSTOMER COPY --"' />
+  <uta:row uta:id="rptBankCpy"   uta:data='"-- BANK COPY --"' />
+  
+  <uta:row uta:id="rptFmtInvNum"   uta:data='"     %s"' />
+  <uta:row uta:id="rptFmtStanNum"   uta:data='"     %s"' />
+  <uta:row uta:id="rptFmtBatNum"   uta:data='"     %s"' />
+  <uta:row uta:id="rptFmtNii"   uta:data='"%s"' />
+  
+  <uta:row uta:id="rptTmsPriNumber"   uta:data='"%s"' />
+  <uta:row uta:id="rptTmsSecNumber"   uta:data='"%s"' />
+  <uta:row uta:id="rptPan"   uta:data='"%s"' />
+  <uta:row uta:id="rptTransType"   uta:data='"%s"' />
+  <uta:row uta:id="rptTrans"   uta:data='"TRANS"' />
+      
+  <uta:row uta:id="rptSale"   		uta:data='"AMOUNT : "' />
+  <uta:row uta:id="rptVoidSale"   	uta:data='"VOID SALE"' />  
+  <uta:row uta:id="rptVoid"   	uta:data='"VOID %s"' />
+  <uta:row uta:id="rptRefund"   	uta:data='"REFUND"' />  
+  <uta:row uta:id="rptVoidRefund"   	uta:data='"VOID REFUND"' />
+  <uta:row uta:id="rptOffline"   	uta:data='"OFFLSALE"' />  
+  <uta:row uta:id="rptVoidOffline"   	uta:data='"VOID OFFLSALE"' />
+  <uta:row uta:id="rptPwrbuy"   		uta:data='"POWERBUY "' />
+  <uta:row uta:id="rptVoidPwrbuy"   	uta:data='"VOID POWERBUY"' />  
+  <uta:row uta:id="rptPhpPlus"   	uta:data='"PHP"' />
+  <uta:row uta:id="rptPhpMinus"   	uta:data='"-PHP"' />    
+  <uta:row uta:id="rptMinus"   	uta:data='"-"' />
+  <uta:row uta:id="rptAutCodLbl"   	uta:data='"Auth#"' />  
+  <uta:row uta:id="rptTrace"   		uta:data='"TRACE NO: %s"' />  
+  <uta:row uta:id="rptTrace2"   		uta:data='"TRACE NO: "' />  
+  <uta:row uta:id="rptExpDatCtl"   	uta:data='"abCcd"' />  
+  <uta:row uta:id="rptTotalSale"   	uta:data='"       SALE       "' />
+  <uta:row uta:id="rptTotalTopUp"   	uta:data='"      TOP UP      "' />  
+  <uta:row uta:id="rptTotalUpdate"   	uta:data='"      UPDATE      "' />    
+  <uta:row uta:id="rptTotalRefund"      uta:data='"       REFUND     "' />
+  <uta:row uta:id="rptTotalTip"   		uta:data='"       TIP        "' />
+  <uta:row uta:id="rptTotalVoid"   	uta:data='"       VOID       "' />  
+  <uta:row uta:id="rptGrandTotal"   	uta:data='"GRAND TOTAL"' />  
+  <uta:row uta:id="rptTerminal"   	uta:data='"TERMINAL "' />  
+  <uta:row uta:id="rptHost"   		uta:data='"HOST "' />    
+  <uta:row uta:id="rptSpace"  		uta:data='" "' />  
+  <uta:row uta:id="rptTip"   		uta:data='"TIP"' />
+  <uta:row uta:id="rptRefNo"   		uta:data='"REF NO:  "' />    
+  <uta:row uta:id="rptAprvCod"   	uta:data='"APRV :  "' />  
+  <uta:row uta:id="rptInvNum"   	uta:data='"INV#  "' />    
+  <uta:row uta:id="rptBatNum"   	uta:data='"BATCH # : "' />  
+  <uta:row uta:id="rptLogRef"   	uta:data='"LOG: REF  "' />
+  <!--<uta:row uta:id="rptFmtLogAmt"    uta:data='"%s%s""\x1B\x18""PHP%s"' />-->
+  <uta:row uta:id="rptLogApproval"  uta:data='"APPROVAL""\x1B\x18""%s"' />
+  <uta:row uta:id="rptApproval"  uta:data='"APPROVAL"' />
+  <uta:row uta:id="rptFmtLogDatTim" uta:data='"/: "' />   
+  <uta:row uta:id="rptLogDatTim" 	uta:data='"ghAefAabcdCijBkl"' />  
+  <!--<uta:row uta:id="rptFmtTxnTtlCnt" uta:data='"%s""\x1B\x18""%s"' />-->
+  <uta:row uta:id="rptFmtTxnTtlAmt" uta:data='"\x1B\x18""%s%s"' />
+  <uta:row uta:id="rptAppName" 		uta:data='"SWM1.I"' />
+  <uta:row uta:id="rptCurVer" 		uta:data='"0100"' />
+  <!--<uta:row uta:id="rptCenter" 		uta:data='"\x1B\x17""%s"' />-->
+  <!--<uta:row uta:id="rptRight" 		uta:data='"\x1B\x18""%s"' />-->
+  <!--<uta:row uta:id="rptTID" 		    uta:data='"TID:""\x1B\x18""%s"' />  -->
+  <!--<uta:row uta:id="rptAcqNameNii" 	uta:data='"%s""\x1B\x18""%s"' />-->
+  <uta:row uta:id="rptTID" 		    uta:data='"TID: %s"' /> 
+  <uta:row uta:id="rptBatch" 		uta:data='"BATCH "' />  
+  <uta:row uta:id="rptClosed" 		uta:data='"CLOSED"' />    
+  <uta:row uta:id="rptSOC" 			uta:data='"SOC # "' />  
+  <uta:row uta:id="rptString" 		uta:data='"%s"' />    
+  <uta:row uta:id="rptAmount" 	       uta:data='"AMOUNT"' />      
+  <uta:row uta:id="rptSetTotalsByCard" 	uta:data='"TOTALS BY CARD"' />
+  <uta:row uta:id="rptPabx" 		uta:data='"%s"' /> 
+  <uta:row uta:id="rptPrtType" 		uta:data='"TYPE        :  "' />
+  <uta:row uta:id="rptPrtToneDet" 	uta:data='"TONE DETECT :  "' />
+  <uta:row uta:id="rptPrtPabx" 		uta:data='"PABX #      :  "' />
+  <uta:row uta:id="rptPrtDHCP" 		uta:data='"DHCP   : "' />
+  <uta:row uta:id="rptPrtIP" 		uta:data='"IP     : "' />
+  <uta:row uta:id="rptPrtPriIP" 		uta:data='"PRI IP : %s"' />
+  <uta:row uta:id="rptPrtSecIP" 		uta:data='"SEC IP : %s"' />
+  <uta:row uta:id="rptPrtSubnet" 	uta:data='"SUBNET : "' />
+  <uta:row uta:id="rptPrtGateway" 	    uta:data='"GATEWAY: "' />
+  <uta:row uta:id="rptPrtGPRSIP" 		uta:data='"IP     : "' />
+  <uta:row uta:id="rptPrtGPRSSubnet" 	uta:data='"SUBNET : "' />
+  <uta:row uta:id="rptPrtGPRSGateway" 	uta:data='"GATEWAY: "' />
+  <uta:row uta:id="rptPrtTMSTrn" 	uta:data='"TRN  : "' />  
+  <uta:row uta:id="rptPrtTMSNii" 	uta:data='"NII  : "' />    
+  <uta:row uta:id="rptPrtTMSLink" 	uta:data='"LINK : "' />      
+  <uta:row uta:id="rptPrtTMSDialUpOpt" 	uta:data='"DIAL UP"' />      
+  <uta:row uta:id="rptPrtTMSTCPIPOpt" 	uta:data='"TCP/IP"' />        
+  <uta:row uta:id="rptPrtTMSRS232Opt" 	uta:data='"RS232 "' />        
+  <uta:row uta:id="rptPrtTMSGPRSOpt" 	uta:data='"GPRS "' />        
+  <uta:row uta:id="rptPrtTMSUndefOpt" 	uta:data='"UNKNOWN "' />          
+  <uta:row uta:id="rptPrtTMSBytes" 	uta:data='" BYTES"' />          
+  <uta:row uta:id="rptPrtTMSPriNum" 	uta:data='"PRI# : "' />      
+  <uta:row uta:id="rptPrtTMSSecNum" 	uta:data='"SEC# : "' />        
+  <uta:row uta:id="rptPrtTMSBaud" 	uta:data='"BAUD : "' />          
+  <uta:row uta:id="rptPrtTMSBuff" 	uta:data='"BUFF : "' />            
+  <uta:row uta:id="rptPrtTMSBuff500" 	uta:data='"BUFF : 500 BYTES"' />              
+  <uta:row uta:id="rptPrtTMSPriIP" 	uta:data='"PRI  : "' />      
+  <uta:row uta:id="rptPrtTMSSecIP" 	uta:data='"SEC  : "' />        
+  <uta:row uta:id="rptPrtTMSPort" 	uta:data='"PORT : "' />     
+  <uta:row uta:id="rptPrtTMS1200"    			 uta:data='" 1200bps"' />
+  <uta:row uta:id="rptPrtTMS2400"    			 uta:data='" 2400bps"' />
+  <uta:row uta:id="rptPrtTMS9600"    			 uta:data='" 9600bps"' />
+  <uta:row uta:id="rptPrtTMS14400"    		 uta:data='" 14400bps"' />
+  <uta:row uta:id="rptPrtTMS19200"    		 uta:data='" 19200bps"' />
+  <uta:row uta:id="rptPrtTMS28800"    		 uta:data='" 28800bps"' />
+  <uta:row uta:id="rptPrtTMS33600"    		 uta:data='" 33600bps"' />
+  <uta:row uta:id="rptFmtTotalAmt"    uta:data='"%s %s"' />
+  <uta:row uta:id="rptFmtRspCod"    uta:data='"%s"' />
+  <uta:row uta:id="rptAcknow1"			uta:data='"I AGREE TO PAY ABOVE TOTAL AMOUNT"' />
+  <uta:row uta:id="rptAcknow2"			uta:data='"ACCORDING TO CARD ISSUER AGREEMENT"' />
+  <uta:row uta:id="rptAcknow3"			uta:data='"MERCHANT AGREEMENT IF CREDIT VOUCHER"' />  
+<!-- DEWI EMV 22062010 -->
+  <uta:row uta:id="rptMidBRI"		uta:data='"MERCHANT ID : "'/>
+  <uta:row uta:id="rptTidBRI"		uta:data='"TERMINAL ID : "'/>
+  <uta:row uta:id="rptCardType"		uta:data='"CARD TYPE : %s"'/>
+  <uta:row uta:id="rptHdrSiteAddr1BRI"   uta:data='"Sudirman"' />
+  <uta:row uta:id="rptHdrSiteAddr2BRI"   uta:data='"Jakarta"' />
+  <uta:row uta:id="rptHdrSiteNameBRI"   uta:data='"Gedung BRI I"' />
+
+<!--mcy add for mandiri -->
+  <uta:row uta:id="rptExpDat"   		uta:data='"EXPY DATE: %s"' />
+  <uta:row uta:id="rptAllString"   		uta:data='"%s"' />
+  <uta:row uta:id="rptFmtRefNum"   	uta:data='"REF NO: %s"' />
+  <uta:row uta:id="rptFmtApprvCde"   uta:data='"APPR. CODE: %s"' />
+  <uta:row uta:id="rptFmtApprvCde2"   uta:data='"APPROVAL CODE"' />
+  <uta:row uta:id="rptTerm"			uta:data='"TERMINAL ID : "'/>
+  <uta:row uta:id="rptMer"			uta:data='"MERCHANT ID : "'/>
+  <uta:row uta:id="rptBatchNo"		uta:data='"BATCH : %s"'/>
+  <uta:row uta:id="rptBase" 	 	 	uta:data='"BASE"' />      
+  <uta:row uta:id="rptPinVer" 	 	uta:data='"NO SIGNATURE REQUIRED"' />      
+  <uta:row uta:id="rptPinVer2" 	 	uta:data='"*** PIN VERIFICATION SUCCESS ***"' />      
+  <uta:row uta:id="rptRequest" 		uta:data='"GEN AC Req CID: "' />     
+  <uta:row uta:id="rptResponse" 		uta:data='"GEN AC Rsp CID: "' />     
+  <uta:row uta:id="rptScheme" 		uta:data='"Scheme spesifics tags :"' />  
+  <uta:row uta:id="rptRiskMng" 		uta:data='"Risk Management Info : "' />  
+  <uta:row uta:id="rptUnpNum" 		uta:data='"Unpredictable Num. : "' />  
+  <uta:row uta:id="rptTerminalAction" 		   uta:data='"Terminal Action Codes : "' />  
+  <uta:row uta:id="rptIssuerAction" 		   uta:data='"Issuer Action Codes : (* = default)"' />  
+  <uta:row uta:id="msgTrnDate" 			    	   uta:data='"Transaction Date : "' />   
+  <uta:row uta:id="msgTrnType" 			    	   uta:data='"Transaction Type : "' />   
+  <uta:row uta:id="msgCurrCode" 			   uta:data='"Trans Curr Code : "' />   
+  <uta:row uta:id="msgCouCode" 			   uta:data='"Term Country Code : "' />
+  <uta:row uta:id="msgAmtAuthNum" 			   uta:data='"Amount Authorized : "' />  
+  <uta:row uta:id="msgAmtOherNum" 			   uta:data='"Amount Other : "' />  
+  <uta:row uta:id="msgPanSequence" 			   uta:data='"PAN Sequence No : "' />  
+  <uta:row uta:id="msgCertAuth"			   	   uta:data='"Cert Auth Public Key Index : "' />	
+  <uta:row uta:id="msgAuthRspCd" 			   uta:data='"Auth Response Code :"' />  
+  <uta:row uta:id="msgIAD" 			    	  	   uta:data='"Issuer App Data : "' />  
+  <uta:row uta:id="msgFinalSW1Sw2" 			   uta:data='"Final SW1SW2 =  "' />  
+  <uta:row uta:id="rptPreAuth" 				   uta:data='"PREAUTH"' />  
+  <uta:row uta:id="rptTrk1" 				   	   uta:data='"  "' />  
+  <uta:row uta:id="rptString2" 				   uta:data='"%s %s"' />  
+  <uta:row uta:id="rptCardNumber2" 				   uta:data='"CARD NUMBER"' />  
+  <uta:row uta:id="rptCardType2" 				   uta:data='"CARD TYPE"' />  
+  <uta:row uta:id="rptTotalsByIssuer" 			uta:data='"*** TRANSACTION TOTALS BY ISSUER ***"' />
+  <uta:row uta:id="rptIssuer" 			uta:data='"ISSUER: %s"' />
+  <uta:row uta:id="rptMonthly" 			uta:data='"MONTHLY"' />
+  <uta:row uta:id="rptTerm2" 			uta:data='"TERM"' />
+
+<!--VIVOPAY-->
+  <uta:row uta:id="rptHistory" 			uta:data='"TRANSACTION HISTORY"' />
+  <uta:row uta:id="rptHistoryFail" 			uta:data='"TRANSACTION HISTORY FAIL"' />
+  
+  <uta:row uta:id="rptCardNo" 			uta:data='"CARD NO: "' />
+  <uta:row uta:id="rptHash" 			uta:data='"HASH: "' />  
+  <uta:row uta:id="rptAppCode" 			uta:data='"APPROVAL CODE: "' />
+  <uta:row uta:id="rptEndRecord" 		uta:data='"--- END OF RECORD---"' />
+  <uta:row uta:id="rptjdl1" 			uta:data='"TYPE   DATE/TIME      "' />
+  <uta:row uta:id="rptjdl2" 			uta:data='"           TID"' />
+  <uta:row uta:id="rptjdl3" 			uta:data='"     AMOUNT"' />
+  <uta:row uta:id="rptjdl4" 			uta:data='"BALANCE"' />
+  <uta:row uta:id="rptjdl1Lama" 			uta:data='"TYPE     TID      INST ID   AMOUNT      BALANCE"' />
+  <uta:row uta:id="rptjdl2Lama" 			uta:data='"      INST ID"' />
+  <uta:row uta:id="rptSaldoAwal" 			uta:data='"Saldo Awal"' />
+  <uta:row uta:id="rptSaldoAkhir" 			uta:data='"Saldo Akhir"' />
+  <uta:row uta:id="rptSaldoTrx" 			uta:data='"Total"' />
+  <uta:row uta:id="rptSaldoAwalPre" 			uta:data='"Saldo Awal  Rp."' />
+  <uta:row uta:id="rptSaldoAkhirPre" 			uta:data='"Saldo Akhir Rp."' />
+  <uta:row uta:id="rptSaldoTrxPre" 			uta:data='"Total       Rp."' />
+  <uta:row uta:id="rptPrepaidUpdate" 			uta:data='"Card Type PREPAID"' />
+  <uta:row uta:id="rptPrepaidPurc" 			uta:data='"PREPAID"' />  
+  <uta:row uta:id="rptPrepaidTopup" 			uta:data='"PREPAID TOPUP"' />
+  <uta:row uta:id="rptPrepaidCard" 			uta:data='"PREPAID CARD  : "' />  
+  <uta:row uta:id="rptPrepaidDemon" 			uta:data='"DENOM  : Rp."' />  
+  <uta:row uta:id="rptPrepaidCharge" 			uta:data='"CHARGE : Rp."' />    
+  <uta:row uta:id="rptPrepaidTotal" 			uta:data='"TOTAL  : Rp."' />   
+
+  <uta:row uta:id="rptPrepaidUpdateSaldO" 			uta:data='"UPDATE SALDO"' />
+  <uta:row uta:id="rptPrepaidSaldoAwal" 			uta:data='"Saldo Awal  Rp."' />    
+  <uta:row uta:id="rptPrepaidSaldoAkhir" 			uta:data='"Saldo Akhir Rp."' />    
+  <uta:row uta:id="rptPrepaidTopUpEchannel" 			uta:data='"Update      Rp."' />    
+<!--  <uta:row uta:id="rptPrepaidTopUpEchannel" 			uta:data='"TopUp eChannel : Rp."' />    -->
+  <uta:row uta:id="rptMerCpyPre"   uta:data='"MERCHANT COPY "' />
+  <uta:row uta:id="rptCusCpyPre"   uta:data='"CUSTOMER COPY "' />
+  <uta:row uta:id="rptBankCpyPre"   uta:data='"BANK COPY "' />
+  
+
+  <uta:row uta:id="rptPrepaidTeks1" 			uta:data='"HARAP TANDA TERIMA INI DISIMPAN"' />
+  <uta:row uta:id="rptPrepaidTeks2" 			uta:data='"SEBAGAI BUKTI PEMBAYARAN YANG SAH"' />  
+  <uta:row uta:id="rptPrepaidTeks3" 			uta:data='"*** TERIMA KASIH ***"' />  
+
+  <uta:row uta:id="rptPrepaidTeks5" 			uta:data='" = NO SIGNATURE REQUIRED = "' />
+  <uta:row uta:id="rptPrepaidTeks6" 			uta:data='"CARDHOLDER ACKNOWLEDGES RECEIPT"' />  
+  <uta:row uta:id="rptPrepaidTeks7" 			uta:data='"OF GOODS AND SERVICES AND AGREES"' />  
+  <uta:row uta:id="rptPrepaidTeks8" 			uta:data='"TO PAY THE TOTAL SHOWN HEREIN."' />  
+  <uta:row uta:id="rptPrepaidPurcGP" 			uta:data='"BIAYA ADM"' />    
+  <uta:row uta:id="rptPrepaidTeks9" 			uta:data='"KARENA KARTU TIDAK AKTIF SELAMA 1 TAHUN"' />  
+  <uta:row uta:id="rptPrepaidTeks10" 			uta:data='"KARTU DIKENAKAN BIAYA ADMINISTRASI"' />  
+  <uta:row uta:id="rptPrepaidTeks11" 			uta:data='"SILAKAN LAKUKAN TRANSAKSI / ISI ULANG KEMBALI"' /> 
+
+<!--add dw MiniATM 06012K11-->
+  <uta:row uta:id="rptAdminFee" 			uta:data='"ADMIN FEE"' />
+  <uta:row uta:id="rptDenda" 			uta:data='"DENDA"' />
+  <uta:row uta:id="rptTotal" 				uta:data='"TOTAL"' />
+  <uta:row uta:id="rptReff" 				uta:data='"BILL REF"' />
+  <uta:row uta:id="rptNama" 			uta:data='"NAMA      : "' />
+  <uta:row uta:id="rptId" 				uta:data='"ID PEL    : "' />
+  <uta:row uta:id="rptBlnThn" 			uta:data='"BLN/THN   : "' />
+  <uta:row uta:id="rptMTR" 				uta:data='"STAND MTR : "' />
+  <uta:row uta:id="rptMplo" 				uta:data='"MPLO REF  : "' />
+  <uta:row uta:id="rptPLN1" 				uta:data='"PLN MENYATAKAN STRUK INI SEBAGAI"' />
+  <uta:row uta:id="rptPLN2" 				uta:data='"             BUKTI YANG SAH                 "' />
+  <uta:row uta:id="rptNoTag" 			uta:data='"NO TAGIHAN"' />
+  <uta:row uta:id="rptFoot1" 			uta:data='"HARAP TANDA TERIMA INI DISIMPAN"' />
+  <uta:row uta:id="rptFoot2" 			uta:data='"SEBAGAI BUKTI PEMBAYARAN YANG SAH"' />
+ <uta:row uta:id="rptGracePrd" 			uta:data='"GRACE PRD"' />
+  <uta:row uta:id="rptTelkom" 			uta:data='"TELKOM"' />
+  <uta:row uta:id="rptSatelindo" 			uta:data='"SATELINDO"' />
+  <uta:row uta:id="rptTelkomsel" 			uta:data='"TELKOMSEL"' />
+  <uta:row uta:id="rptExcelcom" 				uta:data='"EXCELCOMINDO"' />
+  <uta:row uta:id="rptEsia"	 			uta:data='"ESIA"' />
+  <uta:row uta:id="rptPLN" 				uta:data='"PLN"' />
+  <uta:row uta:id="rptFirstMedia" 			uta:data='"FIRST MEDIA"' />
+  <uta:row uta:id="rptIndovision" 		uta:data='"INDOVISION"' />
+  <uta:row uta:id="rptOtoMulti" 			uta:data='"OTO MULTIARTA"' />
+  <uta:row uta:id="rptFee" 				uta:data='"COMM FEE"' />
+  <uta:row uta:id="rptMAtm" 			uta:data='"TOTAL COMM"' />
+  <uta:row uta:id="rptMiniATM" 			uta:data='"TOTAL SALE"' />
+
+  <!--GP -->
+  <uta:row uta:id="rptGPAdm"   	uta:data='"      GP ADM      "' />  
+
+    
+ 
+    <!--Fasa4 -->
+   <uta:row uta:id="rptSRek" 			uta:data='"DARI REK : "' />
+   <uta:row uta:id="rptValuta" 			uta:data='"VALUTA   : "' />
+   <uta:row uta:id="rptDRek" 			uta:data='"KE REK   : "' />
+   <uta:row uta:id="rptDNama" 			uta:data='"NAMA PENERIMA"' />
+   <uta:row uta:id="rptNoCC" 			uta:data='"NO. KARTU KREDIT"' />
+   <uta:row uta:id="rptAn" 				uta:data='"NAMA PEMEGANG KARTU"' />
+
+   <uta:row uta:id="rptCashW" 			uta:data='"CASH OUT"' />
+   <uta:row uta:id="rptTunai" 			uta:data='"SALE/CASH OUT"' />
+   <uta:row uta:id="rptTransfer" 			uta:data='"OVERBOOK"' />
+   <uta:row uta:id="rptCC" 				uta:data='"PAYMENT CC"' />
+   <uta:row uta:id="rptUSD" 				uta:data='"USD"' />
+   <uta:row uta:id="rptSGD" 				uta:data='"SGD"' />
+   <uta:row uta:id="rptJPN" 				uta:data='"JPY"' />
+   
+</uta:table>

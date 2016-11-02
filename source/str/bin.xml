@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!--
+Subversion reference
+$HeadURL: https://svn.ingenico.com/UTAPROJECTS/sea-partner/5W/trunk/ISO5WPH/str/bin.xml $
+$Id: bin.xml 1324 2009-01-19 06:43:44Z kdelacruz $
+-->
+<uta:record uta:id="bin" uta:dim="dimBin" uta:comment="Card Range multirecord"
+ xmlns:uta="http://www.ingenico.com/xml/uta">
+  <uta:field uta:id="binID" uta:type="byte" uta:comment='Card Prefix ID' />
+  <uta:field uta:id='binTotAppDbAmt' uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Debit amount for acquirer' /> 
+  <uta:field uta:id='binTotAppDbCnt' uta:type='word' uta:comment='Number Debits for acquirer' /> 
+  <uta:field uta:id='binTotAppCrAmt' uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Credit amount for acquirer' /> 
+  <uta:field uta:id='binTotAppCrCnt' uta:type='word' uta:comment='Number Credits for acquirer' /> 
+  <uta:field uta:id='binTotAppTpAmt' uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Tip amount for acquirer' /> 
+  <uta:field uta:id='binTotAppTpCnt' uta:type='word' uta:comment='Number Tip for acquirer' /> 
+  <uta:data>
+    <uta:instance>
+      <uta:col uta:data='1' />							<!-- Card Prefix ID-->     
+      <uta:col uta:data='"0"' />				<!-- binTotAppDbAmt: Total Debit amount for acquirer-->
+      <uta:col uta:data='0' />					<!-- binTotAppDbCnt: Number Debits for acquirer-->
+      <uta:col uta:data='"0"' />				<!-- binTotAppCrAmt: Total Credit amount for acquirer-->
+      <uta:col uta:data='0' />					<!-- binTotAppCrCnt: Number Credits for acquirer-->
+      <uta:col uta:data='"0"' />				<!-- binTotAppTpAmt: Total Tip amount for acquirer-->
+      <uta:col uta:data='0' />					<!-- binTotAppTpCnt: Number Tip for acquirer-->
+    </uta:instance>
+  </uta:data>
+</uta:record>

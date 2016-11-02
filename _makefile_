@@ -1,0 +1,215 @@
+#created by template
+path=C:\Windows;C:\Windows\system32;C:\PAXPAY~1\build\gcc410\bin
+
+NAME      = PinterpayVMMAB
+VERSION   = "v2.01.0014"
+GCCDIR    = C:\PAXPAY~1\build\gcc410
+GCCBIN    = $(GCCDIR)\bin
+GCCLIB    = $(GCCDIR)\lib
+LOCSRC    = c:\PAXPAY~1\myapp\PINTER~3
+LOCOBJ    = c:\PAXPAY~1\myapp\PINTER~3\.\obj_sxx
+LOCINC    =  -IC:\PAXPAY~1\include
+POSLIBDIR = C:\PAXPAY~1\postype\S80
+POSLIB    = s80api
+
+ASM       = $(GCCBIN)\arm-elf-gcc -O0 -I$(GCCINC)\sys -msoft-float -mlittle-endian -fno-zero-initialized-in-bss -D_POS_S80 $(LOCINC) -c 
+GCC       = $(GCCBIN)\arm-elf-gcc -O0 -I$(GCCINC)\sys -msoft-float -mlittle-endian -fno-zero-initialized-in-bss -D_POS_S80 $(LOCINC) -c
+LINK      = $(GCCBIN)\arm-elf-ld -T$(POSLIBDIR)\sldscript_s80 -L$(GCCLIB) -L$(POSLIBDIR) -L$(LOCOBJ)
+OBJ    = $(LOCOBJ)\init.o \
+		          $(LOCOBJ)\appLib.o \
+         $(LOCOBJ)\artajasa.o \
+         $(LOCOBJ)\Blowfish.o \
+         $(LOCOBJ)\brizzi.o \
+         $(LOCOBJ)\CALCAC~1.o \
+         $(LOCOBJ)\checkopt.o \
+         $(LOCOBJ)\commlib.o \
+         $(LOCOBJ)\COMMLI~1.o \
+         $(LOCOBJ)\commproc.o \
+         $(LOCOBJ)\cpinpad.o \
+         $(LOCOBJ)\dba.o \
+         $(LOCOBJ)\dft.o \
+         $(LOCOBJ)\drv.o \
+         $(LOCOBJ)\emvproc.o \
+         $(LOCOBJ)\emvtest.o \
+         $(LOCOBJ)\eventmsg.o \
+         $(LOCOBJ)\farsi.o \
+         $(LOCOBJ)\fileoper.o \
+         $(LOCOBJ)\fmt.o \
+         $(LOCOBJ)\Function.o \
+         $(LOCOBJ)\global.o \
+         $(LOCOBJ)\hdl.o \
+         $(LOCOBJ)\initpos.o \
+         $(LOCOBJ)\keyPED.o \
+         $(LOCOBJ)\lng.o \
+         $(LOCOBJ)\main.o \
+         $(LOCOBJ)\manage.o \
+         $(LOCOBJ)\map.o \
+         $(LOCOBJ)\menu.o \
+         $(LOCOBJ)\miniATM.o \
+         $(LOCOBJ)\mlogo.o \
+         $(LOCOBJ)\MultiApp.o \
+         $(LOCOBJ)\newPack.o \
+         $(LOCOBJ)\pack8583.o \
+         $(LOCOBJ)\password.o \
+         $(LOCOBJ)\paxmem.o \
+         $(LOCOBJ)\powerbuy.o \
+         $(LOCOBJ)\print.o \
+         $(LOCOBJ)\PrintBRI.o \
+         $(LOCOBJ)\Purchase.o \
+         $(LOCOBJ)\rpt.o \
+         $(LOCOBJ)\SamTest.o \
+         $(LOCOBJ)\SetPack.o \
+         $(LOCOBJ)\setup.o \
+         $(LOCOBJ)\Simulate.o \
+         $(LOCOBJ)\st8583.o \
+         $(LOCOBJ)\std.o \
+         $(LOCOBJ)\str.o \
+         $(LOCOBJ)\SxxCom.o \
+         $(LOCOBJ)\tbx.o \
+         $(LOCOBJ)\TLE.o \
+         $(LOCOBJ)\TLEMAN~1.o \
+         $(LOCOBJ)\TMS.o \
+         $(LOCOBJ)\toolsBRI.o \
+         $(LOCOBJ)\TOOLSB~1.o \
+         $(LOCOBJ)\tranproc.o \
+         $(LOCOBJ)\unPack.o \
+         $(LOCOBJ)\util.o \
+         $(LOCOBJ)\Vector.o
+
+#  ADS-ROM version
+$(NAME).elf: $(OBJ) _makefile_
+    $(LINK) -o $(LOCOBJ)\$(NAME).elf $(OBJ)  "C:\PAXPAY~1\myapp\PINTER~3\source\LIBEMV~2.A"  -l$(POSLIB)  -lc -lgcc
+    elftobin $(LOCOBJ)\$(NAME).elf $(LOCOBJ)\$(NAME)($(VERSION)).bin PAX-S80-SAPP
+	
+	arm-elf-objdump -D -S $(LOCOBJ)\$(NAME).elf > $(LOCOBJ)\$(NAME).dasm
+
+# ASM file
+$(LOCOBJ)\init.o: $(POSLIBDIR)\init_s80.s
+        $(ASM) $(POSLIBDIR)\init_s80.s -o $(LOCOBJ)\init.o
+
+#  C files
+$(LOCOBJ)\appLib.o: ".\source\appLib.c"
+        $(GCC) ".\source\appLib.c" -o $(LOCOBJ)\appLib.o
+$(LOCOBJ)\artajasa.o: ".\source\artajasa.c"
+        $(GCC) ".\source\artajasa.c" -o $(LOCOBJ)\artajasa.o
+$(LOCOBJ)\Blowfish.o: ".\source\Blowfish.c"
+        $(GCC) ".\source\Blowfish.c" -o $(LOCOBJ)\Blowfish.o
+$(LOCOBJ)\brizzi.o: ".\source\brizzi.c"
+        $(GCC) ".\source\brizzi.c" -o $(LOCOBJ)\brizzi.o
+$(LOCOBJ)\CALCAC~1.o: ".\source\CALCAC~1.c"
+        $(GCC) ".\source\CALCAC~1.c" -o $(LOCOBJ)\CALCAC~1.o
+$(LOCOBJ)\checkopt.o: ".\source\checkopt.c"
+        $(GCC) ".\source\checkopt.c" -o $(LOCOBJ)\checkopt.o
+$(LOCOBJ)\commlib.o: ".\source\commlib.c"
+        $(GCC) ".\source\commlib.c" -o $(LOCOBJ)\commlib.o
+$(LOCOBJ)\COMMLI~1.o: ".\source\COMMLI~1.c"
+        $(GCC) ".\source\COMMLI~1.c" -o $(LOCOBJ)\COMMLI~1.o
+$(LOCOBJ)\commproc.o: ".\source\commproc.c"
+        $(GCC) ".\source\commproc.c" -o $(LOCOBJ)\commproc.o
+$(LOCOBJ)\cpinpad.o: ".\source\cpinpad.c"
+        $(GCC) ".\source\cpinpad.c" -o $(LOCOBJ)\cpinpad.o
+$(LOCOBJ)\dba.o: ".\source\dba.c"
+        $(GCC) ".\source\dba.c" -o $(LOCOBJ)\dba.o
+$(LOCOBJ)\dft.o: ".\source\dft.c"
+        $(GCC) ".\source\dft.c" -o $(LOCOBJ)\dft.o
+$(LOCOBJ)\drv.o: ".\source\drv.c"
+        $(GCC) ".\source\drv.c" -o $(LOCOBJ)\drv.o
+$(LOCOBJ)\emvproc.o: ".\source\emvproc.c"
+        $(GCC) ".\source\emvproc.c" -o $(LOCOBJ)\emvproc.o
+$(LOCOBJ)\emvtest.o: ".\source\emvtest.c"
+        $(GCC) ".\source\emvtest.c" -o $(LOCOBJ)\emvtest.o
+$(LOCOBJ)\eventmsg.o: ".\source\eventmsg.c"
+        $(GCC) ".\source\eventmsg.c" -o $(LOCOBJ)\eventmsg.o
+$(LOCOBJ)\farsi.o: ".\source\farsi.c"
+        $(GCC) ".\source\farsi.c" -o $(LOCOBJ)\farsi.o
+$(LOCOBJ)\fileoper.o: ".\source\fileoper.c"
+        $(GCC) ".\source\fileoper.c" -o $(LOCOBJ)\fileoper.o
+$(LOCOBJ)\fmt.o: ".\source\fmt.c"
+        $(GCC) ".\source\fmt.c" -o $(LOCOBJ)\fmt.o
+$(LOCOBJ)\Function.o: ".\source\Function.c"
+        $(GCC) ".\source\Function.c" -o $(LOCOBJ)\Function.o
+$(LOCOBJ)\global.o: ".\source\global.c"
+        $(GCC) ".\source\global.c" -o $(LOCOBJ)\global.o
+$(LOCOBJ)\hdl.o: ".\source\hdl.c"
+        $(GCC) ".\source\hdl.c" -o $(LOCOBJ)\hdl.o
+$(LOCOBJ)\initpos.o: ".\source\initpos.c"
+        $(GCC) ".\source\initpos.c" -o $(LOCOBJ)\initpos.o
+$(LOCOBJ)\keyPED.o: ".\source\keyPED.c"
+        $(GCC) ".\source\keyPED.c" -o $(LOCOBJ)\keyPED.o
+$(LOCOBJ)\lng.o: ".\source\lng.c"
+        $(GCC) ".\source\lng.c" -o $(LOCOBJ)\lng.o
+$(LOCOBJ)\main.o: ".\source\main.c"
+        $(GCC) ".\source\main.c" -o $(LOCOBJ)\main.o
+$(LOCOBJ)\manage.o: ".\source\manage.c"
+        $(GCC) ".\source\manage.c" -o $(LOCOBJ)\manage.o
+$(LOCOBJ)\map.o: ".\source\map.c"
+        $(GCC) ".\source\map.c" -o $(LOCOBJ)\map.o
+$(LOCOBJ)\menu.o: ".\source\menu.c"
+        $(GCC) ".\source\menu.c" -o $(LOCOBJ)\menu.o
+$(LOCOBJ)\miniATM.o: ".\source\miniATM.c"
+        $(GCC) ".\source\miniATM.c" -o $(LOCOBJ)\miniATM.o
+$(LOCOBJ)\mlogo.o: ".\source\mlogo.c"
+        $(GCC) ".\source\mlogo.c" -o $(LOCOBJ)\mlogo.o
+$(LOCOBJ)\MultiApp.o: ".\source\MultiApp.c"
+        $(GCC) ".\source\MultiApp.c" -o $(LOCOBJ)\MultiApp.o
+$(LOCOBJ)\newPack.o: ".\source\newPack.c"
+        $(GCC) ".\source\newPack.c" -o $(LOCOBJ)\newPack.o
+$(LOCOBJ)\pack8583.o: ".\source\pack8583.c"
+        $(GCC) ".\source\pack8583.c" -o $(LOCOBJ)\pack8583.o
+$(LOCOBJ)\password.o: ".\source\password.c"
+        $(GCC) ".\source\password.c" -o $(LOCOBJ)\password.o
+$(LOCOBJ)\paxmem.o: ".\source\paxmem.c"
+        $(GCC) ".\source\paxmem.c" -o $(LOCOBJ)\paxmem.o
+$(LOCOBJ)\powerbuy.o: ".\source\powerbuy.c"
+        $(GCC) ".\source\powerbuy.c" -o $(LOCOBJ)\powerbuy.o
+$(LOCOBJ)\print.o: ".\source\print.c"
+        $(GCC) ".\source\print.c" -o $(LOCOBJ)\print.o
+$(LOCOBJ)\PrintBRI.o: ".\source\PrintBRI.c"
+        $(GCC) ".\source\PrintBRI.c" -o $(LOCOBJ)\PrintBRI.o
+$(LOCOBJ)\Purchase.o: ".\source\Purchase.c"
+        $(GCC) ".\source\Purchase.c" -o $(LOCOBJ)\Purchase.o
+$(LOCOBJ)\rpt.o: ".\source\rpt.c"
+        $(GCC) ".\source\rpt.c" -o $(LOCOBJ)\rpt.o
+$(LOCOBJ)\SamTest.o: ".\source\SamTest.c"
+        $(GCC) ".\source\SamTest.c" -o $(LOCOBJ)\SamTest.o
+$(LOCOBJ)\SetPack.o: ".\source\SetPack.c"
+        $(GCC) ".\source\SetPack.c" -o $(LOCOBJ)\SetPack.o
+$(LOCOBJ)\setup.o: ".\source\setup.c"
+        $(GCC) ".\source\setup.c" -o $(LOCOBJ)\setup.o
+$(LOCOBJ)\Simulate.o: ".\source\Simulate.c"
+        $(GCC) ".\source\Simulate.c" -o $(LOCOBJ)\Simulate.o
+$(LOCOBJ)\st8583.o: ".\source\st8583.c"
+        $(GCC) ".\source\st8583.c" -o $(LOCOBJ)\st8583.o
+$(LOCOBJ)\std.o: ".\source\std.c"
+        $(GCC) ".\source\std.c" -o $(LOCOBJ)\std.o
+$(LOCOBJ)\str.o: ".\source\str.c"
+        $(GCC) ".\source\str.c" -o $(LOCOBJ)\str.o
+$(LOCOBJ)\SxxCom.o: ".\source\SxxCom.c"
+        $(GCC) ".\source\SxxCom.c" -o $(LOCOBJ)\SxxCom.o
+$(LOCOBJ)\tbx.o: ".\source\tbx.c"
+        $(GCC) ".\source\tbx.c" -o $(LOCOBJ)\tbx.o
+$(LOCOBJ)\TLE.o: ".\source\TLE.c"
+        $(GCC) ".\source\TLE.c" -o $(LOCOBJ)\TLE.o
+$(LOCOBJ)\TLEMAN~1.o: ".\source\TLEMAN~1.c"
+        $(GCC) ".\source\TLEMAN~1.c" -o $(LOCOBJ)\TLEMAN~1.o
+$(LOCOBJ)\TMS.o: ".\source\TMS.c"
+        $(GCC) ".\source\TMS.c" -o $(LOCOBJ)\TMS.o
+$(LOCOBJ)\toolsBRI.o: ".\source\toolsBRI.c"
+        $(GCC) ".\source\toolsBRI.c" -o $(LOCOBJ)\toolsBRI.o
+$(LOCOBJ)\TOOLSB~1.o: ".\source\TOOLSB~1.c"
+        $(GCC) ".\source\TOOLSB~1.c" -o $(LOCOBJ)\TOOLSB~1.o
+$(LOCOBJ)\tranproc.o: ".\source\tranproc.c"
+        $(GCC) ".\source\tranproc.c" -o $(LOCOBJ)\tranproc.o
+$(LOCOBJ)\unPack.o: ".\source\unPack.c"
+        $(GCC) ".\source\unPack.c" -o $(LOCOBJ)\unPack.o
+$(LOCOBJ)\util.o: ".\source\util.c"
+        $(GCC) ".\source\util.c" -o $(LOCOBJ)\util.o
+$(LOCOBJ)\Vector.o: ".\source\Vector.c"
+        $(GCC) ".\source\Vector.c" -o $(LOCOBJ)\Vector.o
+
+		
+clean:
+	del *.db
+	del *.blk
+	del *.db2
+	del *.out

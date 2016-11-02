@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!--
+Subversion reference
+$HeadURL: https://svn.ingenico.com/UTAPROJECTS/sea-partner/5W/trunk/ISO5WPH/str/rev.xml $
+$Id: rev.xml 1439 2009-01-27 02:42:02Z kdelacruz $
+-->
+<uta:record uta:id='rev' uta:comment='reversal record' xmlns:uta="http://www.ingenico.com/xml/uta">
+  <uta:field uta:id='revReversalFlag'  uta:type='byte' uta:data='0x00' uta:comment='Reversal Flag Indicator' /> 
+  <uta:field uta:id='revPan' uta:comment='card number' uta:type='ASCII' uta:length='lenPan' />
+  <uta:field uta:id='revPrcCod' uta:type="binary" uta:length="lenPrcCod" uta:comment="003: Processing Code" />
+  <uta:field uta:id='revSTAN'      uta:type='card'                            uta:comment='System Trace Audit Number 1..999999' />
+  <uta:field uta:id='revInvNum'    uta:type='card'                            uta:comment='invoice number (R.O.C.)' /> 
+  <uta:field uta:id='revDatTim' uta:type='ASCII' uta:length='lenDatTim' uta:comment='current date and time CCYYMMDDhhmmss' />
+  <uta:field uta:id='revAmt' uta:comment='transaction amount' uta:type='ASCII' uta:length='lenAmt' />
+  <uta:field uta:id='revExpDat' uta:type='ASCII' uta:length='lenExpDat' uta:comment='expiry date' />
+  <uta:field uta:id='revEntMod' uta:type='char' uta:comment='card entry mode' />
+  <uta:field uta:id='revConCode' uta:type='byte' uta:comment='condition code' />
+  <uta:field uta:id='revPanSeq'    uta:type='ASCII' uta:length='2'    uta:comment='5F34 PAN sequence number' />
+  <uta:field uta:id='revPinBlk' uta:type='binary' uta:length='lenPinBlk' uta:comment='Pin block' />    
+  <uta:field uta:id='revAcqIdx' uta:type='byte' uta:comment='index in Acq multirecord' />  
+  <uta:field uta:id='revTrk2' uta:type='ASCII' uta:length='lenTrk2' uta:comment='track 2 of the card' />  
+  <uta:field uta:id="revTID" uta:type="ASCII" uta:length="lenTid" uta:comment='Acquirer Terminal ID' />
+  <uta:field uta:id="revMID" uta:type="ASCII" uta:length="lenMid" uta:comment='Acquirer Merchant ID' />
+  <uta:field uta:id='revBit48PwrBuy' uta:type='ASCII'  uta:length='128'  uta:comment='Bit48 Req PwrBuy' /> 
+  <uta:field uta:id='revTipAmt' uta:comment='Reversal Tip Amount' uta:type='ASCII' uta:length='lenAmt' />
+  <uta:field uta:id='revICC'    uta:type='ASCII'  uta:length='lenEmvICC'    uta:comment='ICC Data Bit 55' />
+  <uta:field uta:id='revBit58PwrBuy' uta:type='ASCII'  uta:length='256'  uta:comment='Bit48 Req PwrBuy  All Trx' />  
+  <uta:field uta:id='revBatNum'    uta:type='ASCII' uta:length='lenInvNum'    uta:comment='Batch number' />   
+  <uta:field uta:id='revBinIdx' uta:type='byte' uta:comment='index in Bin multirecord' />
+  <uta:field uta:id='revIssIdx' uta:type='byte' uta:comment='index in Iss multirecord' />
+  <uta:field uta:id='revEmvFullFlag' uta:type='byte' uta:data ='0' uta:comment='is full emv process..?' />
+  <uta:field uta:id='revBit23On'   uta:type='byte'   uta:data ='0'  uta:comment='Bit32 Indicator' />
+  <uta:field uta:id='revTxnType'   uta:type='byte'   uta:comment='TxnType' />
+  <uta:field uta:id='revMnuItmTenor' uta:type='word' uta:comment='current menu item tenor selected' />
+  </uta:record>
+

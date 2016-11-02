@@ -1,0 +1,4097 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!-- 
+Subversion reference
+$HeadURL: https://svn.ingenico.com/UTAPROJECTS/sea-partner/5W/trunk/ISO5WPH/str/cmb.xml $
+$Id: cmb.xml 1888 2009-04-17 08:09:51Z ajloreto $
+-->
+
+<uta:combos uta:id="cmb" xmlns:uta="http://www.ingenico.com/xml/uta">
+	<uta:combo uta:id="cmbInitTidMid" uta:comment="Concatenate Tid and Mid values for printing">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>acqTID</uta:arg0>
+		<uta:arg1>acqMID</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbInitTid" uta:comment="    TID: 12345678">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptFmtInitTid</uta:arg0>
+		<uta:arg1>acqTID</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbTid" uta:comment="TID: 12345678">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptFmtTid</uta:arg0>
+		<uta:arg1>acqTID</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbMid" uta:comment="MID: 123456789012345">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptFmtMid</uta:arg0>
+		<uta:arg1>acqMID</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbTidMid" uta:comment="TID: 12345678               MID: 123456789012345">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbTid</uta:arg0>
+		<uta:arg1>cmbMid</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbTidMidInit" uta:comment="    TID: 12345678           MID: 123456789012345">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbInitTid</uta:arg0>
+		<uta:arg1>cmbMid</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>	
+																						 
+	<uta:combo uta:id="cmbEmvTc" uta:comment="TC   :09CDFA2DAF4B0D2F                          ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgEmvTc</uta:arg0>
+		<uta:arg1>cvtEmvTc</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>	
+	
+	<uta:combo uta:id="cmbEmvAid" uta:comment="AID   :A00000000031010                          "><!--mcy add for print AID-->
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgEmvAID</uta:arg0>
+		<uta:arg1>cvtDFNam</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>	
+
+	<uta:combo uta:id="cmbEmvAppType" uta:comment="APP   :CREDITO DE VISA                          "><!--mcy add for print App Type-->
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgEmvAppType</uta:arg0>
+		<uta:arg1>traAppPrfNam</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>	
+
+
+	<uta:combo uta:id="cmbEmvTvr" uta:comment="TVR  :400000E040                                ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgEmvTvr</uta:arg0>
+		<uta:arg1>cvtEmvTvr</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	
+	<uta:combo uta:id="cmbEmvTsi" uta:comment="TSI  :F800                                      ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgEmvTsi</uta:arg0>
+		<uta:arg1>cvtEmvTsi</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+
+	<uta:combo uta:id="cmbPriSrv" uta:comment="COMMENT">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptFmtPriSrv</uta:arg0>
+		<uta:arg1>acqPriTxnPhnSrv</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbSecSrv" uta:comment="COMMENT">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptFmtSecSrv</uta:arg0>
+		<uta:arg1>acqSecTxnPhnSrv</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbPhoneSrv" uta:comment="    PRI #: 7519220           SEC#: 7519206">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbPriSrv</uta:arg0>
+		<uta:arg1>cmbSecSrv</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbPriIpSrvTMS" uta:comment="COMMENT">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptFmtPriIP</uta:arg0>
+		<uta:arg1>appIpAdd</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbSecIpSrvTMS" uta:comment="COMMENT">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptFmtSecIP</uta:arg0>
+		<uta:arg1>appSecIpAdd</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbPriIpSrv" uta:comment="COMMENT">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptFmtPriIP</uta:arg0>
+		<uta:arg1>acqPriTxnIPSrv</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbSecIpSrv" uta:comment="COMMENT">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptFmtSecIP</uta:arg0>
+		<uta:arg1>acqSecTxnIPSrv</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+    <uta:combo uta:id="cmbRptDatTim">
+		<uta:operation>oprMut</uta:operation>
+		<uta:arg0>traDatTim</uta:arg0>
+		<uta:arg1>rptDatTimBgd</uta:arg1>
+		<uta:arg2>rptDatTimCtl</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+    <uta:combo uta:id="cmbAcqDet"> uta:comment="HOST 808 MCChost">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptFmtAcquirerDetails</uta:arg0>
+		<uta:arg1>acqNII</uta:arg1>
+		<uta:arg2>acqName</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+	<!--uta:combo uta:id="cmbCardTxnType" uta:comment="COMMENT">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptFmtCardTranType</uta:arg0>
+		<uta:arg1>traCardType</uta:arg1>
+		<uta:arg2>traTransType</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+																									012345678901234567890123456789012345678901234567
+	</uta:combo-->
+	<uta:combo uta:id="cmbCardTxnType" uta:comment="VISA                                        SALE">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>traCardType</uta:arg0>
+		<uta:arg1>traTransType</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+
+	<uta:combo uta:id="cmbVoidTxnType" uta:comment="VOID SALE">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptVoid</uta:arg0>
+		<uta:arg1>traTransType</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>		
+	
+	<uta:combo uta:id="cmbVoidCardTxnType" uta:comment="VISA                                   VOID SALE">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>traCardType</uta:arg0>
+		<uta:arg1>cmbVoidTxnType</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>	
+
+
+	<uta:combo uta:id="cmbCardNumExpDate" uta:comment="4172037641051717S                           1208">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>traBlockPan</uta:arg0>
+		<uta:arg1>traExpDat</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+
+  	<uta:combo uta:id="cmbAmtFmt" uta:comment="formated amount">
+        <uta:operation>oprAmt</uta:operation>
+        <uta:arg0>traAmt</uta:arg0>
+        <uta:arg1>appExp</uta:arg1>
+        <uta:arg2>0</uta:arg2>
+        <uta:length>dspW+1</uta:length>
+    </uta:combo>
+    
+  	<uta:combo uta:id="cmbTotAmtFmt" uta:comment="formated amount">
+        <uta:operation>oprAmt</uta:operation>
+        <uta:arg0>traTotAmt</uta:arg0>
+        <uta:arg1>appExp</uta:arg1>
+        <uta:arg2>0</uta:arg2>
+        <uta:length>dspW+1</uta:length>
+    </uta:combo>
+    
+    <uta:combo uta:id="cmbAmt" uta:comment="COMMENT">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbAmtFmt</uta:arg0>
+		<uta:arg1>appCurrSign</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>dspW+1</uta:length>
+	</uta:combo>
+
+    <uta:combo uta:id="cmbTraTotAmt" uta:comment="COMMENT">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbTotAmtFmt</uta:arg0>
+		<uta:arg1>appCurrSign</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>dspW+1</uta:length>
+	</uta:combo>
+
+	<uta:combo uta:id="cmbMsgAmtInput" uta:comment="AMT?         PHP">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgAmount</uta:arg0>
+		<uta:arg1>appCurrSign</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>dspW+1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbMsgTipInput" uta:comment="TIP?         PHP">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgTip</uta:arg0>
+		<uta:arg1>appCurrSign</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>dspW+1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbRefNum" uta:comment="Reference number value">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>regTmsRefNum</uta:arg0>
+		<uta:arg1>0</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbTMSRefNum" uta:comment="Reference number value">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>appRefNum</uta:arg0>
+		<uta:arg1>0</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>dspW+1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbTmsPriNumber" uta:comment="TMS primary number">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptTmsPriNumber</uta:arg0>
+		<uta:arg1>appPriSrv</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbTmsSecNumber" uta:comment="TMS Secondary number">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptTmsSecNumber</uta:arg0>
+		<uta:arg1>appSecSrv</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbTMSNii" uta:comment="TMS NII value">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptFmtNii</uta:arg0>
+		<uta:arg1>acqNII</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbPabx" uta:comment="Pabx: 9">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptPabx</uta:arg0>
+		<uta:arg1>appPabx</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEqDialOpt1" uta:comment="TMS Dial Options is equal to RS232">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appDialOpt</uta:arg0>
+		<uta:arg1>-1</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEqDialOpt6" uta:comment="TMS Dial Options is equal to USB">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appDialOpt</uta:arg0>
+		<uta:arg1>-6</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbIfDialOpt6" uta:comment="If TMS Dial Options is equal to USB show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqDialOpt6</uta:arg0>
+		<uta:arg1>msgUSB</uta:arg1>
+		<uta:arg2>msgNotDef</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbEqDialOpt5" uta:comment="TMS Dial Options is equal to WIFI">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appDialOpt</uta:arg0>
+		<uta:arg1>-5</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbIfDialOpt5" uta:comment="If TMS Dial Options is equal to WIFI show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqDialOpt5</uta:arg0>
+		<uta:arg1>msgWIFI</uta:arg1>
+		<uta:arg2>cmbIfDialOpt6</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>		
+	<uta:combo uta:id="cmbEqDialOpt4" uta:comment="TMS Dial Options is equal to GPRS">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appDialOpt</uta:arg0>
+		<uta:arg1>-4</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbIfDialOpt4" uta:comment="If TMS Dial Options is equal to GPRS show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqDialOpt4</uta:arg0>
+		<uta:arg1>msgGprs</uta:arg1>
+		<uta:arg2>cmbIfDialOpt5</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbEqDialOpt3" uta:comment="TMS Dial Options is equal to TCP/IP">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appDialOpt</uta:arg0>
+		<uta:arg1>-3</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbIfDialOpt3" uta:comment="If TMS Dial Options is equal to TCP/IP show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqDialOpt3</uta:arg0>
+		<uta:arg1>msgTCPIP</uta:arg1>
+		<uta:arg2>cmbIfDialOpt4</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>		
+	<uta:combo uta:id="cmbEqDialOpt2" uta:comment="TMS Dial Options is equal to Dial-up">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appDialOpt</uta:arg0>
+		<uta:arg1>-2</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbIfDialOpt2" uta:comment="If TMS Dial Options is equal to Dial-up show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqDialOpt2</uta:arg0>
+		<uta:arg1>msgDIALUP</uta:arg1>
+		<uta:arg2>cmbIfDialOpt3</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbIfDialOpt" uta:comment="If TMS Dial Options is equal to RS232 show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqDialOpt1</uta:arg0>
+		<uta:arg1>msgRs232</uta:arg1>
+		<uta:arg2>cmbIfDialOpt2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEqBaudRate7" uta:comment="TMS Baud rate is equal to 33600">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appBaudRate</uta:arg0>
+		<uta:arg1>-7</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbIfBaudRate7" uta:comment="If TMS Baud rate is equal to 33600 show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqBaudRate7</uta:arg0>
+		<uta:arg1>msg33600</uta:arg1>
+		<uta:arg2>msgNotDef</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbEqBaudRate6" uta:comment="TMS Baud rate is equal to 28800">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appBaudRate</uta:arg0>
+		<uta:arg1>-6</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbIfBaudRate6" uta:comment="If TMS Baud rate is equal to 28800 show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqBaudRate6</uta:arg0>
+		<uta:arg1>msg28800</uta:arg1>
+		<uta:arg2>cmbIfBaudRate7</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbEqBaudRate5" uta:comment="TMS Baud rate is equal to 19200">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appBaudRate</uta:arg0>
+		<uta:arg1>-5</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbIfBaudRate5" uta:comment="If TMS Baud rate is equal to 19200 show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqBaudRate5</uta:arg0>
+		<uta:arg1>msg19200</uta:arg1>
+		<uta:arg2>cmbIfBaudRate6</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbEqBaudRate4" uta:comment="TMS Baud rate is equal to 14400">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appBaudRate</uta:arg0>
+		<uta:arg1>-4</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbIfBaudRate4" uta:comment="If TMS Baud rate is equal to 14400 show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqBaudRate4</uta:arg0>
+		<uta:arg1>msg14400</uta:arg1>
+		<uta:arg2>cmbIfBaudRate5</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbEqBaudRate3" uta:comment="TMS Baud rate is equal to 9600">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appBaudRate</uta:arg0>
+		<uta:arg1>-3</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbIfBaudRate3" uta:comment="If TMS Baud rate is equal to 9600 show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqBaudRate3</uta:arg0>
+		<uta:arg1>msg9600</uta:arg1>
+		<uta:arg2>cmbIfBaudRate4</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbEqBaudRate2" uta:comment="TMS Baud rate is equal to 2400">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appBaudRate</uta:arg0>
+		<uta:arg1>-2</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbIfBaudRate2" uta:comment="If TMS Baud rate is equal to 2400 show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqBaudRate2</uta:arg0>
+		<uta:arg1>msg2400</uta:arg1>
+		<uta:arg2>cmbIfBaudRate3</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbEqBaudRate1" uta:comment="TMS Baud rate is equal to 1200">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appBaudRate</uta:arg0>
+		<uta:arg1>-1</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbIfBaudRate" uta:comment="If TMS Baud rate is equal to 1200 show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqBaudRate1</uta:arg0>
+		<uta:arg1>msg1200</uta:arg1>
+		<uta:arg2>cmbIfBaudRate2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEqTonePulse2" uta:comment="TMS Baud rate is equal to 2400">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appTonePulse</uta:arg0>
+		<uta:arg1>-2</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbIfTonePulse2" uta:comment="If equal to Tone show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTonePulse2</uta:arg0>
+		<uta:arg1>msgPulse</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEqTonePulse1" uta:comment="If equal to Tone show it">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appTonePulse</uta:arg0>
+		<uta:arg1>-1</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbIfTonePulse" uta:comment="If equal to Tone show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTonePulse1</uta:arg0>
+		<uta:arg1>msgTone</uta:arg1>
+		<uta:arg2>cmbIfTonePulse2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbToneDetect" uta:comment="If equal to Tone show it">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>regToneDetect</uta:arg0>
+		<uta:arg1>0</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbEqBufSize3" uta:comment="TMS Buffer size is equal to 1400">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appTmsBufSize</uta:arg0>
+		<uta:arg1>-3</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbIfBufSize3" uta:comment="If TMS Buffer size is equal to 1400 show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqBufSize3</uta:arg0>
+		<uta:arg1>msg1400</uta:arg1>
+		<uta:arg2>msgNotDef</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEqBufSize2" uta:comment="TMS Buffer size is equal to 1000">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appTmsBufSize</uta:arg0>
+		<uta:arg1>-2</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbIfBufSize2" uta:comment="If TMS Buffer size is equal to 1000 show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqBufSize2</uta:arg0>
+		<uta:arg1>msg1000</uta:arg1>
+		<uta:arg2>cmbIfBufSize3</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEqBufSize1" uta:comment="TMS Buffer size is equal to 500">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appTmsBufSize</uta:arg0>
+		<uta:arg1>-1</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbIfBufSize" uta:comment="If TMS Buffer size is equal to 500 show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqBufSize1</uta:arg0>
+		<uta:arg1>msg500</uta:arg1>
+		<uta:arg2>cmbIfBufSize2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+    <uta:combo uta:id="cmbRptLogDatTim">
+	<uta:operation>oprMut</uta:operation>
+	<uta:arg0>logDatTim</uta:arg0>
+	<uta:arg1>rptDatTimBgd</uta:arg1>
+	<uta:arg2>rptDatTimCtl</uta:arg2>
+	<uta:length>prtW+1</uta:length>
+  </uta:combo>
+  
+  <uta:combo uta:id="cmbEqTrxLogSale" uta:comment="If Log Transaction is Sale">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>logMnuItm</uta:arg0>
+		<uta:arg1>-mnuSale</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+    </uta:combo>	
+  
+  <uta:combo uta:id="cmbEqTrxLogRefund" uta:comment="If Log Transaction is Refund">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>logMnuItm</uta:arg0>
+		<uta:arg1>-mnuRefund</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+    </uta:combo>
+   
+  <uta:combo uta:id="cmbEqTrxLogVoid" uta:comment="If Log Transaction is Void">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>logVoidFlag</uta:arg0>
+		<uta:arg1>-1</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+   </uta:combo>	
+
+    <uta:combo uta:id="cmbIfTrxLogIsVoidOffline" uta:comment="Determine if the Sale or Refund is voided">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxLogVoid</uta:arg0>
+		<uta:arg1>rptVoidOffline</uta:arg1>
+		<uta:arg2>rptOffline</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>	
+    
+  <uta:combo uta:id="cmbIfTrxLogIsVoidRefund" uta:comment="Determine if the Sale or Refund is voided">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxLogVoid</uta:arg0>
+		<uta:arg1>rptVoidRefund</uta:arg1>
+		<uta:arg2>rptRefund</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>	
+  
+  <uta:combo uta:id="cmbIfTrxLogIsVoidSale" uta:comment="Determine if the Sale or Refund is voided">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxLogVoid</uta:arg0>
+		<uta:arg1>rptVoidSale</uta:arg1>
+		<uta:arg2>rptSale</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>	
+<!--
+    <uta:combo uta:id="cmbIfTrxLogRefund" uta:comment="Print Sale if Log Transaction is Sale">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxLogRefund</uta:arg0>
+		<uta:arg1>cmbIfTrxLogIsVoidRefund</uta:arg1>
+		<uta:arg2>cmbIfTrxLogIsVoidOffline</uta:arg2>
+		<uta:length>1</uta:length>
+    </uta:combo>	
+ -->   
+    <uta:combo uta:id="cmbIfTrxLogRefund" uta:comment="Print Sale if Log Transaction is Sale">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxLogRefund</uta:arg0>
+		<uta:arg1>cmbIfTrxLogIsVoidRefund</uta:arg1>
+		<uta:arg2>cmbIfTrxLogOffline</uta:arg2>
+		<uta:length>1</uta:length>
+    </uta:combo>	
+    <uta:combo uta:id="cmbIfTrxLogManual" uta:comment="Print Sale if Log Transaction is Manual Sale">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxLogManual</uta:arg0>
+		<uta:arg1>cmbIfTrxLogIsVoidManual</uta:arg1>
+		<uta:arg2>rptPreAuth</uta:arg2>
+		<uta:length>1</uta:length>
+    </uta:combo>	
+
+    <uta:combo uta:id="cmbIfTrxLogOffline" uta:comment="Print Sale if Log Transaction is Sale">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxLogOffline</uta:arg0>
+		<uta:arg1>cmbIfTrxLogIsVoidOffline</uta:arg1>
+		<uta:arg2>cmbIfTrxLogManual</uta:arg2>
+		<uta:length>1</uta:length>
+    </uta:combo>	
+  <uta:combo uta:id="cmbEqTrxLogOffline" uta:comment="If Log Transaction is Offline">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>logMnuItm</uta:arg0>
+		<uta:arg1>-mnuOffline</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+    </uta:combo>
+    <uta:combo uta:id="cmbIfTrxLogIsVoidManual" uta:comment="Determine if the Manual is voided">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxLogVoid</uta:arg0>
+		<uta:arg1>rptVoidSale</uta:arg1>
+		<uta:arg2>rptSale</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>	
+    <uta:combo uta:id="cmbIfTrxLogIsVoidPwrbuy" uta:comment="Determine if the Pwrbuy is voided">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxLogVoid</uta:arg0>
+		<uta:arg1>rptVoidPwrbuy</uta:arg1>
+		<uta:arg2>rptPwrbuy</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>	
+
+  <uta:combo uta:id="cmbEqTrxLogManual" uta:comment="If Log Transaction is Manual">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>logMnuItm</uta:arg0>
+		<uta:arg1>-mnuManual</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+    </uta:combo>
+  <uta:combo uta:id="cmbEqTrxLogPwrbuy" uta:comment="If Log Transaction is Pwrbuy">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>logMnuItm</uta:arg0>
+		<uta:arg1>-mnuPowerBuy</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+    </uta:combo>
+
+  <uta:combo uta:id="cmbIfTrxLogSale" uta:comment="Print Sale if Log Transaction is Sale">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxLogSale</uta:arg0>
+		<uta:arg1>cmbIfTrxLogIsVoidSale</uta:arg1>
+		<uta:arg2>cmbIfTrxLogRefund</uta:arg2>
+		<uta:length>1</uta:length>
+    </uta:combo>	
+    
+  <uta:combo uta:id="cmbCurrPlus" uta:comment="$100.00">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>appCurrSignSpaces<!--appCurrSign--></uta:arg0>
+		<uta:arg1>0</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>	
+    
+  <uta:combo uta:id="cmbCurrMinus" uta:comment="-$100.00">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptMinus</uta:arg0>
+		<uta:arg1>appCurrSignSpaces<!--appCurrSign--></uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>	    	
+ 
+  <uta:combo uta:id="cmbIfTrxLogRefundPhp" uta:comment="Print -PHP if Log Txn is Void, otherwise PHP">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxLogVoid</uta:arg0>
+		<uta:arg1>cmbCurrMinus</uta:arg1>
+		<uta:arg2>cmbCurrMinus</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>	
+
+    <uta:combo uta:id="cmbIfTrxLogSalePhp" uta:comment="Print -PHP if Log Txn is Void, otherwise PHP">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxLogVoid</uta:arg0>
+		<uta:arg1>cmbCurrMinus</uta:arg1>
+		<uta:arg2>cmbCurrPlus</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>	
+  <uta:combo uta:id="cmbIfTrxLogPwrbuyPhp" uta:comment="Print -PHP if Log Txn is Void, otherwise PHP">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxLogVoid</uta:arg0>
+		<uta:arg1>cmbCurrMinus</uta:arg1>
+		<uta:arg2>cmbCurrPlus</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>	
+
+   <uta:combo uta:id="cmbIfTrxLogRefundTxn" uta:comment="Print -PHP if Log Txn is Void, otherwise PHP">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxLogRefund</uta:arg0>
+		<uta:arg1>cmbIfTrxLogRefundPhp</uta:arg1>
+		<uta:arg2>cmbIfTrxLogOfflineTxn</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>	
+    
+   <uta:combo uta:id="cmbIfTrxLogPhp" uta:comment="Print -PHP if Log Txn is Void, otherwise PHP">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxLogSale</uta:arg0>
+		<uta:arg1>cmbIfTrxLogSalePhp</uta:arg1>
+		<uta:arg2>cmbIfTrxLogRefundTxn</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>	
+    
+    <uta:combo uta:id="cmbTrxLogTraAmt">
+		<uta:operation>oprAmt</uta:operation>
+		<uta:arg0>logTraAmt</uta:arg0>
+		<uta:arg1>appExp</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>lenAmt+1+1</uta:length>
+    </uta:combo>
+    
+    <uta:combo uta:id="cmbTrxLogTraTotAmt">
+		<uta:operation>oprAmt</uta:operation>
+		<uta:arg0>traTotAmt</uta:arg0>
+		<uta:arg1>appExp</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>lenAmt+1+1</uta:length>
+    </uta:combo>
+    
+  <uta:combo uta:id="cmbRptLogTraAmtCurr" uta:comment="$ 1000.00">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbIfTrxLogPhp</uta:arg0>
+		<uta:arg1>cmbTrxLogTraAmt</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+
+   <uta:combo uta:id="cmbRptLogTraTipAmtCurr" uta:comment="$ 1010.00">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbIfTrxLogPhp</uta:arg0>
+		<uta:arg1>cmbTrxLogTraTotAmt</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+<!--
+  <uta:combo uta:id="cmbTrxTipAmt">
+		<uta:operation>oprAmt</uta:operation>
+		<uta:arg0>traFmtTip</uta:arg0>
+		<uta:arg1>appExp</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>lenAmt+1+1</uta:length>
+    </uta:combo>
+    -->
+  <uta:combo uta:id="cmbTrxTipAmt">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptAllString</uta:arg0>
+		<uta:arg1>traFmtTip</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+    
+  <uta:combo uta:id="cmbRptTipAmt">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbIfTrxLogPhp</uta:arg0>
+		<uta:arg1>cmbTrxTipAmt</uta:arg1>
+		<uta:arg2>0</uta:arg2>		
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+<!--
+    <uta:combo uta:id="cmbTrxTotAmt">
+		<uta:operation>oprAmt</uta:operation>
+		<uta:arg0>traTotAmt</uta:arg0>
+		<uta:arg1>appExp</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>lenAmt+1+1</uta:length>
+    </uta:combo>
+    -->
+
+<uta:combo uta:id="cmbTrxTotAmt">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptAllString</uta:arg0>
+		<uta:arg1>traTotAmt</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+    
+    <uta:combo uta:id="cmbRptTotAmt">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbIfTrxLogPhp</uta:arg0>
+		<uta:arg1>cmbTrxTotAmt</uta:arg1>
+		<uta:arg2>0</uta:arg2>		
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+
+    <uta:combo uta:id="cmbRptTotAmtPlus">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbCurrPlus</uta:arg0>
+		<uta:arg1>cmbTrxLogFmtAmt</uta:arg1>
+		<uta:arg2>0</uta:arg2>		
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+    
+    <uta:combo uta:id="cmbRptLogTrxTypeAmt">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbIfTrxLogSale</uta:arg0>
+		<uta:arg1>cmbRptLogTraTipAmtCurr</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+6</uta:length>
+    </uta:combo>
+    <uta:combo uta:id="cmbRptLogAutCod">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptAutCodLbl</uta:arg0>		
+		<uta:arg1>logAutCod</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>
+    <uta:combo uta:id="cmbRptLogLine1">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbRptLogTrxTypeAmt</uta:arg0>
+		<uta:arg1>cmbRptLogAutCod</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>
+    
+	<uta:combo uta:id="cmbRptTrace">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptTrace2</uta:arg0>
+		<uta:arg1>cvtLogTraceNum</uta:arg1>		
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+    <uta:combo uta:id="cmbRptExpDat">
+	<uta:operation>oprMut</uta:operation>
+	<uta:arg0>logExpDat</uta:arg0>
+	<uta:arg1>rptDatTimBgd</uta:arg1>
+	<uta:arg2>rptExpDatCtl</uta:arg2>
+	<uta:length>prtW+1</uta:length>
+    </uta:combo>
+	<uta:combo uta:id="cmbRptHalfLine2">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>traBlockPan<!--logPan--></uta:arg0>
+		<uta:arg1>cmbRptExpDat</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+7</uta:length>
+    </uta:combo>
+	<uta:combo uta:id="cmbRptLogLine2">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbRptTrace</uta:arg0>
+		<uta:arg1>cmbRptHalfLine2</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+    <uta:combo uta:id="cmbRptLogTotalSaleCount">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptTotalSale</uta:arg0>
+		<uta:arg1>cvtLogTotalCount</uta:arg1>		
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+    <uta:combo uta:id="cmbRptLogTotalRefundCount">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptTotalRefund</uta:arg0>
+		<uta:arg1>cvtLogTotalCount</uta:arg1>		
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+    <uta:combo uta:id="cmbRptLogTotalTipCount">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptTotalTip</uta:arg0>
+		<uta:arg1>cvtLogTotalCount</uta:arg1>		
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+    <uta:combo uta:id="cmbRptLogTotalVoidCount">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptTotalVoid</uta:arg0>
+		<uta:arg1>cvtLogTotalCount</uta:arg1>		
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+    <uta:combo uta:id="cmbRptLogTotalAmt">
+		<uta:operation>oprAmt</uta:operation>
+		<uta:arg0>traLogTotalAmount</uta:arg0>
+		<uta:arg1>appExp</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>lenAmt+1+1</uta:length>
+    </uta:combo>
+
+    <uta:combo uta:id="cmbRptLogTotalAmtCurrPlus">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPhpPlus</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmt</uta:arg1>
+		<uta:arg2>0</uta:arg2>		
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+
+    <uta:combo uta:id="cmbRptLogTotalAmtCurrMinus">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPhpMinus</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmt</uta:arg1>
+		<uta:arg2>0</uta:arg2>		
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+
+    <uta:combo uta:id="cmbRptLogTotalsSale">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbRptLogTotalSaleCount</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtCurrPlus</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+    <uta:combo uta:id="cmbRptLogTotalsRefund">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbRptLogTotalRefundCount</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtCurrMinus</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+    <uta:combo uta:id="cmbRptLogTotalsTip">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbRptLogTotalTipCount</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtCurrPlus</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+    <uta:combo uta:id="cmbRptLogTotalsVoid">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbRptLogTotalVoidCount</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtCurrMinus</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+    <uta:combo uta:id="cmbRptLogTerminalId">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptTerminal</uta:arg0>
+		<uta:arg1>acqTID</uta:arg1>		
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+    <uta:combo uta:id="cmbRptLogAcqNii">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cvtNII</uta:arg0>
+		<uta:arg1>rptSpace</uta:arg1>		
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>	
+
+    <uta:combo uta:id="cmbRptLogAcqInfo">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>acqNII</uta:arg0>
+		<uta:arg1>acqName</uta:arg1>		
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>	
+
+    <uta:combo uta:id="cmbRptLogAcqLine">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptHost</uta:arg0>
+		<uta:arg1>cmbRptLogAcqInfo</uta:arg1>		
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+    <uta:combo uta:id="cmbDlgAmt" uta:comment="dialog amount">
+        <uta:operation>oprAmt</uta:operation>
+        <uta:arg0>traAmt</uta:arg0>
+        <uta:arg1>appExp</uta:arg1>
+        <uta:arg2>0</uta:arg2>
+        <uta:length>dspW+1</uta:length>
+    </uta:combo>
+    <uta:combo uta:id="cmbDlgAmtPad" uta:comment="padded dialog amount">
+        <uta:operation>oprPad</uta:operation>
+        <uta:arg0>cmbDlgAmt</uta:arg0>
+        <uta:arg1 uta:value="'L'"></uta:arg1> <!-- transfer by argument value, not by key -->
+        <uta:arg2>msgPadAmt</uta:arg2>
+        <uta:length>dspW+1</uta:length>
+    </uta:combo>
+																		
+	<uta:combo uta:id="cmbTraAmt" uta:comment="SALE                                    $1000.00">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptSale</uta:arg0>
+		<uta:arg1>cmbRptLogTraAmtCurr</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+
+	<uta:combo uta:id="cmbTipAmt" uta:comment="Tip Amount Line">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptTip</uta:arg0>
+		<uta:arg1>traFmtTip</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+
+	<uta:combo uta:id="cmbTotAmt" uta:comment="Total Amount Line">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptTotal</uta:arg0>
+		<uta:arg1>cmbRptTotAmt</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+
+	<uta:combo uta:id="cmbAmtMonthly" uta:comment="Monthly Amt">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptMonthly</uta:arg0>
+		<uta:arg1>cmbAmtMonthlyPlus</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>	
+    <uta:combo uta:id="cmbAmtMonthlyPlus">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbCurrPlus</uta:arg0>
+		<uta:arg1>traAmtMonthly</uta:arg1>
+		<uta:arg2>0</uta:arg2>		
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+	<uta:combo uta:id="cmbTermMonth" uta:comment="Monthly Amt">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptTerm2</uta:arg0>
+		<uta:arg1>traMonth</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>	
+	
+	<uta:combo uta:id="cmbTotAmt2" uta:comment="Total Amount Line">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptTotal</uta:arg0>
+		<uta:arg1>cmbRptTotAmtPlus</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>	
+
+	<uta:combo uta:id="cmbRefNumSct" uta:comment="Reference Number Section">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptRefNo</uta:arg0>
+		<uta:arg1>traRrn</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+	</uta:combo>
+	
+	<uta:combo uta:id="cmbAprvCodSct" uta:comment="Aprroval Code Section">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptAprvCod</uta:arg0>
+		<uta:arg1>traAutCod</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+
+	<uta:combo uta:id="cmbRefNumApprvCde" uta:comment="Reference Number and Aprroval Code Receipt Line">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbRefNumSct</uta:arg0>
+		<uta:arg1>cmbAprvCodSct</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+
+	<uta:combo uta:id="cmbInvNum" uta:comment="Center R.O.C. value">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptFmtInvNum</uta:arg0>
+		<uta:arg1>cvtInvNum</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+
+	<uta:combo uta:id="cmbSetInvNum" uta:comment="Center R.O.C. value">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>cvtInvNum</uta:arg0>
+		<uta:arg1>0</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+
+	<uta:combo uta:id="cmbStanNum" uta:comment="STAN value">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptFmtStanNum</uta:arg0>
+		<uta:arg1>cvtStanNum</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+
+	<uta:combo uta:id="cmbSetStanNum" uta:comment="STAN value">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>cvtStanNum</uta:arg0>
+		<uta:arg1>0</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+	
+	<uta:combo uta:id="cmbTransType" uta:comment="Txn type value">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptTransType</uta:arg0>
+		<uta:arg1>cmbIfMnuPowerbuy</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+		
+	<uta:combo uta:id="cmbCardType" uta:comment="Card type value">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>traAppPrfNam<!--rptCardType--></uta:arg0>
+		<uta:arg1>traCardType</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+
+	<uta:combo uta:id="cmbCardType2" uta:comment="Card type value">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptCardType</uta:arg0>
+		<uta:arg1>traCardType</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+	
+	<uta:combo uta:id="cmbBatNum" uta:comment="Batch number value">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptFmtBatNum</uta:arg0>
+		<uta:arg1>acqCurBat</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+
+	<uta:combo uta:id="cmbTraceBatchNum" uta:comment="Invoice No . and Batch No. Receipt Line ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbInvNum</uta:arg0>
+		<uta:arg1>cmbBatNum</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+	
+	<uta:combo uta:id="cmbEqTraRspCod1" uta:comment="Response code is equal to 00">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>traRspCod</uta:arg0>
+		<uta:arg1>-0</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+
+	<uta:combo uta:id="cmbIfTraRspCod" uta:comment="If Response code is equal to 00 show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTraRspCod1</uta:arg0>
+		<uta:arg1>msgEmpty</uta:arg1>
+		<uta:arg2>msgEmpty</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+
+	<uta:combo uta:id="cmbEqTraRspCodChk" uta:comment="Response code is equal to 00">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>cvtRspCod</uta:arg0>
+		<uta:arg1>-0</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+
+	<uta:combo uta:id="cmbIfTraRspCodMsgDsp" uta:comment="If Response code is equal to 00, display 'Approved' otherwise 'Decline'">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTraRspCodChk</uta:arg0>
+		<uta:arg1>msgApproved</uta:arg1>
+		<uta:arg2>msgDeclined</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+
+	<uta:combo uta:id="cmbTraRspCodDsp" uta:comment="Total Amount Line">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptFmtRspCod</uta:arg0>
+		<uta:arg1>traRspCod</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>dspW+1</uta:length>
+	</uta:combo>	
+<!--
+	<uta:combo uta:id="cmbDlgRspCod">
+        <uta:operation>oprMut</uta:operation>
+		<uta:arg0>traRspCod</uta:arg0>
+		<uta:arg1>msgRspCodBgd</uta:arg1>
+		<uta:arg2>msgRspCodCtl</uta:arg2>
+		<uta:length>dspW+1</uta:length>
+    </uta:combo>
+--> 
+   <uta:combo uta:id="cmbDlgRspCod">
+        <uta:operation>oprSpr</uta:operation>
+		<uta:arg0>msgRspCodBgd</uta:arg0>
+		<uta:arg1>traRspCod</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>dspW+1</uta:length>
+    </uta:combo>
+    
+    <uta:combo uta:id="cmbCardTransType">
+        <uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptFmtCardTranType</uta:arg0>
+		<uta:arg1>traCardType</uta:arg1>
+		<uta:arg2>traTransType</uta:arg2>
+		<uta:length>dspW+1</uta:length>
+    </uta:combo>
+
+	<uta:combo uta:id="cmbTraTotAmount" uta:comment="Total Amount Line">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptFmtTotalAmt</uta:arg0>
+		<uta:arg1>msgTotal</uta:arg1>
+		<uta:arg2>cmbTraTotAmt</uta:arg2>
+		<uta:length>dspW+1</uta:length>
+	</uta:combo>	
+	
+	<uta:combo uta:id="cmbVoidTotAmount" uta:comment="Total Amount Line">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptFmtTotalAmt</uta:arg0>
+		<uta:arg1>msgVoid</uta:arg1>
+		<uta:arg2>cmbTraTotAmt</uta:arg2>
+		<uta:length>dspW+1</uta:length>
+	</uta:combo>	
+
+	<uta:combo uta:id="cmbLogRef" uta:comment="Batch Reference Number">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptLogRef</uta:arg0>
+		<uta:arg1>cvtRptInvNum</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>dspW+1</uta:length>
+	</uta:combo>
+	
+    <uta:combo uta:id="cmbTrxDateTime" uta:comment="DATE: DD MMM CCYY    TIME: HH:MM">
+		<uta:operation>oprMut</uta:operation>
+		<uta:arg0>traFmtDate</uta:arg0>
+		<uta:arg1>rptTrxDatTimBgd</uta:arg1>
+		<uta:arg2>rptTrxDatTimCtl</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+	
+    <uta:combo uta:id="cmbStlDateTime" uta:comment="DD, MMM CCYY      HH:MM">
+		<uta:operation>oprMut</uta:operation>
+		<uta:arg0>traFmtDate</uta:arg0>
+		<uta:arg1>rptStlDatTimBgd</uta:arg1>
+		<uta:arg2>rptStlDatTimCtl</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+
+  <uta:combo uta:id="cmbTraAmtCurr" uta:comment="$1000.00">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbIfTrxLogPhp</uta:arg0>
+		<uta:arg1>cmbTrxLogTraTotAmt</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>dspW+1</uta:length>
+    </uta:combo>	
+	
+	<uta:combo uta:id="cmbLogAmt" uta:comment="SALE   PHP100.00">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>traTypeName</uta:arg0>
+		<uta:arg1>cmbTraAmtCurr</uta:arg1>
+	    <uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>dspW+1</uta:length>
+	</uta:combo>	
+
+	<uta:combo uta:id="cmbApproval" uta:comment="Batch transactionn Approval code">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptLogApproval</uta:arg0>
+		<uta:arg1>logAutCod</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>dspW+1</uta:length>
+	</uta:combo>
+	
+	<!--
+	<uta:combo uta:id="cmbApproval" uta:comment="APPROVAL      42">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptApproval</uta:arg0>
+		<uta:arg1>logAutCod</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>		
+		<uta:length>dspW+1</uta:length>
+	</uta:combo>	
+	-->
+	
+	<uta:combo uta:id="cmbPan" uta:comment="Batch transaction Pan">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>logPan</uta:arg0>
+		<uta:arg1>0</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>dspW+1</uta:length>
+	</uta:combo>	
+	
+	<uta:combo uta:id="cmbLogTraDatTim" uta:comment="Batch transaction Date Time">
+		<uta:operation>oprMut</uta:operation>
+		<uta:arg0>logDatTim</uta:arg0>
+		<uta:arg1>rptFmtLogDatTim</uta:arg1>
+		<uta:arg2>rptLogDatTim</uta:arg2>
+		<uta:length>dspW+1</uta:length>
+	</uta:combo>	
+	
+	
+	<uta:combo uta:id="cmbTxnTypeCount" uta:comment="SALE         002">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>traTypeName</uta:arg0>
+		<uta:arg1>traLogTxnTtlCnt</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>	
+		<uta:length>dspW+1</uta:length>
+	</uta:combo>	
+		<!--
+	<uta:combo uta:id="cmbTxnTypeTotal" uta:comment="Transaction Type Total">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptFmtTxnTtlAmt</uta:arg0>
+		<uta:arg1>traTypeCurName</uta:arg1>
+		<uta:arg2>traLogTotalAmount</uta:arg2>
+		<uta:length>dspW+1</uta:length>
+	</uta:combo>
+	-->
+
+	<uta:combo uta:id="cmbTxnTypeTotal1" uta:comment="PHP10.00">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>traTypeCurName</uta:arg0>
+		<uta:arg1>traLogTotalAmount</uta:arg1>
+		<uta:arg2>0</uta:arg2>	
+		<uta:length>dspW+1</uta:length>
+	</uta:combo>	
+		
+	<uta:combo uta:id="cmbTxnTypeTotal" uta:comment="        PHP10.00">
+		<uta:operation>oprPad</uta:operation>
+		<uta:arg0>cmbTxnTypeTotal1</uta:arg0>
+		<uta:arg1 uta:value="'R'"></uta:arg1>
+		<uta:arg2>msgSpaces</uta:arg2>
+		<uta:length>dspW+1</uta:length>
+	</uta:combo>		
+
+	<uta:combo uta:id="cmbAppName" uta:comment="Application Name">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptAllString</uta:arg0>
+		<uta:arg1>appSoftName</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>dspW+1</uta:length>
+	</uta:combo>
+	
+	<uta:combo uta:id="cmbCurVer" uta:comment="Current Version Number">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptCurVer</uta:arg0>
+		<uta:arg1>0</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>dspW+1</uta:length>
+	</uta:combo>
+	
+	<!--JL orig
+	<uta:combo uta:id="cmbAcqName" uta:comment="Current Version Number">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptCenter</uta:arg0>
+		<uta:arg1>traAcqName</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>dspW+1</uta:length>
+	</uta:combo>
+	-->
+
+	<uta:combo uta:id="cmbAcqName" uta:comment="Current Version Number">
+		<uta:operation>oprPad</uta:operation>
+		<uta:arg0>traAcqName</uta:arg0>
+		<uta:arg1 uta:value="'C'"></uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>dspW+1</uta:length>
+	</uta:combo>
+
+	<!--JL orig
+	<uta:combo uta:id="cmbAcqNameNii" uta:comment="MCCHOST 069     ">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptAcqNameNii</uta:arg0>
+		<uta:arg1>acqName</uta:arg1>
+		<uta:arg2>acqNII</uta:arg2>
+		<uta:length>dspW+1</uta:length>
+	</uta:combo>
+	-->
+	
+	<uta:combo uta:id="cmbAcqNameNii" uta:comment="MCCHOST 069     ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>acqName</uta:arg0>
+		<uta:arg1>acqNII</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>dspW+1</uta:length>
+	</uta:combo>
+	
+	<!--JL orig	
+	<uta:combo uta:id="cmbTID" uta:comment="TID:    12345678">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptTID</uta:arg0>
+		<uta:arg1>acqTID</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>dspW+1</uta:length>
+	</uta:combo>
+	-->
+	
+	<uta:combo uta:id="cmbTID" uta:comment="TID:    12345678">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>acqTID</uta:arg0>
+		<uta:arg1 uta:value="'R'"></uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>dspW+1</uta:length>
+	</uta:combo>
+	
+	<uta:combo uta:id="cmbMID" uta:comment="123456789012345 ">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>acqMID</uta:arg0>
+		<uta:arg1>0</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>dspW+1</uta:length>
+	</uta:combo>
+	
+	<uta:combo uta:id="cmbPriNo" uta:comment="Current Version Number">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>appPriSrv</uta:arg0>
+		<uta:arg1>0</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>dspW+1</uta:length>
+	</uta:combo>
+	
+	<uta:combo uta:id="cmbSecNo" uta:comment="Current Version Number">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>appSecSrv</uta:arg0>
+		<uta:arg1>0</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>dspW+1</uta:length>
+	</uta:combo>
+	
+	<uta:combo uta:id="cmbInv" uta:comment="INV#  : 000000">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptTrace</uta:arg0>
+		<uta:arg1>cvtInvNum</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>	
+
+	<uta:combo uta:id="cmbBatch" uta:comment="BATCH#: 000000">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptFmtBatchNum</uta:arg0>
+		<uta:arg1>acqCurBat</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>	
+
+	<uta:combo uta:id="cmbTrxInvBat" uta:comment="INV#  : 000005                   BATCH#: 000004">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbInv</uta:arg0>
+		<uta:arg1>cmbBatch</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>		
+<!--		
+	<uta:combo uta:id="cmbRef" uta:comment="REF NO: 212121212121">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptFmtRefNum</uta:arg0>
+		<uta:arg1>traRrn</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+-->			
+	<uta:combo uta:id="cmbAutCod" uta:comment="APRV  : APPRV">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptFmtApprvCde</uta:arg0>
+		<uta:arg1>traAutCod</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>	
+
+	<uta:combo uta:id="cmbAutCod2" uta:comment="APRV  : APPRV">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptFmtApprvCde2</uta:arg0>
+		<uta:arg1>traAutCod</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>	
+
+	<uta:combo uta:id="cmbAutCodOff" uta:comment="APRV  : APPRV">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptFmtApprvCde</uta:arg0>
+		<uta:arg1>cvtAutCodOff</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>	
+	
+	<uta:combo uta:id="cmbTrxRefApprv" uta:comment="REF NO: 212121212121              APRV  : APPRV">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbRef</uta:arg0>
+		<uta:arg1>cmbAutCod</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>		
+
+	<uta:combo uta:id="cmbTrxRefApprvOff" uta:comment="REF NO: 212121212121              APRV  : APPRV">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbRef</uta:arg0>
+		<uta:arg1>cmbAutCodOff</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+	</uta:combo>		
+
+	    
+	<uta:combo uta:id="cmbTxnType" uta:comment="      SALE      ">
+		<uta:operation>oprPad</uta:operation>
+		<uta:arg0>traTransType</uta:arg0>
+		<uta:arg1 uta:value="'C'"></uta:arg1>
+		<uta:arg2>msgSpaces</uta:arg2>
+		<uta:length>dspW+1</uta:length>
+	</uta:combo>		
+
+	<uta:combo uta:id="cmbEqTran1" uta:comment="txn is equal sale is equal to 00">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>traTxnType</uta:arg0>
+		<uta:arg1>-3</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+
+	<uta:combo uta:id="cmbIfTran" uta:comment="If txn is equal sale print sale receipt">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTran1</uta:arg0>
+		<uta:arg1>rloRefundBody</uta:arg1>
+		<uta:arg2>msgEmpty</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+
+
+	<uta:combo uta:id="cmbSettleBatchCountLog" uta:comment="Settlement Batch Indicator">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptBatch</uta:arg0>
+		<uta:arg1>totBatNum</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>	
+
+	<uta:combo uta:id="cmbSettleBatchCountSpLog" uta:comment="Settlement Batch plus Space">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbSettleBatchCountLog</uta:arg0>
+		<uta:arg1>rptSpace</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>	
+
+	<uta:combo uta:id="cmbSettleBatchFieldLog" uta:comment="Settlement Batch Field">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbSettleBatchCountSpLog</uta:arg0>
+		<uta:arg1>rptClosed</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>	
+
+	<uta:combo uta:id="cmbSettleSOCLog" uta:comment="SOC">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptSOC</uta:arg0>
+		<uta:arg1>cvtInvNum</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>	
+
+	<uta:combo uta:id="cmbSettleBatchSOCLog" uta:comment="Invoice No . and Batch No. Receipt Line ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbSettleBatchFieldLog</uta:arg0>
+		<uta:arg1>cmbSettleSOCLog</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+	</uta:combo>
+
+	<uta:combo uta:id="cmbSettleBatchCount" uta:comment="Settlement Batch Indicator">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptBatch</uta:arg0>
+		<uta:arg1>acqCurBat</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>	
+
+	<uta:combo uta:id="cmbSettleBatchCountSp" uta:comment="Settlement Batch plus Space">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbSettleBatchCount</uta:arg0>
+		<uta:arg1>rptSpace</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>	
+
+	<uta:combo uta:id="cmbSettleBatchField" uta:comment="Settlement Batch Field">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbSettleBatchCountSp</uta:arg0>
+		<uta:arg1>rptClosed</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>	
+
+	<uta:combo uta:id="cmbSettleSOC" uta:comment="SOC">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptInvNum<!--rptSOC--></uta:arg0>
+		<uta:arg1>cvtInvNum</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>	
+
+	<uta:combo uta:id="cmbSettleBatchSOC" uta:comment="Invoice No . and Batch No. Receipt Line ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbSettleBatchField</uta:arg0>
+		<uta:arg1>cmbSettleSOC</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+	</uta:combo>
+
+	<uta:combo uta:id="cmbSettleCardName" uta:comment="Settlement Receipt Card Name">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptString</uta:arg0>
+		<uta:arg1>binName</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>	
+
+	<uta:combo uta:id="cmbIssuer" uta:comment="Issuer Name">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptIssuer</uta:arg0>
+		<uta:arg1>issRef</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>	
+
+	<uta:combo uta:id="cmbIssuerHost" uta:comment="Issuer    Host">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbIssuer</uta:arg0>
+		<uta:arg1>cmbAcqDet</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+	</uta:combo>	
+
+	<uta:combo uta:id="cmbSettleCardNameHdr" uta:comment="Settlement Receipt Card Name">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbSettleCardName</uta:arg0>
+		<uta:arg1>rptAmount</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+	</uta:combo>	
+
+	<uta:combo uta:id="cmbEqDhcp2" uta:comment="Response code is equal to 2">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appTmsDhcp</uta:arg0>
+		<uta:arg1>-2</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+
+	<uta:combo uta:id="cmbIfDhcp2" uta:comment="If DHCP is equal to 2 display ON">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqDhcp2</uta:arg0>
+		<uta:arg1>msgOn</uta:arg1>
+		<uta:arg2>msgEmpty</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+	
+	<uta:combo uta:id="cmbEqDhcp1" uta:comment="Response code is equal to 1">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appTmsDhcp</uta:arg0>
+		<uta:arg1>-1</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+
+	<uta:combo uta:id="cmbIfDhcp" uta:comment="If DHCP is equal to 1 display OFF">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqDhcp1</uta:arg0>
+		<uta:arg1>msgOff</uta:arg1>
+		<uta:arg2>cmbIfDhcp2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+
+	<uta:combo uta:id="cmbPrtType" uta:comment="Print Line Type TONE/PULSE">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPrtType</uta:arg0>
+		<uta:arg1>regTonePulse</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+	
+	<uta:combo uta:id="cmbPrtToneDet" uta:comment="Print Line If Tone Detect ON/OFF">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPrtToneDet</uta:arg0>
+		<uta:arg1>regToneDetect</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+
+	<uta:combo uta:id="cmbPrtPabx" uta:comment="Print Line PABX">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPrtPabx</uta:arg0>
+		<uta:arg1>appPabx</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+	
+	<uta:combo uta:id="cmbPrtDHCP" uta:comment="Print DHCP">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPrtDHCP</uta:arg0>
+		<uta:arg1>regDHCP</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+
+	<uta:combo uta:id="cmbPrtPriIP" uta:comment="PRI IP : 000.000.000.000">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptPrtPriIP</uta:arg0>
+		<uta:arg1>acqPriTxnIPSrv</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+	</uta:combo>
+	
+	<uta:combo uta:id="cmbPrtSecIP" uta:comment="SEC IP : 000.000.000.000">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptPrtSecIP</uta:arg0>
+		<uta:arg1>acqSecTxnIPSrv</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+	</uta:combo>	
+
+	<uta:combo uta:id="cmbPrtSubnet" uta:comment="Print IP Subnet">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptPrtSubnet</uta:arg0>
+		<uta:arg1>appSubMask</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+
+	<uta:combo uta:id="cmbPrtGateway" uta:comment="Print IP Gateway">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPrtGateway</uta:arg0>
+		<uta:arg1>appDefGateway</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+
+	<uta:combo uta:id="cmbPrtGPRSIP" uta:comment="Print GPRS IP">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPrtIP</uta:arg0>
+		<uta:arg1>appIpAdd</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+
+	<uta:combo uta:id="cmbPrtGPRSSubnet" uta:comment="Print GPRS Subnet">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPrtGPRSSubnet</uta:arg0>
+		<uta:arg1>appSubMask</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+
+	<uta:combo uta:id="cmbPrtGPRSGateway" uta:comment="Print GPRS Gateway">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPrtGPRSGateway</uta:arg0>
+		<uta:arg1>appDefGateway</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+     <uta:combo uta:id="cmbEqConnSet6" uta:comment="Connection Type is equal to USB">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appConnType</uta:arg0>
+		<uta:arg1>-6</uta:arg1>
+		<uta:arg2>-4</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+	
+    	<uta:combo uta:id="cmbIfConnSet6" uta:comment="If Connection Setting is USB Show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqConnSet6</uta:arg0>
+		<uta:arg1>msgUSB</uta:arg1>
+		<uta:arg2>msgNotDef</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+
+	<uta:combo uta:id="cmbEqConnSet5" uta:comment="Connection Type is equal to WIFI">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appConnType</uta:arg0>
+		<uta:arg1>-5</uta:arg1>
+		<uta:arg2>-4</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+	
+    	<uta:combo uta:id="cmbIfConnSet5" uta:comment="If Connection Setting is WIFI Show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqConnSet5</uta:arg0>
+		<uta:arg1>msgWIFI</uta:arg1>
+		<uta:arg2>cmbIfConnSet6</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbEqConnSet4" uta:comment="Connection Type is equal to GPRS">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appConnType</uta:arg0>
+		<uta:arg1>-4</uta:arg1>
+		<uta:arg2>-5</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+	
+    	<uta:combo uta:id="cmbIfConnSet4" uta:comment="If Connection Setting is GPRS Show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqConnSet4</uta:arg0>
+		<uta:arg1>msgGprs</uta:arg1>
+		<uta:arg2>cmbIfConnSet5</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbEqConnSet3" uta:comment="Connection Type is equal to RS232">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appConnType</uta:arg0>
+		<uta:arg1>-3</uta:arg1>
+		<uta:arg2>-4</uta:arg2><!--3-->
+		<uta:length>1</uta:length>
+	</uta:combo>
+	
+    <uta:combo uta:id="cmbIfConnSet3" uta:comment="If Connection Setting is RS232 Show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqConnSet3</uta:arg0>
+		<uta:arg1>msgRs232</uta:arg1>
+		<uta:arg2>cmbIfConnSet4</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEqConnSet2" uta:comment="Connection Type is equal to TCPIP">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appConnType</uta:arg0>
+		<uta:arg1>-2</uta:arg1>
+		<uta:arg2>-3</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+       <uta:combo uta:id="cmbIfConnSet2" uta:comment="If Connection Setting is TCPIP Show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqConnSet2</uta:arg0>
+		<uta:arg1>msgTCPIP</uta:arg1>
+		<uta:arg2>cmbIfConnSet3</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEqConnSet1" uta:comment="Connection Type is equal to DIAL UP">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appConnType</uta:arg0>
+		<uta:arg1>-1</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+       <uta:combo uta:id="cmbIfConnSet" uta:comment="If Connection Setting is Dial Up Show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqConnSet1</uta:arg0>
+		<uta:arg1>msgDIALUP</uta:arg1>
+		<uta:arg2>cmbIfConnSet2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+       <uta:combo uta:id="cmbPrtTMSRefNum" uta:comment="Print TMS Cfg Reference Number">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPrtTMSTrn</uta:arg0>
+		<uta:arg1>regTmsRefNum</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+       </uta:combo>	    
+       <uta:combo uta:id="cmbPrtTMSNII" uta:comment="Print TMS Cfg NII ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPrtTMSTrn</uta:arg0>
+		<uta:arg1>appNII</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+       </uta:combo>	    
+	<uta:combo uta:id="cmbIfTMSDialOpt4" uta:comment="If TMS Dial Options is equal to GPRS show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqDialOpt4</uta:arg0>
+		<uta:arg1>rptPrtTMSGPRSOpt</uta:arg1>
+		<uta:arg2>rptPrtTMSUndefOpt</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbIfTMSDialOpt3" uta:comment="If TMS Dial Options is equal to TCP/IP show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqDialOpt3</uta:arg0>
+		<uta:arg1>rptPrtTMSTCPIPOpt</uta:arg1>
+		<uta:arg2>cmbIfTMSDialOpt4</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>		
+	<uta:combo uta:id="cmbIfTMSDialOpt2" uta:comment="If TMS Dial Options is equal to Dial-up show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqDialOpt2</uta:arg0>
+		<uta:arg1>rptPrtTMSDialUpOpt</uta:arg1>
+		<uta:arg2>cmbIfTMSDialOpt3</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbIfTMSDialOpt" uta:comment="If TMS Dial Options is equal to RS232 show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqDialOpt1</uta:arg0>
+		<uta:arg1>rptPrtTMSRS232Opt</uta:arg1>
+		<uta:arg2>cmbIfTMSDialOpt2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>		
+       <uta:combo uta:id="cmbPrtTMSLink" uta:comment="Print TMS Cfg Link ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPrtTMSLink</uta:arg0>
+		<uta:arg1>cmbIfTMSDialOpt</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+       </uta:combo>	    
+       <uta:combo uta:id="cmbPrtTMSPriNum" uta:comment="Print TMS Cfg Primary Number ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPrtTMSPriNum</uta:arg0>
+		<uta:arg1>appPriSrv</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+       </uta:combo>	    
+       <uta:combo uta:id="cmbPrtTMSSecNum" uta:comment="Print TMS Cfg Secondary Number ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPrtTMSSecNum</uta:arg0>
+		<uta:arg1>appSecSrv</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+       </uta:combo>	    
+	<uta:combo uta:id="cmbIfTMSBaudRate7" uta:comment="If TMS Baud rate is equal to 33600 show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqBaudRate7</uta:arg0>
+		<uta:arg1>rptPrtTMS33600</uta:arg1>
+		<uta:arg2>rptPrtTMSUndefOpt</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbIfTMSBaudRate6" uta:comment="If TMS Baud rate is equal to 28800 show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqBaudRate6</uta:arg0>
+		<uta:arg1>rptPrtTMS28800</uta:arg1>
+		<uta:arg2>cmbIfTMSBaudRate7</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbIfTMSBaudRate5" uta:comment="If TMS Baud rate is equal to 19200 show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqBaudRate5</uta:arg0>
+		<uta:arg1>rptPrtTMS19200</uta:arg1>
+		<uta:arg2>cmbIfTMSBaudRate6</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbIfTMSBaudRate4" uta:comment="If TMS Baud rate is equal to 14400 show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqBaudRate4</uta:arg0>
+		<uta:arg1>rptPrtTMS14400</uta:arg1>
+		<uta:arg2>cmbIfTMSBaudRate5</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbIfTMSBaudRate3" uta:comment="If TMS Baud rate is equal to 9600 show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqBaudRate3</uta:arg0>
+		<uta:arg1>rptPrtTMS9600</uta:arg1>
+		<uta:arg2>cmbIfTMSBaudRate4</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbIfTMSBaudRate2" uta:comment="If TMS Baud rate is equal to 2400 show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqBaudRate2</uta:arg0>
+		<uta:arg1>rptPrtTMS2400</uta:arg1>
+		<uta:arg2>cmbIfTMSBaudRate3</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbIfTMSBaudRate" uta:comment="If TMS Baud rate is equal to 1200 show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqBaudRate1</uta:arg0>
+		<uta:arg1>rptPrtTMS1200</uta:arg1>
+		<uta:arg2>cmbIfTMSBaudRate2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+       <uta:combo uta:id="cmbPrtTMSBaudRate" uta:comment="Print TMS Cfg Baud Rate ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPrtTMSBaud</uta:arg0>
+		<uta:arg1>cmbIfTMSBaudRate</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+       </uta:combo>	    
+       <uta:combo uta:id="cmbPrtTMSBufferHead" uta:comment="Size ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPrtTMSBuff</uta:arg0>
+		<uta:arg1>cvtTMSBuffer</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+       </uta:combo>	    
+       <uta:combo uta:id="cmbPrtTMSBuffer" uta:comment="Buffer Size ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbPrtTMSBufferHead</uta:arg0>
+		<uta:arg1>rptPrtTMSBytes</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+       </uta:combo>	    
+       <uta:combo uta:id="cmbPrtTMSPriIP" uta:comment="Print TMS Cfg Primary IP ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPrtTMSPriIP</uta:arg0>
+		<uta:arg1>traPriIpBuf</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+       </uta:combo>	    
+       <uta:combo uta:id="cmbPrtTMSPriPort" uta:comment="Print TMS Cfg Primary Port ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPrtTMSPort</uta:arg0>
+		<uta:arg1>traPriPortBuf</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+       </uta:combo>	    
+       <uta:combo uta:id="cmbPrtTMSSecIP" uta:comment="Print TMS Cfg Secondary IP ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPrtTMSSecIP</uta:arg0>
+		<uta:arg1>traSecIpBuf</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+       </uta:combo>	    
+       <uta:combo uta:id="cmbPrtTMSSecPort" uta:comment="Print TMS Cfg Secondary Port ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPrtTMSPort</uta:arg0>
+		<uta:arg1>traSecPortBuf</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+       </uta:combo>
+       <uta:combo uta:id="cmbSrv" uta:comment="View Server Detail">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>traSrv</uta:arg0>
+		<uta:arg1>0</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>dspW+1</uta:length>
+       </uta:combo>
+ 	<uta:combo uta:id="cmbEqPortCom2" uta:comment="Port Com is equal to COM 2">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appComType</uta:arg0>
+		<uta:arg1>-2</uta:arg1>
+		<uta:arg2>-3</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+	
+    <uta:combo uta:id="cmbIfPortCom2" uta:comment="If Port Com 2 Com 2 Show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqPortCom2</uta:arg0>
+		<uta:arg1>msgComPort2</uta:arg1>
+		<uta:arg2>msgNotDef</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbEqPortCom1" uta:comment="Port Com is equal to COM 1">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appComType</uta:arg0>
+		<uta:arg1>-1</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+       <uta:combo uta:id="cmbIfPortCom1" uta:comment="If Port Com 1 Com 1 Show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqPortCom1</uta:arg0>
+		<uta:arg1>msgComPort1</uta:arg1>
+		<uta:arg2>cmbIfPortCom2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEqRs232BaudRate5" uta:comment="Rs232 Baud rate is equal to 9600">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appBaudRate</uta:arg0>
+		<uta:arg1>-5</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbIfRs232BaudRate5" uta:comment="If Rs232 Baud rate is equal to 9600 show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqRs232BaudRate5</uta:arg0>
+		<uta:arg1>msg9600</uta:arg1>
+		<uta:arg2>msgNotDef</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbEqRs232BaudRate4" uta:comment="Rs232 Baud rate is equal to 19200">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appBaudRate</uta:arg0>
+		<uta:arg1>-4</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbIfRs232BaudRate4" uta:comment="If Rs232 Baud rate is equal to 19200 show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqRs232BaudRate4</uta:arg0>
+		<uta:arg1>msg19200</uta:arg1>
+		<uta:arg2>cmbIfRs232BaudRate5</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbEqRs232BaudRate3" uta:comment="Rs232 Baud rate is equal to 38400">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appBaudRate</uta:arg0>
+		<uta:arg1>-3</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbIfRs232BaudRate3" uta:comment="If Rs232 Baud rate is equal to 38400 show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqRs232BaudRate3</uta:arg0>
+		<uta:arg1>msg38400</uta:arg1>
+		<uta:arg2>cmbIfRs232BaudRate4</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbEqRs232BaudRate2" uta:comment="Rs232 Baud rate is equal to 57600">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appBaudRate</uta:arg0>
+		<uta:arg1>-2</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbIfRs232BaudRate2" uta:comment="If Rs232 Baud rate is equal to 57600 show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqRs232BaudRate2</uta:arg0>
+		<uta:arg1>msg57600</uta:arg1>
+		<uta:arg2>cmbIfRs232BaudRate3</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbEqRs232BaudRate1" uta:comment="Rs232 Baud rate is equal to 115200">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appBaudRate</uta:arg0>
+		<uta:arg1>-1</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>	
+	<uta:combo uta:id="cmbIfRs232BaudRate" uta:comment="If TMS Baud rate is equal to 115200 show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqRs232BaudRate1</uta:arg0>
+		<uta:arg1>msg115200</uta:arg1>
+		<uta:arg2>cmbIfRs232BaudRate2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+   <!--  tambahan tuk TLE -->
+       <uta:combo uta:id="cmbIfTleSet" uta:comment="If TLE Setting is On TLE Show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTleSet1</uta:arg0>
+		<uta:arg1>msgOffTle</uta:arg1>
+		<uta:arg2>cmbIfTleSet2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEqTleSet1" uta:comment="Connection Type is equal to DIAL UP">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appTleSet</uta:arg0>
+		<uta:arg1>-1</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEqTleSet2" uta:comment="Connection Type is equal to TCPIP">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appTleSet</uta:arg0>
+		<uta:arg1>-2</uta:arg1>
+		<uta:arg2>-3</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+       <uta:combo uta:id="cmbIfTleSet2" uta:comment="If Connection Setting is TCPIP Show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTleSet2</uta:arg0>
+		<uta:arg1>msgOnTle</uta:arg1>
+		<uta:arg2>msgNotDef</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+
+	<!--  tambahan tuk Blowfish -->
+       <uta:combo uta:id="cmbIfBlowfishSet" uta:comment="If Blowfish Setting is On Blowfish Show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqBfSet1</uta:arg0>
+		<uta:arg1>msgOffBf</uta:arg1>
+		<uta:arg2>cmbIfBlowfishSet2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEqBfSet1" uta:comment="Connection Type is equal to DIAL UP">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appBlowFish</uta:arg0>
+		<uta:arg1>-1</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEqBfSet2" uta:comment="Connection Type is equal to TCPIP">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>appBlowFish</uta:arg0>
+		<uta:arg1>-2</uta:arg1>
+		<uta:arg2>-3</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+       <uta:combo uta:id="cmbIfBlowfishSet2" uta:comment="If Connection Setting is TCPIP Show it">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqBfSet2</uta:arg0>
+		<uta:arg1>msgOnBf</uta:arg1>
+		<uta:arg2>msgNotDef</uta:arg2>
+		<uta:length>1</uta:length>
+	</uta:combo>
+	<!--tambahan dewi EMV 22062010 -->
+	<uta:combo uta:id="cmbCardNumSC" uta:comment="4172037641051717Swipe or Chip ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>traBlockPan</uta:arg0>
+		<uta:arg1>traChipSwipe</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+	  	<uta:combo uta:id="cmbTidBRI" uta:comment="TID: 12345678">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptTidBRI</uta:arg0>
+		<uta:arg1>acqTID</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbMidBRI" uta:comment="MID: 123456789012345">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptMidBRI</uta:arg0>
+		<uta:arg1>acqMID</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbCardTxnTypeBRI" uta:comment="CARD TYPE : MASTERCARD">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptCardType</uta:arg0>
+		<uta:arg1>traCardType</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbCardNumBRI" uta:comment="xxxxxxxxxxx51717(chip)">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>traBlockPan</uta:arg0>
+		<uta:arg1>traChipSwipe</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbTransTypeExpDateBRI" uta:comment="SALE   1208">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>traTransType</uta:arg0>
+		<uta:arg1>traExpDat</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+
+	<!--mcy add for mandiri -->
+	<uta:combo uta:id="cmbTerm" uta:comment="TERM.ID 00000000">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptTerm</uta:arg0>
+		<uta:arg1>acqTID</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbMer" uta:comment="MER.ID 000000000000000">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptMer</uta:arg0>
+		<uta:arg1>acqMID</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbCard_Type" uta:comment="Card type value"><!--mcy cardtype-->
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptCardType</uta:arg0>
+		<uta:arg1>traCardType</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbTxnTypeExpDate" uta:comment="SALE     				10/12 "><!--mcy expdat-->
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbTxn_Type</uta:arg0>
+		<uta:arg1>cmbExpDate</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>		
+	<uta:combo uta:id="cmbExpDate" uta:comment="SALE     				10/12 "><!--mcy expdat-->
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptExpDat</uta:arg0>
+		<uta:arg1>traExpDatFmt</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>		
+	<uta:combo uta:id="cmbBatchInv" uta:comment="BATCH : 000000      REF NO. 515151515151">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbBatchNo</uta:arg0>
+		<uta:arg1>cmbInv</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbRef" uta:comment="REF NO: 212121212121">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptFmtRefNum</uta:arg0>
+		<uta:arg1>traRrn</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbTraFmtAmt" uta:comment="SALE                                    $1000.00"><!--mcy amt-->
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptBase</uta:arg0>
+		<uta:arg1>cmbTrxLogFmtAmt</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+  <uta:combo uta:id="cmbEqTrxLogTip" uta:comment="If Input Tip "><!--mcy tip-->
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>traTipFlag</uta:arg0>
+		<uta:arg1>-1</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+   </uta:combo>	
+   <uta:combo uta:id="cmbIfTrxLogIsTip" uta:comment="Determine if Input Tip or Not"><!--mcy tip-->
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxLogTip</uta:arg0>
+		<uta:arg1>cmbTipAmt</uta:arg1>
+		<uta:arg2>rptEmpty</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+    	<uta:combo uta:id="cmbBatchNo" uta:comment="BATCH : 000000">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptBatchNo</uta:arg0>
+		<uta:arg1>acqCurBat</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+    <uta:combo uta:id="cmbTrxLogFmtAmt"> <!--mcy amt -->
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptAllString</uta:arg0>
+		<uta:arg1>traFmtAmt</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+
+	<uta:combo uta:id="cmbTxn_Type" uta:comment="SALE      ">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptAllString</uta:arg0>
+		<uta:arg1>traTransType</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>		
+	<uta:combo uta:id="cmbtraPan" uta:comment="4172037641051717Swipe or Chip ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>traPan</uta:arg0>
+		<uta:arg1>traChipSwipe</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbtraBlockPan" uta:comment="4172037641051717Swipe or Chip ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>traBlockPan</uta:arg0>
+		<uta:arg1>traChipSwipe</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+
+  <uta:combo uta:id="cmbEqCust" uta:comment="If Customer Copy"><!--mcy PAN-->
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>traCustFlag</uta:arg0>
+		<uta:arg1>-1</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+   </uta:combo>	
+   <uta:combo uta:id="cmbIfCustCopy" uta:comment="Determine if Cust Copy or Not"><!--mcy PAN-->
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqCust</uta:arg0>
+		<uta:arg1>cmbtraBlockPan</uta:arg1>
+		<uta:arg2>cmbtraPan</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+
+<!--mcy add for EMV Debug -->
+
+	<uta:combo uta:id="cmbEmvCvmr" uta:comment="TVR  :400000E040                                ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgEmvCvmr</uta:arg0>
+		<uta:arg1>cvtCvmr</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEmvTACDef" uta:comment="TACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgDef</uta:arg0>
+		<uta:arg1>cvtTACDef</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEmvTACDen" uta:comment="TACDEN                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgDen</uta:arg0>
+		<uta:arg1>cvtTACDen</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEmvTACOnl" uta:comment="TACONL                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgOnl</uta:arg0>
+		<uta:arg1>cvtTACOnl</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEmvIACDef" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgDef</uta:arg0>
+		<uta:arg1>cvtIACDef</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEmvIACDen" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgDen</uta:arg0>
+		<uta:arg1>cvtIACDen</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEmvIACOnl" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgOnl</uta:arg0>
+		<uta:arg1>cvtIACOnl</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEmvCid" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgCid</uta:arg0>
+		<uta:arg1>cvtCID</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEmvUnpNum" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptUnpNum</uta:arg0>
+		<uta:arg1>cvtUnpNum</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEmvIAD" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgIAD</uta:arg0>
+		<uta:arg1>cvtIAD</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEmvAIP" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgAIP</uta:arg0>
+		<uta:arg1>cvtAIP</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEmvAmtNum" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgAmtAuthNum</uta:arg0>
+		<uta:arg1>cvtAmtNum</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEmvOtherNum" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgAmtOherNum</uta:arg0>
+		<uta:arg1>cvtAmtOtherNum</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEmvIFDSerNum" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgIFDSerNum</uta:arg0>
+		<uta:arg1>emvIFDSerNum</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEmvCurrCode" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgCurrCode</uta:arg0>
+		<uta:arg1>cvtTrnCurCod</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEmvCouCode" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgCouCode</uta:arg0>
+		<uta:arg1>cvtTrmCurCod</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+
+	<uta:combo uta:id="cmbEmvTermType" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgTermType</uta:arg0>
+		<uta:arg1>cvtTrmTyp</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEmvTrnType" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgTrnType</uta:arg0>
+		<uta:arg1>cvtTrnTyp</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEmvTrnDate" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgTrnDate</uta:arg0>
+		<uta:arg1>cvtTrnDate</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEmvExpDate" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgExpDate</uta:arg0>
+		<uta:arg1>cvtExpDate</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbTermCap" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgTermCap</uta:arg0>
+		<uta:arg1>cvtTermCap</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbAddTermCap" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgAddTermCap</uta:arg0>
+		<uta:arg1>cvtAddTermCap</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbTxt" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgTxt</uta:arg0>
+		<uta:arg1>appAppPrfNam</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbCAPKIdx" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgCertAuth</uta:arg0>
+		<uta:arg1>cvtCAPKIdx</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEmvPAN" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgPAN</uta:arg0>
+		<uta:arg1>cvtPAN</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEmvPANSeq" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgPanSequence</uta:arg0>
+		<uta:arg1>cvtPANSeq</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEmvAuthRspCd" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgAuthRspCd</uta:arg0>
+		<uta:arg1>emvRspCod</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbScheme" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msg9F53</uta:arg0>
+		<uta:arg1>cvtScheme</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEmvAC" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgAC</uta:arg0>
+		<uta:arg1>cvtEmvTc</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEmvATC" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgATC</uta:arg0>
+		<uta:arg1>cvtATC</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEmvAmt" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgEmvAmount</uta:arg0>
+		<uta:arg1>emvAppTraAmt</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEmvPrevAmt" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgPrevAmount</uta:arg0>
+		<uta:arg1>cvtEmvPrevAmt</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+		<uta:combo uta:id="cmbEmvTotAmt" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgTotAmt</uta:arg0>
+		<uta:arg1>cvtEmvAmtNum</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbEmvFlrLim" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgFloor</uta:arg0>
+		<uta:arg1>cvtEmvFlrLim</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbACReq1" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgFirst</uta:arg0>
+		<uta:arg1>cvtACReq1</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbACReq2" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgSecond</uta:arg0>
+		<uta:arg1>traACReq2</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbACRsp1" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgFirst</uta:arg0>
+		<uta:arg1>cvtACRsp1</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbACRsp2" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgSecond</uta:arg0>
+		<uta:arg1>cvtACRsp2</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbLstCmdRsp" uta:comment="IACDEF                             ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>msgFinalSW1Sw2</uta:arg0>
+		<uta:arg1>traLstCmdRsp</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+
+	<uta:combo uta:id="cmbTotalAmt" uta:comment="Total Amount Line">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>0</uta:arg0>
+		<uta:arg1>traDspAmt</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>dspW+1</uta:length>
+	</uta:combo>	
+	
+	<uta:combo uta:id="cmbIfTrxLogOfflineTxn" uta:comment="Print -PHP if Log Txn is Void, otherwise PHP">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxLogOffline</uta:arg0>
+		<uta:arg1>cmbIfTrxLogOfflinePhp</uta:arg1>
+		<uta:arg2>cmbIfTrxLogManualTxn</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>	
+    	<uta:combo uta:id="cmbIfTrxLogManualTxn" uta:comment="Print -PHP if Log Txn is Void, otherwise PHP">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxLogManual</uta:arg0>
+		<uta:arg1>cmbIfTrxLogManualPhp</uta:arg1>
+		<uta:arg2>cmbIfTrxLogPwrbuyTxn</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>	
+
+    	<uta:combo uta:id="cmbIfTrxLogPwrbuyTxn" uta:comment="Print -PHP if Log Txn is Void, otherwise PHP">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxLogPwrbuy</uta:arg0>
+		<uta:arg1>cmbIfTrxLogPwrbuyPhp</uta:arg1>
+		<uta:arg2>cmbIfTrxLogTunaiTxn</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>	
+
+	<uta:combo uta:id="cmbIfTrxLogPreAuthPhp" uta:comment="Print -PHP if Log Txn is Void, otherwise PHP">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxLogVoid</uta:arg0>
+		<uta:arg1>cmbCurrPlus</uta:arg1>
+		<uta:arg2>cmbCurrPlus</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+	<uta:combo uta:id="cmbIfTrxLogOfflinePhp" uta:comment="Print -PHP if Log Txn is Void, otherwise PHP">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxLogVoid</uta:arg0>
+		<uta:arg1>cmbCurrMinus</uta:arg1>
+		<uta:arg2>cmbCurrPlus</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+    	<uta:combo uta:id="cmbIfTrxLogManualPhp" uta:comment="Print -PHP if Log Txn is Void, otherwise PHP">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxLogVoid</uta:arg0>
+		<uta:arg1>cmbCurrMinus</uta:arg1>
+		<uta:arg2>cmbCurrPlus</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+
+   <uta:combo uta:id="cmbTrak1" uta:comment="Application Name and Version">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptAllString</uta:arg0>
+		<uta:arg1>traAppName</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+
+    <uta:combo uta:id="cmbAuditReportLine1">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>traInvTransType</uta:arg0>
+		<uta:arg1>logAutCod</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>
+
+    <uta:combo uta:id="cmbAuditReportLine2">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>traBlockPan</uta:arg0>
+		<uta:arg1>logCardType</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>
+
+    <uta:combo uta:id="cmbAuditReportLine3">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptSpaces</uta:arg0>
+		<uta:arg1>traLine3</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>
+    
+  <uta:combo uta:id="cmbEqIsSign" uta:comment="Need Signature ..?">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>logIsSign</uta:arg0>
+		<uta:arg1>-1</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+   </uta:combo>	
+  <uta:combo uta:id="cmbIfSign" uta:comment="Print -Sign or not">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqIsSign</uta:arg0>
+		<uta:arg1>rloDupNeedSign</uta:arg1>
+		<uta:arg2>rloDupNoSign</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+
+<!--audit report header -->
+    <uta:combo uta:id="cmbAuditDate" uta:comment="AUDIT REPORT    DATE: DD MMM CCYY">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptTxnLog</uta:arg0>
+		<uta:arg1>cmbDate</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+	</uta:combo>
+  <uta:combo uta:id="cmbDate" uta:comment="Date">
+		<uta:operation>oprMut</uta:operation>
+		<uta:arg0>traFmtDate</uta:arg0>
+		<uta:arg1>rptReportDatBgd</uta:arg1>
+		<uta:arg2>rptReportDatCtl</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+    <uta:combo uta:id="cmbBatchMid" uta:comment="BATCH    MID">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbBatchNo</uta:arg0>
+		<uta:arg1>cmbMer</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+	</uta:combo>
+    <uta:combo uta:id="cmbBatchAcqDet" uta:comment="BATCH    HOST">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbBatchNo2</uta:arg0>
+		<uta:arg1>cmbAcqDet</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+	</uta:combo>
+
+<uta:combo uta:id="cmbTidR" uta:comment="Tid">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptTID</uta:arg0>
+		<uta:arg1>acqTID</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>		
+    <uta:combo uta:id="cmbTIDHost" uta:comment="TID    Host">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbTidR</uta:arg0>
+		<uta:arg1>cmbAcqDet</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+	</uta:combo>
+ <uta:combo uta:id="cmbInvTrans" uta:comment="Inv Trans">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptString2</uta:arg0>
+		<uta:arg1>rptInvNum</uta:arg1>
+		<uta:arg2>rptTrans</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>	
+    <uta:combo uta:id="cmbInvTransAuth" uta:comment="TID    Host">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbInvTrans</uta:arg0>
+		<uta:arg1>rptAutCodLbl</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+	</uta:combo>
+    <uta:combo uta:id="cmbCardNbrType" uta:comment="Card Number   	Card Type">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptCardNumber2</uta:arg0>
+		<uta:arg1>rptCardType2</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+	</uta:combo>
+   <uta:combo uta:id="cmbIfTrxLogIsTipBase" uta:comment="Determine if Input Tip or Not"><!--mcy if tip, base -->
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxLogTip</uta:arg0>
+		<uta:arg1>cmbTraFmtAmt</uta:arg1>
+		<uta:arg2>rptEmpty</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+   <uta:combo uta:id="cmbIfTrxLogIsTipLine" uta:comment="Determine if Input Tip or Not"><!--mcy if tip, line -->
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxLogTip</uta:arg0>
+		<uta:arg1>rptEqualAmt</uta:arg1>
+		<uta:arg2>rptEmpty</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+   <uta:combo uta:id="cmbPwrBuyType" uta:comment="PwrBuy type value">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptTransType</uta:arg0>
+		<uta:arg1>traPwrBuyType</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+   <uta:combo uta:id="cmbIfBankSetl" uta:comment="Determine if Settlement Bank Copy or Not"><!--mcy Settle-->
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqCust</uta:arg0>
+		<uta:arg1>logAcqCurBat</uta:arg1>
+		<uta:arg2>acqCurBat</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+    <uta:combo uta:id="cmbBatchNo2" uta:comment="BATCH : 000000">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptBatchNo</uta:arg0>
+		<uta:arg1>cmbIfBankSetl</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+  <uta:combo uta:id="cmbEqTrxIsPwrbuy" uta:comment="If Current Transaction is Pwrbuy">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>traMnuItm</uta:arg0>
+		<uta:arg1>-mnuPowerBuy</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+    </uta:combo>
+  <uta:combo uta:id="cmbIfMnuPowerbuy" uta:comment="If Current Transaction is Pwrbuy">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxIsPwrbuy</uta:arg0>
+		<uta:arg1>traPwrBuyType</uta:arg1>
+		<uta:arg2>traTransType</uta:arg2>
+		<uta:length>1</uta:length>
+    </uta:combo>
+
+<!--Prepaid-->
+
+	<uta:combo uta:id="cmbCardPrepaidNumExpDate2" uta:comment="4172037641051717S                           1208">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>traTrkPrepaidTapPrint</uta:arg0>
+		<uta:arg1>rptPrepaidPurc</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+    
+	<uta:combo uta:id="cmbCardPrepaidNumExpDate" uta:comment="4172037641051717S                           1208">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>traTrkPrepaidTapPrint</uta:arg0>
+		<uta:arg1>traExpDat</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+
+   <uta:combo uta:id="cmbHis01" uta:comment="TID	TYPE  Amount">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>traInsId</uta:arg0>
+		<uta:arg1>traTidTxr</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>27</uta:length>
+    </uta:combo>    
+		
+   <uta:combo uta:id="cmbHis02" uta:comment="   BALANCE   INST.ID">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>traPayment</uta:arg0>
+		<uta:arg1>traBalance</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>21</uta:length>
+    </uta:combo>
+    <uta:combo uta:id="cmbHis03" uta:comment="TID	TYPE	AMOUNT 		BALANCE		INST.ID">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbHis01</uta:arg0>
+		<uta:arg1>cmbHis02</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>
+
+    <uta:combo uta:id="cmbHis01Lama" uta:comment="TID	TYPE  Amount">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>traInsId</uta:arg0>
+		<uta:arg1>traTidIns</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>24</uta:length>
+    </uta:combo>  
+    <uta:combo uta:id="cmbHis02Lama" uta:comment="   BALANCE   INST.ID">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>traPayment</uta:arg0>
+		<uta:arg1>traBalance</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>22</uta:length>
+    </uta:combo>
+    <uta:combo uta:id="cmbHis03Lama" uta:comment="TID	TYPE	AMOUNT 		BALANCE		INST.ID">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbHis01Lama</uta:arg0>
+		<uta:arg1>cmbHis02Lama</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>
+
+   <uta:combo uta:id="cmbCardNo" uta:comment=" CARD NO: ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptCardNo</uta:arg0>
+		<uta:arg1>traCardNo</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>
+
+   <uta:combo uta:id="cmbHASH" uta:comment=" HASH NO: ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptHash</uta:arg0>
+		<uta:arg1>traHastPrepaid</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>
+
+
+    <uta:combo uta:id="cmbJdl1" uta:comment=" CARD NO: ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptjdl1</uta:arg0>
+		<uta:arg1>rptjdl2</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>24</uta:length>
+    </uta:combo>
+    <uta:combo uta:id="cmbJdl2" uta:comment=" CARD NO: ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptjdl3</uta:arg0>
+		<uta:arg1>rptjdl4</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+    <uta:combo uta:id="cmbJdl3" uta:comment=" CARD NO: ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbJdl1</uta:arg0>
+		<uta:arg1>cmbJdl2</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>
+     
+     <uta:combo uta:id="cmbTransaksiPuchse" uta:comment=" CARD NO: ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptSaldoTrxPre</uta:arg0>
+		<uta:arg1>traTotAmt</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+
+     <uta:combo uta:id="cmbSaldoAkhirPurc" uta:comment=" CARD NO: ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptSaldoAkhirPre</uta:arg0>
+		<uta:arg1>traSaldoAKhir</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+    <uta:combo uta:id="cmbSaldoAwalPurc" uta:comment=" SALDO AWAL : rp ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptSaldoAwalPre</uta:arg0>
+		<uta:arg1>traSaldoAwal</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+
+
+
+     <uta:combo uta:id="cmbTransaksi" uta:comment=" CARD NO: ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptSaldoTrx</uta:arg0>
+		<uta:arg1>traTotAmt</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+
+     <uta:combo uta:id="cmbSaldoAkhir" uta:comment=" CARD NO: ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptSaldoAkhir</uta:arg0>
+		<uta:arg1>traSaldoAKhir</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+    <uta:combo uta:id="cmbSaldoAwal" uta:comment=" SALDO AWAL : rp ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptSaldoAwal</uta:arg0>
+		<uta:arg1>traSaldoAwal</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+    <uta:combo uta:id="cmbAppCode" uta:comment=" APP CODE   123456 ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptAppCode</uta:arg0>
+		<uta:arg1>traAppCode</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>
+
+    <uta:combo uta:id="cmbTrk2Prepaid" uta:comment=" TRACK 2 PREPAID ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPrepaidCard</uta:arg0>
+		<uta:arg1>traTrkPrepaidPrint</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+
+    
+    	<uta:combo uta:id="cmbPrepaidDemon" uta:comment="VISA                                   VOID SALE">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPrepaidDemon</uta:arg0>
+		<uta:arg1>traPayment</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>	
+
+    	<uta:combo uta:id="cmbPrepaidTotal" uta:comment="VISA                                   VOID SALE">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPrepaidTotal</uta:arg0>
+		<uta:arg1>traPrepaidTotal</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>	
+
+   	<uta:combo uta:id="cmbPrepaidmerchantAmt" uta:comment="VISA                                   VOID SALE">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPrepaidCharge</uta:arg0>
+		<uta:arg1>tramerchantAmt</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>	
+
+   	<uta:combo uta:id="cmbPrepaidIssuerAmt" uta:comment="VISA                                   VOID SALE">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPrepaidCharge</uta:arg0>
+		<uta:arg1>traIssuerAmt</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>	
+
+    	<uta:combo uta:id="cmbPrepaidPoolingAmt" uta:comment="VISA                                   VOID SALE">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPrepaidCharge</uta:arg0>
+		<uta:arg1>traPoolingAmt</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>	
+
+    	<uta:combo uta:id="cmbTopupEchannel" uta:comment="VISA                                   VOID SALE">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPrepaidTopUpEchannel</uta:arg0>
+		<uta:arg1>traPoolingAmt</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>	
+     <uta:combo uta:id="cmbPrepaidSaldoAkhir" uta:comment=" CARD NO: ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPrepaidSaldoAkhir</uta:arg0>
+		<uta:arg1>traBalance</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+    <uta:combo uta:id="cmbPrepaidSaldoAwal" uta:comment=" SALDO AWAL : rp ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPrepaidSaldoAwal</uta:arg0>
+		<uta:arg1>traSaldoAwal</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+
+    <uta:combo uta:id="cmbAppCodeTopUP" uta:comment=" APP CODE   123456 ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptAppCode</uta:arg0>
+		<uta:arg1>traAutCod</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+    
+
+    <uta:combo uta:id="cmbPrepaidTC" uta:comment=" SALDO AWAL : rp ">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptSpaces</uta:arg0>
+		<uta:arg1>traTCCode</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+
+	<uta:combo uta:id="cmbAppCdTC" uta:comment="Settlement Receipt Card Name">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbAppCodeTopUP</uta:arg0>
+		<uta:arg1>cmbPrepaidTC</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>	
+
+
+	<uta:combo uta:id="cmbCardPrepaidTrans" uta:comment="4172037641051717S                           1208">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>traTrkPrepaidSwipePrint</uta:arg0>
+		<uta:arg1>traCardType</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+
+	<uta:combo uta:id="cmbMerchntVersi" uta:comment="4172037641051717S                           1208">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptMerCpyPre</uta:arg0>
+		<uta:arg1>traAppName</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+
+	<uta:combo uta:id="cmbBankVersi" uta:comment="4172037641051717S                           1208">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptBankCpyPre</uta:arg0>
+		<uta:arg1>traAppName</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+
+	<uta:combo uta:id="cmbCutsVersi" uta:comment="4172037641051717S                           1208">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptCusCpy</uta:arg0>
+		<uta:arg1>traAppName</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+
+	<uta:combo uta:id="cmbDuplicateVersi" uta:comment="4172037641051717S                           1208">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptDupCpy</uta:arg0>
+		<uta:arg1>traAppName</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+
+
+    <uta:combo uta:id="cmbRptLogTotalAmtPrepaid">
+		<uta:operation>oprAmt</uta:operation>
+		<uta:arg0>traLogTotalAmountTopup</uta:arg0>
+		<uta:arg1>appExp</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>lenAmt+1+1</uta:length>
+    </uta:combo>
+
+    <uta:combo uta:id="cmbRptLogTotalAmtCurrPlusPrepaid">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPhpPlus</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtPrepaid</uta:arg1>
+		<uta:arg2>0</uta:arg2>		
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+
+
+    <uta:combo uta:id="cmbRptLogTotalTopupCount">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptTotalTopUp</uta:arg0>
+		<uta:arg1>cvtLogTotalTopupCount</uta:arg1>		
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+
+    <uta:combo uta:id="cmbRptLogTotalsTopup">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbRptLogTotalTopupCount</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtCurrPlusPrepaid</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+
+
+    <uta:combo uta:id="cmbRptLogTotalAmtPrepaidUpdate">
+		<uta:operation>oprAmt</uta:operation>
+		<uta:arg0>traLogTotalAmountTopup</uta:arg0>
+		<uta:arg1>appExp</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>lenAmt+1+1</uta:length>
+    </uta:combo>
+
+    <uta:combo uta:id="cmbRptLogTotalAmtCurrPlusPrepaidUpdate">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPhpPlus</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtPrepaidUpdate</uta:arg1>
+		<uta:arg2>0</uta:arg2>		
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+
+
+    <uta:combo uta:id="cmbRptLogTotalUpdateCount">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptTotalUpdate</uta:arg0>
+		<uta:arg1>cvtLogTotalTopupCount</uta:arg1>		
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+
+    <uta:combo uta:id="cmbRptLogTotalsUpdate">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbRptLogTotalUpdateCount</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtCurrPlusPrepaidUpdate</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+	<uta:combo uta:id="cmbCardPrepaidTransNew" uta:comment="4172037641051717S                           1208">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>traTrkPrepaidSwipePrint</uta:arg0>
+		<uta:arg1>traTrk1</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+
+<!--add dw 06012K11 MiniAtm-->
+    <uta:combo uta:id="cmbEqTrxIsDenda" uta:comment="If Current Transaction is Pwrbuy">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>traFlagDenda</uta:arg0>
+		<uta:arg1>-1</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+    </uta:combo>
+  <uta:combo uta:id="cmbIfDenda" uta:comment="If Current Transaction is Pwrbuy">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxIsDenda</uta:arg0>
+		<uta:arg1>traDendaAmt</uta:arg1>
+		<uta:arg2>rptEmpty</uta:arg2>
+		<uta:length>1</uta:length>
+    </uta:combo>
+    <uta:combo uta:id="cmbIfRptDenda" uta:comment="If Current Transaction is Pwrbuy">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxIsDenda</uta:arg0>
+		<uta:arg1>rptDenda</uta:arg1>
+		<uta:arg2>rptEmpty</uta:arg2>
+		<uta:length>1</uta:length>
+    </uta:combo>
+
+   <uta:combo uta:id="cmbDendaAmt" uta:comment="Txn type value">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbIfRptDenda</uta:arg0>
+		<uta:arg1>cmbIfDenda</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+    <uta:combo uta:id="cmbTxn_Opti" uta:comment="          TELKOM">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptAllString</uta:arg0>
+		<uta:arg1>traMnuLain</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>	
+      <uta:combo uta:id="cmbTxn_telco" uta:comment="          TELKOM">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptAllString</uta:arg0>
+		<uta:arg1>traOperator</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+    <uta:combo uta:id="cmbTransaksiTelco" uta:comment=" PAYMENT         TELKOM">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbTxn_telco</uta:arg0>
+		<uta:arg1>traTransType</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+      <uta:combo uta:id="cmbAmount" uta:comment=" AMOUNT         Rp. 10.000">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptAmount</uta:arg0>
+		<uta:arg1>traAmtDisp</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	 <uta:combo uta:id="cmbNoTag" uta:comment=" No Tagihan         1117688">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptNoTag</uta:arg0>
+		<uta:arg1>traNomor</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+     <uta:combo uta:id="cmbAdminFee" uta:comment=" ADMIN FEE         Rp. 1.000">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptAdminFee</uta:arg0>
+		<uta:arg1>traAdminFee</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+     <uta:combo uta:id="cmbTotal" uta:comment=" ADMIN FEE         Rp. 1.000">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptTotal</uta:arg0>
+		<uta:arg1>traTotalAmtDisp</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+     <uta:combo uta:id="cmbBillRef" uta:comment=" BILL REF         12345667">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptReff</uta:arg0>
+		<uta:arg1>traReff</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+      <uta:combo uta:id="cmbNamaNomor" uta:comment=" DUWI KEREN         021345678">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>traNama</uta:arg0>
+		<uta:arg1>traNomor</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	
+	<uta:combo uta:id="cmbNama" uta:comment=" Nama         DUWI KEREN">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptNama</uta:arg0>
+		<uta:arg1>traNama</uta:arg1>
+		<uta:arg2 >0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbId" uta:comment=" ID PEL : 1234567">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptId</uta:arg0>
+		<uta:arg1>traNomor</uta:arg1>
+		<uta:arg2 >0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbMploReff" uta:comment=" MPLO REFF: 1234567">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptMplo</uta:arg0>
+		<uta:arg1>traReff</uta:arg1>
+		<uta:arg2 >0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+       <uta:combo uta:id="cmbMeter" uta:comment=" METER : 1000-1234567">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptMTR</uta:arg0>
+		<uta:arg1>traMeter</uta:arg1>
+		<uta:arg2 >0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+	
+	<uta:combo uta:id="cmbBlnThn" uta:comment=" BLN/THN : 08/09">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptBlnThn</uta:arg0>
+		<uta:arg1>trablnThn</uta:arg1>
+		<uta:arg2 >0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+
+	<uta:combo uta:id="cmbCustVersi" uta:comment="copy Cutomer                           ver 04.00">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptCusCpy</uta:arg0>
+		<uta:arg1>traAppName</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbCardPrepaidNumExpDate2GP" uta:comment="4172037641051717S                           1208">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>traTrkPrepaidTapPrint</uta:arg0>
+		<uta:arg1>rptPrepaidPurcGP</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+	<uta:combo uta:id="cmbBiayaAdmGP" uta:comment="BIAYA ADM				10.000">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPrepaidPurcGP</uta:arg0>
+		<uta:arg1>traTotAmt</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+<!--MINIATM Beg-->
+	<uta:combo uta:id="cmbRptLogTotalTelkom">
+		<uta:operation>oprAmt</uta:operation>
+		<uta:arg0>traLogTotalAmountTelkom</uta:arg0>
+		<uta:arg1>appExp</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>lenAmt+1+1</uta:length>
+    </uta:combo>
+
+    <uta:combo uta:id="cmbRptLogTotalAmtCurrPlusTelkom">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPhpPlus</uta:arg0>
+		<uta:arg1>cmbRptLogTotalTelkom</uta:arg1>
+		<uta:arg2>0</uta:arg2>		
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+    <uta:combo uta:id="cmbRptLogTelkomCount">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptTelkom</uta:arg0>
+		<uta:arg1>cvtLogTotalTelkomCount</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+    <uta:combo uta:id="cmbRptLogTotalsTelkomAmt">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptFee</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtCurrPlusTelkom</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+      
+
+    <uta:combo uta:id="cmbRptLogTotalAmtSatelindo">
+		<uta:operation>oprAmt</uta:operation>
+		<uta:arg0>traLogTotalAmountSatelindo</uta:arg0>
+		<uta:arg1>appExp</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>lenAmt+1+1</uta:length>
+    </uta:combo>
+
+    <uta:combo uta:id="cmbRptLogTotalAmtCurrPlusSatelindo">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPhpPlus</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtSatelindo</uta:arg1>
+		<uta:arg2>0</uta:arg2>		
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+    
+    <uta:combo uta:id="cmbRptLogTotalSatelindoCount">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptSatelindo</uta:arg0>
+		<uta:arg1>cvtLogTotalSatelindoCount</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+    
+    <uta:combo uta:id="cmbRptLogTotalsSatelindo">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptFee</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtCurrPlusSatelindo</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+
+    <uta:combo uta:id="cmbRptLogTotalAmtTelkomsel">
+		<uta:operation>oprAmt</uta:operation>
+		<uta:arg0>traLogTotalAmountTelkomsel</uta:arg0>
+		<uta:arg1>appExp</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>lenAmt+1+1</uta:length>
+    </uta:combo>
+    <uta:combo uta:id="cmbRptLogTotalAmtCurrPlusTelkomsel">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPhpPlus</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtTelkomsel</uta:arg1>
+		<uta:arg2>0</uta:arg2>		
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+    <uta:combo uta:id="cmbRptLogTotalTelkomselCount">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptTelkomsel</uta:arg0>
+		<uta:arg1>cvtLogTotalTelkomselCount</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+    <uta:combo uta:id="cmbRptLogTotalsTelkomsel">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptFee</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtCurrPlusTelkomsel</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+    <uta:combo uta:id="cmbRptLogTotalAmtExcelcom">
+		<uta:operation>oprAmt</uta:operation>
+		<uta:arg0>traLogTotalAmountExcelcom</uta:arg0>
+		<uta:arg1>appExp</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>lenAmt+1+1</uta:length>
+    </uta:combo>
+
+    <uta:combo uta:id="cmbRptLogTotalAmtCurrPlusExcelcom">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPhpPlus</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtExcelcom</uta:arg1>
+		<uta:arg2>0</uta:arg2>		
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+
+    <uta:combo uta:id="cmbRptLogTotalExcelcomCount">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptExcelcom</uta:arg0>
+		<uta:arg1>cvtLogTotalExcelcomCount</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+    <uta:combo uta:id="cmbRptLogTotalsExcelcom">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptFee</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtCurrPlusExcelcom</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+    <uta:combo uta:id="cmbRptLogTotalAmtEsia">
+		<uta:operation>oprAmt</uta:operation>
+		<uta:arg0>traLogTotalAmountEsia</uta:arg0>
+		<uta:arg1>appExp</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>lenAmt+1+1</uta:length>
+    </uta:combo>
+
+    <uta:combo uta:id="cmbRptLogTotalAmtCurrPlusEsia">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPhpPlus</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtEsia</uta:arg1>
+		<uta:arg2>0</uta:arg2>		
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+    <uta:combo uta:id="cmbRptLogTotalEsiaCount">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptEsia</uta:arg0>
+		<uta:arg1>cvtLogTotalEsiaCount</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+    <uta:combo uta:id="cmbRptLogTotalsEsia">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptFee</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtCurrPlusEsia</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+    <uta:combo uta:id="cmbRptLogTotalAmtPLN">
+		<uta:operation>oprAmt</uta:operation>
+		<uta:arg0>traLogTotalAmountPLN</uta:arg0>
+		<uta:arg1>appExp</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>lenAmt+1+1</uta:length>
+    </uta:combo>
+
+    <uta:combo uta:id="cmbRptLogTotalAmtCurrPlusPLN">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPhpPlus</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtPLN</uta:arg1>
+		<uta:arg2>0</uta:arg2>		
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+
+    <uta:combo uta:id="cmbRptLogTotalPLNCount">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPLN</uta:arg0>
+		<uta:arg1>cvtLogTotalPLNCount</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+    <uta:combo uta:id="cmbRptLogTotalsPLN">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptFee</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtCurrPlusPLN</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+    <uta:combo uta:id="cmbRptLogTotalAmtFirstMedia">
+		<uta:operation>oprAmt</uta:operation>
+		<uta:arg0>traLogTotalAmountFirstMedia</uta:arg0>
+		<uta:arg1>appExp</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>lenAmt+1+1</uta:length>
+    </uta:combo>
+
+    <uta:combo uta:id="cmbRptLogTotalAmtCurrPlusFirstMedia">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPhpPlus</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtFirstMedia</uta:arg1>
+		<uta:arg2>0</uta:arg2>		
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+
+
+    <uta:combo uta:id="cmbRptLogTotalFirstMediaCount">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptFirstMedia</uta:arg0>
+		<uta:arg1>cvtLogTotalFirstMediaCount</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+    <uta:combo uta:id="cmbRptLogTotalsFirstMedia">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptFee</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtCurrPlusFirstMedia</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+    <uta:combo uta:id="cmbRptLogTotalAmtIndovision">
+		<uta:operation>oprAmt</uta:operation>
+		<uta:arg0>traLogTotalAmountIndovision</uta:arg0>
+		<uta:arg1>appExp</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>lenAmt+1+1</uta:length>
+    </uta:combo>
+
+    <uta:combo uta:id="cmbRptLogTotalAmtCurrPlusIndovision">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPhpPlus</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtIndovision</uta:arg1>
+		<uta:arg2>0</uta:arg2>		
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+
+
+    <uta:combo uta:id="cmbRptLogTotalIndovisionCount">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptIndovision</uta:arg0>
+		<uta:arg1>cvtLogTotalIndovisionCount</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+
+    <uta:combo uta:id="cmbRptLogTotalsIndovision">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptFee</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtCurrPlusIndovision</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+    <uta:combo uta:id="cmbRptLogTotalAmtPOtoMulti">
+		<uta:operation>oprAmt</uta:operation>
+		<uta:arg0>traLogTotalAmountOtoMulti</uta:arg0>
+		<uta:arg1>appExp</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>lenAmt+1+1</uta:length>
+    </uta:combo>
+
+    <uta:combo uta:id="cmbRptLogTotalAmtCurrPlusOtoMulti">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPhpPlus</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtPOtoMulti</uta:arg1>
+		<uta:arg2>0</uta:arg2>		
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+
+
+    <uta:combo uta:id="cmbRptLogTotalOtoMultiCount">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptOtoMulti</uta:arg0>
+		<uta:arg1>cvtLogTotalOtoMultiCount</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+
+    <uta:combo uta:id="cmbRptLogTotalsOtoMulti">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptFee</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtCurrPlusOtoMulti</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+
+      <uta:combo uta:id="cmbRptLogTotalAmtMAtm">
+		<uta:operation>oprAmt</uta:operation>
+		<uta:arg0>traLogTotalAmountMAtm</uta:arg0>
+		<uta:arg1>appExp</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>lenAmt+1+1</uta:length>
+    </uta:combo>
+
+    <uta:combo uta:id="cmbRptLogTotalAmtCurrPlusMAtm">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPhpPlus</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtMAtm</uta:arg1>
+		<uta:arg2>0</uta:arg2>	
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+
+    <uta:combo uta:id="cmbRptLogTotalMAtmCount">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptMAtm</uta:arg0>
+		<uta:arg1>cvtLogTotalCommCount</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>	
+
+    <uta:combo uta:id="cmbRptLogTotalsMAtm">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbRptLogTotalMAtmCount</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtCurrPlusMAtm</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+
+      <uta:combo uta:id="cmbRptLogTotalAmtMINIATM">
+		<uta:operation>oprAmt</uta:operation>
+		<uta:arg0>traLogTotalAmountMINIAtm</uta:arg0>
+		<uta:arg1>appExp</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>lenAmt+1+1</uta:length>
+    </uta:combo>
+
+    <uta:combo uta:id="cmbRptLogTotalAmtCurrPlusMINIATM">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPhpPlus</uta:arg0>
+		<uta:arg1>traLogTotalAmountMINIAtm</uta:arg1>
+		<uta:arg2>0</uta:arg2>	
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+
+	<uta:combo uta:id="cmbRptLogTotalMiniATMCount">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptMiniATM</uta:arg0>
+		<uta:arg1>cvtLogTotalMAtmCount</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>	
+    
+    <uta:combo uta:id="cmbRptLogTotalsMINIATM">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbRptLogTotalMiniATMCount</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtCurrPlusMINIATM</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+
+    
+    <uta:combo uta:id="cmbTidMid1" uta:comment="TID: 12345678               MID: 123456789012345">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbTid</uta:arg0>
+		<uta:arg1>cmbMid</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+	</uta:combo>    
+    <uta:combo uta:id="cmbTrxDateTime1" uta:comment="DATE: DD MMM CCYY    TIME: HH:MM">
+		<uta:operation>oprMut</uta:operation>
+		<uta:arg0>traFmtDate</uta:arg0>
+		<uta:arg1>rptTrxDatTimBgd</uta:arg1>
+		<uta:arg2>rptTrxDatTimCtl1</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+<!--Grace Period-->
+
+    <uta:combo uta:id="cmbRptLogTotalCountGP">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptGPAdm</uta:arg0>
+		<uta:arg1>cvtLogTotalTopupCount</uta:arg1>		
+		<uta:arg2>0</uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+
+    <uta:combo uta:id="cmbRptLogTotalsGP">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbRptLogTotalCountGP</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtCurrPlusPrepaid</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+<!--Grace Period End-->	
+<!--Add FASA4 12042K11-->	
+ <uta:combo uta:id="cmbAccDest">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptDRek</uta:arg0>
+		<uta:arg1>traAccDest</uta:arg1>		
+		<uta:arg2 >0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>	
+  <uta:combo uta:id="cmbAccSource">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptSRek</uta:arg0>
+		<uta:arg1>traNomor</uta:arg1>		
+		<uta:arg2 >0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>	
+
+   <uta:combo uta:id="cmbValutaSource">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptValuta</uta:arg0>
+		<uta:arg1>traCode</uta:arg1>		
+		<uta:arg2 >0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>	
+    <uta:combo uta:id="cmbValutaDest">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptValuta</uta:arg0>
+		<uta:arg1>traCodeDest</uta:arg1>		
+		<uta:arg2 >0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>	
+     <uta:combo uta:id="cmbNamaDest">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptAn</uta:arg0>
+		<uta:arg1>traNama</uta:arg1>		
+		<uta:arg2 >0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>	
+    <uta:combo uta:id="cmbAmountTransfer" uta:comment=" AMOUNT         Rp. 10.000">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptAmount</uta:arg0>
+		<uta:arg1>traAmtDisp</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+  <uta:combo uta:id="cmbAmountTT" uta:comment=" AMOUNT         Rp. 10.000">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptAmount</uta:arg0>
+		<uta:arg1>traAmtDisp</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+<uta:combo uta:id="cmbAdminFeeTT" uta:comment=" ADMIN FEE         Rp. 1.000">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptCashW</uta:arg0>
+		<uta:arg1>traTunai</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+<!--report Tunai-->
+ <uta:combo uta:id="cmbRptLogTotalTunaiCount">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptTunai</uta:arg0>
+		<uta:arg1>cvtLogTotalTunaiCount</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+ <uta:combo uta:id="cmbRptLogTotalAmtTunai">
+		<uta:operation>oprAmt</uta:operation>
+		<uta:arg0>traLogTotalAmountTunai</uta:arg0>
+		<uta:arg1>appExp</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>lenAmt+1+1</uta:length>
+    </uta:combo>
+
+    <uta:combo uta:id="cmbRptLogTotalAmtCurrPlusTunai">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPhpPlus</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtTunai</uta:arg1>
+		<uta:arg2>0</uta:arg2>		
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+      <uta:combo uta:id="cmbRptLogTotalsTunai">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptFee</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtCurrPlusTunai</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+ <!--report Transfer-->
+ <uta:combo uta:id="cmbRptLogTotalTransferCount">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptTransfer</uta:arg0>
+		<uta:arg1>cvtLogTotalTransferCount</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+ <uta:combo uta:id="cmbRptLogTotalAmtTransfer">
+		<uta:operation>oprAmt</uta:operation>
+		<uta:arg0>traLogTotalAmountTransfer</uta:arg0>
+		<uta:arg1>appExp</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>lenAmt+1+1</uta:length>
+    </uta:combo>
+
+    <uta:combo uta:id="cmbRptLogTotalAmtCurrPlusTransfer">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPhpPlus</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtTransfer</uta:arg1>
+		<uta:arg2>0</uta:arg2>		
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+      <uta:combo uta:id="cmbRptLogTotalsTransfer">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptFee</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtCurrPlusTransfer</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+   <!--report CC-->
+ <uta:combo uta:id="cmbRptLogTotalCCCount">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptCC</uta:arg0>
+		<uta:arg1>cvtLogTotalCCCount</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+ <uta:combo uta:id="cmbRptLogTotalAmtCC">
+		<uta:operation>oprAmt</uta:operation>
+		<uta:arg0>traLogTotalAmountCC</uta:arg0>
+		<uta:arg1>appExp</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>lenAmt+1+1</uta:length>
+    </uta:combo>
+
+    <uta:combo uta:id="cmbRptLogTotalAmtCurrPlusCC">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptPhpPlus</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtCC</uta:arg1>
+		<uta:arg2>0</uta:arg2>		
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+      <uta:combo uta:id="cmbRptLogTotalsCC">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptFee</uta:arg0>
+		<uta:arg1>cmbRptLogTotalAmtCurrPlusCC</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+  <uta:combo uta:id="cmbCntUSD">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptSpaces</uta:arg0>
+		<uta:arg1>cvtLogTotalUSDCount</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>	
+  <uta:combo uta:id="cmbCntSGD">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptSpaces</uta:arg0>
+		<uta:arg1>cvtLogTotalSGDCount</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>	
+ <uta:combo uta:id="cmbCntJPN">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptSpaces</uta:arg0>
+		<uta:arg1>cvtLogTotalJPNCount</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>	
+ 
+  <uta:combo uta:id="cmbRptUSD">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptUSD</uta:arg0>
+		<uta:arg1>traLogTotalAmountTransferUSD</uta:arg1>
+		<uta:arg2>0</uta:arg2>		
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+
+   <uta:combo uta:id="cmbRptSGD">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptSGD</uta:arg0>
+		<uta:arg1>traLogTotalAmountTransferSGD</uta:arg1>
+		<uta:arg2>0</uta:arg2>		
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+    <uta:combo uta:id="cmbRptJPN">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>rptJPN</uta:arg0>
+		<uta:arg1>traLogTotalAmountTransferJPN</uta:arg1>
+		<uta:arg2>0</uta:arg2>		
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+    
+   <uta:combo uta:id="cmbRptLogTotalsTransferUSD">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbCntUSD</uta:arg0>
+		<uta:arg1>cmbRptUSD</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+   <uta:combo uta:id="cmbRptLogTotalsTransferSGD">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbCntSGD</uta:arg0>
+		<uta:arg1>cmbRptSGD</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+    <uta:combo uta:id="cmbRptLogTotalsTransferJPN">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbCntJPN</uta:arg0>
+		<uta:arg1>cmbRptJPN</uta:arg1>		
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW+1</uta:length>
+    </uta:combo>	
+
+     <!--Add dw-->
+   <uta:combo uta:id="cmbIfTrxLogTunaiPhp" uta:comment="Print -PHP if Log Txn is Void, otherwise PHP">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxLogVoid</uta:arg0>
+		<uta:arg1>cmbCurrMinus</uta:arg1>
+		<uta:arg2>cmbCurrPlus</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+
+     <uta:combo uta:id="cmbEqTrxLogTunai" uta:comment="If Log Transaction is Pwrbuy">
+		<uta:operation>oprEq</uta:operation>
+		<uta:arg0>logMnuItm</uta:arg0>
+		<uta:arg1>-mnuTarikTunai</uta:arg1>
+		<uta:arg2>-2</uta:arg2>
+		<uta:length>1</uta:length>
+    </uta:combo>
+   <uta:combo uta:id="cmbIfTrxLogTunaiTxn" uta:comment="Print -PHP if Log Txn is Void, otherwise PHP">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxLogTunai</uta:arg0>
+		<uta:arg1>cmbIfTrxLogTunaiPhp</uta:arg1>
+		<uta:arg2>cmbIfTrxLogPreAuthPhp</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>	
+
+    <uta:combo uta:id="cmbTrxTunai">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptAllString</uta:arg0>
+		<uta:arg1>traFmtTip</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+
+    <uta:combo uta:id="cmbTrxTunaiPhp">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbIfTrxLogPhp</uta:arg0>
+		<uta:arg1>cmbTrxTunai</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+    
+    <uta:combo uta:id="cmbIfTrxLogIsTunai" uta:comment="Determine if Input Tip or Not">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxLogTunai</uta:arg0>
+		<uta:arg1>cmbTrxTunaiPhp</uta:arg1>
+		<uta:arg2>rptEmpty</uta:arg2>
+		<uta:length>1</uta:length>
+    </uta:combo>  
+  
+
+    <uta:combo uta:id="cmbRptTunaiRpt">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxLogTunai</uta:arg0>
+		<uta:arg1>rptCashW</uta:arg1>
+		<uta:arg2>rptEmpty</uta:arg2>		
+		<uta:length>1</uta:length>
+    </uta:combo>
+   <uta:combo uta:id="cmbTunaiAmt" uta:comment="Tunai Amount Line">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbRptTunaiRpt</uta:arg0>
+		<uta:arg1>cmbIfTrxLogIsTunai</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+
+<!--Sale Tunai-->
+    <uta:combo uta:id="cmbTrxTSale">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptAllString</uta:arg0>
+		<uta:arg1>traFmtAmt</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+
+    <uta:combo uta:id="cmbTrxTSalePhp">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbIfTrxLogPhp</uta:arg0>
+		<uta:arg1>cmbTrxTSale</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+ <uta:combo uta:id="cmbIfTrxLogIsTSale" uta:comment="Determine if Input Tip or Not">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxLogTunai</uta:arg0>
+		<uta:arg1>cmbTrxTSalePhp</uta:arg1>
+		<uta:arg2>rptEmpty</uta:arg2>
+		<uta:length>1</uta:length>
+    </uta:combo>  
+ <uta:combo uta:id="cmbRptTSaleRpt">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxLogTunai</uta:arg0>
+		<uta:arg1>rptAmount</uta:arg1>
+		<uta:arg2>rptEmpty</uta:arg2>		
+		<uta:length>1</uta:length>
+    </uta:combo>
+ <uta:combo uta:id="cmbTSaleAmt" uta:comment="Sale Tunai Amount Line">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbRptTSaleRpt</uta:arg0>
+		<uta:arg1>cmbIfTrxLogIsTSale</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>
+ <uta:combo uta:id="cmbIfVoidTunaiLine" uta:comment="jika void tunai ada line">
+		<uta:operation>oprIf</uta:operation>
+		<uta:arg0>cmbEqTrxLogTunai</uta:arg0>
+		<uta:arg1>rptEqualAmt</uta:arg1>
+		<uta:arg2>rptEmpty</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+    </uta:combo>
+ 	<uta:combo uta:id="cmbTraInv" uta:comment="INV#  : 000000">
+		<uta:operation>oprSpr</uta:operation>
+		<uta:arg0>rptTrace</uta:arg0>
+		<uta:arg1>cvtTraInvNum</uta:arg1>
+		<uta:arg2>0</uta:arg2>
+		<uta:length>prtW+1</uta:length>
+	</uta:combo>	
+
+	<uta:combo uta:id="cmbBatchTraInv" uta:comment="BATCH : 000000      REF NO. 515151515151">
+		<uta:operation>oprCat</uta:operation>
+		<uta:arg0>cmbBatchNo</uta:arg0>
+		<uta:arg1>cmbTraInv</uta:arg1>
+		<uta:arg2 uta:value="' '"></uta:arg2>
+		<uta:length>2*prtW</uta:length>
+	</uta:combo>
+
+
+ </uta:combos>

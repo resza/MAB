@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!--
+Subversion reference
+$HeadURL: https://svn.ingenico.com/UTAPROJECTS/sea-partner/5W/trunk/ISO5WPH/str/reg.xml $
+$Id: reg.xml 1900 2009-04-21 05:10:43Z ajloreto $
+-->
+<uta:record uta:id='reg' uta:comment='registry record' xmlns:uta="http://www.ingenico.com/xml/uta">
+  <uta:field uta:id='regTrxNo'     uta:type='word'                            uta:comment='transaction number' />
+  <uta:field uta:id='regSTAN'      uta:type='card'  uta:data='0'                          uta:comment='System Trace Audit Number 1..999999' />
+  <uta:field uta:id='regInvNum'    uta:type='card'   uta:data='1'                         uta:comment='invoice number (R.O.C.)' /> 
+  <uta:field uta:id='regBatNum'    uta:type='ASCII' uta:length='lenInvNum'    uta:data='"000001"'          uta:comment='Batch number' /> 
+  <uta:field uta:id='regBinCnt'	   uta:type='byte'  uta:data='0'              uta:comment='bin Counter' />
+  <uta:field uta:id='regIssCnt'    uta:type='byte'  uta:data='1'              uta:comment='Iss counter' />
+  <uta:field uta:id='regAcqCnt'    uta:type='byte'  uta:data='1'              uta:comment='acq counter' />
+  <uta:field uta:id='regReqSent'   uta:type='byte'  uta:data='0'              uta:comment='Is there request sent and response is not received yet?' />
+  <uta:field uta:id='regLocType'  uta:type='byte'  uta:data='84'              uta:comment=' T = (dec)84 Location on where to get certain info: L - log, T - tra' />
+  <uta:field uta:id='regAidCnt'    uta:type='byte'  uta:data='0'              uta:comment='Number of AID records in database' />  
+  <uta:field uta:id='regPubCnt'    uta:type='byte'  uta:data='0'              uta:comment='Number of Pub key records in database' />
+  <uta:field uta:id='regTmsRefNum' uta:type='ASCII' uta:length='lenTmsRefNum' uta:data='"12344321"' uta:comment='TMS Refence Number'/>
+  <uta:field uta:id='regSTANContext'      uta:type='card'                            uta:comment='System Trace Audit Number 1..999999' />
+  <uta:field uta:id='regInvNumContext'    uta:type='card'                            uta:comment='invoice number (R.O.C.)' /> 
+  <uta:field uta:id='regBatNumContext'    uta:type='ASCII' uta:length='lenInvNum'    uta:comment='Batch number' /> 
+  <uta:field uta:id='regCurrIdxPtr'   uta:type='word'                            uta:comment='transaction log index storage for tracking previous last transaction. This applies in voided transactions'/>
+  <uta:field uta:id='regDupSTAN'      uta:type='card'                            uta:comment='Duplicate Copy for System Trace Audit Number' />
+  <uta:field uta:id='regDupInvNum'    uta:type='card'                            uta:comment='Duplicate Copy for Invoice number (R.O.C.)' /> 
+  <uta:field uta:id='regDupCurBat'    uta:type="ASCII" 	uta:length="lenInvNum" uta:comment='Duplicate Current Batch Number' />
+  <uta:field uta:id='regToneDetect' 	uta:type='ASCII'   uta:length='3'  uta:data='"ON "' uta:comment='display ON/OFF for Tone Detect'/>
+  <uta:field uta:id='regTonePulse' 		uta:type='ASCII'   uta:length='5' uta:data='"TONE "' uta:comment='display TONE or PULSE'/>
+  <uta:field uta:id='regDHCP' 			uta:type='ASCII'   uta:length='3' uta:data='"OFF"'    uta:comment='display ON/OFF DHCP'/>
+  <uta:field uta:id='regOfflineCnt'  uta:type='word'   uta:data='0'                        uta:comment='Number of Offline in application' /> 
+  <uta:field uta:id='regAutCodOff'  uta:type='card'   uta:data='0'                        uta:comment='Number of AutCode Offline in application' /> <!--mcy add-->
+  <uta:field uta:id='regTleCnt'      uta:type='card'  uta:data='0'                          uta:comment='Encryption counter 0..999999' />
+  <uta:field uta:id='regIssTrxNo'     uta:type='word'    uta:data='0'                   uta:comment='iss transaction number' />
+  <uta:field uta:id='regPurchaseOfflineCnt'  uta:type='word'   uta:data='0'                        uta:comment='Number of Offline in application' /><!--ADD Chandra-->        
+  <uta:field uta:id='regErrTimeOutConn'  	uta:type='card'   uta:data='0'                        uta:comment='Time Out Connecting - No Answer' />        
+  <uta:field uta:id='regErrTimeOutRecv'  	uta:type='card'   uta:data='0'                        uta:comment='Time Out Receiving' />
+  <uta:field uta:id='regErrLineBusy'  		uta:type='card'   uta:data='0'                        uta:comment='Line Busy' />
+  <uta:field uta:id='regErrNoCarrier'  		uta:type='card'   uta:data='0'                        uta:comment='No Carrier' />
+  <uta:field uta:id='regErrUserCancel'  	uta:type='card'   uta:data='0'                        uta:comment='User Cancel' />  
+  <uta:field uta:id='regErrLineDisconnect'  	uta:type='card'   uta:data='0'                        uta:comment='Line Disconnect' />
+  <uta:field uta:id='regErrCurBat' 		uta:type='ASCII' uta:length='lenBatNum' 		uta:comment='Current Batch Number' />
+  </uta:record>

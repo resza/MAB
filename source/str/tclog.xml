@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!--
+Subversion reference
+$HeadURL: https://svn.ingenico.com/UTAPROJECTS/sea-partner/5W/trunk/ISO5WPH/str/rev.xml $
+$Id: rev.xml 1439 2009-01-27 02:42:02Z kdelacruz $
+-->
+<uta:record uta:id='tclog' uta:comment='TC record' xmlns:uta="http://www.ingenico.com/xml/uta">
+  <uta:field uta:id='TCFlag'  uta:type='byte' uta:data='0x00' uta:comment='Reversal Flag Indicator' /> 
+  <uta:field uta:id='TCMti' uta:type='ASCII' uta:length='lenMti' uta:comment='Message Type' />
+  <uta:field uta:id='TCPan' uta:comment='card number' uta:type='ASCII' uta:length='lenPan' />
+  <uta:field uta:id='TCSTAN'      uta:type='card'                            uta:comment='System Trace Audit Number 1..999999' />
+  <uta:field uta:id='TCInvNum'    uta:type='card'                            uta:comment='invoice number (R.O.C.)' /> 
+  <uta:field uta:id='TCDatTim' uta:type='ASCII' uta:length='lenDatTim' uta:comment='current date and time CCYYMMDDhhmmss' />
+  <uta:field uta:id='TCAmt' uta:comment='transaction amount' uta:type='ASCII' uta:length='lenAmt' />
+  <uta:field uta:id='TCRspBit13' uta:comment='Rsp Bit 13' uta:type='ASCII' uta:length='2' />
+  <uta:field uta:id='TCRspBit12' uta:comment='Rsp Bit 12' uta:type='ASCII' uta:length='3' />
+  <uta:field uta:id='TCExpDat' uta:type='ASCII' uta:length='lenExpDat' uta:comment='expiry date' />
+  <uta:field uta:id='TCEntMod' uta:type='char' uta:comment='card entry mode' />
+  <uta:field uta:id='TCPanSeq' uta:type='ASCII' uta:length='2' uta:comment='Pan Seq' />
+  <uta:field uta:id='TCRrn' uta:type='ASCII' uta:length='lenRrn' uta:comment='Retrieval Reference Number' />
+  <uta:field uta:id='TCAutCod'       uta:type='ASCII'      uta:length='lenAutCod'       uta:comment='Authorization code' />
+  <uta:field uta:id='TCRspCod' uta:type='ASCII' uta:length='lenRspCod' uta:comment='Response code' />
+  <uta:field uta:id='TCTrk2' uta:type='ASCII' uta:length='lenTrk2' uta:comment='track 2 of the card' />  
+  <uta:field uta:id="TCTid" uta:type="ASCII" uta:length="lenTid" uta:comment='Acquirer Terminal ID' />
+  <uta:field uta:id="TCMid" uta:type="ASCII" uta:length="lenMid" uta:comment='Acquirer Merchant ID' />
+  <uta:field uta:id='TCTipAmt' uta:comment='Reversal Tip Amount' uta:type='ASCII' uta:length='lenAmt' />
+  <uta:field uta:id='TCEmvPANSeq'    uta:type='binary' uta:length='lenPANSeq'    uta:comment='5F34 PAN sequence number' />
+  <uta:field uta:id='TCEmvICC' 		uta:type='ASCII' uta:length='lenEmvICC' uta:comment='message of bit 55' />
+  <uta:field uta:id="TCEmvLen"   uta:type="word"   uta:comment='Len EMV' />
+  <uta:field uta:id='TCTxnType'   uta:type='byte'   uta:comment='TxnType' />
+  <uta:field uta:id='TCBit48PwrBuy' uta:type='ASCII'  uta:length='5'  uta:comment='Bit48 Req PwrBuy' /> 
+  </uta:record>
+

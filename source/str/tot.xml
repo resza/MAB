@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!--
+Subversion reference
+$HeadURL: https://svn.ingenico.com/UTAPROJECTS/sea-partner/5W/trunk/ISO5WPH/str/tot.xml $
+$Id: tot.xml 1888 2009-04-17 08:09:51Z ajloreto $
+-->
+<uta:record uta:id='tot' uta:comment='totals record' xmlns:uta="http://www.ingenico.com/xml/uta">
+  <uta:field uta:id='totAppDbAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Debit amount of application' /> 
+  <uta:field uta:id='totAppDbCnt'  uta:type='word'                         uta:comment='Number Debits of application' /> 
+  <uta:field uta:id='totAppCrAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Credit amount of application' /> 
+  <uta:field uta:id='totAppCrCnt'  uta:type='word'                         uta:comment='Number Credits of application' /> 
+  <uta:field uta:id='totAppTpAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Tip amount of application' /> 
+  <uta:field uta:id='totAppTpCnt'  uta:type='word'                         uta:comment='Number Tip of application' />     
+  <uta:field uta:id='totAppSaleAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Sale amount of application' />   
+  <uta:field uta:id='totAppSaleCnt'  uta:type='word'                         uta:comment='Number of Sale in application' />       
+  <uta:field uta:id='totAppRefundAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Refund amount of application' />   
+  <uta:field uta:id='totAppRefundCnt'  uta:type='word'                         uta:comment='Number of refund in application' />       
+  <uta:field uta:id='totAppOfflineAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Offline amount of application' />   
+  <uta:field uta:id='totAppOfflineCnt'  uta:type='word'                         uta:comment='Number of Offline in application' />       
+  <uta:field uta:id='totAppManualAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Manual amount of application' />   
+  <uta:field uta:id='totAppManualCnt'  uta:type='word'                         uta:comment='Number of Manual in application' />       
+  <uta:field uta:id='totAppVoidAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Void amount of application' />   
+  <uta:field uta:id='totAppVoidCnt'  uta:type='word'                         uta:comment='Number of Void in application' />       
+  <uta:field uta:id='totDatTim'  uta:type='ASCII'   uta:length='lenDatTim'  uta:comment='Batch date and time CCYYMMDDhhmmss' />
+  <uta:field uta:id='totBatNum'    uta:type='ASCII'   uta:length='lenBatNum'   uta:comment='Batch Number' />
+  <!--Prepaid-->
+  <uta:field uta:id='totAppTopUpAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Sale amount of application' />   
+  <uta:field uta:id='totAppTopUpCnt'  uta:type='word'                         uta:comment='Number of Sale in application' />       
+  <uta:field uta:id='totAppUpdateAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Sale amount of application' />   
+  <uta:field uta:id='totAppUpdateCnt'  uta:type='word'                         uta:comment='Number of Sale in application' />       
+  <!--MiniATM-->
+  <uta:field uta:id='totAppTelkomAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Sale amount of application' />   
+  <uta:field uta:id='totAppTelkomCnt'  uta:type='word'                         uta:comment='Number of Sale in application' />       
+  <uta:field uta:id='totAppSatelindoAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Sale amount of application' />   
+  <uta:field uta:id='totAppSatelindoCnt'  uta:type='word'                         uta:comment='Number of Sale in application' />   
+  <uta:field uta:id='totAppTelkomselAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Sale amount of application' />   
+  <uta:field uta:id='totAppTelkomselCnt'  uta:type='word'                         uta:comment='Number of Sale in application' />       
+  <uta:field uta:id='totAppExcelcomAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Sale amount of application' />   
+  <uta:field uta:id='totAppExcelcomCnt'  uta:type='word'                         uta:comment='Number of Sale in application' />       
+  <uta:field uta:id='totAppEsiaAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Sale amount of application' />   
+  <uta:field uta:id='totAppEsiaCnt'  uta:type='word'                         uta:comment='Number of Sale in application' />       
+  <uta:field uta:id='totAppPLNAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Sale amount of application' />   
+  <uta:field uta:id='totAppPLNCnt'  uta:type='word'                         uta:comment='Number of Sale in application' />       
+  <uta:field uta:id='totAppFirstMEdiaAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Sale amount of application' />   
+  <uta:field uta:id='totAppFirstMEdiaCnt'  uta:type='word'                         uta:comment='Number of Sale in application' />       
+  <uta:field uta:id='totAppIndovisionAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Sale amount of application' />   
+  <uta:field uta:id='totAppIndovisionCnt'  uta:type='word'                         uta:comment='Number of Sale in application' />       
+  <uta:field uta:id='totAppOtoMultiAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Sale amount of application' />   
+  <uta:field uta:id='totAppOtoMultiCnt'  uta:type='word'                         uta:comment='Number of Sale in application' />       
+
+   <uta:field uta:id='totAppMAtmAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Commission amount of application' />  
+   <uta:field uta:id='totAppAmountMINIATM'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Sale amount of application' />   
+  <uta:field uta:id='totAppMAtmCnt'  uta:type='word'                         uta:comment='Number of Sale in application' />  
+  
+  <!--GP-->  
+  <uta:field uta:id='totAppPurchaseAmtGP'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Sale amount of application' />   
+  <uta:field uta:id='totAppPurchaseCntGP'  uta:type='word'                         uta:comment='Number of Sale in application' />       
+<!--GP-->    
+<!--Fasa4-->
+ <uta:field uta:id='totAppTunaiAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Sale amount of application' />   
+  <uta:field uta:id='totAppTunaiCnt'  uta:type='word'                         uta:comment='Number of Sale in application' />  
+  <uta:field uta:id='totAppTransferAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Sale amount of application' />   
+  <uta:field uta:id='totAppTransferCnt'  uta:type='word'                         uta:comment='Number of Sale in application' />  
+  <uta:field uta:id='totAppCCAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Sale amount of application' />   
+  <uta:field uta:id='totAppCCCnt'  uta:type='word'                         uta:comment='Number of Sale in application' />  
+
+  <uta:field uta:id='totAppOnUsAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Sale amount on us of application' />   
+  <uta:field uta:id='totAppOnUsCnt'  uta:type='word'                         uta:comment='Number of Sale on us in application' />       
+  <uta:field uta:id='totAppOffUsAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Sale off us amount of application' />   
+  <uta:field uta:id='totAppOffUsCnt'  uta:type='word'                         uta:comment='Number of Sale off us in application' />       
+
+  <uta:field uta:id='totAppDBOnUsAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Sale amount on us of application' />   
+  <uta:field uta:id='totAppDBOnUsCnt'  uta:type='word'                         uta:comment='Number of Sale on us in application' />       
+  <uta:field uta:id='totAppMCOnUsAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Sale amount on us of application' />   
+  <uta:field uta:id='totAppMCOnUsCnt'  uta:type='word'                         uta:comment='Number of Sale on us in application' />       
+  <uta:field uta:id='totAppMCOffUsAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Sale off us amount of application' />   
+  <uta:field uta:id='totAppMCOffUsCnt'  uta:type='word'                         uta:comment='Number of Sale off us in application' />       
+  <uta:field uta:id='totAppVSOnUsAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Sale amount on us of application' />   
+  <uta:field uta:id='totAppVSOnUsCnt'  uta:type='word'                         uta:comment='Number of Sale on us in application' />       
+  <uta:field uta:id='totAppVSOffUsAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Sale off us amount of application' />   
+  <uta:field uta:id='totAppVSOffUsCnt'  uta:type='word'                         uta:comment='Number of Sale off us in application' />       
+  <uta:field uta:id='totAppMCPBAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total PowerBuy amount of application' />   
+  <uta:field uta:id='totAppMCPBCnt'  uta:type='word'                         uta:comment='Number of PowerBuy in application' />       
+  <uta:field uta:id='totAppVSPBAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total PowerBuy amount of application' />   
+  <uta:field uta:id='totAppVSPBCnt'  uta:type='word'                         uta:comment='Number of PowerBuy in application' />       
+
+</uta:record>

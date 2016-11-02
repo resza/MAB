@@ -1,0 +1,6 @@
+<!--<!DOCTYPE map SYSTEM "http://www.ingenico.com/xml/uta/map.dtd">-->
+<uta:def xmlns:uta="http://www.ingenico.com/xml/uta">
+    <!-- constants defined somewhere else, not to be used to generate code -->
+    <uta:define uta:id="dspW" uta:data="16"/>
+    <uta:define uta:id="prtW" uta:data="24"/>
+</uta:def>

@@ -1,0 +1,122 @@
+<!--
+Subversion reference
+$HeadURL: https://svn.ingenico.com/UTAPROJECTS/sea-partner/5W/trunk/ISO5WPH/str/mnu.xml $
+$Id: mnu.xml 1598 2009-02-26 10:52:18Z jlapara $
+-->
+<uta:table uta:id="mnu" uta:type='ASCII' uta:length="lenMnu" uta:cache="yes" uta:comment="menu tree"
+  xmlns:uta="http://www.ingenico.com/xml/uta">
+  <uta:row uta:id="mnuMainMenu"     			uta:data='"0 MENU UTAMA      "' />
+<!--CICILAN BUKOPIN-->
+   	 	<uta:row uta:id="mnuPurchase"				uta:data='"1? PURCHASE"' />
+    	<uta:row uta:id="mnuSale"         			uta:data='"1 SALE"' />
+    	<uta:row uta:id="mnuPrvtLbl"         		uta:data='"1 PRVT LABEL INS"' />
+    	<uta:row uta:id="mnuPrvtLblTes"         	uta:data='"1 PRVT LABEL TAP"' />
+
+    	
+    	<uta:row uta:id="mnuTransferBank"    		uta:data='"1 TRANSFER BANK"' />
+
+
+    	    <uta:row uta:id="mnuSetorBkpn"    			uta:data='"2 SETOR TUNAI"' />
+    	    <uta:row uta:id="mnuTarikBkpn"    			uta:data='"2 TARIK TUNAI"' />
+    	    <uta:row uta:id="mnuTransferBkpn"    		uta:data='"2 TRANSFER"' />
+    	    <uta:row uta:id="mnuTranBukopinBkpn"    		uta:data='"3 TRAN BUKOPIN"' />
+    	    <uta:row uta:id="mnuTranBankLainBkpn"    		uta:data='"3 TRAN BANK LAIN"' />
+    	    <uta:row uta:id="mnuPembayaranBkpn"    		uta:data='"2 PEMBAYARAN"' />
+    	    <uta:row uta:id="mnuPln1Bkpn"    				uta:data='"3 PLN"' />
+    	    <uta:row uta:id="mnuPlnPostpaidBkpn"    			uta:data='"4 PLN POSTPAI"' />
+    	    <uta:row uta:id="mnuPlnNonTaglisBkpn"    			uta:data='"4 PLN NON TAGLIS"' />
+    	    <uta:row uta:id="mnuTeleponBkpn"    			uta:data='"3 TELEPON"' />
+    	    <uta:row uta:id="mnuSelularBkpn"    			uta:data='"3 SELULAR"' />
+    	    <uta:row uta:id="mnuPamPdamBkpn"    			uta:data='"3 PAM/PDAM"' />
+    	    <uta:row uta:id="mnuAetraBkpn"    					uta:data='"4 AETRA"' />
+    	    <uta:row uta:id="mnuPalyjaBkpn"    					uta:data='"4 PALYJA"' />
+    	    <uta:row uta:id="mnuMultifinanceBkpn"    		uta:data='"3 MULTIFINANCE"' />
+    	    <uta:row uta:id="mnuMafBkpn"    					uta:data='"4 MAF"' />
+    	    <uta:row uta:id="mnuMcfBkpn"    					uta:data='"4 MCF"' />
+    	    <uta:row uta:id="mnuWomBkpn"    					uta:data='"4 WOM"' />
+    	    <uta:row uta:id="mnuBafBkpn"    					uta:data='"4 BAF"' />
+    	    <uta:row uta:id="mnuKartuKreditBkpn"    		uta:data='"3 KARTU KREDIT"' />
+    	    <uta:row uta:id="mnuPembelianBkpn"    		uta:data='"2 PEMBELIAN"' />
+    	    <uta:row uta:id="mnuEvoucherBkpn"    			uta:data='"3 E-VOUCHER"' />
+    	    <uta:row uta:id="mnuEvoucherBkpnXl"    				uta:data='"4 PLN PREPAID"' />
+    	    <uta:row uta:id="mnuEvoucherBkpnTelkomsel"    		uta:data='"4 XL"' />
+    	    <uta:row uta:id="mnuEvoucherBkpnIndosat"    		uta:data='"4 INDOSAT OOREDOO"' />
+    	    <uta:row uta:id="mnuEvoucherBkpnEsia"    			uta:data='"4 ESIA"' />
+    	    <uta:row uta:id="mnuEvoucherBkpnSmartfren"    		uta:data='"4 SMARTFREN"' />
+    	    <uta:row uta:id="mnuPln2Bkpn"    				uta:data='"3 PLN"' />
+    	    <uta:row uta:id="mnuPlnPrepaidBkpn"    				uta:data='"4 PLN PREPAID"' />
+    	    <uta:row uta:id="mnuManualAdviceBkpn"    			uta:data='"4 MANUAL ADVICE"' />
+    	    <uta:row uta:id="mnuInformasiBkpn"    		uta:data='"2 INFORMASI"' />
+    	    <uta:row uta:id="mnuInfoSaldoBkpn"    			uta:data='"3 INFO SALDO"' />
+    	    <uta:row uta:id="mnuKodeBankBkpn"    			uta:data='"3 INFO KODE BANK"' />
+    	    <uta:row uta:id="mnuInfoTransaksiBkpn"    		uta:data='"3 INFO TRANSAKSI"' />
+    	    <uta:row uta:id="mnuCetakUlangBkpn"    		uta:data='"2 CETAK ULANG"' />
+    	    <uta:row uta:id="mnuTransaksiTerakhirBkpn"    	uta:data='"3 TRANSAKSI TERAKHIR"' />
+    	    <uta:row uta:id="mnuTransaksiNoBkpn"    		uta:data='"3 TRANSAKSI NO"' />
+    	    <uta:row uta:id="mnuLaporanBkpn"    		uta:data='"2 LAPORAN"' />
+    	    <uta:row uta:id="mnuRekapHarianBkpn"    			uta:data='"3 REKAP HARIAN"' />
+    	    <uta:row uta:id="mnuDetailHarianBkpn"    			uta:data='"3 DETAIL HARIAN"' />
+    	    <uta:row uta:id="mnuFeetransaksiBkpn"    			uta:data='"3 FEE TRANSAKSI"' />
+    	    <uta:row uta:id="mnuLainlainBkpn"    		uta:data='"2 LAIN-LAIN"' />
+    	    <uta:row uta:id="mnuUbahPinBkpn"    			uta:data='"3 UBAH PIN"' />
+    	    <uta:row uta:id="mnuUbahBahasaBkpn"    			uta:data='"3 UBAH BAHASA"' />
+    	    <uta:row uta:id="mnuSetupBkpn"    			uta:data='"2 SETUP"' />
+    	       	     	    
+
+
+    	
+	   <!-- 	<uta:row uta:id="mnuTransferBkpn"         		uta:data='"2 TRANSFER>"' />  -->
+     <!--		<uta:row uta:id="mnuPlnBkpn"     		    	uta:data='"2 PLN"' />	-->
+	  <!--  	<uta:row uta:id="mnuPdamBkpn"         			uta:data='"2 PDAM"' /> -->
+			<uta:row uta:id="mnuTelkomBkpn"         			uta:data='"2 TELKOM"' />
+			<uta:row uta:id="mnuSelPosBkpn"         			uta:data='"2 SELLR POSTPAID"' />
+			<uta:row uta:id="mnuSelPreBkpn"         			uta:data='"2 SELLR PREPAID"' />
+			<uta:row uta:id="mnuPlnBkpn"     		    	uta:data='"2 PLN"' />
+				<uta:row uta:id="mnuPlnBkpn1"         			uta:data='"3 PLN POSTPAID"' />
+				<uta:row uta:id="mnuPlnBkpn2"         			uta:data='"3 PLN PREPAID"' />
+			<uta:row uta:id="mnuPdamBkpn"         			uta:data='"2 PDAM"' />
+				<uta:row uta:id="mnuPdamBkpn1"         			uta:data='"3 TPJ/AETRA"' />
+				<uta:row uta:id="mnuPdamBkpn2"         			uta:data='"3 PALYJA"' />
+				<uta:row uta:id="mnuPdamBkpn3"         			uta:data='"3 PAM BSD"' />
+			<uta:row uta:id="mnuMultiBkpn"         			uta:data='"2 MULTIFINANCE"' />
+				<uta:row uta:id="mnuMultiBkpn1"         			uta:data='"3 MCF"' />
+				<uta:row uta:id="mnuMultiBkpn2"         			uta:data='"3 MAF"' />
+				<uta:row uta:id="mnuMultiBkpn3"         			uta:data='"3 WOM"' />
+				<uta:row uta:id="mnuMultiBkpn4"         			uta:data='"3 BAF"' />
+			<uta:row uta:id="mnuCCBkpn"         			uta:data='"2 KARTU KREDIT"' />
+			<uta:row uta:id="mnuFBBkpn"         			uta:data='"2 FOOD BENEFIT"' />
+				<uta:row uta:id="mnuFBBkpn1"         			uta:data='"3 JAMSOSTEK"' />
+			<uta:row uta:id="mnuTarikBkpn"         			uta:data='"2 TARIK TUNAI"' />
+				<uta:row uta:id="mnuTarikBkpn1"         			uta:data='"3 BANK BUKOPIN"' />
+				<uta:row uta:id="mnuTarikBkpn2"         			uta:data='"3 BANK LAIN"' />
+			<uta:row uta:id="mnuSetorBkpn"         			uta:data='"2 SETOR TUNAI"' />
+			<uta:row uta:id="mnuTopupBkpn"         			uta:data='"2 TOP UP"' />
+
+
+			
+
+	    	
+	     <!-- 	<uta:row uta:id="mnuSettingMBkpn"         		uta:data='"2 SETTING"' /> -->
+    	<uta:row uta:id="mnuCash"         			uta:data='"1 CASH ADVANCE"' />
+		<uta:row uta:id="mnuVoid"         		    uta:data='"1 VOID"' />
+    	<uta:row uta:id="mnuRefund"         		uta:data='"1 REFUND"' />
+		<uta:row uta:id="mnuCardVer"       			uta:data='"1 CARD VER"' />
+	    <uta:row uta:id="mnuOffline"    			uta:data='"1 OFFLINE"' />
+	    <uta:row uta:id="mnuSettlement"  			uta:data='"1 SETTLEMENT"' />
+	    <uta:row uta:id="mnuFunctions"    			uta:data='"1 FUNCTIONS"' />
+	    	<uta:row uta:id="mnuHostLogon"         		uta:data='"2 HOST LOGON>"' />
+     		<uta:row uta:id="mnuEchoTest"     		    uta:data='"2 ECHO TEST"' />	
+	    	<uta:row uta:id="mnuReprint"         		uta:data='"2 REPRINT>"' />
+	    		<uta:row uta:id="mnuLastTrx"         		uta:data='"3 LAST TRANSACTION"' />
+	    		<uta:row uta:id="mnuAnyTrx"         		uta:data='"3 ANY TRANSACTION "' />
+	    		<uta:row uta:id="mnuMrcSetDup"    			uta:data='"3 SETTLE DUPLICATE"' />
+	    	<uta:row uta:id="mnuMrcBatTot"         		uta:data='"2 BATCH TOTALS"' />
+	    	<uta:row uta:id="mnuMrcViewBat"  			uta:data='"2 BATCH VIEW"' />
+	    	<uta:row uta:id="mnuMrcReset"         		uta:data='"2 CLEAR BATCH"' />
+	    	<uta:row uta:id="mnuMrcResetRev"  			uta:data='"2 CLEAR REVERSAL"' />
+	    	<uta:row uta:id="mnuReport"  				uta:data='"2 REPORT>         "' />
+	    		<uta:row uta:id="mnuDetailReport"  			uta:data='"3 DETAIL REPORT   "' /> 
+	    		<uta:row uta:id="mnuSummaryReport"  		uta:data='"3 SUMMARY REPORT  "' />
+	    	<uta:row uta:id="mnuKoneksi"  				uta:data='"2 SETCOMM  "' />	
+    	
+</uta:table>

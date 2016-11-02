@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!--
+Subversion reference
+$HeadURL: https://svn.ingenico.com/UTAPROJECTS/sea-partner/5W/trunk/ISO5WPH/str/msg.xml $
+$Id: msg.xml 1931 2009-04-27 09:49:34Z ajloreto $
+-->
+<uta:table uta:id="msg" uta:type='ASCII' uta:length="dspW" uta:cache="yes" uta:comment="screen messages"
+  xmlns:uta="http://www.ingenico.com/xml/uta">
+  <uta:row uta:id="msgSpaces"          	uta:data='"                "' />
+  <uta:row uta:id="msgAreYouSure"      	uta:data='" Are you sure?  "' />
+  <uta:row uta:id="msgMemoryReset"     	uta:data='"  Memory reset  "' />
+  <uta:row uta:id="msgProcessingError" 	uta:data='"Processing error"' />
+  <uta:row uta:id="msgDataAccess"    		uta:data='"  Data Access"' />
+  <uta:row uta:id="msgError"    				uta:data='"      Error"' />
+  <uta:row uta:id="msgCryptoPeriphError"  uta:data='"  Crypto. Error "' />   
+  <uta:row uta:id="msgMemoryError"         uta:data='" Out Of Memory "' />    
+  <uta:row uta:id="msgNotAccepted"          uta:data='"  Not Accepted  "' />  
+  <uta:row uta:id="msgLastPin"                  uta:data='"PIN:           "' />  
+   <uta:row uta:id="msgPinPrompt"            uta:data='"PIN:            "' />           
+  <uta:row uta:id="msgWrongPin"        	uta:data='"Invalid PIN code"' />
+  <uta:row uta:id="msgValidPin"                uta:data='"   Valid Pin    "' />  
+  <uta:row uta:id="msgLastAttempt"           uta:data='"  LAST ATTEMPT  "' />  
+  <uta:row uta:id="msgPwdInput"        	uta:data='" ENTER PASSWORD "' />
+  <uta:row uta:id="msgPadAmt"                 uta:data='"           12.34"' />  
+  <uta:row uta:id="msgDialing"         	uta:data='"   Dialing...   "' />
+  <uta:row uta:id="msgWait"            	uta:data='" Please Wait... "' />
+  <uta:row uta:id="msgConnecting"       uta:data='"  Connecting..  "' />
+  <uta:row uta:id="msgSend"            	uta:data='"    Sending...  "' />
+  <uta:row uta:id="msgReceive"         	uta:data='"    RECEIVING   "' />
+  <uta:row uta:id="msgEnterAmount"     	uta:data='"ENTER AMOUNT:   "' />
+  <uta:row uta:id="msgEnterCard"       	uta:data='"ENTER CARD:     "' />
+  <uta:row uta:id="msgSwipeCard"       	uta:data='"   SWIPE CARD   "' />
+  <uta:row uta:id="msgSwipeInsert"      uta:data='"  SWIPE/INSERT  "' />
+  <uta:row uta:id="msgCard"      		uta:data='"      CARD      "' />  
+  <uta:row uta:id="msgEnterFunction"    uta:data='"FUNCTION ?"' />
+  <uta:row uta:id="msgFunction"       	uta:data='"    FUNCTION    "' />
+  <uta:row uta:id="msgTMS"       		uta:data='"       TMS      "' />
+  <uta:row uta:id="msgTerminal"       	uta:data='"    TERMINAL    "' />
+  <uta:row uta:id="msgCommunication"    uta:data='"  COMMUNICATION "' />
+  <uta:row uta:id="msgConfigure"       	uta:data='"    CONFIGURE   "' />
+  <uta:row uta:id="msgLoadParam"       	uta:data='" LOAD PARAMETERS"' />
+  <uta:row uta:id="msgLoadSoft"       	uta:data='"  LOAD SOFTWARE "' />
+  <uta:row uta:id="msgTMSConfig"       	uta:data='"TMS CONFIG"' />
+  <uta:row uta:id="msgTMSRefNo"       	uta:data='"TMS REFERENCE NO"' />
+  <uta:row uta:id="msgTMSNii"       	uta:data='"TMS NII :"' />
+  <uta:row uta:id="msgLinkSetup"       	uta:data='"LINK SETUP(1-5)?"' />
+  <uta:row uta:id="msgModemParam"       uta:data='"MODEM PARAMETER"' />
+  <uta:row uta:id="msgPriNo"       		uta:data='"PRIMARY NO. :"' />
+  <uta:row uta:id="msgSecNo"       		uta:data='"SECONDARY NO. :"' />
+  <uta:row uta:id="msgBaudRate"       	uta:data='"BAUD RATE (1-7)?"' />
+  <uta:row uta:id="msgBufferSize"       uta:data='"BUFFER SIZE(1-3)"' />
+  <uta:row uta:id="msgLoadParamNow"     uta:data='"LOAD PARAMETERS"' />
+  <uta:row uta:id="msgNow"       		uta:data='"NOW ?"' />
+  <uta:row uta:id="msgHostLink "       	uta:data='"HOST LINK(1-4)?"' />
+  <uta:row uta:id="msgEMVCredit"   		uta:data='"   EMV CREDIT   "' />
+  <uta:row uta:id="msgTerminalConfig"	uta:data='"TERMINAL  CONFIG"' />
+  <uta:row uta:id="msgCardRanges"		uta:data='"   CARD RANGES  "' />
+  <uta:row uta:id="msgIssuer"			uta:data='"     ISSUER     "' />
+  <uta:row uta:id="msgAcquirer"			uta:data='"    ACQUIRER    "' />
+  <uta:row uta:id="msgEMVParam"			uta:data='"  EMV PARAMETER "' />
+  <uta:row uta:id="msgCompleted"		uta:data='"    COMPLETED   "' />
+  <uta:row uta:id="msgMasterCard"		uta:data='"      MASTERCARD"' />
+  <uta:row uta:id="msgVisaCard"			uta:data='"      VISACARDS"' />
+  <uta:row uta:id="msgSale"				uta:data='"      SALE"' />
+  <uta:row uta:id="msgMCardNo"			uta:data='"5972037641051717"' />
+  <uta:row uta:id="msgVCardNo"			uta:data='"4972037641051717"' />
+  <uta:row uta:id="msgAmount"			uta:data='"AMT?"' />
+  <uta:row uta:id="msgTip"				uta:data='"TIP?"' />
+  <uta:row uta:id="msgPin"				uta:data='"PIN?"' />
+  <uta:row uta:id="msgTotal"			uta:data='"TOTAL"' />
+  <uta:row uta:id="msgYesNo"			uta:data='"            Y/N?"' />
+  <uta:row uta:id="msgVisaCardSale"		uta:data='"VISACARDS   SALE"' />
+  <uta:row uta:id="msgTransaction"		uta:data='"   TRANSACTION  "' />
+  <uta:row uta:id="msgNotAllowed"		uta:data='"   NOT ALLOWED   "' />
+  <uta:row uta:id="msgTransmitting"		uta:data='"  TRANSMITTING  "' />
+  <uta:row uta:id="msgReceiving"		uta:data='"    RECEIVING   "' />
+  <uta:row uta:id="msgVerifySign"		uta:data='"VERIFY SIGNATURE"' />
+  <uta:row uta:id="msgMerchantCopy"		uta:data='"  MERCHANT COPY "' />
+  <uta:row uta:id="msgCustomerCopy"	uta:data='"  CUSTOMER COPY "' />
+  <uta:row uta:id="msgBankCopy"		uta:data='"    BANK COPY   "' />  
+  <uta:row uta:id="msgPressEnter"		uta:data='"   PRESS ENTER  "' />
+  <uta:row uta:id="msgPressCancel"		uta:data='"  PRESS CANCEL  "' />
+  <uta:row uta:id="msgPressStop"		uta:data='"   PRESS STOP   "' />
+  <uta:row uta:id="msgPrinting"			uta:data='"    PRINTING"' />  
+  <uta:row uta:id="msgEmpty"           	uta:data='""' />
+  <uta:row uta:id="msgTleGo" 			uta:data='"Sending.."' />
+  <uta:row uta:id="msgRs232" 			uta:data='"RS232"' />
+  <uta:row uta:id="msgPort" 			uta:data='"PORT (1-2)?"' />
+  <uta:row uta:id="msgTCPIPprm" 		uta:data='"TCP/IP PARAMETER"' />
+  <uta:row uta:id="msgPriIP" 			uta:data='"PRI. HOST IP:"' />
+  <uta:row uta:id="msgPriHostPort" 		uta:data='"PRI. HOST PORT:"' />
+  <uta:row uta:id="msgSecIP" 			uta:data='"SEC. HOST IP:"' />
+  <uta:row uta:id="msgSecHostPort" 		uta:data='"SEC. HOST PORT:"' />
+  <uta:row uta:id="msgLineParam" 		uta:data='"LINE PARAMETERS"' />
+  <uta:row uta:id="msgTonePulse" 		uta:data='"1-TONE 2-PULSE?"' />
+  <uta:row uta:id="msgPabx" 			uta:data='"PABX NUMBER"' />
+  <uta:row uta:id="msgToneDetect" 		uta:data='"TONE DETECT"' />
+  <uta:row uta:id="msgViewBatch" 		uta:data='"   VIEW BATCH   "' />  
+  <uta:row uta:id="msgLog" 				uta:data='"LOG:"' />
+  <uta:row uta:id="msgOsale" 			uta:data='"O/SALE"' />
+  <uta:row uta:id="msgPrevNext" 		uta:data='"PREV  MORE  NEXT"' />
+  <uta:row uta:id="msgMore"		 		uta:data='"      MORE      "' />
+  <uta:row uta:id="msgCurrentTrace" 	uta:data='"CURRENT TRACE #"'/>
+  <uta:row uta:id="msgSetTrace" 		uta:data='"SET TRACE #"'/>
+  <uta:row uta:id="msgEnterTrace" 		uta:data='"ENTER TRACE #"'/>
+  <uta:row uta:id="msgCurrentBatchNum" 	uta:data='"  CURRENT BATCH "' />
+  <uta:row uta:id="msgViewStan" 		uta:data='"   VIEW STAN #  "' />
+  <uta:row uta:id="msgSetStan" 		    uta:data='"SET STAN #"' />
+  <uta:row uta:id="msgViewConfig" 		uta:data='"VIEW CONFIG"' />
+  <uta:row uta:id="msgTermConfig" 		uta:data='"TERMINAL CONFIG"' />
+  <uta:row uta:id="msgSelectAcq" 		uta:data='"SELECT ACQUIRER"' />
+  <uta:row uta:id="msgApplicationSelect" uta:data='"APPLI. SELECT..."' />  
+  <uta:row uta:id="msgAidListEmpty" 	uta:data='"  NOT ACCEPTED  "' />    
+  <uta:row uta:id="msgConfirm" 			uta:data='"    Confirm     "' /> 
+  <uta:row uta:id="msgYesVal" 			uta:data='"   YES = ENTER  "' />
+  <uta:row uta:id="msgNoAnn" 			uta:data='"   NO  = CLEAR  "' />
+  <uta:row uta:id="msgEmvAppBlock" 		uta:data='" APP BLOCK..."' />
+  <uta:row uta:id="msgEmvCrdBlock" 		uta:data='" CARD BLOCK..."' />
+  <uta:row uta:id="msgShouldBeProcessed" uta:data='"TO BE PROCESSED "' />
+  <uta:row uta:id="msgEmvCard" 			uta:data='"  AS CHIP CARD  "' /> 
+  <uta:row uta:id="msgNewPwdInput"		uta:data='"New password:   "' /> 
+  <uta:row uta:id="msgConfPwdInput"		uta:data='"Confirm pwd:    "' />
+  <uta:row uta:id="msgPwdInvalid"		uta:data='"INVALID PASSWORD"' />
+  <uta:row uta:id="msgTestKeyLoad"		uta:data='"LOAD TEST KEY   "' />
+  <uta:row uta:id="msgIpAdd" 			uta:data='"IP ADDRESS :    "' />
+  <uta:row uta:id="msgSubMask" 			uta:data='"SUBNET MASK :   "' />
+  <uta:row uta:id="msgGateway" 			uta:data='"GATEWAY :       "' />
+  <uta:row uta:id="msgEnableEdh" 		uta:data='"ENABLE EDH      "' />
+  <uta:row uta:id="msgGprsApn" 			uta:data='"GPRS APN?       "' />
+  <uta:row uta:id="msgGprsPin" 			uta:data='"GPRS PIN?       "' />
+  <uta:row uta:id="msgGprsUsername" 	uta:data='"GPRS USERNAME?  "' />
+  <uta:row uta:id="msgGprsPassword" 	uta:data='"GPRS PASSWORD?  "' />
+  <uta:row uta:id="msgGprsPhone" 		uta:data='"GPRS PHONE?     "' />
+  <uta:row uta:id="msgGprs" 			uta:data='"GPRS"' />
+  <uta:row uta:id="msgOnOff" 			uta:data='"1-OFF 2-ON ?"' />
+  <uta:row uta:id="msgGprsParameter" 	uta:data='"GPRS PARAMETER"' />
+  <uta:row uta:id="msgTCPIP" 			   uta:data='"TCP/IP"' />
+  <uta:row uta:id="msgDIALUP" 			 uta:data='"DIAL UP"' />
+  <uta:row uta:id="msgNotDef" 			 uta:data='"Not defined"' />
+  <uta:row uta:id="msgDone"          uta:data='"      DONE      "' />
+  <uta:row uta:id="msgEmvContext"    uta:data='" EMV CONTEXT... "' />
+  <uta:row uta:id="msg1200"    			 uta:data='" 1200bps"' />
+  <uta:row uta:id="msg2400"    			 uta:data='" 2400bps"' />
+  <uta:row uta:id="msg9600"    			 uta:data='" 9600bps"' />
+  <uta:row uta:id="msg14400"    		 uta:data='" 14400bps"' />
+  <uta:row uta:id="msg19200"    		 uta:data='" 19200bps"' />
+  <uta:row uta:id="msg28800"    		 uta:data='" 28800bps"' />
+  <uta:row uta:id="msg33600"    		 uta:data='" 33600bps"' />
+  <uta:row uta:id="msg38400"    			 uta:data='" 38400bps"' />
+  <uta:row uta:id="msg57600"    			 uta:data='" 57600bps"' />
+  <uta:row uta:id="msg115200"    			 uta:data='" 115200bps"' />
+  <uta:row uta:id="msg500"    			 uta:data='"500"' />
+  <uta:row uta:id="msg1000"    			 uta:data='"1000"' />
+  <uta:row uta:id="msg1400"    			 uta:data='"1400"' />  
+  <uta:row uta:id="msgUserCancel"    uta:data='"   USER CANCEL"' />
+  <uta:row uta:id="msgBinNotFound"	 uta:data='"  INVALID BIN   "' />  
+  <uta:row uta:id="msgCardRefused"	 uta:data='"  Card Refused  "' />  
+  <uta:row uta:id="msgInvalidPan"		 uta:data='"  INVALID CARD  "' />
+  <uta:row uta:id="msgInvalidLuhn"	  uta:data='"  INVALID LUHN  "' />
+  <uta:row uta:id="msgCardExpired"	  uta:data='"  CARD EXPIRED  "' />
+  <uta:row uta:id="msgInvalidInput"	  uta:data='" INVALID INPUT  "' />
+  <uta:row uta:id="msgRspCodBgd"		  uta:data='"Resp. code:  %s"' />
+  <uta:row uta:id="msgRspCodCtl"		  uta:data='"ABCDEFGHIJKLMabc"' /> 
+  <uta:row uta:id="msgConnConnected"	uta:data='"    Connected   "' />  
+  <uta:row uta:id="msgConnBusy"			 uta:data='"    LINE BUSY   "' />    
+  <uta:row uta:id="msgConnNoDialTone"	uta:data='"  NO DIAL TONE  "' />  
+  <uta:row uta:id="msgConnNoCarrier"	uta:data='"   NO CARRIER   "' />  
+  <uta:row uta:id="msgConnTimeout"		uta:data='"     TIMEOUT    "' />  
+  <uta:row uta:id="msgConnFail"			 uta:data='"CONNECTION FAIL"' />
+  <uta:row uta:id="msgRedialing"			 uta:data='"    REDIALING   "' />  
+  <uta:row uta:id="msgReConnecting"			 uta:data='"  RECONNECTING  "' />
+  <uta:row uta:id="msgSendingFailed"	uta:data='" SENDING FAILED "' />  
+  <uta:row uta:id="msgReceivingFailed"			 uta:data='"RECEIVING FAILED"' />    
+  <uta:row uta:id="msgReversal"			  uta:data='"    REVERSAL   "' />
+  <uta:row uta:id="msgApprove"			  uta:data='"    APPROVE"' />
+  <uta:row uta:id="msgVoid"			      uta:data='"VOID"' />
+  <uta:row uta:id="msgAlreadyVoid"	  uta:data='" ALREADY VOIDED"' />
+  <uta:row uta:id="msgRefNotFound"	  uta:data='" REF# NOT FOUND"' />
+  <uta:row uta:id="msgTraceNotFound"  uta:data='"TRACE# NOT FOUND"' />
+  <uta:row uta:id="msgLogTraDatTim"	  uta:data='"TRAN DATE/  TIME"' />
+  <uta:row uta:id="msgNoTran"			    uta:data='"NO TRANSACTIONS"' />
+  <uta:row uta:id="msgOff"				    uta:data='"OFF"' />
+  <uta:row uta:id="msgOn"				      uta:data='"ON"' />
+  <uta:row uta:id="msgLogEmpty"		    uta:data='"   BATCH EMPTY"' />
+  <uta:row uta:id="msgLogFull"		    uta:data='"    BATCH FULL"' />
+  <uta:row uta:id="msgStl"				    uta:data='"   SETTLEMENT   "' />
+  <uta:row uta:id="msgBatUpl"			    uta:data='"  BATCH UPLOAD  "' />
+  <uta:row uta:id="msgCrdRng"			    uta:data='"   CARD RANGES  "' />
+  <uta:row uta:id="msgIss"				    uta:data='"     ISSUER     "' />
+  <uta:row uta:id="msgAcq"				    uta:data='"    ACQUIRER    "' />
+  <uta:row uta:id="msgEmvPrm"			    uta:data='" EMV PARAMETER "' />
+  <uta:row uta:id="msgVar"				    uta:data='""' />
+  <uta:row uta:id="msgEntDat"			    uta:data='"ENTER DATE:"' />
+  <uta:row uta:id="msgEntTim"			    uta:data='"ENTER TIME:"' />
+  <uta:row uta:id="msgLodMstKey"	    uta:data='"Load Master Key"' />
+  <uta:row uta:id="msgLodWrkKey"	    uta:data='"Load Working Key"' />
+  <uta:row uta:id="msgEntPwd"			    uta:data='"Enter password: "' /> 
+  <uta:row uta:id="msgFncPwd"			    uta:data='"FUNCT PASSWORD ?"' /> 
+  <uta:row uta:id="msgTerReset"		    uta:data='" TERMINAL RESET "' />
+  <uta:row uta:id="msgOfltxn"			    uta:data='"Offline Txns"' />
+  <uta:row uta:id="msgPanInput"       uta:data='"   Enter PAN    "' />
+  <uta:row uta:id="msgExpDatInput"    uta:data='"Enter Exp. date "' />
+  <uta:row uta:id="msgEnableDhcp"     uta:data='"ENABLE DHCP"'/> 
+  <uta:row uta:id="msgInvalidTrack"   uta:data='" INVALID TRACK  "'/>
+  <uta:row uta:id="msgEnterAppCod"		uta:data='"Approval Code?"' />
+  <uta:row uta:id="msgRmvCrd"			    uta:data='"  REMOVE CARD  "' />   
+  <uta:row uta:id="msgEmvAuthenticate"	uta:data='"EMV AUTHENTICATE"' />   
+  <uta:row uta:id="msgEmvAppCvm"		  uta:data='"   EMV CVM...   "' />
+  <uta:row uta:id="msgDuplicata"		  uta:data='"    DUPLICATE   "' />  
+  <uta:row uta:id="msgApproved"       uta:data='"APPROVED"' />  
+  <uta:row uta:id="msgDeclined"       uta:data='"    DECLINED    "' />
+  <uta:row uta:id="msgTone"       uta:data='"TONE"' />  
+  <uta:row uta:id="msgPulse"       uta:data='"PULSE"' />
+  <uta:row uta:id="msgManBarred"       uta:data='" MANUAL BARRED"' />
+  <uta:row uta:id="msgConnection"       uta:data='"  CONNECTION:  "' />
+  <uta:row uta:id="msgEmvTc"		uta:data='"TC  : "' />
+  <uta:row uta:id="msgEmvTvr"		uta:data='"TVR: "' />
+  <uta:row uta:id="msgEmvTsi"		uta:data='"TSI : "' />
+  <uta:row uta:id="msgInvalidAmount"	  uta:data='" INVALID AMOUNT "' />
+  
+  <uta:row uta:id="msgTMSError"	  			uta:data='"   TMS ERROR    "' />
+  <uta:row uta:id="msgFileMiss"	  			uta:data='"  FILE MISSING  "' />
+  <uta:row uta:id="msgServer"	  			uta:data='"     SERVER     "' />
+  <uta:row uta:id="msgUnavailable"	  		uta:data='"  UNAVAILABLE   "' />
+  <uta:row uta:id="msgQueryFailed"	  		uta:data='"  QUERY FAILED  "' />
+  <uta:row uta:id="msgDLLarge"	  			uta:data='"  DL TOO LARGE  "' />
+  <uta:row uta:id="msgInvVer"	  			uta:data='"   VER. ERROR   "' />
+  <uta:row uta:id="msgBufOvrFlw"	  		uta:data='"   BUF OVRFLW   "' />
+  <uta:row uta:id="msgInvReq"	  			uta:data='"   INVALID REQ  "' />
+  <uta:row uta:id="msgInvRefNum"	  		uta:data='"   INV REF NUM  "' />
+  <uta:row uta:id="msgUnknownReq"	  		uta:data='"   UNKNOWN REQ  "' />
+  <uta:row uta:id="msgOutBounds"	 	 	uta:data='" OUT OF BOUNDS  "' />
+  <uta:row uta:id="msgErrorReq"	  			uta:data='"  ERROR IN REQ  "' />
+  <uta:row uta:id="msgUndefError"	  		uta:data='" UNDEFINED ERR  "' />
+  <uta:row uta:id="msgPrint"					uta:data='"      PRINT"' /> 
+  <uta:row uta:id="msgBatNotEmpty"			uta:data='"BATCH NOT EMPTY"' />
+  <uta:row uta:id="msgPerformStl"			uta:data='"  DO SETTLEMENT"' />
+  <uta:row uta:id="msgDeleteRev"			uta:data='"DELETE REVERSAL"' />
+  <uta:row uta:id="msgDeleteBat"			uta:data='"  DELETE BATCH  "' />
+  <uta:row uta:id="msgBatDelete"			uta:data='"  BATCH DELETED "' />
+  <uta:row uta:id="msgDeleteTC"				uta:data='"   DELETE TC    "' />
+  <uta:row uta:id="msgRevDelete"			uta:data='"REVERSAL DELETED"' />
+  <uta:row uta:id="msgTCDelete"				uta:data='"  TC DELETED   "' />
+  <uta:row uta:id="msgComPort1"			uta:data='"COM 1"' />
+  <uta:row uta:id="msgComPort2"			uta:data='"COM 2"' />
+  <uta:row uta:id="msgGPRSprm" 			uta:data='"GPRS PARAMETER"' />
+  <uta:row uta:id="msgNotInit" 				uta:data='"NOT INITIALIZED"' />
+  <uta:row uta:id="msgNoEmvFile" 			uta:data='"  NO EMV PARAM"' />
+  <uta:row uta:id="msgLoadedTms" 			uta:data='" LOADED IN TMS"' />
+  <uta:row uta:id="msgDefaultEMVParam" 		uta:data='" DEF PARAM USED"' />
+  <uta:row uta:id="msgEnableBlowfish" 		uta:data='"ENABLE BLOWFISH?"'/> 
+  <uta:row uta:id="msgOnBf" 			 	uta:data='"ON BLOWFISH"' />
+  <uta:row uta:id="msgOffBf" 			 	uta:data='"OFF BLOWFISH"' />
+  <uta:row uta:id="msgSetBf"       			uta:data='"1 = OFF ; 2 = ON"' />
+  <uta:row uta:id="msgOnTle" 			 	uta:data='"TLE ON"' />
+  <uta:row uta:id="msgOffTle" 			 	uta:data='"TLE OFF"' />
+
+  <!-- TAMBAHAN FOR EMV  smartweb-->		
+  <uta:row uta:id="msgOfflineDeclined"			uta:data='"EMV OFFLINE DEC"' />
+  <uta:row uta:id="msgPressAnyKey"				uta:data='"  PRESS ANY KEY  "' />
+  <uta:row uta:id="msgChipMalfunction"			uta:data='"CHIP MALFUNCTION"' />
+  <uta:row uta:id="msgFallback1"					uta:data='"    FALLBACK   "' />
+  <uta:row uta:id="msgFallback2"					uta:data='" PLS SWIPE CARD "' />
+  <uta:row uta:id="msgChipDetect1"				uta:data='"  EMV DETECTED  "' />
+  <uta:row uta:id="msgChipDetect2"				uta:data='"PLS INSERT CARD"' />
+  <uta:row uta:id="msgUnknownAID"				uta:data='"  UNKNOWN AID   "' />
+  <uta:row uta:id="msgCardErr"					uta:data='" CARD PROC ERR  "' />
+
+<!--Tambahan untuk test GPRS -->
+  <uta:row uta:id="msgStartingGPRS"			uta:data='"STARTING GPRS..."' />
+  <uta:row uta:id="msgComStartKO"		        uta:data='"COMSTART KO     "' />
+  <uta:row uta:id="msgComSetKO"				uta:data='"COMSET KO       "' />
+  <uta:row uta:id="msgComDialKO"				uta:data='"COMDIAL KO      "' />
+  <uta:row uta:id="msgSuccessfully"			uta:data='"SUCCESSFULLY    "' />
+  <uta:row uta:id="msgConfigured"				uta:data='"CONFIGURED    "' />
+
+  <uta:row uta:id="msg01Declined1"				uta:data='" CALL YOUR BANK "' />
+  <uta:row uta:id="msg51Declined1"				uta:data='" INSUFF. FUNDS  "' />
+  <uta:row uta:id="msg51Declined2"				uta:data='"  OVER LIMIT    "' />
+  <uta:row uta:id="msgUseMag"			   		uta:data='" USE MAGSTRIPE  "' />   
+  <uta:row uta:id="msgDoNotHonour"			   	uta:data='" DO NOT HONOUR  "' />   
+  <uta:row uta:id="msgLastPrintTry" 			       uta:data='"  LAST PIN TRY  "' />  
+
+  <uta:row uta:id="msgAppNot" 			    		uta:data='"APPLICATION NOT "' />  
+  <uta:row uta:id="msgAvailable" 			       uta:data='"   AVAILABLE    "' />  
+  <uta:row uta:id="msgPinBlocked" 			       uta:data='"  PIN BLOCKED   "' />  
+  <uta:row uta:id="msgEmvOffline" 			       uta:data='"  EMV OFFLINE   "' />  
+  <uta:row uta:id="msgCardProcErr" 			       uta:data='" CARD PROC ERR  "' />  
+
+  <uta:row uta:id="msgEmvDeclined" 			   uta:data='"  EMV DECLINED  "' />  
+  <uta:row uta:id="msgProcErr" 			    	   uta:data='"   PROC. ERROR   "' />  
+
+  <uta:row uta:id="msgTermCap"		    	   	   uta:data='"TERM CAP : "' />  
+  <uta:row uta:id="msgAddTermCap"		    	   uta:data='"ADD TERM CAP : "' />  
+  <uta:row uta:id="msgTxt"				    	   uta:data='"Txt : "' />  
+  <uta:row uta:id="msgCodeTable"		    	   uta:data='"Code Table : "' />  
+  <uta:row uta:id="msgEmvAppType"			   uta:data='"APP.: "' />
+  <uta:row uta:id="msgEmvAID"				   uta:data='"AID : "' />
+  <uta:row uta:id="msgEmvApi"			   	   uta:data='"API : "' />	
+  <uta:row uta:id="msgPAN"			   	  	   uta:data='"PAN : "' />	
+  <uta:row uta:id="msgDen" 			    	   uta:data='"DEN : "' />   	
+  <uta:row uta:id="msgOnl" 				    	   uta:data='"ONL : "' />  
+  <uta:row uta:id="msgDef" 			 	   	   uta:data='"DEF : "' />    
+  <uta:row uta:id="msgEmvCvmr"		    	   uta:data='"CVMR : "' />  
+  <uta:row uta:id="msg9F53" 				   uta:data='"9F53 :"' />  
+  <uta:row uta:id="msgGenAC" 				   uta:data='"Gen AC"' />  
+  <uta:row uta:id="msgAC" 					   uta:data='"AC :"' />  
+  <uta:row uta:id="msgATC" 				   uta:data='"ATC :"' />  
+
+  <uta:row uta:id="msgTCC" 			          uta:data='"TCC : "' />  
+  <uta:row uta:id="msgEmvAmount" 		          uta:data='"Amount =  "' />  
+  <uta:row uta:id="msgPrevAmount" 		          uta:data='"PrevAmt =  "' />  
+  <uta:row uta:id="msgTotAmt" 			          uta:data='"TotAmt = "' />  
+  <uta:row uta:id="msgFloor" 			          uta:data='"Floor  = "' />  
+  <uta:row uta:id="msgAIP" 			    	   	   uta:data='"AIP : "' />   
+  <uta:row uta:id="msgCid" 			    	   	   uta:data='"CID : "' />   
+  <uta:row uta:id="msgIFDSerNum" 			   uta:data='"IFD SER NUM : "' />   
+  <uta:row uta:id="msgTermType" 			   uta:data='"Term Type  : "' />  
+  <uta:row uta:id="msgExpDate" 			    	   uta:data='"EXP DATE : "' />     
+  <uta:row uta:id="msgFirst" 			    	   uta:data='"1st : "' />     
+  <uta:row uta:id="msgSecond" 			    	   uta:data='"2nd : "' />     
+  <uta:row uta:id="msgRecvTimeout" 			   uta:data='" RECV. TIMEOUT  "' />     
+  <uta:row uta:id="msgCardRemoved"			   uta:data='"CARD WAS REMOVED"' />     
+  <uta:row uta:id="msgInvalidTID"			   uta:data='"INVALID TERM ID"' />  
+  <uta:row uta:id="msgInvalidMID"			   uta:data='"INVALID MERC ID"' />  
+  <uta:row uta:id="msgUSB"			   		   uta:data='"USB"' />  
+  <uta:row uta:id="msgWIFI"			   		   uta:data='"WIFI"' />  
+  <uta:row uta:id="msgTCUpload"			   uta:data='"   TC UPLOAD   "' />  
+  <uta:row uta:id="msgFailed"				   uta:data='"     FAILED    "' />  
+  <uta:row uta:id="msgIncorrectPIN"	   uta:data='" INCORRECT PIN "' />
+  <uta:row uta:id="msgCardDeclined"	   uta:data='" CARD DECLINED "' />
+  <uta:row uta:id="msgRetrySetl"		   uta:data='"RETRY SETTLEMENT"' />
+  <uta:row uta:id="msgAccCode"		   uta:data='"ACCESS CODE ?"' />
+  <uta:row uta:id="msgPleaseInsert"		   uta:data='"  PLEASE INSERT "' />
+  <uta:row uta:id="msgChip"				   uta:data='"      CHIP      "' />
+  <uta:row uta:id="msgMagstripe"		   uta:data='"   MAGSTRIPE   "' />
+  <uta:row uta:id="msgManual"		 	   uta:data='"     MANUAL     "' />
+  <uta:row uta:id="msgEntryBarred"		   uta:data='"  ENTRY BARRED  "' />  
+  <uta:row uta:id="msgVoidBarred"		   uta:data='"   VOID BARRED  "' />    
+  <uta:row uta:id="msgAdjustBarred"		   uta:data='" ADJUST BARRED "' />    
+  <uta:row uta:id="msgOfflineBarred"		   uta:data='" OFFLINE BARRED "' />    
+  <uta:row uta:id="msgPreautBarred"		   uta:data='" PREAUTH BARRED "' />    
+  <uta:row uta:id="msgRefundBarred"		   uta:data='" REFUND BARRED "' />    
+  <uta:row uta:id="msgInvalidMerchant"	   uta:data='"INVALID MERCHANT"' />
+  <uta:row uta:id="msgTooMuch"			   uta:data='"  TIP TOO MUCH  "' />
+  <uta:row uta:id="msgDownloadKey"		   uta:data='"  DOWNLOAD KEY "' />
+  <uta:row uta:id="msgInvalidTrx"		   uta:data='" INVALID TRANS "' />
+  <uta:row uta:id="msgPickUpCard"		   uta:data='"  PICK UP CARD  "' />
+  <uta:row uta:id="msgInvalid"	   		   uta:data='"    INVALID    "' />
+  <uta:row uta:id="msgAccNumber"	   	   uta:data='" ACCOUNT NUMBER "' />
+  <uta:row uta:id="msgReEnterTrans"		   uta:data='" RE-ENTER TRANS "' />  
+  <uta:row uta:id="msgReferTo"			   uta:data='"REFER TO SPECIAL"' />  
+  <uta:row uta:id="msgCondition"		   	   uta:data='"   CONDITION    "' />  
+  <uta:row uta:id="msgHonorWith"	   	   uta:data='"   HONOR WITH   "' /> 
+  <uta:row uta:id="msgIdentification"	   	   uta:data='" IDENTIFICATION "' /> 
+  <uta:row uta:id="msgReqInProgress"	   uta:data='"REQ IN PROGRESS"' /> 
+  <uta:row uta:id="msgNoSuchIss"	   	   uta:data='" NO SUCH ISSUER "' /> 
+  <uta:row uta:id="msgCustomer"	   	   uta:data='"    CUSTOMER    "' /> 
+  <uta:row uta:id="msgCancellation"	   	   uta:data='"  CANCELLATION  "' /> 
+  <uta:row uta:id="msgDispute"		   	   uta:data='"     DISPUTE    "' /> 
+  <uta:row uta:id="msgInvalidRsp"		   uta:data='"INVALID RESPONSE"' /> 
+  <uta:row uta:id="msgNoActionTaken"	   uta:data='"NO ACTION TAKEN"' /> 
+  <uta:row uta:id="msgSuspect"			   uta:data='"   SUSPECTED   "' /> 
+  <uta:row uta:id="msgMalFunction"		   uta:data='"   MALFUNCTION  "' /> 
+  <uta:row uta:id="msgUnacceptable"		   uta:data='"  UNACCEPTABLE  "' /> 
+  <uta:row uta:id="msgTrxFees"	 	  	   uta:data='"TRANSACTION FEES"' />      
+  <uta:row uta:id="msgFormatError"	   	   uta:data='"  FORMAT ERROR  "' /> 
+  <uta:row uta:id="msgNotSupport"	   	   uta:data='"NOT SUPPORTED"' />   
+  <uta:row uta:id="msgBySwitch"	 	  	   uta:data='"   BY SWITCH   "' /> 
+  <uta:row uta:id="msgPartially"		   	   uta:data='"   PARTIALLY   "' /> 
+  <uta:row uta:id="msgSuspFraud"		   uta:data='"SUSPECTED FRAUD"' /> 
+  <uta:row uta:id="msgRefAcq"	 	  	   uta:data='"  REF ACQUIRER  "' /> 
+  <uta:row uta:id="msgPickUp"	   	   	   uta:data='"    PICK UP    "' /> 
+  <uta:row uta:id="msgRestCard"		   	   uta:data='"RESTRICTED CARD"' /> 
+  <uta:row uta:id="msgMercCall"		   	   uta:data='" MERCHANT CALL "' /> 
+  <uta:row uta:id="msgAcqSecurity"	   	   uta:data='"ACQUIRER SCURITY"' /> 
+  <uta:row uta:id="msgExceeded"	   	   uta:data='"    EXCEEDED   "' /> 
+  <uta:row uta:id="msgNoCrAcc"	   		   uta:data='" NO CREDIT ACC "' /> 
+  <uta:row uta:id="msgReqFunct"	   		   uta:data='"REQUEST FUNCTION"' /> 
+  <uta:row uta:id="msgCardLost"	   		   uta:data='"   CARD LOST   "' /> 
+  <uta:row uta:id="msgNoUnivAcc"		   uta:data='"  NO UNIV ACC  "' /> 
+  <uta:row uta:id="msgCardStolen"	   	   uta:data='"  CARD STOLEN  "' /> 
+  <uta:row uta:id="msgNoInvestAcc"		   uta:data='" NO INVEST ACC "' /> 
+  <uta:row uta:id="msgNoCheqAcc"	   	   uta:data='"NO CHEQUING ACC"' /> 
+  <uta:row uta:id="msgNoSavAcc"	   	   uta:data='" NO SAVING ACC "' /> 
+  <uta:row uta:id="msgNoCardRecord"	   uta:data='" NO CARD RECORD "' /> 
+  <uta:row uta:id="msgTrxNotPermit"		   uta:data='"TRX NOT PRMITTED"' /> 
+  <uta:row uta:id="msgForCH"	   		   uta:data='" FOR CARDHOLDER"' /> 
+  <uta:row uta:id="msgMercCont"	   		   uta:data='"MERCHANT CONTACT"' /> 
+  <uta:row uta:id="msgWithdrLmt"		   uta:data='"WITHDRAWAL LIMIT"' /> 
+  <uta:row uta:id="msgSecViolation"		   uta:data='"SECRUTY VIOLTION"' /> 
+  <uta:row uta:id="msgHardCapture"		   uta:data='"  HARD CAPTURE  "' /> 
+  <uta:row uta:id="msgPinRetries"		   uta:data='"  PIN RETRIES  "' /> 
+  <uta:row uta:id="msgIneligibleAccount"		   uta:data='"INELIGIBLE ACCT"' /> 
+  <uta:row uta:id="msgNoSharing"		   uta:data='"   NO SHARING  "' /> 
+  <uta:row uta:id="msgRefCardIssue"		   uta:data='" REF CARD ISSUE "' /> 
+  <uta:row uta:id="msgAppvTrxInWind"		   uta:data='" TRX IN WINDOW "' /> 
+  <uta:row uta:id="msgAppvTrxOutWind"		   uta:data='" TRX OUT WINDOW"' /> 
+  <uta:row uta:id="msgAppvTrxBal"		   uta:data='"  TRX BALANCE  "' /> 
+  <uta:row uta:id="msgAccNoStmtInf"		   uta:data='"ACC NO STMT INF"' /> 
+  <uta:row uta:id="msgStmtInfNotAvail"		   uta:data='" STMT INFO NOT "' /> 
+  <uta:row uta:id="msgStmtInfNotAvail2"		   uta:data='"   AVAILABLE   "' />
+  <uta:row uta:id="msgSystemError"		   uta:data='"  SYSTEM ERROR  "' /> 
+  <uta:row uta:id="msgDatabaseProblem"		   uta:data='"DATABASE PROBLEM"' /> 
+  <uta:row uta:id="msgCutIsInProg"		   uta:data='" CUT OFF IS IN "' /> 
+  <uta:row uta:id="msgCutIsInProg2"		   uta:data='"    PROGRESS   "' /> 
+  <uta:row uta:id="msgIssInOperative"		   uta:data='" ISSUER/SWITCH "' />
+  <uta:row uta:id="msgIssInOperative2"		   uta:data='"  INOPERATIVE  "' />
+  <uta:row uta:id="msgTrxNotComplete"		   uta:data='" TRX INCOMPLETE"' /> 
+  <uta:row uta:id="msgDuplicateTransaction"		   uta:data='" DUPLICATE TRX "' /> 
+  <uta:row uta:id="msgReconcileError"		   uta:data='"RECONCILE ERROR"' /> 
+  <uta:row uta:id="msgSystem"		  	 uta:data='"     SYSTEM     "' /> 
+  <uta:row uta:id="msgInsufficientBal"		   uta:data='"  INSUFFICIENT "' />
+  <uta:row uta:id="msgInsufficientBal2"		   uta:data='"     BALANCE   "' />
+  <uta:row uta:id="msgAccNotFound"		   uta:data='" ACC NOT FOUND "' /> 
+  <uta:row uta:id="msgAccIntAttentionl"		   uta:data='"ACC IN ATTENTION"' /> 
+  <uta:row uta:id="msgReject"		   uta:data='"     REJECT    "' /> 
+  <uta:row uta:id="msgPending"		   uta:data='"    PENDING    "' /> 
+  <uta:row uta:id="msgUpdate"		  	 uta:data='"   NO PENDING   "' /> 
+  <uta:row uta:id="msgOvrlimit"		  	 uta:data='"   OVER LIMIT     "' />   
+  <uta:row uta:id="msgKartutdk"		  	 uta:data='"   KARTU TIDAK     "' /> 
+  <uta:row uta:id="msgTerdaftar"		  	 uta:data='"   TERDAFTAR     "' />   
+   <!--Message Error MiniATM-->
+  <uta:row uta:id="msgB1"		   uta:data='" INVALID AMOUNT "' /> 
+  <uta:row uta:id="msgB2_1"	   uta:data='"   EXCEED MAX   "' /> 
+  <uta:row uta:id="msgB2_2"	   uta:data='" NUMBER OF BILL "' /> 
+  <uta:row uta:id="msgB3_1"	   uta:data='"   2 BILL FOR   "' /> 
+  <uta:row uta:id="msgB3_2"	   uta:data='" THE SAME MONTH "' /> 
+  <uta:row uta:id="msgB4_1"	   uta:data='"  MOBILE NUMBER  "' /> 
+  <uta:row uta:id="msgB4_2"	   uta:data='" HAS BEEN BLOCK "' /> 
+  <uta:row uta:id="msgB5_1"	   uta:data='"    BILL REF    "' /> 
+  <uta:row uta:id="msgB5_2"	   uta:data='"   NOT FOUND    "' /> 
+  <uta:row uta:id="msgB6_1"	   uta:data='"    MUST PAY    "' /> 
+  <uta:row uta:id="msgB6_2"	   uta:data='" PREVIOUS BILL  "' /> 
+  <uta:row uta:id="msgB7_1"	   uta:data='"PARTIAL PAYMENT "' /> 
+  <uta:row uta:id="msgB7_2"	   uta:data='"  NOT ALLOWED   "' /> 
+  <uta:row uta:id="msgB8_1"	   uta:data='"    BILL HAS    "' /> 
+  <uta:row uta:id="msgB8_2"	   uta:data='"  ALREADY PAID  "' /> 
+  <uta:row uta:id="msgB9_1"	   uta:data='"   INVALID PH/   "' /> 
+  <uta:row uta:id="msgB9_2"	   uta:data='"CUST ID/USER ID"' /> 
+  <uta:row uta:id="msg06_1"	   uta:data='"    UNDEFINED   "' /> 
+  <uta:row uta:id="msg06_2"	   uta:data='"   ERROR CODE   "' /> 
+  <uta:row uta:id="msg11_1"	   uta:data='" MESSAGE FORMAT "' /> 
+  <uta:row uta:id="msg11_2"	   uta:data='"     ERROR      "' />
+  <uta:row uta:id="msg31_1"	   uta:data='"  MESSAGE EDIT  "' /> 
+  <uta:row uta:id="msg31_2"	   uta:data='"     ERROR      "' />
+  
+  <uta:row uta:id="msg61"	   		uta:data='"   EXCEED LIMIT    "' /> 
+  <uta:row uta:id="msg62_1"	   uta:data='"   MORE THAN    "' /> 
+  <uta:row uta:id="msg62_2"	   uta:data='"  3 REFERENCE   "' />
+  <uta:row uta:id="msg67_1"	   uta:data='" MESSAGE FORMAT "' /> 
+  <uta:row uta:id="msg67_2"	   uta:data='"     ERROR      "' />
+  <uta:row uta:id="msg76_1"	   uta:data='" INVALID PHONE  "' /> 
+  <uta:row uta:id="msg76_2"	   uta:data='"     NUMBER     "' />
+  <uta:row uta:id="msg87_1"	   uta:data='"    PROVIDER    "' /> 
+  <uta:row uta:id="msg87_2"	   uta:data='"DATABASE PROBLEM"' />
+  <uta:row uta:id="msg88"	   	   uta:data='" DUPLICATE KEY  "' /> 
+  <uta:row uta:id="msg90"	   	   uta:data='"    TIME OUT    "' /> 
+  <uta:row uta:id="msg92"	   	   uta:data='"     LINK DOWN   "' /> 
+  <uta:row uta:id="msg93"	   	   uta:data='"INVALID ROUTING "' /> 
+
+ <!--Message Error MiniATM-->
+ <uta:row uta:id="msgC1"	   	   uta:data='"UNDEFINED ERROR"' /> 
+ <uta:row uta:id="msgC2_1"	   	   uta:data='" MESSAGE FORMAT "' /> 
+ <uta:row uta:id="msgC3_1"	   	   uta:data='"  MESSAGE EDIT  "' /> 
+ <uta:row uta:id="msgC4_1"	   	   uta:data='"   MORE THAN   "' /> 
+ <uta:row uta:id="msgC4_2"	   	   uta:data='"     3 REF      "' /> 
+ <uta:row uta:id="msgP1"	   	   uta:data='"    CVV ERROR   "' />
+ <uta:row uta:id="msgP2_1"	   	   uta:data='"  TRANS LIMIT   "' />
+ <uta:row uta:id="msgP3_1"	   	   uta:data='"    CARD NOT    "' />
+ <uta:row uta:id="msgP3_2"	   	   uta:data='"     ACTIVE     "' />
+ <uta:row uta:id="msgP4_1"	   	   uta:data='" ERROR MISMATCH "' />
+ <uta:row uta:id="msgP4_2"	   	   uta:data='"     TRACK2      "' />
+ <uta:row uta:id="msgP5_1"	   	   uta:data='"  EXCEEDED PIN  "' />
+ <uta:row uta:id="msgP5_2"	   	   uta:data='"   RETRY LIMIT   "' />
+ <uta:row uta:id="msgP9_1"	   	   uta:data='"INVALID SERVICE"' />
+ <uta:row uta:id="msgP9_2"	   	   uta:data='"    FOR CARD    "' />
+ <uta:row uta:id="msgQ1_1"	   	   uta:data='"    HOT CARD    "' />
+ <uta:row uta:id="msgQ2_1"	   	   uta:data='"   CARD LIMIT   "' />
+ <uta:row uta:id="msgQ2_2"	   	   uta:data='"    EXCEEDED    "' />
+ <uta:row uta:id="msgQ3_1"	   	   uta:data='"  NO CHECKHING  "' />
+ <uta:row uta:id="msgQ3_2"	   	   uta:data='"    ACCOUNT     "' />
+ <uta:row uta:id="msgQ4_1"	   	   uta:data='"   NO SAVINGS   "' />
+ <uta:row uta:id="msgQ5"	   	   uta:data='"  EXPIRED CARD  "' />
+<uta:row uta:id="msgQ6"	   	   uta:data='"  PIN MISMATCH  "' />
+<uta:row uta:id="msgQ7_1"	   	   uta:data='"  SERVICE NOT  "' />
+<uta:row uta:id="msgQ7_2"	   	   uta:data='"    ACTIVED    "' />
+<uta:row uta:id="msgQ9_1"	   	   uta:data='"   ACCOUNT NOT   "' />
+<uta:row uta:id="msgQ9_2"	  	   uta:data='"     FOUND     "' />
+<uta:row uta:id="msgR1_1"	  	   uta:data='"  SYSTEM ERROR  "' />
+<uta:row uta:id="msgR1_2"	  	   uta:data='"  TERMINAL HSM  "' />
+<uta:row uta:id="msgR2_2"	  	   uta:data='"   BATCH RUN   "' />
+<uta:row uta:id="msgS4"	  	   uta:data='"   TRANSACTION   "' />
+
+  <uta:row uta:id="msgPleaseSwipe"		   uta:data='"  PLEASE SWIPE "' />
+  <uta:row uta:id="msgMiniATM"		   uta:data='"    MINI ATM    "' />
+  <uta:row uta:id="msgTarikTunai"		   uta:data='"  TARIK TUNAI    "' />
+  
+  <uta:row uta:id="msgInvalidResponse"	uta:data='"INVALID RESPONSE"' />
+  <uta:row uta:id="msgPlsTryAgain"		uta:data='"PLEASE TRY AGAIN"' />
+
+  <uta:row uta:id="msgDownloadLTWK"		   uta:data='"  DOWNLOAD LTWK "' />
+  
+</uta:table>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!--
+Subversion reference
+$HeadURL: https://svn.ingenico.com/UTAPROJECTS/sea-partner/5W/trunk/ISO5WPH/str/log.xml $
+$Id: log.xml 1333 2009-01-19 10:11:26Z jelemia $
+-->
+<uta:record uta:id='isslog'
+            uta:dim='dimLog'
+            uta:cache="no"
+            uta:comment='Transaction log table'
+            xmlns:uta="http://www.ingenico.com/xml/uta">
+
+  <uta:field uta:id='logIssAcqIdx'              uta:type='byte'                uta:comment='index in Acq multirecord' />
+  <uta:field uta:id='logIss2Idx'              uta:type='word'                uta:comment='index in Iss multirecord' />
+  <uta:field uta:id='logIssTotAppVoidAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Void amount of issuer' />   
+  <uta:field uta:id='logIssTotAppVoidCnt'  uta:type='word'                         uta:comment='Number of Void in application' />         
+  <uta:field uta:id='logIssTotAppDbAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Debit amount for issuer' /> 
+  <uta:field uta:id='logIssTotAppDbCnt'  uta:type='word'                         uta:comment='Number Debits for issuer' /> 
+
+<!--Prepaid-->
+  <uta:field uta:id='logIssTotAppTopupAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Topup amount of issuer' />   
+  <uta:field uta:id='logIssTotAppTopupCnt'  uta:type='word'                         uta:comment='Number of Topup in application' />         
+  <uta:field uta:id='logIssTotAppUpdateAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Update amount of issuer' />   
+  <uta:field uta:id='logIssTotAppUpdateCnt'  uta:type='word'                         uta:comment='Number of Update in application' />           
+<!--Prepaid-->
+
+<!--GP-->
+  <uta:field uta:id='logIssTotAppAmtGP'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Topup amount of issuer' />   
+  <uta:field uta:id='logIssTotAppCntGP'  uta:type='word'                         uta:comment='Number of Topup in application' />         
+<!--MiniATM-->
+  <uta:field uta:id='logissTotAppAmtTelkom'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Debit amount for issuer' /> 
+  <uta:field uta:id='logissTotAppCntTelkom'  uta:type='word'                         uta:comment='Number Debits for issuer' /> 
+  <uta:field uta:id='logissTotAppAmtSatelindo'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Debit amount for issuer' /> 
+  <uta:field uta:id='logissTotAppCntSatelindo'  uta:type='word'                         uta:comment='Number Debits for issuer' /> 
+  <uta:field uta:id='logissTotAppAmtTelkomsel'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Debit amount for issuer' /> 
+  <uta:field uta:id='logissTotAppCntTelkomsel'  uta:type='word'                         uta:comment='Number Debits for issuer' /> 
+  <uta:field uta:id='logissTotAppAmtExcelcom'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Debit amount for issuer' /> 
+  <uta:field uta:id='logissTotAppCntExcelcom'  uta:type='word'                         uta:comment='Number Debits for issuer' /> 
+  <uta:field uta:id='logissTotAppAmtEsia'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Debit amount for issuer' /> 
+  <uta:field uta:id='logissTotAppCntEsia'  uta:type='word'                         uta:comment='Number Debits for issuer' /> 
+  <uta:field uta:id='logissTotAppAmtPLN'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Debit amount for issuer' /> 
+  <uta:field uta:id='logissTotAppCntPLN'  uta:type='word'                         uta:comment='Number Debits for issuer' /> 
+  <uta:field uta:id='logissTotAppAmtFirstMedia'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Debit amount for issuer' /> 
+  <uta:field uta:id='logissTotAppCntFirstMedia'  uta:type='word'                         uta:comment='Number Debits for issuer' /> 
+  <uta:field uta:id='logissTotAppAmtIndovision'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Debit amount for issuer' /> 
+  <uta:field uta:id='logissTotAppCntIndovision'  uta:type='word'                         uta:comment='Number Debits for issuer' /> 
+  <uta:field uta:id='logissTotAppAmtOtoMulti'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Debit amount for issuer' /> 
+  <uta:field uta:id='logissTotAppCntOtoMulti'  uta:type='word'                         uta:comment='Number Debits for issuer' /> 
+<!--Fasa4-->
+  <uta:field uta:id='logissTotAppAmtTunai'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Debit amount for issuer' /> 
+  <uta:field uta:id='logissTotAppCntTunai'  uta:type='word'                         uta:comment='Number Debits for issuer' /> 
+  <uta:field uta:id='logissTotAppAmtTransfer'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Debit amount for issuer' /> 
+  <uta:field uta:id='logissTotAppCntTransfer'  uta:type='word'                         uta:comment='Number Debits for issuer' /> 
+  <uta:field uta:id='logissTotAppAmtCC'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Debit amount for issuer' /> 
+  <uta:field uta:id='logissTotAppCntCC'  uta:type='word'                         uta:comment='Number Debits for issuer' /> 
+
+<uta:field uta:id='logissTotAppAmtTransferUSD'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Debit amount for issuer' /> 
+ <uta:field uta:id='logissTotAppCntTransferUSD'  uta:type='word'                         uta:comment='Number Debits for issuer' /> 
+<uta:field uta:id='logissTotAppAmtTransferSGD'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Debit amount for issuer' /> 
+ <uta:field uta:id='logissTotAppCntTransferSGD'  uta:type='word'                         uta:comment='Number Debits for issuer' /> 
+<uta:field uta:id='logissTotAppAmtTransferJPN'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Debit amount for issuer' /> 
+ <uta:field uta:id='logissTotAppCntTransferJPN'  uta:type='word'                         uta:comment='Number Debits for issuer' /> 
+
+<!--OnUsOffUs-->
+  <uta:field uta:id='logIssTotAppMOnUsAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total amount Master On Us for issuer' /> 
+  <uta:field uta:id='logIssTotAppMOnUsCnt'  uta:type='word'                         uta:comment='Number of Master On Us for issuer' /> 
+  <uta:field uta:id='logIssTotAppMOnUsVoidAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Master On US Void amount of issuer' />   
+  <uta:field uta:id='logIssTotAppMOnUsVoidCnt'  uta:type='word'                         uta:comment='Number of Master On Us Void in application' />         
+
+  <uta:field uta:id='logIssTotAppVOnUsAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total amount Master On Us for issuer' /> 
+  <uta:field uta:id='logIssTotAppVOnUsCnt'  uta:type='word'                         uta:comment='Number of Master On Us for issuer' /> 
+  <uta:field uta:id='logIssTotAppVOnUsVoidAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Master On US Void amount of issuer' />   
+  <uta:field uta:id='logIssTotAppVOnUsVoidCnt'  uta:type='word'                         uta:comment='Number of Master On Us Void in application' />         
+
+  <uta:field uta:id='logIssTotAppMOffUsAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total amount Visa Off Us for issuer' /> 
+  <uta:field uta:id='logIssTotAppMOffUsCnt'  uta:type='word'                         uta:comment='Number of Visa Off Us for issuer' /> 
+  <uta:field uta:id='logIssTotAppMOffUsVoidAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Visa Off US Void amount of issuer' />   
+  <uta:field uta:id='logIssTotAppMOffUsVoidCnt'  uta:type='word'                         uta:comment='Number of Visa Off Us Void in application' />         
+
+  <uta:field uta:id='logIssTotAppVOffUsAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total amount Visa Off Us for issuer' /> 
+  <uta:field uta:id='logIssTotAppVOffUsCnt'  uta:type='word'                         uta:comment='Number of Visa Off Us for issuer' /> 
+  <uta:field uta:id='logIssTotAppVOffUsVoidAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Visa Off US Void amount of issuer' />   
+  <uta:field uta:id='logIssTotAppVOffUsVoidCnt'  uta:type='word'                         uta:comment='Number of Visa Off Us Void in application' />         
+
+  <uta:field uta:id="logissTotAppTipAmtMOnUs" uta:type='ASCII'  uta:length='lenTotAmt' 	uta:comment='Total Tip amount for Master Card On Us' /> 
+  <uta:field uta:id="logissTotAppTipAmtVOnUs" uta:type='ASCII'  uta:length='lenTotAmt' 	uta:comment='Total Tip amount for Visa Card On Us' /> 
+  <uta:field uta:id="logissTotAppTipAmtMOffUs" uta:type='ASCII'  uta:length='lenTotAmt' 	uta:comment='Total Tip amount for Master Card Off Us' /> 
+  <uta:field uta:id="logissTotAppTipAmtVOffUs" uta:type='ASCII'  uta:length='lenTotAmt' 	uta:comment='Total Tip amount for Visa Card Off Us' /> 
+
+<!--end-->
+  
+</uta:record>
+

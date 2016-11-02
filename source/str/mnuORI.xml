@@ -1,0 +1,101 @@
+<!--
+Subversion reference
+$HeadURL: https://svn.ingenico.com/UTAPROJECTS/sea-partner/5W/trunk/ISO5WPH/str/mnu.xml $
+$Id: mnu.xml 1598 2009-02-26 10:52:18Z jlapara $
+-->
+<uta:table uta:id="mnu" uta:type='ASCII' uta:length="lenMnu" uta:cache="yes" uta:comment="menu tree"
+  xmlns:uta="http://www.ingenico.com/xml/uta">
+  <uta:row uta:id="mnuMainMenu"     			uta:data='"0 BNI APPL    "' />
+       <uta:row uta:id="mnuSale"         			uta:data='"1 SALE            "' />
+	<uta:row uta:id="mnuVoid"         		    	uta:data='"1 VOID"' />
+	<uta:row uta:id="mnuManual" 		       uta:data='"1 MANUAL"' />
+	<uta:row uta:id="mnuRefund"         		uta:data='"1 REFUND"' />
+	<uta:row uta:id="mnuPreaut"       		uta:data='"1 PREAUTH"' />
+	<uta:row uta:id="mnuOffline" 		       uta:data='"1 OFFLINE"' />
+	<uta:row uta:id="mnuCardVer"       		uta:data='"? CARD VER"' />	
+	<uta:row uta:id="mnuAdjust"       		uta:data='"1 ADJUST TIP"' /> 
+	<uta:row uta:id="mnuOthers"       		uta:data='"1 OTHERS>"' /> 
+		<uta:row uta:id="mnuReprint"         		uta:data='"2 REPRINT>"' />
+			<uta:row uta:id="mnuLastTrx"         		uta:data='"3 LAST TRANSACTION"' />
+			<uta:row uta:id="mnuAnyTrx"         		uta:data='"3 ANY TRANSACTION"' />
+			<uta:row uta:id="mnuMrcSetDup"    			uta:data='"3 SETTLE DUPLICATE"' uta:comment="F73"/>
+        	<uta:row uta:id="mnuMrcHostTot"   			uta:data='"3 HOST TOTALS     "' uta:comment="+F74 HC"/>
+      		<uta:row uta:id="mnuReview"       		uta:data='"2 REVIEW>           "'/>
+			<uta:row uta:id="mnuMrcViewTxn"   		uta:data='"3 VIEW TXN        "' uta:comment="JJ"/>
+			<uta:row uta:id="mnuMrcViewBat"   		uta:data='"3 VIEW BATCH      "' uta:comment="F50"/>
+       <uta:row uta:id="mnuSettlement"  			uta:data='"1 SETTLEMENT      "' />	
+	
+	<uta:row uta:id="mnuLogon"         		uta:data='"? LOGON"' />	
+       <uta:row uta:id="mnuEchoTest"     		    uta:data='"? ECHO TEST> "' />			
+       <uta:row uta:id="mnuBatchUpload"   		    uta:data='"? BATCH UPLOAD> "' />			
+	<uta:row uta:id="mnuMonitoring"   		    uta:data='"? MONITORING> "' />			
+
+    <uta:row uta:id="mnuOnlineRedeem"     	uta:data='"? ONLINE REDEEEM>       "' /><!-- For Online Redeem -->
+    	<uta:row uta:id="mnuInqPoint"     		uta:data='"? INQ POINT>       "' />
+    	<uta:row uta:id="mnuPartialPoint"     		uta:data='"? PARTIAL POINT>       "' />
+     	<uta:row uta:id="mnuFullPoint"     		uta:data='"? FULL POINT>       "' /><!-- End -->
+
+    <uta:row uta:id="mnuMultiCurr"     		 uta:data='"? SELECT CURRENCY"' /><!--tambahan untuk multi currency-->
+	<uta:row uta:id="mnuIDR"         		    	uta:data='"? IDR            "' />
+	<uta:row uta:id="mnuSGD"         		uta:data='"? SGD           "' />
+	<uta:row uta:id="mnuUSD"         		    	uta:data='"? USD           "' />
+	<uta:row uta:id="mnuEURO"         		uta:data='"? EURO      "' />
+
+    <uta:row uta:id="mnuCustomer"     uta:data='"? CUSTOMER>       "' />
+      <uta:row uta:id="mnuPreaut2"       uta:data='"? PREAUTHORIZATION"' />
+      <uta:row uta:id="mnuOffline2"      uta:data='"? OFFLINE         "' />
+      <uta:row uta:id="mnuVoid2"         uta:data='"? VOID            "' />
+      <uta:row uta:id="mnuReversal"       uta:data='"? REVERSAL          "' />
+      <uta:row uta:id="mnuTCUpload"       uta:data='"? REVERSAL          "' />
+      <uta:row uta:id="mnuLogOn"       uta:data='"? LOG ON         "' />      
+
+    <uta:row uta:id="mnuMerchant"     uta:data='"? MERCHANT>       "' />
+        <uta:row uta:id="mnuMrcInfo"      uta:data='"2 INFO>            "'/>
+        <uta:row uta:id="mnuMrcInitRpt"   uta:data='"3 INIT RECEIPT    "' uta:comment="F1"/>
+        <uta:row uta:id="mnuMrcViewTot"   uta:data='"3 VIEW TOTALS     "' uta:comment="F5"/>
+        <uta:row uta:id="mnuMrcSWver"     uta:data='"3aSOFTWARE VERSION"' uta:comment="F91 HC"/>
+      <uta:row uta:id="mnuMrcBatStan"   uta:data='"2 BATCH STAN>      "'/>
+        <uta:row uta:id="mnuMrcViewRoc"   uta:data='"3 VIEW ROC        "' uta:comment="F6"/>
+        <uta:row uta:id="mnuMrcSetRoc"    uta:data='"3aSET ROC         "' uta:comment="F7"/>
+        <uta:row uta:id="mnuMrcViewBatNum" uta:data='"3 VIEW BATCH NUM  "' uta:comment="F8"/>
+        <uta:row uta:id="mnuMrcViewSTAN"  uta:data='"3 VIEW STAN       "' uta:comment="F18"/>
+        <uta:row uta:id="mnuMrcSetSTAN"   uta:data='"3 SET STAN        "' uta:comment="F19"/>        
+      <uta:row uta:id="mnuMrcLog2"       uta:data='"2 LOG>           "'/>
+		<uta:row uta:id="mnuMrcViewTxn2"   uta:data='"? VIEW TXN        "' uta:comment="JJ"/>
+		<uta:row uta:id="mnuMrcViewBat2"   uta:data='"3 VIEW BATCH      "' uta:comment="F50"/>
+        <uta:row uta:id="mnuMrcPrnTra"    uta:data='"3 PRINT TXN       "' uta:comment="JJ"/>
+        <uta:row uta:id="mnuMrcReprint"   uta:data='"3 DUPLICATE       "' uta:comment="F72"/>
+        <uta:row uta:id="mnuMrcSetDup2"    uta:data='"3 SETTLE DUPLICATE"' uta:comment="F73"/>
+        <uta:row uta:id="mnuMrcHostTot2"   uta:data='"3 HOST TOTALS     "' uta:comment="+F74 HC"/>
+        <uta:row uta:id="mnuMrcDetails"   uta:data='"3 PRINT LOG       "' uta:comment="+F75 HC"/>
+        <uta:row uta:id="mnuMrcBatTot"    uta:data='"3 BATCH TOTALS    "' uta:comment="+F76 HC"/>
+      <uta:row uta:id="mnuSettlement2"   uta:data='"? SETTLEMENT      "' />
+      <uta:row uta:id="mnuMrcChgPwd"    uta:data='"? CHANGE PASSWORD "' uta:comment="F90"/>
+      <uta:row uta:id="mnuMrcTogDBG"    uta:data='"? TOGGLE DEBUG    "' uta:comment="F93"/>
+      <uta:row uta:id="mnuMrcReset"     uta:data='"2 DELETE BATCH    "' uta:comment="F99"/>
+      <uta:row uta:id="mnuMrcResetRev"     uta:data='"2 DELETE REVERSAL "' uta:comment="F99"/>
+    <uta:row uta:id="mnuAdmin"        uta:data='"? ADMIN>          "' />
+      <uta:row uta:id="mnuTMS"          uta:data='"2 TMS>            "' />
+        <uta:row uta:id="mnuTMSLP"        uta:data='"3 LOAD PARAMETERS"'/>
+        <uta:row uta:id="mnuTMSLS"        uta:data='"? LOAD SOFTWARE"' />
+         <uta:row uta:id="mnuTMSVC"        uta:data='"3 VIEW CONFIG"' uta:comment="JL"/>
+         <uta:row uta:id="mnuTMSPC"        uta:data='"3 PRINT CONFIG"' uta:comment="JL HC"/>
+         <uta:row uta:id="mnuTMSConfig"    uta:data='"3 CONFIGURE"' uta:comment="JL"/>
+       <uta:row uta:id="mnuTerm"         uta:data='"2 Terminal>       "' />
+         <uta:row uta:id="mnuTDT"          uta:data='"3 Date time       "' />
+         <uta:row uta:id="mnuTermAppli"    uta:data='"? Application     "' />
+         <uta:row uta:id="mnuTMKey"    	   uta:data='"? Master key load "' />
+         <uta:row uta:id="mnuEDCFunction"    	   uta:data='"3 EDC Function "' />
+       <uta:row uta:id="mnuCmm"          uta:data='"2 Communications> "' />
+         <uta:row uta:id="mnuCmmVS"        uta:data='"3 View Setting    "' uta:comment="JL"/>
+         <uta:row uta:id="mnuCmmPS"        uta:data='"3 Print Setting   "' uta:comment="JL HC"/>
+         <uta:row uta:id="mnuCmmLS"        uta:data='"3 Line Setup      "' uta:comment="JL"/>
+         <uta:row uta:id="mnuCmmGS"        uta:data='"3 GPRS Setup      "' uta:comment="JL"/>
+         <uta:row uta:id="mnuCmmCS"        uta:data='"3 Conn. Setting      "' uta:comment="AL"/>
+        <uta:row uta:id="mnuTLE"     uta:data='"2 TLE>       "' />
+ 		<uta:row uta:id="mnuLTMK"         			uta:data='"3 LOAD LTMK"' />
+ 		<uta:row uta:id="mnuLTWK"         			uta:data='"? LOAD LTWK"' />
+ 		<uta:row uta:id="mnuLTMKRenewal"         		uta:data='"? RENEWAL LTMK"' />
+   		<uta:row uta:id="mnuLTWKRenewal"         		uta:data='"? RENEWAL LTWK"' />
+</uta:table>
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!--
+Subversion reference
+$HeadURL: https://svn.ingenico.com/UTAPROJECTS/sea-partner/5W/trunk/ISO5WPH/str/bin.xml $
+$Id: bin.xml 1324 2009-01-19 06:43:44Z $
+-->
+<uta:record uta:id="cdb" uta:dim='200' uta:comment="bank code multi record"
+ xmlns:uta="http://www.ingenico.com/xml/uta">
+  <uta:field uta:id="cdbBankKode" uta:type="ASCII" uta:length='3' uta:comment='Kode Bank' />
+  <uta:field uta:id="cdbBankName" uta:type="ASCII" uta:length='15' uta:comment='Nama Bank' /> 
+  <uta:data>
+    <uta:instance>
+      <uta:col uta:data='"002"' />		<!-- Kode Bank -->     
+      <uta:col uta:data='"BRI            "' />	<!-- Nama Bank -->
+    </uta:instance>
+  </uta:data>
+</uta:record>

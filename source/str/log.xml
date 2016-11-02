@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!--
+Subversion reference
+$HeadURL: https://svn.ingenico.com/UTAPROJECTS/sea-partner/5W/trunk/ISO5WPH/str/log.xml $
+$Id: log.xml 1333 2009-01-19 10:11:26Z jelemia $
+-->
+<uta:record uta:id='log'
+            uta:dim='dimLog'
+            uta:cache="no"
+            uta:comment='Transaction log table'
+            xmlns:uta="http://www.ingenico.com/xml/uta">
+    <uta:field uta:id='logVoidFlag'
+               uta:type='byte'
+               uta:comment='Void flag' />
+             
+    <uta:field uta:id='logMnuItm'
+               uta:type='word'
+               uta:comment='menu item selected' />
+               
+     <uta:field uta:id='logTransType' uta:comment='Transaction Type' uta:type='ASCII' uta:length='lenCardTransType' />            
+     
+    <uta:field uta:id='logDatTim'
+               uta:type='ASCII'
+               uta:length='lenDatTim'
+               uta:comment='transaction date and time CCYYMMDDhhmmss' />
+    <uta:field uta:id='logBinIdx' 
+               uta:type='byte' 
+               uta:comment='index in Bin multirecord' />
+    <uta:field uta:id='logAcqIdx' 
+               uta:type='byte' 
+               uta:comment='index in Acq multirecord' />
+    <uta:field uta:id='logIssIdx' 
+               uta:type='byte' 
+               uta:comment='index in Iss multirecord' />
+    <uta:field uta:id='logPan'
+               uta:type='ASCII'
+               uta:length='lenPan'
+               uta:comment='PAN' />
+  <uta:field uta:id='logExpDat' 
+               uta:type='ASCII'
+               uta:length='lenExpDat'
+               uta:comment='Expiry Date' />
+               
+  <uta:field uta:id='logTrk2'
+               uta:type='ASCII'
+               uta:length='lenTrk2'
+               uta:comment='track 2 of the card' />
+  <uta:field uta:id='logAutCod'
+               uta:type='ASCII'
+               uta:length='lenAutCod'
+               uta:comment='Authorization code' />
+              
+  <uta:field uta:id='logBatNum' 
+               uta:type='ASCII'
+               uta:length='lenBatNum'
+               uta:comment='Batch Number' />
+ <uta:field uta:id='logTraAmt' 
+               uta:type='ASCII'
+               uta:length='lenAmt'
+               uta:comment='Transaction Amount' />
+           
+ <uta:field uta:id='logTipAmt' 
+               uta:type='ASCII'
+               uta:length='lenAmt'
+               uta:comment='Tip Amount' />
+              
+ <uta:field uta:id='logSTAN'
+               uta:type='card'
+               uta:comment='system trace audit number' />
+ <uta:field uta:id='logRrn'
+               uta:type='ASCII'
+               uta:length='lenRrn'
+               uta:comment='Retrieval Reference Number' />
+
+  <uta:field uta:id='logROC'
+               uta:type='card'
+               uta:comment='ROC/Invoice' />
+  <uta:field uta:id='logEntMod'
+               uta:type='byte'
+               uta:comment='POS Entry Mode' />
+  <uta:field uta:id='logConCode'
+               uta:type='byte'
+               uta:comment='POS Condition Code' />
+  <uta:field uta:id='logCardType'
+               uta:type='ASCII'
+               uta:length='lenCardTransType'
+               uta:comment='Card Type' />  
+ <uta:field uta:id='logEmvFullFlag' uta:type='byte'  uta:comment='is full emv process..?' />               
+ <uta:field uta:id='logBit48PwrBuy' uta:type='ASCII'  uta:length='5'  uta:comment='Bit48 Req PwrBuy' /> 
+ <uta:field uta:id='logBit23On'   uta:type='byte'    uta:data ='0'   uta:comment='Bit32 Indicator' />
+ <uta:field uta:id='logPanSeq'    uta:type='ASCII' uta:length='2'    uta:comment='5F34 PAN sequence number' />
+  <uta:field uta:id='logEmvICC' uta:type='ASCII' uta:length='lenEmvICC' uta:comment='message of bit 55' />               
+  <uta:field uta:id="logEmvLen"   uta:type="word"   uta:comment='Len EMV' />
+  <uta:field uta:id='logTipFlag' 	uta:type='byte'    uta:comment='Tip indicator' /><!--mcy add for mandiri -->            
+  <uta:field uta:id='logMTI'      uta:type='ASCII'      uta:length='lenMti'        uta:comment='Message Type' />
+  <uta:field uta:id='logAutCodOff' uta:type='ASCII' uta:length='lenAutCod' uta:comment='Authorization (approval) code' /><!--mcy -->
+  <uta:field uta:id='logChipSwipe' 				  uta:type='ASCII'   uta:length='10' uta:comment='Chip or Swipe' /><!--mcy-->
+ <uta:field uta:id='logFmtAmt'    uta:type='ASCII'   uta:length='20' uta:comment='Display formatted Amount'/><!--mcy add for log Amt FMT-->
+ <uta:field uta:id='logFmtTip'    uta:type='ASCII'   uta:length='20' uta:comment='Display formatted Tip'/><!--mcy -->             
+  <uta:field uta:id='logAmtMonthly' uta:type='ASCII'  uta:length='20'  uta:comment='Amt Monthly PowerBuy' /> 
+  <uta:field uta:id='logMonth' uta:type='ASCII'  uta:length='9'  uta:comment='Month' /> 
+ <uta:field uta:id='logRspCod' uta:type='ASCII' uta:length='lenRspCod' uta:comment='Response code' />
+ <uta:field uta:id='logPinBlk' uta:type='binary' uta:length='lenPinBlk' uta:comment='Pin block' />                              
+  <uta:field uta:id='logTrk1' uta:type='ASCII' uta:length='lenTrk2' uta:comment='track 1 of the card' />  
+  <uta:field uta:id="logEmvAid" uta:type="binary" uta:length="lenAID" uta:comment='4F Application Identifier' />
+  <uta:field uta:id='logEmvIssTrnCrt' uta:type='binary' uta:length='lenIssTrnCrt' uta:comment='9F26 Issuer Transaction Certificate' />
+  <uta:field uta:id='logEmvAppPrfNam'  uta:type='binary' uta:length='lenAppPrfNam' uta:comment='9F12 Application Preferred Name' />
+<!--ADD Chandra Prepaid 09122010-->
+<uta:field uta:id='logSAMTransReport' 
+               uta:type='ASCII'
+               uta:length='47'
+               uta:comment='Record Purchase' />
+
+<uta:field uta:id='logTCPrepaid' 
+               uta:type='ASCII'
+               uta:length='26'
+               uta:comment='TC Prepaid' />
+
+<uta:field uta:id='logSaldoAwalPrepaid' 
+               uta:type='ASCII'
+               uta:length='20'
+               uta:comment='Saldo Awal' />
+               
+<uta:field uta:id='logSaldoAKhirPrepaid' 
+               uta:type='ASCII'
+               uta:length='20'
+               uta:comment='Saldo Akhir' />
+
+<uta:field uta:id='logTotAmtPrepaid' 
+               uta:type='ASCII'
+               uta:length='20'
+               uta:comment='Total Amt Prepaid' />
+
+<uta:field uta:id='logTrk2Prepaid' 
+               uta:type='ASCII'
+               uta:length='16'
+               uta:comment='Trk2 Prepaid' />
+
+<uta:field uta:id='logDenomPrepaid' 
+               uta:type='ASCII'
+               uta:length='20'
+               uta:comment='Denom Prepaid' />
+
+<uta:field uta:id='logChargePrepaid' 
+               uta:type='ASCII'
+               uta:length='15'
+               uta:comment='Denom Prepaid' />
+
+<uta:field uta:id='logTotalPrepaid' 
+               uta:type='ASCII'
+               uta:length='15'
+               uta:comment='Total Prepaid' />               
+
+<uta:field uta:id='logTrk2PrintPrepaid' 
+               uta:type='ASCII'
+               uta:length='20'
+               uta:comment='Track Prepaid' />
+
+<uta:field uta:id='logTrk2SwipePrintPrepaid' 
+               uta:type='ASCII'
+               uta:length='25'
+               uta:comment='Track Swipe Prepaid' />
+
+               
+<!--ADD Chandra Prepaid 09122010-->    
+
+ <!--MiniATM 06012K11-->
+ <uta:field uta:id='logNomor'  		uta:type='ASCII'  	uta:length='20' 	uta:comment='id pelnggan' />
+ <uta:field uta:id='logMnuLain'  		uta:type='ASCII'  	uta:length='32' 	uta:comment='nama Pay Lainnya  untuk MiniAtm' />
+ <uta:field uta:id='logAmtDisp'  		uta:type='ASCII'  	uta:length='20' 	uta:comment='amt disply' />
+ <uta:field uta:id='logAdminFee'  		uta:type='ASCII'  	uta:length='16' 	uta:comment='admin fee' />
+ <uta:field uta:id='logTotalAmtDisp'  	uta:type='ASCII'  	uta:length='20' 	uta:comment='total amt' />
+ <uta:field uta:id='logNama'  		uta:type='ASCII'  	uta:length='32' 	uta:comment='Nama' />
+ <uta:field uta:id='logOperator'  		uta:type='ASCII'  	uta:length='16' 	uta:comment='Operator telco' />
+ <uta:field uta:id='logReff'  			uta:type='ASCII'  	uta:length='32' 	uta:comment='total amt' />
+ <uta:field uta:id='logblnThn'  		uta:type='ASCII'  	uta:length='6' 	uta:comment='total amt' />
+ <uta:field uta:id='logMeter'  		uta:type='ASCII'  	uta:length='32' 	uta:comment='total amt' />
+ <uta:field uta:id='logDendaAmt'		uta:type='ASCII'  	uta:length='16' 	uta:comment='total amt' />
+ <uta:field uta:id='logFlagDenda' 		uta:type='ASCII' 	uta:length='16' 	uta:comment='flag denda MiniAtm'  />  
+ <uta:field uta:id='logAmtComm'		uta:type='ASCII'  	uta:length='16' 	uta:comment='commission amt' />
+ <uta:field uta:id='logIsSign'   uta:type='byte'    uta:data ='0'   uta:comment='Signature Indicator' /> 
+ <uta:field uta:id='logBalance'  		uta:type='ASCII'  	uta:length='20'   			uta:comment='BALANCE PREAPAID' />   
+
+ <!--FASA4 12042K11-->
+  <uta:field uta:id='logTunai' uta:comment='print Tunai MiniAtm' uta:type='ASCII' uta:length='16' />
+ <uta:field uta:id='logAccDest' uta:comment='print Tunai MiniAtm' uta:type='ASCII' uta:length='19' />
+ <uta:field uta:id='logCode' uta:comment='print Tunai MiniAtm' uta:type='ASCII' uta:length='3' />
+ <uta:field uta:id='logCodeDest' uta:comment='print Tunai MiniAtm' uta:type='ASCII' uta:length='3' />
+ <uta:field uta:id='logAmtIDR' uta:comment='Amount in IDR' uta:type='ASCII' uta:length='lenAmt' />
+ <uta:field uta:id='logCardTypeTBM' uta:comment='Card Type' uta:type='ASCII' uta:length='lenCardTransType'  /> <!-- add if bin TBM topUp-->
+<!--<uta:field uta:id='logvalas' uta:comment='Valas Type' uta:type='ASCII' uta:length='3'  /> --><!-- add naili 220811-->
+
+<uta:field uta:id='logOnUsOffUs'   uta:type='byte'    uta:data ='0'   uta:comment='Flag On Us Off Us' /> 
+<uta:field uta:id='logFlagDBMCVS' 	uta:type='byte'    uta:data ='0' uta:comment='flag Debit, MasterCard, Visa' /><!--add, irf, 11012012 -->
+
+</uta:record>
+

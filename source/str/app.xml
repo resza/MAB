@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!--
+Subversion reference
+$HeadURL: https://svn.ingenico.com/UTAPROJECTS/sea-partner/5W/trunk/ISO5WPH/str/app.xml $
+$Id: app.xml 1883 2009-04-16 14:03:09Z ajloreto $
+-->
+<uta:record uta:id='app' uta:comment='application parameters record' xmlns:uta="http://www.ingenico.com/xml/uta">
+  <uta:field uta:id='appCmpDat'
+             uta:type='ASCII'
+             uta:length='lenCmpDat'
+             uta:comment='compile date' />
+  <uta:field uta:id='appCmpTim'
+             uta:type='ASCII'
+             uta:length='lenCmpTim'
+             uta:comment='compile time' />
+<uta:field uta:id='appEndTime'
+               uta:type='ASCII'
+               uta:length='lenEndTime'
+               uta:data='"2000"'
+               uta:comment='time of automatic day close hhmm' />  
+  <uta:field uta:id='appGprsApn' uta:type='ASCII' uta:length='lenApn' uta:data='__DFTAPN__' uta:comment='Communication channel settings' />
+  <uta:field uta:id='appChn' uta:type='ASCII' uta:length='lenChn' uta:data='__DFTCHN__' uta:comment='Communication channel settings' />
+  <uta:field uta:id='appSrv' uta:type='ASCII' uta:length='lenSrv' uta:data='__DFTSRVTMS__' uta:comment='TMS server phone number' />
+  <uta:field uta:id="appSrvAtt" 
+ 		uta:type="byte" 
+		uta:data='2'
+ 		uta:comment='TMS Server Connect attempts' />
+  <uta:field uta:id='appPabx'
+             uta:type='ASCII'
+             uta:length='lenPabx'
+             uta:data='"9"'
+             uta:comment='Phone PABX' />
+  <uta:field uta:id='appTonePulse'
+  			 uta:type='byte'
+  			 uta:data='1'
+  			 uta:comment='Tone Pulse' />
+  <uta:field uta:id='appToneDetect'
+  			 uta:type='byte'
+  			 uta:data='1'
+  			 uta:comment='Tone Detect' />  
+  <uta:field uta:id='appPrefix'
+             uta:type='ASCII'
+             uta:length='lenPrefix'
+             uta:data='""'
+             uta:comment='Phone Prefix' />
+  <uta:field uta:id='appMrcPwd'
+             uta:type='ASCII'
+             uta:length='lenPwd'
+             uta:data='"0000"'
+             uta:comment='Merchant password' />
+  <uta:field uta:id='appAdmPwd'
+             uta:type='ASCII'
+             uta:length='lenPwd'
+             uta:data='"0000"'
+             uta:comment='Administrator password' />
+   <uta:field uta:id='appAccCode'
+             uta:type='ASCII'
+             uta:length='lenPwd'
+             uta:data='"6212"'
+             uta:comment='EDC Access Code' />
+          
+  <uta:field uta:id='appExp'
+             uta:type='byte'
+             uta:data='0'
+             uta:comment='Currency exponent' />
+  <uta:field uta:id='appTid'
+             uta:type='ASCII'
+             uta:length='lenTid'
+             uta:data='"10000001"'
+             uta:comment='Terminal Identifier' />
+  <uta:field uta:id='appMid'
+             uta:type='ASCII'
+             uta:length='lenMid'
+             uta:data='"000001019100001"'
+             uta:comment='Merchant ID' />
+  <uta:field uta:id='appAmtFmt'
+             uta:type='byte'
+             uta:data='0x03'
+             uta:comment='Amount Formatting to be used' />
+  <uta:field uta:id='appDefTra'
+             uta:type='byte'
+             uta:data='0'
+             uta:comment='Default Transaction' />
+  <uta:field uta:id='appTermOpt1'
+             uta:type='byte'
+             uta:data='0x04'
+             uta:comment='Terminal Options 1: 0x04 (Tips enabled Option), 0x02 (Display Pan Option), 0x01 (MOTO Enabled option) are used' />
+  <uta:field uta:id='appTermOpt2'
+             uta:type='byte'
+             uta:data='0x22'
+             uta:comment='Terminal Options 2: bits 0x20 (Base Total Entry option), 0x02 (Printer Enabled Option) are used' />
+   <uta:field uta:id='appTermOpt5'
+             uta:type='byte'
+             uta:data='0xC0'
+             uta:comment='Terminal Options 5: bits 0x80 (Display Name Option), 0x40 Confirm Amount Entry Option) are used' />
+
+   <uta:field uta:id='appLocOpt'
+             uta:type='byte'
+             uta:data='0x0F'
+             uta:comment='Local Options: bits 0x08 (ROC Search Password option), 0x04 (Refund Password Required Option), 0x02 (Void Password Required Option) are used' />
+
+  <uta:field uta:id='appCurrSign'
+             uta:type='ASCII'
+             uta:length='lenCurrSign'
+             uta:data='"Php"'
+             uta:comment='Currency Sign used for amount' />
+
+  <uta:field uta:id='appConnType' uta:type='byte' uta:data='1' uta:comment='Connection Type: Dialup / TCPIP / GPRS / RS232 (to follow wifi)' />
+  <uta:field uta:id='appComType' uta:type='byte' uta:data='1' uta:comment='COM Type: COM1 / COM2' />
+  
+  <uta:field uta:id='appVoidPwd' uta:type='ASCII' uta:length='lenPwd' uta:data='"0000"' uta:comment='Void Transaction password' />
+  <uta:field uta:id='appRefPwd' uta:type='ASCII' uta:length='lenPwd' uta:data='"0000"' uta:comment='Refund Transaction password' />
+  <uta:field uta:id='appSetlPwd' uta:type='ASCII' uta:length='lenPwd' uta:data='"0000"' uta:comment='Settle Transaction password' />
+             
+  <uta:field uta:id='appEMSale' uta:type='byte' uta:data='0xF7' uta:comment='Entry Mode For Sale' />
+  <uta:field uta:id='appEMRefund' uta:type='byte' uta:data='0xF7' uta:comment='Entry Mode For Refund' />
+  <uta:field uta:id='appEMOffline' uta:type='byte' uta:data='0xF7' uta:comment='Entry Mode For Offline Transaction' />
+  <uta:field uta:id='appEMCash' uta:type='byte' uta:data='0xF7' uta:comment='Entry Mode For Cash' />
+  <uta:field uta:id='appEMPreAuth' uta:type='byte' uta:data='0xF7' uta:comment='Entry Mode For Pre Authorization' />
+  <uta:field uta:id='appEMCrdVrfy' uta:type='byte' uta:data='0xF7' uta:comment='Entry Mode For Card Verification' />
+  <uta:field uta:id='appEMBalance' uta:type='byte' uta:data='0xF7' uta:comment='Entry Mode For Balance Transaction' />
+
+  <uta:field uta:id="appGPRSFlag" uta:type="byte" uta:data='0' uta:comment='gprs flag' />
+  <uta:field uta:id='appNII' uta:type='ASCII' uta:length='lenNII' uta:data='"015"'  uta:comment='TMS Connection NII, format length and value' />
+  <uta:field uta:id="appPriSrv" uta:type="ASCII" uta:length="lenSrv" uta:data='__DFTSRVTMS__' uta:comment='Primary TMS Server Phone Number or IP address/port' />
+  <uta:field uta:id="appPriAtt" uta:type="byte" uta:data='2' uta:comment='Primary TMS Server Connect attempts' />
+  <uta:field uta:id="appSecSrv" uta:type="ASCII" uta:length="lenSrv" uta:data='__DFTSRVTMS__' uta:comment='Secondary TMS Server Phone Number or IP address/port' />
+  <uta:field uta:id="appSecAtt" uta:type="byte" uta:data='2' uta:comment='Secondary TMS Server Connect attempts' />
+  <uta:field uta:id="appDialOpt" uta:type="byte" uta:data='2' uta:comment='TMS Dial Options' />
+  <uta:field uta:id="appRefNum" uta:type="ASCII" uta:length="lenMid" uta:comment='TMS Reference number' />
+  <uta:field uta:id="appBaudRate" uta:type="byte" uta:data='1' uta:comment='TMS Baud Rate' />
+  <uta:field uta:id="appTmsBufSize" uta:type="byte" uta:data='1' uta:comment='TMS Buffer size' />
+  <uta:field uta:id="appTmsDhcp" uta:type="byte" uta:comment='DHCP flag' />
+  <uta:field uta:id="appIpAdd" uta:type="ASCII" uta:length="lenSrv" uta:data='__DFTSRVTMS__' uta:comment='ip address' />
+  <uta:field uta:id="appSecIpAdd" uta:type="ASCII" uta:length="lenSrv" uta:data='__DFTSRVTMS__' uta:comment='Secondary ip address' />
+  <uta:field uta:id="appSubMask" uta:type="ASCII" uta:length="lenSrv" uta:comment='subnet mask' />
+  <uta:field uta:id="appDefGateway" uta:type="ASCII" uta:length="lenSrv" uta:comment='default gateway' />
+
+    <uta:field uta:id='appCrdInpCtl' uta:type='ASCII' uta:length='lenCrdInpCtl'   uta:data='"mck"' uta:comment='Card Input Control String' />
+    <uta:field uta:id='appPinKeyLoc' uta:type='byte'  uta:data='__appPinKeyLoc__' uta:comment='Pin Key Location' />
+    <uta:field uta:id='appMKeyLoc'   uta:type='byte'  uta:data='__appMKeyLoc__'   uta:comment='Master Key Location' />
+               
+    <uta:field uta:id="appDefRxTO" uta:type="word" uta:data='30' uta:comment="Default Rx Timeout" />
+    <uta:field uta:id="appDefICTO" uta:type="word" uta:data='3' uta:comment="Default Inter Character Timeout" />
+    <uta:field uta:id="appDefConTO" uta:type="word" uta:data='180' uta:comment='Default Connection Timeout' />
+
+  <!-- Transaction Name --> 
+  <uta:field uta:id='apptraSale' 	 uta:type='ASCII'  uta:data='"SALE"'      uta:length='lenTraName'  uta:comment='Sale Transaction' />
+  <uta:field uta:id='apptraOSale' 	 uta:type='ASCII'  uta:data='"O/SALE"'  uta:length='lenTraName'  uta:comment='Offline Sale Transaction' />
+  <uta:field uta:id='apptraOffline'  uta:type='ASCII'  uta:data='"OFFLINE"' uta:length='lenTraName'  uta:comment='Offline Transaction' />
+  <uta:field uta:id='apptraPreAuth'  uta:type='ASCII'  uta:data='"PREAUTH"' uta:length='lenTraName'  uta:comment='PreAuthorization Transaction' />
+  <uta:field uta:id='apptraVoid'     uta:type='ASCII'  uta:data='"VOID"'    uta:length='lenTraName'  uta:comment='Voided Transactions'/>
+  <uta:field uta:id='apptraRefund'   uta:type='ASCII'  uta:data='"REFUND"'  uta:length='lenTraName'  uta:comment='Refund Transactions'/>
+  <uta:field uta:id='apptraAdjust'   uta:type='ASCII'  uta:data='"ADJUST"'  uta:length='lenTraName'  uta:comment='Adjust Transactions'/>
+  <uta:field uta:id='apptraManual'   uta:type='ASCII'  uta:data='"MANUAL"'  uta:length='lenTraName'  uta:comment='Manual Transactions'/>
+  <uta:field uta:id='appTenor1' 	 uta:type='ASCII'  uta:data='"TENOR 1"'      uta:length='lenTraName'  uta:comment='Sale Transaction' />
+  <uta:field uta:id='appTenor3' 	 uta:type='ASCII'  uta:data='"TENOR 3"'  uta:length='lenTraName'  uta:comment=' Sale Transaction' />
+  <uta:field uta:id='appTenor6'  uta:type='ASCII'  uta:data='"TENOR 6"' uta:length='lenTraName'  uta:comment='Sale Transaction' />
+  <uta:field uta:id='appTenor9'  uta:type='ASCII'  uta:data='"TENOR 9"' uta:length='lenTraName'  uta:comment='Sale Transaction' />
+  <uta:field uta:id='appTenor12'     uta:type='ASCII'  uta:data='"TENOR 12"'    uta:length='lenTraName'  uta:comment='Sale Transactions'/>
+  <uta:field uta:id='appTenor18'   uta:type='ASCII'  uta:data='"TENOR 18"'  uta:length='lenTraName'  uta:comment='Sale Transactions'/>
+  <uta:field uta:id='appTenor24'   uta:type='ASCII'  uta:data='"TENOR 24"'  uta:length='lenTraName'  uta:comment='Sale Transactions'/>
+  
+  <!-- TPDU value -->
+  <uta:field uta:id='apptpduHead' 	uta:type='ASCII' 	uta:length='1'		uta:data='"\x60"'                 uta:comment='Standard TPDU Header' />
+  <uta:field uta:id='apptpduModem' 	uta:type='ASCII'	uta:length='2'		uta:data='"\x30\x00"'             uta:comment='Destination NII (Standard 30) for Modem' />
+  <uta:field uta:id='apptpduTCPIP' 	uta:type='ASCII'	uta:length='2'		uta:data='"\x30\x00"'             uta:comment='Destination NII (Standard 80) for TCPIP' />
+  <uta:field uta:id='apptpduRS232' 	uta:type='ASCII'	uta:length='2'		uta:data='"\x06\x65"'             uta:comment='NII (Standard 665) for RS232' />    
+    
+ <!-- all EMV tags are stored as binary (the first byte is the data length) -->
+  <!-- closed by irfan for testing -->
+  <!--
+  <uta:field uta:id='emvTrnCurCod'  uta:type='binary' uta:length='lenTrnCurCod'  uta:data='"\x02\x06\x08"'                 uta:comment='5F2A Transaction Currency Code' />
+  <uta:field uta:id='emvTrnCurExp'  uta:type='binary' uta:length='lenTrnCurExp'  uta:data='"\x01\x03"'                     uta:comment='5F36 Transaction Currency Exponent' />
+  <uta:field uta:id='emvMrcCatCod'  uta:type='binary' uta:length='lenMrcCatCod'  uta:data='"\x02\x53\x11"'                 uta:comment='9F15 Merchant Category Code' />
+  <uta:field uta:id='emvTrmCntCod'  uta:type='binary' uta:length='lenTrmCntCod'  uta:data='"\x02\x06\x08"'                 uta:comment='9F1A Terminal Country Code' />
+  <uta:field uta:id='emvTrmId'      uta:type='binary' uta:length='lenTID'        uta:data='"\x08""00000211"'               uta:comment='9F1C Terminal Identification' />
+  <uta:field uta:id='emvTrmCap'     uta:type='binary' uta:length='lenTrmCap'     uta:data='"\x03\xE0\xF8\xC8"'             uta:comment='9F33 Terminal Capabilities' />
+  <uta:field uta:id='emvTrmTyp'     uta:type='binary' uta:length='lenEmvTrmTyp'  uta:data='"\x01\x22"'                     uta:comment='9F35 Terminal Type' />
+  <uta:field uta:id='emvAddTrmCap'  uta:type='binary' uta:length='lenAddTrmCap'  uta:data='"\x05\xF1\x00\xF0\xA0\x01"'     uta:comment='9F40 Additional Terminal Capabilities' />
+  <uta:field uta:id='emvVlpSupInd'  uta:type='binary' uta:length='lenVlpSupInd'  uta:data='"\x01\x00"'                     uta:comment='9F7A VLP Terminal Support Indicator' />
+  <uta:field uta:id='emvVlpTrmLim'  uta:type='binary' uta:length='lenVlpTrmLim'  uta:data='"\x06\x00\x00\x00\x00\x00\x00"' uta:comment='9F7B VLP Terminal Transaction Limit' />
+  <uta:field uta:id='emvLstRspCod'  uta:type='binary' uta:length='lenLstRspCod'  uta:data='"\x14""Y1Z1Y2Z2Y3Z300050104"'   uta:comment='DF16 List of possible response codes' />
+  <uta:field uta:id='emvIFDSerNum'  uta:type='binary' uta:length='lenIFDSerNum'  uta:data='"\x08""28725422"'               uta:comment='9F1E Interface Device (IFD) Serial Number' />  
+  -->
+
+  <!-- add by irfan, 21042010 -->
+  <uta:field uta:id='emvTrnCurCod'  uta:type='binary' uta:length='lenTrnCurCod'  uta:data='"\x02\x03\x60"'                 uta:comment='5F2A Transaction Currency Code' />
+  <uta:field uta:id='emvTrnCurExp'  uta:type='binary' uta:length='lenTrnCurExp'  uta:data='"\x01\x03"'                     uta:comment='5F36 Transaction Currency Exponent' />
+  <uta:field uta:id='emvMrcCatCod'  uta:type='binary' uta:length='lenMrcCatCod'  uta:data='"\x02\x53\x11"'                 uta:comment='9F15 Merchant Category Code' />
+  <uta:field uta:id='emvTrmCntCod'  uta:type='binary' uta:length='lenTrmCntCod'  uta:data='"\x02\x03\x60"'                 uta:comment='9F1A Terminal Country Code' />
+  <uta:field uta:id='emvTrmId'      uta:type='binary' uta:length='lenTID'        uta:data='"\x08""00000211"'               uta:comment='9F1C Terminal Identification' />
+  <uta:field uta:id='emvTrmCap'     uta:type='binary' uta:length='lenTrmCap'     uta:data='"\x03\xE0\xB8\xC8"'             uta:comment='9F33 Terminal Capabilities' />
+  <uta:field uta:id='emvTrmTyp'     uta:type='binary' uta:length='lenEmvTrmTyp'  uta:data='"\x01\x22"'                     uta:comment='9F35 Terminal Type' />
+  <uta:field uta:id='emvAddTrmCap'  uta:type='binary' uta:length='lenAddTrmCap'  uta:data='"\x05\xF0\x00\xF0\xA0\x01"'     uta:comment='9F40 Additional Terminal Capabilities' />
+  <uta:field uta:id='emvVlpSupInd'  uta:type='binary' uta:length='lenVlpSupInd'  uta:data='"\x01\x00"'                     uta:comment='9F7A VLP Terminal Support Indicator' />
+  <uta:field uta:id='emvVlpTrmLim'  uta:type='binary' uta:length='lenVlpTrmLim'  uta:data='"\x06\x00\x00\x00\x00\x00\x00"' uta:comment='9F7B VLP Terminal Transaction Limit' />
+  <uta:field uta:id='emvLstRspCod'  uta:type='binary' uta:length='lenLstRspCod'  uta:data='"\x14""Y1Z1Y2Z2Y3Z300050104"'   uta:comment='DF16 List of possible response codes' />
+  <uta:field uta:id='emvIFDSerNum'  uta:type='binary' uta:length='lenIFDSerNum'  uta:data='"\x08""28725422"'               uta:comment='9F1E Interface Device (IFD) Serial Number' />  
+  <uta:field uta:id='emvTRMOverpassAIP'  uta:type='binary' uta:length='2'  uta:data='"\x01\x01"'          	 uta:comment='TRM over AIP' />  
+
+
+  <!-- for EMV component smartweb-->
+  <uta:field uta:id='appServiceCode'   	uta:type='byte' 	uta:data='1'  	uta:comment='Service Code dari Entry Mode TMS' />
+  <uta:field uta:id='appFallBackMod'   	uta:type='byte' 	uta:data='0'  	uta:comment='Mode Fallback for Magneticstripe' />
+
+    <uta:field uta:id='appPPPNbr' uta:type='ASCII' uta:length='128' uta:data='__DFTPPP__' uta:comment='Communication channel settings' />
+
+  <uta:field uta:id='appBfKey' 
+		uta:type='ASCII' 
+		uta:length='16'
+		uta:data='"3333333333333333"' 
+		uta:comment='Set Blowfish Key' />
+
+  <uta:field uta:id='appBlowFish' 
+    	uta:type='byte' 
+    	uta:data='1' 
+    	uta:comment='On/Off Blowfish' />
+
+  <uta:field uta:id='appAftTMSKey' 	uta:type='ASCII' 	uta:length='8'	uta:data='"\x03\x03\x03\x01\x03\x03\x03\x01"' 	uta:comment='After TMS Key' />
+		
+  <uta:field uta:id='appICT220'   	uta:type='byte' 	uta:data='0'  	uta:comment='ON/OFF ICT 220' />
+  <uta:field uta:id='appSettleInd'   	uta:type='byte' 	uta:data='0'  	uta:comment='Pernah Settle Atau Tidak' />
+  <uta:field uta:id='appBf' uta:type='ASCII' uta:length='6' uta:data='"0"' uta:comment='Blowfish settings' />
+
+  <!-- Dewi EMV 22062010 -->
+  <uta:field uta:id="appPANBlockBegin" uta:type="word" uta:data='12' uta:comment='Block PAN from the beginning' />
+  <uta:field uta:id="appPANBlockEnd" uta:type="word" uta:data='0' uta:comment='Block PAN from the end' />
+  <uta:field uta:id='appCurrSignSpaces'     uta:type='ASCII'     uta:length='lenCurrSign+2'       uta:data='"Rp.  "'        uta:comment='Currency Sign used for amount' />
+  	<uta:field uta:id='appRequest'  uta:type='ASCII'  uta:length='700'   uta:comment='iso msg request' />
+    <uta:field uta:id="appReqLen"   uta:type="word"   uta:comment='Len Request' />
+    <uta:field uta:id='appRespon'  uta:type='ASCII'  uta:length='700'   uta:comment='iso msg response' />
+    <uta:field uta:id="appRspLen"   uta:type="word"   uta:comment='Len Response' />
+    <uta:field uta:id='appPassTel'  uta:type='ASCII'  uta:length='4'  uta:data='"1210"' uta:comment='pass EDC Tel' />
+    <uta:field uta:id='appBit57'  uta:type='ASCII'  uta:length='700'   uta:comment='Bit57 msg request' />
+    <uta:field uta:id="appBit57Len"   uta:type="word"   uta:comment='Len Bit 57 Request' />
+    <uta:field uta:id='appBit57Rsp'  uta:type='ASCII'  uta:length='700'   uta:comment='Bit57 msg request' />
+    <uta:field uta:id="appBit57RspLen"   uta:type="word"   uta:comment='Len Bit 57 Request' />
+
+   
+  <uta:field uta:id='appAppPrfNam'  uta:type='binary' uta:length='lenAppPrfNam' uta:comment='9F12 Application Preferred Name' />
+  <uta:field uta:id='emvPAN'       uta:type='binary' uta:length='lenEmvPAN'    uta:comment='5A   Application Primary Account Number' />
+  <uta:field uta:id='emvTrnDat'    uta:type='binary' uta:length='lenTrnDat'    uta:comment='9A Transaction Date YYMMDD' />
+  <uta:field uta:id='emvTrnTim'    uta:type='binary' uta:length='lenTrnTim'    uta:comment='9F21 Transaction Time hhmmss' />
+  <uta:field uta:id='emvTrnTyp'    uta:type='binary' uta:length='lenTrnTyp'    uta:comment='9C Transaction Type' />
+  <uta:field uta:id='emvAmtBin'    uta:type='binary' uta:length='lenAmtBin'    uta:comment='81   Transaction Amount Binary' />
+  <uta:field uta:id='emvAmtOthNum' uta:type='binary' uta:length='lenAmtNum'    uta:comment='9F03 Amount other numeric' />
+  <uta:field uta:id='emvAmtOthBin' uta:type='binary' uta:length='lenAmtBin'    uta:comment='9F04 Amount other binary' />
+  <uta:field uta:id='emvPANSeq'    uta:type='binary' uta:length='lenPANSeq'    uta:comment='5F34 PAN sequence number' />
+  <uta:field uta:id='emvIACDft'     uta:type='binary' uta:length='lenTVR'           uta:comment='IACDft' />
+  <uta:field uta:id='emvIACDnl'     uta:type='binary' uta:length='lenTVR'          uta:comment='IACDen' />
+  <uta:field uta:id='emvIACOnl'     uta:type='binary' uta:length='lenTVR'            uta:comment='IAC Online' />
+  <uta:field uta:id='emvAIP'       uta:type='binary' uta:length='lenAIP'       uta:comment='82   Application interchange profile' />
+  <uta:field uta:id='emvTVR'       uta:type='binary' uta:length='lenTVR'       uta:comment='95   Terminal verification results' />
+  <uta:field uta:id='emvTSI'       uta:type='binary' uta:length='lenTSI'       uta:comment='9B   Transaction Status Information' />
+  <uta:field uta:id='emvCVMRes'    uta:type='binary' uta:length='lenCVMRes'    uta:comment='9F34 Cardholder Verification Method Results' />
+  <uta:field uta:id='emvIAD'       uta:type='binary' uta:length='lenIAD'       uta:comment='9F10 Issuer Application Data' />
+  <uta:field uta:id='emvRspCod'    uta:type='binary' uta:length='lenRspCod'    uta:comment='8A   Authorization response code' />
+  <uta:field uta:id='emvACReq1'     uta:type='binary' uta:length='2'           uta:comment='1st Gen AC Req' />
+  <uta:field uta:id='emvACReq2'     uta:type='binary' uta:length='64'            uta:comment='2nd Gen AC Req' />
+  <uta:field uta:id='traACReq2'     uta:type='ASCII'     uta:length='2'  uta:comment='2nd Gen AC Req' />
+  <uta:field uta:id='emvACRsp1'     uta:type='binary' uta:length='2'           uta:comment='1st Gen AC Rsp' />
+  <uta:field uta:id='emvACRsp2'     uta:type='binary' uta:length='2'            uta:comment='2nd Gen AC Rsp' />
+  <uta:field uta:id='emvLstCmdRsp'     uta:type='binary' uta:length='7'            uta:comment='Final' />
+  <uta:field uta:id='traLstCmdRsp'     uta:type='binary' uta:length='4'            uta:comment='Final' />
+  <uta:field uta:id='emvIssTrnCrt' uta:type='binary' uta:length='lenIssTrnCrt' uta:comment='9F26 Issuer Transaction Certificate' />
+  <uta:field uta:id='emvATC'       uta:type='binary' uta:length='lenATC'       uta:comment='9F36 Application Transaction Counter (ATC)' />
+  <uta:field uta:id='emvUnpNum'    uta:type='binary' uta:length='lenUnpNum'    uta:comment='9F37 Unpredictable Number' /> 
+  <uta:field uta:id='emvAmtNum'    uta:type='binary' uta:length='lenAmtNum'    uta:comment='9F02 Transaction Amount Numeric' />
+  <uta:field uta:id='emvAmtPrv'    uta:type='binary' uta:length='lenAmtBin'    uta:comment='DF25 Amount found in the transaction file, in a previous transaction performed with the same card' />
+  <uta:field uta:id='emvCapkIdx'   uta:type='binary' uta:length='lenCapkIdx'   uta:comment='8F   CAPK index' />
+  <uta:field uta:id='emvAppTraAmt' 		uta:comment='transaction amount' uta:type='ASCII' uta:length='lenAmt' />
+
+  <uta:field uta:id='appLockFlag'        uta:type='byte'      uta:data='0'     uta:comment='Lock EDC Flag' />    
+  <uta:field uta:id='appUserId'  		uta:type='ASCII'  	uta:length='8'   						uta:comment='User ID' />
+  <uta:field uta:id='appAfterTMS'   	uta:type='byte'  						uta:data='0'   		uta:comment='After TMS Indicator' />
+  <uta:field uta:id="appGetTick" 	uta:type="word" 						uta:data='0' 		uta:comment="Get Tick" />
+  <uta:field uta:id='appTmsRefNum' uta:type='ASCII' uta:length='lenTmsRefNum' uta:data='"00000000"' uta:comment='TMS Refence Number'/>
+  <uta:field uta:id='emvDFNam'     uta:type='binary' uta:length='lenDFNam'     uta:comment='84   Dedicated File (DF) Name' />
+
+  <uta:field uta:id='appVersion' uta:type='ASCII' uta:length='4' uta:data='__SoftwareVersion__' uta:comment='Software Version'/>
+  <uta:field uta:id='appSoftName' uta:type='ASCII' uta:length='6' uta:data='__SoftwareName__' uta:comment='Software Name'/>
+  <uta:field   uta:id='appDisplayCd'   uta:type='ASCII'    uta:length='16'   uta:comment='Display Code' />
+    <!-- Tambahan SAM MANDIRI -->		
+  
+  <!-- Yang ini sementara aja (bag atas)-->
+  <uta:field uta:id='appLtmkAcqID'
+			 uta:type='ASCII' 
+			 uta:length='3'
+			 uta:data='"001"' 
+			 uta:comment='acquirer identification' />  
+			 
+  <uta:field uta:id='appVendorID' 
+			 uta:type='ASCII' 
+			 uta:length='8'
+			 uta:data='"00000001"' 
+			 uta:comment='Id for vendor' />  	
+
+  <uta:field uta:id='appLTMKDATA' 
+			 uta:type='ASCII' 
+			 uta:length='112'
+			 uta:data='"12345678123456781234567812345678123456781234567812345678"' 
+			 uta:comment='Id for vendor' /> 
+			 
+  <uta:field uta:id='appModulusRSA' 
+			 uta:type='ASCII' 
+			 uta:length='128'
+			 uta:data='"12345678123456781234567812345678123456781234567812345678"' 
+			 uta:comment='Modulus RSA' /> 
+
+  <uta:field uta:id='appKeySessionTle' 
+			 uta:type='ASCII' 
+			 uta:length='16'
+			 uta:data='"2013022811262013"' 
+			 uta:comment='KeySessionSet for TID 1' /> 
+			 
+  <uta:field uta:id='appNiiLTMK' 
+			 uta:type='ASCII' 
+			 uta:length='lenNII' 
+			 uta:data='"018"'  
+			 uta:comment='TLE LTMK\LTWK NII, format length and value' />	
+			 
+  <uta:field uta:id='appKMSLTMKDATA' 
+			 uta:type='ASCII' 
+			 uta:length='80'
+			 uta:data='"12345678123456781234567812345678123456781234567812345678"' 
+			 uta:comment='Id for vendor' />  
+			 
+  <uta:field uta:id='appLTMK' 
+			 uta:type='ASCII' 
+			 uta:length='48'
+			 uta:data='"F2B10A6B16E17D89D6C1D51F2322B5568B193CACA99800CF"' 
+			 uta:comment='LTMK_ID and LTMK' />  
+			 			 		 
+  <uta:field uta:id='appLTWKTID1' 
+			 uta:type='ASCII' 
+			 uta:length='104'
+			 uta:data='"0000"' 
+			 uta:comment='Encryption Counter for TID 1' />  			 
+
+  <uta:field uta:id='appTidTle' uta:type='ASCII'  uta:length='8' uta:data='"93132833"'  uta:comment='TID Sharing' />  			 
+  <uta:field uta:id='appExponent' uta:type='ASCII'  uta:length='6'  uta:comment='Exponent RSA' /> 
+  
+  <!-- Yang ini sementara aja (bag bawah) -->		  
+  
+  <uta:field uta:id='appKeySessionSAM' 
+			 uta:type='ASCII' 
+			 uta:length='8+1'
+			 uta:data='""' 
+			 uta:comment='KeySession' />
+
+ <uta:field uta:id='appTleSet'        uta:type='byte'      uta:data='2'     uta:comment='TLE Indicator,.' />    			 
+
+ <uta:field uta:id='appBit58' uta:type='ASCII'  uta:length='28' uta:data='"0000000000000000"'  uta:comment='utk mengukur kinerja edc' />  			 
+ <uta:field uta:id='appTxnVoidBfr'        uta:type='byte'      uta:data='0'     uta:comment='Last Transaction, Void indicator' />    			 
+ <uta:field uta:id='appIdxBtcUpl'        uta:type='word'      uta:data='0'     uta:comment='Index Batch Upload' />    			 
+  <uta:field uta:id='appNbrTxnVoidBfr'        uta:type='word'      uta:data='0'     uta:comment='Nbr Last Transaction, Void indicator' />
+ <uta:field uta:id='CurDay' uta:type='ASCII' uta:length='2' uta:comment='current day' />
+ <uta:field uta:id='appCntReceipt' uta:type='byte'  uta:data='2' uta:comment='Count of Receipt' />
+ <uta:field uta:id='appNIIMntr' uta:type='ASCII' uta:length='lenNII' uta:data='"110"'  uta:comment='Monitoring NII, format length and value' />
+  
+ <!-- Tambahan lagi MANDIRI -->
+  <uta:field uta:id='appto' 
+			 uta:type='ASCII' 
+			 uta:length='4'
+			 uta:data='"0000"' 
+			 uta:comment='first Time After restart' />  
+			 
+  <uta:field uta:id='apptoidle' 
+			 uta:type='ASCII' 
+			 uta:length='4'
+			 uta:data='"0000"' 
+			 uta:comment='first Time After first loop of idle' /> 
+			 
+  <uta:field uta:id='apptoTFHr' 
+			 uta:type='ASCII' 
+			 uta:length='4'
+			 uta:data='"0000"' 
+			 uta:comment='first Time After first loop of idle' /> 
+
+  <uta:field uta:id="appPriMonSrv" 
+			 uta:type="ASCII" uta:length="lenSrv" 
+			 uta:data='__DFTMONSRV__' 
+			 uta:comment='Primary EDC Monitoring Server Phone Number or IP address/port' />			  
+
+  <uta:field uta:id="appPriMonAtt" 
+			 uta:type="byte" uta:data='2' 
+			 uta:comment='Primary EDC Monitoring Server Connect attempts' />
+			 
+  <uta:field uta:id="appSecMonSrv" 
+		     uta:type="ASCII" 
+		     uta:length="lenSrv" 
+		     uta:data='__DFTMONSRV__' 
+		     uta:comment='Secondary EDC Monitoring Server Phone Number or IP address/port' />
+		  
+  <uta:field uta:id="appSecMonAtt" 
+		     uta:type="byte" uta:data='2' 
+		     uta:comment='Secondary EDC Monitoring Server Connect attempts' />
+
+<!-- Chandra ADD 07122010 Prepaid-->
+  <uta:field uta:id='appChipUIDSAM'  		uta:type='ASCII'  	uta:length='20'   						uta:comment='Chip_UIDSAM' />
+  <uta:field uta:id='appCIN'  				uta:type='ASCII'  	uta:length='3'   						uta:comment='CIN' />
+  <uta:field uta:id='appCHIP_UID'  			uta:type='ASCII'  	uta:length='7'   						uta:comment='CHIP_UID' />
+  <uta:field uta:id='appDATESAM'  				uta:type='ASCII'  	uta:length='2'   						uta:comment='DATE SAM' />
+  <uta:field uta:id='appSEQ_NO'  			uta:type='ASCII'  	uta:length='4'   						uta:comment='SEQ NUM SAM' />
+  <uta:field uta:id='appCHIP_VERSION'  		uta:type='ASCII'  	uta:length='16'   						uta:comment='CHIP VERSION SAM' />
+  <uta:field uta:id='appENGINE_VERSION'  	uta:type='ASCII'  	uta:length='16'   						uta:comment='ENGINE VERSION SAM' />
+  <uta:field uta:id='appFlagSam'  	uta:type='ASCII'  	uta:length='1'   						uta:comment='0' />
+  <uta:field uta:id='appFlagSamPrepaid'  	uta:type='ASCII'  	uta:length='1'   						uta:comment='0' />
+  <uta:field uta:id='appFlagRevPrepaid'  				uta:type='ASCII'  	uta:length='1'   						uta:comment='Flag Rev' /> 
+  <uta:field uta:id='appFlagTokenPrepaid'  				uta:type='ASCII'  	uta:length='1'   						uta:comment='Flag Rev' />     
+  <uta:field uta:id='appFlagPowerfailure'  				uta:type='byte'  	uta:length='1'   						uta:comment='Flag Rev' />           
+<!-- Chandra ADD 07122010 END-->
+<uta:field uta:id='appGracePeriod'  				uta:type='ASCII'  	uta:length='47'   						uta:comment='Flag Rev' />		  
+<uta:field uta:id='appPinSamCard'  				uta:type='ASCII'  	uta:length='24'   						uta:comment='PIN SAM CARD' />		  
+<uta:field uta:id='appDisplayVivoTech'  				uta:type='byte'  	uta:length='1'   						uta:comment='PIN SAM CARD' />	
+
+<uta:field uta:id='appRekMerchant'  				uta:type='ASCII'  	uta:length='76'   						uta:comment='REK MERCHANT' />	
+<uta:field uta:id='appTimeSet'  					uta:type='ASCII'  	uta:length='5'   						uta:comment='set time settlement ' />	
+<uta:field uta:id='appFlagSettle'  					uta:type='byte'  	uta:length='1'   						uta:comment='flag autoSettle settlement ' />	
+<uta:field uta:id='appLastAutCodPrepaid'			uta:type='ASCII'  	uta:length='6'   uta:data='"000000"'		uta:comment='last Aut code prepaid' />		  
+<uta:field uta:id='appLastTCCode'			uta:type='ASCII'  	uta:length='26'   uta:data='"0000000000"'		uta:comment='last TC code prepaid' />		  
+
+<uta:field uta:id='appTerminalType'			uta:type='ASCII'  	uta:length='12'   uta:data='"EFT930"'		uta:comment='Terminal Type (default)' />		  
+
+<uta:field uta:id='appDateMonitoring'			uta:type='ASCII'  	uta:length='6'   uta:data='"000000"'		uta:comment='Date start monitoring' />		  
+
+<uta:field uta:id='appFlagEDCMon'  			uta:type='byte'  	uta:data='1'   						uta:comment='flag EDC Mon 0=off 1=on ' />	
+
+<uta:field uta:id='appDateReInitRetryEDCMon'			uta:type='ASCII'  	uta:length='6'   uta:data='"000000"'		uta:comment='Date start monitoring' />		  
+<uta:field uta:id="appTimeEdcMon" uta:type="word" uta:data='0' uta:comment='time edc mon' />
+
+  <uta:field uta:id='appRrn' uta:type='ASCII' uta:length='lenRrn' uta:comment='Last Retrieval Reference Number' />
+
+<uta:field uta:id='appFlagDownloadLTWK'  			uta:type='byte'  	uta:data='0'   						uta:comment='flag Download LTWK' />	
+<uta:field uta:id='appFlagInit'  					uta:type='byte'  	uta:data='0'   						uta:comment='flag Success Initialize' />	
+
+<uta:field uta:id='appCtrlVersion' uta:type='ASCII' uta:length='1' uta:data='__CtrlSoftwareVersion__' uta:comment='Control Software Version'/>
+
+</uta:record>
+

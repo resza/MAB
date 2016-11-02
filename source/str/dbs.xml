@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!DOCTYPE map [
+  <!ENTITY enum SYSTEM "enum.xml"> 
+  <!ENTITY app SYSTEM "app.xml"> 
+  <!ENTITY mnu SYSTEM "mnu.xml"> 
+  <!ENTITY msg SYSTEM "msg.xml"> 
+  <!ENTITY mon SYSTEM "mon.xml"> 
+  <!ENTITY tot SYSTEM "tot.xml"> 
+  <!ENTITY cdb SYSTEM "cdb.xml"> 
+  <!ENTITY tra SYSTEM "tra.xml"> 
+  <!ENTITY bin SYSTEM "bin.xml"> 
+  <!ENTITY acq SYSTEM "acq.xml"> 
+  <!ENTITY iss SYSTEM "iss.xml"> 
+  <!ENTITY isslog SYSTEM "isslog.xml"> 
+]>
+<!--
+Subversion reference
+$HeadURL: https://svn.ingenico.com/UTAPROJECTS/sea-partner/5W/trunk/ISO5WPH/str/dbs.xml $
+$Id: dbs.xml 1284 2009-01-16 10:15:58Z kdelacruz $
+-->
+<map xmlns:uta="http://www.ingenico.com/xml/uta">
+    &enum;
+    <uta:keySpace>
+        <uta:dfsFile uta:id='page0000.nvm'>         
+            &mnu;
+            &msg;
+            &mon;
+            &tot;
+            &cdb;
+        </uta:dfsFile>
+        <uta:dfsFile uta:id='page0001.nvm'>
+            &bin;
+            &acq;
+            &iss;
+        </uta:dfsFile>
+  	<uta:dfsFile uta:id='page0002.nvm'>
+               &app;
+        </uta:dfsFile>
+        <uta:volatile>
+            &tra;
+        </uta:volatile>
+      </uta:keySpace>
+</map>

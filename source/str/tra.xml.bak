@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!--
+Subversion reference
+$HeadURL: https://svn.ingenico.com/UTAPROJECTS/sea-partner/5W/trunk/ISO5WPH/str/tra.xml $
+$Id: tra.xml 1900 2009-04-21 05:10:43Z ajloreto $
+-->
+<uta:record uta:id='tra' uta:comment='transaction related data situated in volatile memory'
+  xmlns:uta="http://www.ingenico.com/xml/uta">
+  <uta:field uta:id='traDatTim' uta:type='ASCII' uta:length='lenDatTim' uta:comment='current date and time CCYYMMDDhhmmss' />
+  <uta:field uta:id='traMnuItm' uta:type='word' uta:comment='current menu item selected' />
+  <uta:field uta:id='traCtx' uta:type='ASCII' uta:length='dspW' uta:comment='context message' />
+  <uta:field uta:id='traSta' uta:type='byte' uta:comment='communication session state' />
+  <uta:field uta:id='traEntMod' uta:type='char' uta:comment='card entry mode' />
+  <uta:field uta:id='traConCode' uta:type='byte' uta:comment='condition code' />
+  <uta:field uta:id='traTrk2' uta:type='ASCII' uta:length='lenTrk2' uta:comment='track 2 of the card' />
+  <uta:field uta:id='traPan' uta:comment='card number' uta:type='ASCII' uta:length='lenPan' />
+  <uta:field uta:id='traExpDat' uta:type='ASCII' uta:length='lenExpDat' uta:comment='expiry date' />
+  <uta:field uta:id='traAmt' uta:comment='transaction amount' uta:type='ASCII' uta:length='lenAmt' />
+  <uta:field uta:id='traTransType' uta:comment='Transaction Type' uta:type='ASCII' uta:length='lenCardTransType' />
+  <uta:field uta:id='traCardType' uta:comment='Card Type' uta:type='ASCII' uta:length='lenCardTransType' />
+  <uta:field uta:id='traTipAmt' uta:comment='Transaction Tip Amount' uta:type='ASCII' uta:length='lenAmt' />
+  <uta:field uta:id='traTotAmt' uta:comment='Transaction Total Amount' uta:type='ASCII' uta:length='20' />
+  <uta:field uta:id='traDspAmt' uta:comment='Transaction Total Amount' uta:type='ASCII' uta:length='20' />
+  <uta:field uta:id='traAutCod' uta:type='ASCII' uta:length='lenAutCod' uta:comment='Authorization (approval) code' />
+  <uta:field uta:id='traRspCod' uta:type='ASCII' uta:length='lenRspCod' uta:comment='Response code' />
+  <uta:field uta:id='traRrn' uta:type='ASCII' uta:length='lenRrn' uta:comment='Retrieval Reference Number' />
+  <uta:field uta:id='traTxnType' uta:type='byte' uta:comment='Current Txn Type - used in rqs' />                           
+  <uta:field uta:id='traIssName' uta:type="ASCII" uta:length="dspW" uta:comment='Issuer Name to be displayed' />
+  <uta:field uta:id='traTrk21' uta:type='ASCII' uta:length='dspW' uta:comment='first half of track 2 of the card to be displayed'/>
+  <uta:field uta:id='traTrk22' uta:type='ASCII' uta:length='dspW' uta:comment='tail track 2 of the card to be displayed'/>
+  <uta:field uta:id='traCrdSeq' uta:type='byte' uta:length='lenCrdSeq' uta:comment='Card Seq Number' />
+  <uta:field uta:id='traBinIdx' uta:type='byte' uta:comment='index in Bin multirecord' />
+  <uta:field uta:id='traAcqIdx' uta:type='byte' uta:comment='index in Acq multirecord' />
+  <uta:field uta:id='traIssIdx' uta:type='byte' uta:comment='index in Iss multirecord' />
+  <uta:field uta:id='traSrv' uta:type='ASCII' uta:length='lenSrv' uta:comment='temporary varaible for IP Address or Port in dialog'/>  
+  <uta:field uta:id='traTCPIPprm' uta:type='ASCII' uta:length='dspW' uta:comment='display when viewing IP add or Port config'/>
+  <uta:field uta:id='traPriSec' uta:type='ASCII' uta:length='dspW' uta:comment='display when viewing IP add and Port config if Primary or Secondary'/>
+  <uta:field uta:id='traIPConfig' uta:type='ASCII' uta:length='dspW' uta:comment='display when viewing IP add and Port config'/>
+  <uta:field uta:id='traPinBlk' uta:type='binary' uta:length='lenPinBlk' uta:comment='Pin block' />  
+  <uta:field uta:id='traPinReq' uta:type='byte' uta:comment='is pin required?' />     
+  <uta:field uta:id='traSgnReq' uta:type='byte' uta:comment='is signature required?' />
+  <uta:field uta:id='traTrk1' uta:type='ASCII' uta:length='lenTrk2' uta:comment='track 1 of the card' />  
+
+  <uta:field uta:id='traMnuItmBeforeOffline' uta:type='word' uta:comment='current menu item selected' />
+  <uta:field uta:id='traTxnTypeBeforeOffline' uta:type='byte' uta:comment='Current Txn Type - used in rqs' />                           
+  
+  <uta:field uta:id='traIdx' 		    uta:type='word'    uta:comment='transaction counter index number' />
+  <uta:field uta:id='traLogTotalCount'  uta:type='word'    uta:length='lenLogTotalTxn' uta:comment='buffer placement for total transaction counts'/>
+  <uta:field uta:id='traTypeName' 	    uta:type='ASCII'   uta:length='lenName' uta:comment='Transaction Type Name' />
+  <uta:field uta:id='traTypeCurName' 	uta:type='ASCII'   uta:length='4' uta:comment='Currency Name' />
+  <uta:field uta:id='traLogTxnTtlCnt'   uta:type='ASCII'   uta:length='3' uta:comment='buffer placement for total transaction counts with length 3'/>
+  <uta:field uta:id='traLogTotalAmount' uta:type='ASCII'   uta:length='lenAmt'  uta:comment='buffer placement for total transaction amt'/>
+  <uta:field uta:id='traAcqName' 		uta:type='ASCII'   uta:length='lenName'  uta:comment='Acquirer Name'/>
+  <uta:field uta:id='traFindRoc' 		uta:type='ASCII'   uta:length='lenInvNum'  uta:comment='Trace Number to Search'/>
+  <uta:field uta:id='traVoidFlag' 		uta:type='byte'   uta:comment='Void Flag Indicator , >0 if void or 0 if not'/>  
+  <uta:field uta:id='traFmtAmt' 		uta:type='ASCII'   uta:length='20' uta:comment='Display formatted Amount'/>
+  <uta:field uta:id='traFmtTip' 		uta:type='ASCII'   uta:length='lenAmt' uta:comment='Display formatted Tip Amount'/>
+
+  <uta:field uta:id='traVoidFlagContext' 		uta:type='byte'   uta:comment='Void Flag Indicator Current Value Buffer'/>  
+  <uta:field uta:id='traMnuItmContext' uta:type='word' uta:comment='Menu Item Current Value Buffer' />  
+  <uta:field uta:id='traDatTimContext' uta:type='ASCII' uta:length='lenDatTim' uta:comment='Current Value Buffer of date and time CCYYMMDDhhmmss' /> 
+  <uta:field uta:id='traBinIdxContext' uta:type='byte' uta:comment='Current Value Buffer for index in Bin multirecord' />
+  <uta:field uta:id='traAcqIdxContext' uta:type='byte' uta:comment='Current Value Buffer for index in Acq multirecord' />
+  <uta:field uta:id='traIssIdxContext' uta:type='byte' uta:comment='Current Value Buffer for index in Iss multirecord' />
+  <uta:field uta:id='traPanContext' uta:comment='card number' uta:type='ASCII' uta:length='lenPan' />
+  <uta:field uta:id='traExpDatContext' uta:type='ASCII' uta:length='lenExpDat' uta:comment='Current Value Buffer for expiry date' />
+  <uta:field uta:id='traTrk2Context' uta:type='ASCII' uta:length='lenTrk2' uta:comment='Current Value Buffer for track 2 of the card' />  
+  <uta:field uta:id='traAutCodContext' uta:type='ASCII' uta:length='lenAutCod' uta:comment='Current Value Buffer for Authorization (approval) code' />  
+  <uta:field uta:id='traAmtContext' uta:comment='transaction amount' uta:type='ASCII' uta:length='lenAmt' />
+  <uta:field uta:id='traTipAmtContext' uta:comment='Transaction Tip Amount' uta:type='ASCII' uta:length='lenAmt' />  
+  <uta:field uta:id='traRrnContext' uta:type='ASCII' uta:length='lenRrn' uta:comment='Current Value Buffer for Retrieval Reference Number' />  
+  <uta:field uta:id='traEntModContext' uta:type='char' uta:comment='Current Value Buffer for card entry mode' />
+  <uta:field uta:id='traConCodeContext' uta:type='byte' uta:comment='Current Value Buffer for condition code' />
+  <uta:field uta:id='traCardTypeContext' uta:type='ASCII' uta:length='lenCardTransType' uta:comment='Current Value Buffer for Card Type' />
+  <!--mcy add context -->
+  <uta:field uta:id='traEmvFullFlagContext' uta:type='byte'  uta:comment='is full emv process..? Context' />
+ <uta:field uta:id='traTxnTypeContext' uta:type='byte' uta:comment='Context Txn Type - used in rqs' />
+  <uta:field uta:id='traTxnIdContext' uta:type='byte' uta:comment='Context Txn Type - used in rqs' />
+ <uta:field uta:id='traLocTypeContext' 	uta:type='byte'   uta:comment='Financial flag indicator, 1 if financial or 0 if not'/>                           
+ <uta:field uta:id='traTransTypeContext' uta:comment='Transaction Type' uta:type='ASCII' uta:length='lenCardTransType' />
+  <uta:field uta:id='traTmsMsg' uta:type='byte' uta:data='tmsLogin' uta:comment='TMS Msgs'/>
+  <uta:field uta:id='traTmsMreRec' uta:type='byte' uta:data='0' uta:comment='TMS Msgs'/>
+  <uta:field uta:id='traTmsEmvFleNme' uta:type='ASCII' uta:length='lenFleNme' uta:comment='TMS Emv File Name'/>
+  <uta:field uta:id='traTmsEmvFleHdl' uta:type='binary'  uta:length='lenFleHdl' uta:comment='TMS Emv File Handle'/>
+ <uta:field uta:id='traTmsEmvFleOff' uta:type='card'  uta:data='0' uta:comment='TMS Emv File Offset(size of the received file)'/>
+  <uta:field uta:id='traTmsEmvFleSze' uta:type='card'  uta:comment='TMS Emv File Size'/>
+ <uta:field uta:id='traTmsEmvFlechnlen' uta:type='word'  uta:data='443' uta:comment='Length of the chunk to be requested'/>
+ <uta:field uta:id='traTmsDnlWidEmv' uta:type='byte' uta:data='0' uta:comment='TMS Download with or without emv params'/>
+  <uta:field uta:id='traPriIpBuf' uta:type='ASCII' uta:length='lenSrv' uta:data='__DFTSRV__' uta:comment='Primary TMS Server Phone Number or IP address/port' />
+  <uta:field uta:id='traPriPortBuf' uta:type='ASCII' uta:length='lenSrv' uta:data='__DFTSRV__' uta:comment='Primary TMS Server Phone Number or IP address/port' />
+  <uta:field uta:id='traSecIpBuf' uta:type='ASCII' uta:length='lenSrv' uta:data='__DFTSRV__' uta:comment='Primary TMS Server Phone Number or IP address/port' />
+  <uta:field uta:id='traSecPortBuf' uta:type='ASCII' uta:length='lenSrv' uta:data='__DFTSRV__' uta:comment='Primary TMS Server Phone Number or IP address/port' />
+
+  <uta:field uta:id='traFmtDate' uta:type='ASCII' uta:length='lenDatTim' uta:comment='Formatted Date for Trx printing DD MMM CCYY' />
+  <uta:field uta:id='traFmtTime' uta:type='ASCII' uta:length='lenDatTim' uta:comment='Formatted Time for Trx printing HH:MM' />
+  
+  <uta:field uta:id='traInvNum'  uta:type='card' uta:comment='temporary invoice number (R.O.C.)' />
+  <uta:field uta:id='traRspDspLin1' uta:type='ASCII'	 uta:length='dspW'		   uta:comment='response display line 1' />                                                                               
+  <uta:field uta:id='traRspDspLin2' uta:type='ASCII'  uta:length='dspW'		   uta:comment='response display line 2' />               
+  <uta:field uta:id='traAppPrfNam'  uta:type='ASCII' uta:length='lenAppPrfNam' uta:comment='9F12 Application Preferred Name' /> 
+  <!-- all EMV tags are stored as binary (the first byte is the data length) -->
+  <uta:field uta:id='emvAppPrfNam'  uta:type='binary' uta:length='lenAppPrfNam' uta:comment='9F12 Application Preferred Name' />
+  <uta:field uta:id='emvAppLbl'  uta:type='binary' uta:length='lenAppPrfNam' uta:comment='50 Application Label' />
+  <!--<uta:field uta:id='emvAmtBin'    uta:type='binary' uta:length='lenAmtBin'    uta:comment='81   Transaction Amount Binary' />-->
+  <!--<uta:field uta:id='emvAmtOthNum' uta:type='binary' uta:length='lenAmtNum'    uta:comment='9F03 Amount other numeric' />-->
+  <!--<uta:field uta:id='emvAmtOthBin' uta:type='binary' uta:length='lenAmtBin'    uta:comment='9F04 Amount other binary' /> -->
+  <!--<uta:field uta:id='emvTrnTyp'    uta:type='binary' uta:length='lenTrnTyp'    uta:comment='9C Transaction Type' />-->
+  <!--uta:field uta:id='emvAmtNum'    uta:type='binary' uta:length='lenAmtNum'    uta:comment='9F02 Transaction Amount Numeric' /-->
+  <!--<uta:field uta:id='emvTrnDat'    uta:type='binary' uta:length='lenTrnDat'    uta:comment='9A Transaction Date YYMMDD' />-->
+  <!--<uta:field uta:id='emvTrnTim'    uta:type='binary' uta:length='lenTrnTim'    uta:comment='9F21 Transaction Time hhmmss' />  -->
+  <uta:field uta:id='emvTrnSeqCnt' uta:type='binary' uta:length='lenTrnSeqCnt' uta:comment='9F41 Transaction Sequence Counter' />
+  <!--uta:field uta:id='emvTSI'       uta:type='binary' uta:length='lenTSI'       uta:comment='9B   Transaction Status Information' /-->
+  <!--<uta:field uta:id='emvPAN'       uta:type='binary' uta:length='lenEmvPAN'    uta:comment='5A   Application Primary Account Number' />-->
+  <!--uta:field uta:id='emvPANSeq'    uta:type='binary' uta:length='lenPANSeq'    uta:comment='5F34 PAN sequence number' /-->
+  <!--uta:field uta:id='emvAIP'       uta:type='binary' uta:length='lenAIP'       uta:comment='82   Application interchange profile' /-->
+  <!--<uta:field uta:id='emvCapkIdx'   uta:type='binary' uta:length='lenCapkIdx'   uta:comment='8F   CAPK index' />-->
+  <uta:field uta:id='emvTrk2'      uta:type='binary' uta:length='lenEmvTrk2'   uta:comment='57   Track2 equivalent data' />
+  <uta:field uta:id='emvExpDat'    uta:type='binary' uta:length='lenEmvExpDat' uta:comment='5F24 Application Expiration date' />
+  <uta:field uta:id='emvCVM'       uta:type='binary' uta:length='lenCVM'       uta:comment='8E   Cardholder verification method' />
+  <uta:field uta:id='emvCrdAvn'    uta:type='binary' uta:length='lenCrdAvn'    uta:comment='9F08 card application version number' />
+  <uta:field uta:id='emvChdNam'    uta:type='binary' uta:length='lenChdNam'    uta:comment='5F20 Cardholder Name' />
+  <uta:field uta:id='emvLanPrf'    uta:type='binary' uta:length='lenLanPrf'    uta:comment='5F2D Language Preference' />
+  <uta:field uta:id='emvRSAKeyExp' uta:type='binary' uta:length='lenRSAKeyExp' uta:comment='DF7F RSA key exponent' />
+  <uta:field uta:id='emvRSAKey'    uta:type='binary' uta:length='lenRSAKey'    uta:comment='DF1F RSA key' />
+  <uta:field uta:id='emvCVMOutRes' uta:type='binary' uta:length='lenCVMOutRes' uta:comment='DF38 CVMOUT Result' />
+  <!--uta:field uta:id='emvCVMRes'    uta:type='binary' uta:length='lenCVMRes'    uta:comment='9F34 Cardholder Verification Method Results' /-->
+  <!--uta:field uta:id='emvTVR'       uta:type='binary' uta:length='lenTVR'       uta:comment='95   Terminal verification results' /-->
+  <uta:field uta:id='emvFrcOnl'    uta:type='binary' uta:length='lenFrcOnl'    uta:comment='DF1C Flag transaction forced online' />
+  <uta:field uta:id='emvHotLst'    uta:type='binary' uta:length='lenHotLst'    uta:comment='DF26 Flag set to TRUE if the card is in Opposition List' />
+  <!--uta:field uta:id='emvAmtPrv'    uta:type='binary' uta:length='lenAmtBin'    uta:comment='DF25 Amount found in the transaction file, in a previous transaction performed with the same card' /-->
+  <!--uta:field uta:id='emvRspCod'    uta:type='binary' uta:length='lenRspCod'    uta:comment='8A   Authorization response code' /-->
+  <!--uta:field uta:id='emvIAD'       uta:type='binary' uta:length='lenIAD'       uta:comment='9F10 Issuer Application Data' /-->
+  <!--uta:field uta:id='emvIssTrnCrt' uta:type='binary' uta:length='lenIssTrnCrt' uta:comment='9F26 Issuer Transaction Certificate' /-->
+  <uta:field uta:id='emvCID'       uta:type='binary' uta:length='lenCID'       uta:comment='9F27 Cryptogram Information Data (CID)' />
+  <!--uta:field uta:id='emvUnpNum'    uta:type='binary' uta:length='lenUnpNum'    uta:comment='9F37 Unpredictable Number' /-->
+  <uta:field uta:id='emvTrmDc1'    uta:type='binary' uta:length='lenTrmDcs'    uta:comment='DF29 terminal decision for Generate AC (TC,AAC,ARQC)' />
+  <uta:field uta:id='emvTrmDc2'    uta:type='binary' uta:length='lenTrmDcs'    uta:comment='DF31 Terminal decision after Generate AC 0=Declined, 1= Approved' />
+  <!--uta:field uta:id='emvATC'       uta:type='binary' uta:length='lenATC'       uta:comment='9F36 Application Transaction Counter (ATC)' /-->
+  
+  <uta:field uta:id='emvOnlSta'    uta:type='binary' uta:length='lenOnlSta'    uta:comment='DF39 Online process status' />
+  <uta:field uta:id='emvAuthRes'   uta:type='binary' uta:length='lenAuthRes'   uta:comment='Authorization result (telium)' />
+  <uta:field uta:id='emvCommOk'    uta:type='binary' uta:length='lenCommOk'    uta:comment='Is communication ok (telium)' />
+  <uta:field uta:id='emvIssAutDta' uta:type='binary' uta:length='lenIssAutDta' uta:comment='91   Issuer Authentication Data' />
+  <uta:field uta:id='emvAutCod'    uta:type='binary' uta:length='lenAutCod'    uta:comment='89   Authorization code' />
+  <uta:field uta:id='emvIssSc1'    uta:type='binary' uta:length='lenIssSc1'    uta:comment='71   issuer script template 1' />
+  <uta:field uta:id='emvIssSc2'    uta:type='binary' uta:length='lenIssSc2'    uta:comment='72   issuer script template 2' />  
+  
+<!--mcy add for EMV Debug 20100820-->
+  <!--uta:field uta:id='emvIACDft'     uta:type='binary' uta:length='lenTVR'           uta:comment='IACDft' /-->
+  <!--uta:field uta:id='emvIACDnl'     uta:type='binary' uta:length='lenTVR'          uta:comment='IACDen' /-->
+  <!--uta:field uta:id='emvIACOnl'     uta:type='binary' uta:length='lenTVR'            uta:comment='IAC Online' /-->
+  <!--uta:field uta:id='emvACReq1'     uta:type='binary' uta:length='2'           uta:comment='1st Gen AC Req' /-->
+  <!--
+  <uta:field uta:id='emvACReq2'     uta:type='binary' uta:length='37'            uta:comment='2nd Gen AC Req' />
+  <uta:field uta:id='traACReq2'     uta:type='ASCII'     uta:length='2'  uta:comment='2nd Gen AC Req' />
+  <uta:field uta:id='emvACRsp1'     uta:type='binary' uta:length='2'   uta:data='"FF"'        uta:comment='1st Gen AC Rsp' />
+  <uta:field uta:id='emvACRsp2'     uta:type='binary' uta:length='2'    uta:data='"FF"'        uta:comment='2nd Gen AC Rsp' />
+
+  <uta:field uta:id='emvLstCmdRsp'     uta:type='binary' uta:length='7'            uta:comment='Final' />
+  <uta:field uta:id='traLstCmdRsp'     uta:type='binary' uta:length='4'            uta:comment='Final' />
+  -->
+
+  <!-- add for EMV smartweb -->
+  <uta:field uta:id='traEMSale' 	              uta:type='ASCII'   uta:length='7' uta:comment='Entry Mode Sale Parameter TMS' />
+  <uta:field uta:id='traChipSwipe' 				  uta:type='ASCII'   uta:length='10' uta:comment='Chip or Swipe' /><!--mcy-->
+  <uta:field uta:id='traTxnId' 					  uta:type='byte'    uta:comment='Current Txn Id - used in rqs' />            
+  <uta:field uta:id='traBlockPan' 				  uta:comment='card number' uta:type='ASCII' uta:length='lenPan' />
+
+
+  <uta:field uta:id='traTipFlag' 	uta:type='byte'    uta:data ='0' uta:comment='Tip indicator' /><!--mcy add for tip indicator -->
+  <uta:field uta:id='traFallback' 	uta:type='byte'    uta:comment='Fallback indicator' /><!--mcy add for fallback indicator -->
+  <uta:field uta:id='traSrvCod' uta:type='ASCII' uta:length='3' uta:comment='Service code' />  
+  <uta:field uta:id='traEmvTrnType' uta:type='byte' uta:data='0' uta:comment='Offline/online indicate'/>
+  <uta:field uta:id='traExpDatFmt' uta:type='ASCII' uta:length='5' uta:comment='expiry date formatted' />
+  <uta:field uta:id='traCustFlag' 	uta:type='byte'    uta:data ='0' uta:comment='Cust indicator' /><!--mcy add for tip indicator -->
+  <uta:field uta:id='traAutCodOff' uta:type='ASCII' uta:length='lenAutCod' uta:comment='Authorization (approval) code' />
+  <uta:field uta:id='traEmvICC' 		uta:type='ASCII' uta:length='lenEmvICC' uta:comment='message of bit 55' />
+  <uta:field uta:id='traInputPin' 	uta:type='byte' uta:comment='is pin verified?' />     
+  <uta:field uta:id='traNeedLogon' 	uta:type='byte' uta:comment='is Need Logon ?' />     
+  <uta:field uta:id='traRspBit13' uta:comment='Rsp Bit 4' uta:type='ASCII' uta:length='2' />
+  <uta:field uta:id='traRspBit12' uta:comment='Rsp Bit 4' uta:type='ASCII' uta:length='3' />
+  <uta:field uta:id='traMti' uta:type='ASCII' uta:length='lenMti' uta:comment='Message Type' />
+  <uta:field uta:id='traPanSeq' uta:type='ASCII' uta:length='2' uta:comment='Pan Seq' />
+  <uta:field uta:id='traEmvFullFlag' uta:type='byte'  uta:comment='is full emv process..?' />
+  <uta:field uta:id='traLoginFlag' 	uta:type='byte'   uta:comment='Financial flag indicator, 1 if financial or 0 if not'/>
+  <uta:field uta:id='traIsSign' 	uta:type='byte'   uta:comment='Signature flag indicator, 1 if sign or 0 if not'/>
+  <uta:field uta:id='traWorkingKey' uta:type='ASCII' uta:length='32' uta:comment='Working Key' />
+  <uta:field uta:id='traSerNum' uta:type='ASCII' uta:length='lenTid' uta:comment='Serial Number.' />
+  <uta:field uta:id='traLeMsg' uta:type='ASCII'  uta:length='37'  uta:comment='Error Msg LE' /> 
+  
+    <!-- Tambahan SAM MANDIRI -->
+  <uta:field   uta:id='traMAC'   uta:type='ASCII'    uta:length='8'   uta:comment='MAC' />
+  <uta:field   uta:id='traMsgFlag'   uta:type='byte'    uta:data ='0'  uta:comment='MsgFlag, 0 = LTMK, LTWK; 1 = Transaction; 2 = LTED' />
+  <uta:field   uta:id='traBit23On'   uta:type='byte'    uta:data ='0'   uta:comment='Bit32 Indicator' />
+  <uta:field   uta:id='traLTWKDEK'   uta:type='ASCII'    uta:length='16'   uta:comment='LTWKDEK' />
+  <uta:field uta:id='traMnuItmVoid' uta:type='word' uta:comment='current menu item in void selected' />
+  <uta:field uta:id='traTimeSend' uta:type='ASCII'  uta:length='6' uta:data='"000000"'  uta:comment='Waktu kirim message' /> 
+  <uta:field uta:id='traAppName' uta:type='ASCII'  uta:length='13'  uta:comment='Waktu kirim message' /> 
+  <uta:field uta:id='traInvTransType' uta:type='ASCII'  uta:length='22'  uta:comment='Invoice Nbr and TransType' /> 
+  <uta:field uta:id='traLine3' uta:type='ASCII'  uta:length='20'  uta:comment='amount audit report' /> 
+  <uta:field uta:id='traBinReq'   uta:type='byte'    uta:data ='0'   uta:comment='Bin Req' />
+  <uta:field uta:id='traPinInput' uta:type='ASCII'  uta:length='6'  uta:comment='amount audit report' /> 
+  <uta:field uta:id='traBit48PwrBuy' uta:type='ASCII'  uta:length='128'  uta:comment='Bit48 Req PwrBuy' /> 
+  <uta:field uta:id='traAmtMonthly' uta:type='ASCII'  uta:length='20'  uta:comment='Amt Monthly PowerBuy' /> 
+  <uta:field uta:id='traMonth' uta:type='ASCII'  uta:length='9'  uta:comment='Month' /> 
+  <uta:field uta:id='traEmvReqFlag' 	uta:type='byte'   uta:comment='Financial flag indicator, 1 if financial or 0 if not'/>
+  <uta:field uta:id='traMnuItmTenor' uta:type='word' uta:comment='current menu item tenor selected' />
+  <uta:field uta:id='traPwrBuyType' uta:comment='Power Buy Type' uta:type='ASCII' uta:length='16' />
+
+
+
+  <!-- KD ADD SAM -->
+ <uta:field uta:id='traReader' uta:type='byte' uta:comment='num reader'/>
+  <uta:field uta:id='traSAMPreStatus'  		uta:type='ASCII'  	uta:length='1'   						uta:comment='SAM STATUS PREPAIR' /> 
+  <uta:field uta:id='traSAMTransactionReport'  		uta:type='ASCII'  	uta:length='47'   						uta:comment='SAM TRANSACTION REPORT' />   
+  <uta:field uta:id='traAmtTopUp'  		uta:type='ASCII'  	uta:length='12'   						uta:comment='AMT TOP UP' />     
+  <uta:field uta:id='traAmtPrepaid'  		uta:type='ASCII'  	uta:length='12'   						uta:comment='AMT TOP UP' />       
+  <uta:field uta:id='traTrk2Prepaid'  		uta:type='ASCII'  	uta:length='37'   						uta:comment='Track 2 Prepaid' />         
+  <uta:field uta:id='traInquBit48Prepaid'  		uta:type='ASCII'  	uta:length='256'   						uta:comment='BIT 48 INQU HOST' /> 
+  <uta:field uta:id='traBit58'  		uta:type='ASCII'  	uta:length='128'   						uta:comment='BIT 58 HOST' /> 
+  <uta:field uta:id='traSAMHost'  		uta:type='ASCII'  	uta:length='256'   						uta:comment='Track 2 Prepaid' />           
+  <uta:field uta:id='traTrkPrepaidPrint'  		uta:type='ASCII'  	uta:length='16'   						uta:comment='Track 2 Prepaid' />  
+  <uta:field uta:id='traTrkPrepaidTapPrint'  		uta:type='ASCII'  	uta:length='20'   						uta:comment='Track 2 Prepaid' />    
+  <uta:field uta:id='traTrkPrepaidSwipePrint'  		uta:type='ASCII'  	uta:length='25'   						uta:comment='Track 2 Prepaid' />    
+  <uta:field uta:id='traServerAuthPrepaid'  		uta:type='ASCII'  	uta:length='256'   						uta:comment='Server Auth Prepaid' />      
+  <uta:field uta:id='traHastPrepaid'  		uta:type='ASCII'  	uta:length='16'   						uta:comment='Server Auth Prepaid' />        
+  <!-- KD ADD SAM --> 
+  <uta:field uta:id='traTidTxr'  			uta:type='ASCII'  	uta:length='24'   			uta:comment='TID SAM' />   
+  <uta:field uta:id='traTidIns'  			uta:type='ASCII'  	uta:length='16'   			uta:comment='TID INST' /> 
+  <uta:field uta:id='traCardNo'  		uta:type='ASCII'  	uta:length='32'   			uta:comment='NO CARD PREPAID' />   
+  <uta:field uta:id='traPayment'  		uta:type='ASCII'  	uta:length='20'   			uta:comment='AMOUNT TRX SAM' />      
+  <uta:field uta:id='traBalance'  		uta:type='ASCII'  	uta:length='20'   			uta:comment='BALANCE PREAPAID' />   
+  <uta:field uta:id='traInsId'  		uta:type='ASCII'  	uta:length='2'   			uta:comment='INST ID SAM' />   
+  <uta:field uta:id='traSaldoAKhir'  	uta:type='ASCII'  	uta:length='20'   			uta:comment='SALDO AKHIR' />   
+  <uta:field uta:id='traSaldoAwal'  	uta:type='ASCII'  	uta:length='20'   			uta:comment='SALDO AWAL' />   
+   <uta:field uta:id='traTCCode'  		uta:type='ASCII'  	uta:length='26'   			uta:comment='TC12345678' />   
+   <uta:field uta:id='traAppCode'  		uta:type='ASCII'  	uta:length='6'   			uta:comment='app code : 123456' />   
+  <uta:field uta:id='tramerchantAmt'  		uta:type='ASCII'  	uta:length='15'   			uta:comment='merchantAmt' />   
+  <uta:field uta:id='traIssuerAmt'  		uta:type='ASCII'  	uta:length='15'   			uta:comment='IssuerAmt' />   
+  <uta:field uta:id='traPoolingAmt'  		uta:type='ASCII'  	uta:length='15'   			uta:comment='PoolingAmt' />      
+  <uta:field uta:id='traSaleAmT'  		uta:type='ASCII'  	uta:length='15'   			uta:comment='PoolingAmt' />      
+  <uta:field uta:id='traPrepaidTotal'  		uta:type='ASCII'  	uta:length='15'   			uta:comment='PoolingAmt' />  
+  <uta:field uta:id='traRevBit48Prepaid'  		uta:type='ASCII'  	uta:length='256'   			uta:comment='Rev Top Up' />    
+  <uta:field uta:id='traRevBit58Prepaid'  		uta:type='ASCII'  	uta:length='256'   			uta:comment='Rev Top Up' />        
+
+  <uta:field uta:id='traLogTotalCounTopup'  uta:type='word'    uta:length='lenLogTotalTxn' uta:comment='buffer placement for total transaction counts'/>
+  <uta:field uta:id='traLogTotalAmountTopup' uta:type='ASCII'   uta:length='lenAmt'  uta:comment='buffer placement for total transaction amt'/>
+ <uta:field uta:id='traStateFlag' 	uta:type='byte'   uta:comment='Top Up, Upd Balance'/>  
+
+  <uta:field uta:id='traLogTotalCounTelkom'  uta:type='word'    uta:length='lenLogTotalTxn' uta:comment='buffer placement for total transaction counts'/>
+  <uta:field uta:id='traLogTotalAmountTelkom' uta:type='ASCII'   uta:length='lenAmt'  uta:comment='buffer placement for total transaction amt'/>
+   <uta:field uta:id='traLogTotalCounSatelindo'  uta:type='word'    uta:length='lenLogTotalTxn' uta:comment='buffer placement for total transaction counts'/>
+  <uta:field uta:id='traLogTotalAmountSatelindo' uta:type='ASCII'   uta:length='lenAmt'  uta:comment='buffer placement for total transaction amt'/>
+   <uta:field uta:id='traLogTotalCounTelkomsel'  uta:type='word'    uta:length='lenLogTotalTxn' uta:comment='buffer placement for total transaction counts'/>
+  <uta:field uta:id='traLogTotalAmountTelkomsel' uta:type='ASCII'   uta:length='lenAmt'  uta:comment='buffer placement for total transaction amt'/>
+   <uta:field uta:id='traLogTotalCounExcelcom'  uta:type='word'    uta:length='lenLogTotalTxn' uta:comment='buffer placement for total transaction counts'/>
+  <uta:field uta:id='traLogTotalAmountExcelcom' uta:type='ASCII'   uta:length='lenAmt'  uta:comment='buffer placement for total transaction amt'/>
+   <uta:field uta:id='traLogTotalCounEsia'  uta:type='word'    uta:length='lenLogTotalTxn' uta:comment='buffer placement for total transaction counts'/>
+  <uta:field uta:id='traLogTotalAmountEsia' uta:type='ASCII'   uta:length='lenAmt'  uta:comment='buffer placement for total transaction amt'/>
+   <uta:field uta:id='traLogTotalCounPLN'  uta:type='word'    uta:length='lenLogTotalTxn' uta:comment='buffer placement for total transaction counts'/>
+  <uta:field uta:id='traLogTotalAmountPLN' uta:type='ASCII'   uta:length='lenAmt'  uta:comment='buffer placement for total transaction amt'/>
+   <uta:field uta:id='traLogTotalCounFirstMedia'  uta:type='word'    uta:length='lenLogTotalTxn' uta:comment='buffer placement for total transaction counts'/>
+  <uta:field uta:id='traLogTotalAmountFirstMedia' uta:type='ASCII'   uta:length='lenAmt'  uta:comment='buffer placement for total transaction amt'/>
+   <uta:field uta:id='traLogTotalCounIndovision'  uta:type='word'    uta:length='lenLogTotalTxn' uta:comment='buffer placement for total transaction counts'/>
+  <uta:field uta:id='traLogTotalAmountIndovision' uta:type='ASCII'   uta:length='lenAmt'  uta:comment='buffer placement for total transaction amt'/>
+   <uta:field uta:id='traLogTotalCounOtoMulti'  uta:type='word'    uta:length='lenLogTotalTxn' uta:comment='buffer placement for total transaction counts'/>
+  <uta:field uta:id='traLogTotalAmountOtoMulti' uta:type='ASCII'   uta:length='lenAmt'  uta:comment='buffer placement for total transaction amt'/>
+
+  <uta:field uta:id='traLogTotalCounMAtm'  uta:type='word'    uta:length='lenLogTotalTxn' uta:comment='buffer placement for total transaction counts'/>
+  <uta:field uta:id='traLogTotalAmountMAtm' uta:type='ASCII'   uta:length='lenAmt'  uta:comment='buffer placement for total transaction amt'/>
+  <uta:field uta:id='traLogTotalAmountMINIAtm' uta:type='ASCII'   uta:length='lenAmt'  uta:comment='buffer placement for total transaction amt'/>
+  <uta:field uta:id='traRspBit58ServerAuth'	  uta:type='ASCII'  uta:length='128'  uta:comment='Respon Bit 58 Server Auth' />   
+  <uta:field uta:id='traLogTotalCounComm'  uta:type='word'    uta:length='lenLogTotalTxn' uta:comment='buffer placement for total transaction counts'/>
+
+    <!--Add by FASA4 dw 12042K11-->
+  
+    <uta:field uta:id='traAccDest' uta:comment='Account' uta:type='ASCII' uta:length='19' />
+    <uta:field uta:id='traCode' uta:comment='Code' uta:type='ASCII' uta:length='3' />
+    <uta:field uta:id='traSourceBuyRate' uta:comment='Source Buy Rate ' uta:type='ASCII' uta:length='13' />
+    <uta:field uta:id='traSourceSaleRate' uta:comment='SourceSale Rate' uta:type='ASCII' uta:length='13' />
+    <uta:field uta:id='traDestBuyRate' uta:comment='Dest  Buy Rate' uta:type='ASCII' uta:length='13' />
+    <uta:field uta:id='traDestSaleRate' uta:comment='Dest Sale Rate' uta:type='ASCII' uta:length='13' />
+    <uta:field uta:id='traCodeDest' uta:comment='Code' uta:type='ASCII' uta:length='3' />
+     <uta:field uta:id='traTunai' uta:comment='print Tunai MiniAtm' uta:type='ASCII' uta:length='16' />
+     <uta:field uta:id='traAmtIDR' uta:comment='AMT in IDR for settlement' uta:type='ASCII' uta:length='lenAmt' />
+    <!--Report-->
+    <uta:field uta:id='traLogTotalCounTunai'  uta:type='word'    uta:length='lenLogTotalTxn' uta:comment='buffer placement for total transaction counts'/>
+    <uta:field uta:id='traLogTotalAmountTunai' uta:type='ASCII'   uta:length='lenAmt'  uta:comment='buffer placement for total transaction amt'/>
+    <uta:field uta:id='traLogTotalCounTransfer'  uta:type='word'    uta:length='lenLogTotalTxn' uta:comment='buffer placement for total transaction counts'/>
+    <uta:field uta:id='traLogTotalAmountTransfer' uta:type='ASCII'   uta:length='lenAmt'  uta:comment='buffer placement for total transaction amt'/>
+    <uta:field uta:id='traLogTotalCounCC'  uta:type='word'    uta:length='lenLogTotalTxn' uta:comment='buffer placement for total transaction counts'/>
+    <uta:field uta:id='traLogTotalAmountCC' uta:type='ASCII'   uta:length='lenAmt'  uta:comment='buffer placement for total transaction amt'/>
+    <uta:field uta:id='traLogTotalAmountTransferUSD' uta:type='ASCII'   uta:length='24'  uta:comment='buffer placement for total transaction amt'/>
+    <uta:field uta:id='traLogTotalCounTransferUSD'  uta:type='word'    uta:length='lenLogTotalTxn' uta:comment='buffer placement for total transaction counts'/>
+     <uta:field uta:id='traLogTotalAmountTransferSGD' uta:type='ASCII'   uta:length='24'  uta:comment='buffer placement for total transaction amt'/>
+     <uta:field uta:id='traLogTotalCounTransferSGD'  uta:type='word'    uta:length='lenLogTotalTxn' uta:comment='buffer placement for total transaction counts'/>
+      <uta:field uta:id='traLogTotalAmountTransferJPN' uta:type='ASCII'   uta:length='24'  uta:comment='buffer placement for total transaction amt'/>
+      <uta:field uta:id='traLogTotalCounTransferJPN'  uta:type='word'    uta:length='lenLogTotalTxn' uta:comment='buffer placement for total transaction counts'/>
+
+   <uta:field uta:id='traPWCVoidFlag' 	uta:type='byte'    uta:data ='0' uta:comment='PWC Void  indicator' /><!--dw tunai void  indicator -->
+   <uta:field uta:id='traCardTypeTBM' uta:comment='Card Type' uta:type='ASCII' uta:length='lenCardTransType ' /> <!--add if bin TBM topUp-->
+
+   <!-- add by if, 06052011 -->
+	<uta:field uta:id='traAlreadyConnect' 	uta:type='byte'   uta:comment='connect  flag indicator, 1 if connect or 0 if not'/>
+
+	<uta:field uta:id='traCurBat' 	uta:type="ASCII" uta:length="lenInvNum" uta:comment='Current Batch Number' /><!--add, irf, 01062011-->
+	<uta:field uta:id='traEmvAid' 	uta:type="binary" uta:length="lenAID" uta:comment='4F Application Identifier' /><!--add, irf, 01062011-->
+	<uta:field uta:id='traPrcCod' uta:type="binary" uta:length="lenPrcCod" uta:comment="003: Processing Code" /><!--add, irf, 01062011-->
+
+	<uta:field uta:id='traTimeRecv' uta:type='ASCII'  uta:length='6' uta:data='"000000"'  uta:comment='Waktu terima message' /> <!--add, irf, 06062011-->
+	<uta:field uta:id='traTcFlag' 	uta:type='byte'    uta:data ='0' uta:comment='tra Flag TC upload ' /><!--add, irf, 08062011 -->
+
+<uta:field uta:id='traTrack1' uta:type='ASCII' uta:length='lenTrack' uta:comment='track 1 of the card' />  
+<uta:field uta:id='traTrack2' uta:type='ASCII' uta:length='lenTrack' uta:comment='track 2 of the card' />  
+<uta:field uta:id='traTrack3' uta:type='ASCII' uta:length='lenTrack' uta:comment='track 3 of the card' />  
+<uta:field uta:id='traCurValas' uta:type='ASCII' uta:length='3' uta:comment='cur valas' />  
+
+<uta:field uta:id='traOnUsOffUs' 	uta:type='byte'    uta:data ='0' uta:comment='flag On Us Off Us' /><!--add, irf, 14122011 -->
+<uta:field uta:id='traFlagDBMCVS' 	uta:type='byte'    uta:data ='0' uta:comment='flag Debit, MasterCard, Visa' /><!--add, irf, 11012012 -->
+
+  <uta:field uta:id='traSTAN'      uta:type='card'  uta:data='0'                          uta:comment='System Trace Audit Number 1..999999' />
+
+  <uta:field uta:id='traRspMti' uta:type='ASCII' uta:length='lenMti' uta:comment='Message Type' />
+  <uta:field uta:id='traRspBitmap' uta:type='ASCII' uta:length='lenBitmap' uta:comment='Bitmap ISO' />
+  <uta:field uta:id='traRspTID' uta:type='ASCII' uta:length='lenTid' uta:comment='Response TID' />
+  <uta:field uta:id='traRspMID' uta:type='ASCII' uta:length='lenMid' uta:comment='Response MID' />
+  <uta:field uta:id='traRspSTAN' uta:type='ASCII' uta:length='lenSTAN' uta:comment='Response STAN' />
+  <uta:field uta:id='traRspRRN' uta:type='ASCII' uta:length='lenRrn' uta:comment='Response RRN' />
+  <uta:field uta:id='traRspAutCod' uta:type='ASCII' uta:length='lenAutCod' uta:comment='Response AutCode' />
+  <uta:field uta:id='traRspAmount' uta:type='ASCII' uta:length='lenAmt' uta:comment='Response STAN' />
+  <uta:field uta:id='traRspTrack2' uta:type='ASCII' uta:length='lenTrk2' uta:comment='Response Track2' />
+  <uta:field uta:id='traReqSTAN' uta:type='ASCII' uta:length='lenSTAN' uta:comment='Request STAN' />
+  <uta:field uta:id='traReqTID' uta:type='ASCII' uta:length='lenTid' uta:comment='Request TID' />
+  <uta:field uta:id='traReqMID' uta:type='ASCII' uta:length='lenMid' uta:comment='Request MID' />
+  <uta:field uta:id='traCalcRspMAC'  uta:type='ASCII'    uta:length='8'   uta:comment='MAC' />
+  <uta:field uta:id='traRspMAC'  uta:type='ASCII'    uta:length='8'   uta:comment='MAC' />
+  <uta:field uta:id='traReqAmount' uta:type='ASCII' uta:length='lenAmt' uta:comment='Request Amount' />
+
+
+<!--bit Response-->
+	<uta:field uta:id='traRspBitBeg'  uta:type='ASCII'    uta:length='lenBit1'   uta:comment='Begin' />
+	<uta:field uta:id='traRspBit_1'  uta:type='ASCII'    uta:length='lenBit1'   uta:comment='Bit 1 Rsp' />
+	<uta:field uta:id='traRspBit_2'  uta:type='ASCII'    uta:length='lenBit2'   uta:comment='Bit 2 Rsp' />
+	<uta:field uta:id='traRspBit_3'  uta:type='ASCII'    uta:length='lenBit3'   uta:comment='Bit 3 Rsp' />
+	<uta:field uta:id='traRspBit_4'  uta:type='ASCII'    uta:length='lenBit4'   uta:comment='Bit 4 Rsp' />
+	<uta:field uta:id='traRspBit_5'  uta:type='ASCII'    uta:length='lenBit5'   uta:comment='Bit 5 Rsp' />
+	<uta:field uta:id='traRspBit_6'  uta:type='ASCII'    uta:length='lenBit6'   uta:comment='Bit 6 Rsp' />
+	<uta:field uta:id='traRspBit_7'  uta:type='ASCII'    uta:length='lenBit7'   uta:comment='Bit 7 Rsp' />
+	<uta:field uta:id='traRspBit_8'  uta:type='ASCII'    uta:length='lenBit8'   uta:comment='Bit 8 Rsp' />
+	<uta:field uta:id='traRspBit_9'  uta:type='ASCII'    uta:length='lenBit9'   uta:comment='Bit 9 Rsp' />
+	<uta:field uta:id='traRspBit_10'  uta:type='ASCII'    uta:length='lenBit10'   uta:comment='Bit 10 Rsp' />
+	<uta:field uta:id='traRspBit_11'  uta:type='ASCII'    uta:length='lenBit11'   uta:comment='Bit 11 Rsp' />
+	<uta:field uta:id='traRspBit_12'  uta:type='ASCII'    uta:length='lenBit12'   uta:comment='Bit 12 Rsp' />
+	<uta:field uta:id='traRspBit_13'  uta:type='ASCII'    uta:length='lenBit13'   uta:comment='Bit 13 Rsp' />
+	<uta:field uta:id='traRspBit_14'  uta:type='ASCII'    uta:length='lenBit14'   uta:comment='Bit 14 Rsp' />
+	<uta:field uta:id='traRspBit_15'  uta:type='ASCII'    uta:length='lenBit15'   uta:comment='Bit 15 Rsp' />
+	<uta:field uta:id='traRspBit_16'  uta:type='ASCII'    uta:length='lenBit16'   uta:comment='Bit 16 Rsp' />
+	<uta:field uta:id='traRspBit_17'  uta:type='ASCII'    uta:length='lenBit17'   uta:comment='Bit 17 Rsp' />
+	<uta:field uta:id='traRspBit_18'  uta:type='ASCII'    uta:length='lenBit18'   uta:comment='Bit 18 Rsp' />
+	<uta:field uta:id='traRspBit_19'  uta:type='ASCII'    uta:length='lenBit19'   uta:comment='Bit 19 Rsp' />
+	<uta:field uta:id='traRspBit_20'  uta:type='ASCII'    uta:length='lenBit20'   uta:comment='Bit 20 Rsp' />
+	<uta:field uta:id='traRspBit_21'  uta:type='ASCII'    uta:length='lenBit21'   uta:comment='Bit 21 Rsp' />
+	<uta:field uta:id='traRspBit_22'  uta:type='ASCII'    uta:length='lenBit22'   uta:comment='Bit 22 Rsp' />
+	<uta:field uta:id='traRspBit_23'  uta:type='ASCII'    uta:length='lenBit23'   uta:comment='Bit 23 Rsp' />
+	<uta:field uta:id='traRspBit_24'  uta:type='ASCII'    uta:length='lenBit24'   uta:comment='Bit 24 Rsp' />
+	<uta:field uta:id='traRspBit_25'  uta:type='ASCII'    uta:length='lenBit25'   uta:comment='Bit 25 Rsp' />
+	<uta:field uta:id='traRspBit_26'  uta:type='ASCII'    uta:length='lenBit26'   uta:comment='Bit 26 Rsp' />
+	<uta:field uta:id='traRspBit_27'  uta:type='ASCII'    uta:length='lenBit27'   uta:comment='Bit 27 Rsp' />
+	<uta:field uta:id='traRspBit_28'  uta:type='ASCII'    uta:length='lenBit28'   uta:comment='Bit 28 Rsp' />
+	<uta:field uta:id='traRspBit_29'  uta:type='ASCII'    uta:length='lenBit29'   uta:comment='Bit 29 Rsp' />
+	<uta:field uta:id='traRspBit_30'  uta:type='ASCII'    uta:length='lenBit30'   uta:comment='Bit 30 Rsp' />
+	<uta:field uta:id='traRspBit_31'  uta:type='ASCII'    uta:length='lenBit31'   uta:comment='Bit 31 Rsp' />
+	<uta:field uta:id='traRspBit_32'  uta:type='ASCII'    uta:length='lenBit32'   uta:comment='Bit 32 Rsp' />
+	<uta:field uta:id='traRspBit_33'  uta:type='ASCII'    uta:length='lenBit33'   uta:comment='Bit 33 Rsp' />
+	<uta:field uta:id='traRspBit_34'  uta:type='ASCII'    uta:length='lenBit34'   uta:comment='Bit 34 Rsp' />
+	<uta:field uta:id='traRspBit_35'  uta:type='ASCII'    uta:length='lenBit35'   uta:comment='Bit 35 Rsp' />
+	<uta:field uta:id='traRspBit_36'  uta:type='ASCII'    uta:length='lenBit36'   uta:comment='Bit 36 Rsp' />
+	<uta:field uta:id='traRspBit_37'  uta:type='ASCII'    uta:length='lenBit37'   uta:comment='Bit 37 Rsp' />
+	<uta:field uta:id='traRspBit_38'  uta:type='ASCII'    uta:length='lenBit38'   uta:comment='Bit 38 Rsp' />
+	<uta:field uta:id='traRspBit_39'  uta:type='ASCII'    uta:length='lenBit39'   uta:comment='Bit 39 Rsp' />
+	<uta:field uta:id='traRspBit_40'  uta:type='ASCII'    uta:length='lenBit40'   uta:comment='Bit 40 Rsp' />
+	<uta:field uta:id='traRspBit_41'  uta:type='ASCII'    uta:length='lenBit41'   uta:comment='Bit 41 Rsp' />
+	<uta:field uta:id='traRspBit_42'  uta:type='ASCII'    uta:length='lenBit42'   uta:comment='Bit 42 Rsp' />
+	<uta:field uta:id='traRspBit_43'  uta:type='ASCII'    uta:length='lenBit43'   uta:comment='Bit 43 Rsp' />
+	<uta:field uta:id='traRspBit_44'  uta:type='ASCII'    uta:length='lenBit44'   uta:comment='Bit 44 Rsp' />
+	<uta:field uta:id='traRspBit_45'  uta:type='ASCII'    uta:length='lenBit45'   uta:comment='Bit 45 Rsp' />
+	<uta:field uta:id='traRspBit_46'  uta:type='ASCII'    uta:length='lenBit46'   uta:comment='Bit 46 Rsp' />
+	<uta:field uta:id='traRspBit_47'  uta:type='ASCII'    uta:length='lenBit47'   uta:comment='Bit 47 Rsp' />
+	<uta:field uta:id='traRspBit_48'  uta:type='ASCII'    uta:length='lenBit48'   uta:comment='Bit 48 Rsp' />
+	<uta:field uta:id='traRspBit_49'  uta:type='ASCII'    uta:length='lenBit49'   uta:comment='Bit 49 Rsp' />
+	<uta:field uta:id='traRspBit_50'  uta:type='ASCII'    uta:length='lenBit50'   uta:comment='Bit 50 Rsp' />
+	<uta:field uta:id='traRspBit_51'  uta:type='ASCII'    uta:length='lenBit51'   uta:comment='Bit 51 Rsp' />
+	<uta:field uta:id='traRspBit_52'  uta:type='ASCII'    uta:length='lenBit52'   uta:comment='Bit 52 Rsp' />
+	<uta:field uta:id='traRspBit_53'  uta:type='ASCII'    uta:length='lenBit53'   uta:comment='Bit 53 Rsp' />
+	<uta:field uta:id='traRspBit_54'  uta:type='ASCII'    uta:length='lenBit54'   uta:comment='Bit 54 Rsp' />
+	<uta:field uta:id='traRspBit_55'  uta:type='ASCII'    uta:length='lenBit55'   uta:comment='Bit 55 Rsp' />
+	<uta:field uta:id='traRspBit_56'  uta:type='ASCII'    uta:length='lenBit56'   uta:comment='Bit 56 Rsp' />
+	<uta:field uta:id='traRspBit_57'  uta:type='ASCII'    uta:length='lenBit57'   uta:comment='Bit 57 Rsp' />
+	<uta:field uta:id='traRspBit_58'  uta:type='ASCII'    uta:length='lenBit58'   uta:comment='Bit 58 Rsp' />
+	<uta:field uta:id='traRspBit_59'  uta:type='ASCII'    uta:length='lenBit59'   uta:comment='Bit 59 Rsp' />
+	<uta:field uta:id='traRspBit_60'  uta:type='ASCII'    uta:length='lenBit60'   uta:comment='Bit 60 Rsp' />
+	<uta:field uta:id='traRspBit_61'  uta:type='ASCII'    uta:length='lenBit61'   uta:comment='Bit 61 Rsp' />
+	<uta:field uta:id='traRspBit_62'  uta:type='ASCII'    uta:length='lenBit62'   uta:comment='Bit 62 Rsp' />
+	<uta:field uta:id='traRspBit_63'  uta:type='ASCII'    uta:length='lenBit63'   uta:comment='Bit 63 Rsp' />
+	<uta:field uta:id='traRspBit_64'  uta:type='ASCII'    uta:length='lenBit64'   uta:comment='Bit 64 Rsp' />
+
+	<uta:field uta:id='traRspLBitBeg'  uta:type='word'	uta:comment='Begin' />
+	<uta:field uta:id='traRspLBit_1'  uta:type='word'     	uta:comment='Bit 1 Rsp' />
+	<uta:field uta:id='traRspLBit_2'  uta:type='word'     	uta:comment='Bit 2 Rsp' />
+	<uta:field uta:id='traRspLBit_3'  uta:type='word'    	uta:comment='Bit 3 Rsp' />
+	<uta:field uta:id='traRspLBit_4'  uta:type='word'    	uta:comment='Bit 4 Rsp' />
+	<uta:field uta:id='traRspLBit_5'  uta:type='word'    	uta:comment='Bit 5 Rsp' />
+	<uta:field uta:id='traRspLBit_6'  uta:type='word'    	uta:comment='Bit 6 Rsp' />
+	<uta:field uta:id='traRspLBit_7'  uta:type='word'    	uta:comment='Bit 7 Rsp' />
+	<uta:field uta:id='traRspLBit_8'  uta:type='word'    	uta:comment='Bit 8 Rsp' />
+	<uta:field uta:id='traRspLBit_9'  uta:type='word'    	uta:comment='Bit 9 Rsp' />
+	<uta:field uta:id='traRspLBit_10'  uta:type='word'    	uta:comment='Bit 10 Rsp' />
+	<uta:field uta:id='traRspLBit_11'  uta:type='word'    	uta:comment='Bit 11 Rsp' />
+	<uta:field uta:id='traRspLBit_12'  uta:type='word'    	uta:comment='Bit 12 Rsp' />
+	<uta:field uta:id='traRspLBit_13'  uta:type='word'    	uta:comment='Bit 13 Rsp' />
+	<uta:field uta:id='traRspLBit_14'  uta:type='word'    	uta:comment='Bit 14 Rsp' />
+	<uta:field uta:id='traRspLBit_15'  uta:type='word'    	uta:comment='Bit 15 Rsp' />
+	<uta:field uta:id='traRspLBit_16'  uta:type='word'    	uta:comment='Bit 16 Rsp' />
+	<uta:field uta:id='traRspLBit_17'  uta:type='word'    	uta:comment='Bit 17 Rsp' />
+	<uta:field uta:id='traRspLBit_18'  uta:type='word'    	uta:comment='Bit 18 Rsp' />
+	<uta:field uta:id='traRspLBit_19'  uta:type='word'    	uta:comment='Bit 19 Rsp' />
+	<uta:field uta:id='traRspLBit_20'  uta:type='word'    	uta:comment='Bit 20 Rsp' />
+	<uta:field uta:id='traRspLBit_21'  uta:type='word'   	uta:comment='Bit 21 Rsp' />
+	<uta:field uta:id='traRspLBit_22'  uta:type='word'   	uta:comment='Bit 22 Rsp' />
+	<uta:field uta:id='traRspLBit_23'  uta:type='word'	uta:comment='Bit 23 Rsp' />
+	<uta:field uta:id='traRspLBit_24'  uta:type='word'	uta:comment='Bit 24 Rsp' />
+	<uta:field uta:id='traRspLBit_25'  uta:type='word'  	uta:comment='Bit 25 Rsp' />
+	<uta:field uta:id='traRspLBit_26'  uta:type='word'  	uta:comment='Bit 26 Rsp' />
+	<uta:field uta:id='traRspLBit_27'  uta:type='word'  	uta:comment='Bit 27 Rsp' />
+	<uta:field uta:id='traRspLBit_28'  uta:type='word'  	uta:comment='Bit 28 Rsp' />
+	<uta:field uta:id='traRspLBit_29'  uta:type='word'  	uta:comment='Bit 29 Rsp' />
+	<uta:field uta:id='traRspLBit_30'  uta:type='word'     	uta:comment='Bit 30 Rsp' />
+	<uta:field uta:id='traRspLBit_31'  uta:type='word'	uta:comment='Bit 31 Rsp' />
+	<uta:field uta:id='traRspLBit_32'  uta:type='word'     	uta:comment='Bit 32 Rsp' />
+	<uta:field uta:id='traRspLBit_33'  uta:type='word'     	uta:comment='Bit 33 Rsp' />
+	<uta:field uta:id='traRspLBit_34'  uta:type='word'    	uta:comment='Bit 34 Rsp' />
+	<uta:field uta:id='traRspLBit_35'  uta:type='word'    	uta:comment='Bit 35 Rsp' />
+	<uta:field uta:id='traRspLBit_36'  uta:type='word'     	uta:comment='Bit 36 Rsp' />
+	<uta:field uta:id='traRspLBit_37'  uta:type='word'    	uta:comment='Bit 37 Rsp' />
+	<uta:field uta:id='traRspLBit_38'  uta:type='word'    	uta:comment='Bit 38 Rsp' />
+	<uta:field uta:id='traRspLBit_39'  uta:type='word'    	uta:comment='Bit 39 Rsp' />
+	<uta:field uta:id='traRspLBit_40'  uta:type='word' 	uta:comment='Bit 40 Rsp' />
+	<uta:field uta:id='traRspLBit_41'  uta:type='word'  	uta:comment='Bit 41 Rsp' />
+	<uta:field uta:id='traRspLBit_42'  uta:type='word' 	uta:comment='Bit 42 Rsp' />
+	<uta:field uta:id='traRspLBit_43'  uta:type='word' 	uta:comment='Bit 43 Rsp' />
+	<uta:field uta:id='traRspLBit_44'  uta:type='word' 	uta:comment='Bit 44 Rsp' />
+	<uta:field uta:id='traRspLBit_45'  uta:type='word' 	uta:comment='Bit 45 Rsp' />
+	<uta:field uta:id='traRspLBit_46'  uta:type='word' 	uta:comment='Bit 46 Rsp' />
+	<uta:field uta:id='traRspLBit_47'  uta:type='word'  	uta:comment='Bit 47 Rsp' />
+	<uta:field uta:id='traRspLBit_48'  uta:type='word' 	uta:comment='Bit 48 Rsp' />
+	<uta:field uta:id='traRspLBit_49'  uta:type='word'  	uta:comment='Bit 49 Rsp' />
+	<uta:field uta:id='traRspLBit_50'  uta:type='word'    	uta:comment='Bit 50 Rsp' />
+	<uta:field uta:id='traRspLBit_51'  uta:type='word'  	uta:comment='Bit 51 Rsp' />
+	<uta:field uta:id='traRspLBit_52'  uta:type='word'  	uta:comment='Bit 52 Rsp' />
+	<uta:field uta:id='traRspLBit_53'  uta:type='word'  	uta:comment='Bit 53 Rsp' />
+	<uta:field uta:id='traRspLBit_54'  uta:type='word' 	uta:comment='Bit 54 Rsp' />
+	<uta:field uta:id='traRspLBit_55'  uta:type='word'  	uta:comment='Bit 55 Rsp' />
+	<uta:field uta:id='traRspLBit_56'  uta:type='word' 	uta:comment='Bit 56 Rsp' />
+	<uta:field uta:id='traRspLBit_57'  uta:type='word' 	uta:comment='Bit 57 Rsp' />
+	<uta:field uta:id='traRspLBit_58'  uta:type='word' 	uta:comment='Bit 58 Rsp' />
+	<uta:field uta:id='traRspLBit_59'  uta:type='word'	uta:comment='Bit 59 Rsp' />
+	<uta:field uta:id='traRspLBit_60'  uta:type='word' 	uta:comment='Bit 60 Rsp' />
+	<uta:field uta:id='traRspLBit_61'  uta:type='word' 	uta:comment='Bit 61 Rsp' />
+	<uta:field uta:id='traRspLBit_62'  uta:type='word'	uta:comment='Bit 62 Rsp' />
+	<uta:field uta:id='traRspLBit_63'  uta:type='word'   	uta:comment='Bit 63 Rsp' />
+	<uta:field uta:id='traRspLBit_64'  uta:type='word' 	uta:comment='Bit 64 Rsp' />
+
+<!--end-->
+  	<uta:field uta:id='traNeedDownloadLTWK' 	uta:type='byte' uta:comment='is Need Download LTWK ?' />     
+  	
+  <uta:field uta:id='traKodeBankReq'   uta:type='byte'    uta:data ='0'   uta:comment='Kode Bank Req' />
+  <uta:field uta:id='traJumlahReq' uta:type='word' uta:comment='current menu item tenor selected' />
+
+ <!--MiniATM-->
+ <uta:field uta:id='traNomorTelepon'  uta:type='ASCII'    uta:length='13'   uta:comment='TELKOM' />
+ <uta:field uta:id='traSumberRek' uta:type='byte'   uta:comment='current Type Rekening selected' />
+ <uta:field uta:id='traResponseInq'  uta:type='ASCII'    uta:length='999'   uta:comment='Rsp Inquiry' />
+  
+</uta:record>

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!--
+Subversion reference
+$HeadURL: https://svn.ingenico.com/UTAPROJECTS/sea-partner/5W/trunk/ISO5WPH/str/iss.xml $
+$Id: iss.xml 1281 2009-01-16 07:22:46Z ajloreto $
+-->
+<!--00--><uta:record uta:id="iss"  uta:dim="dimIss"								uta:comment="Issuer Structure"		xmlns:uta="http://www.ingenico.com/xml/uta">
+<!--01--><uta:field uta:id="issID"  uta:type="byte"								uta:comment='Issuer ID' />
+<!--02--><uta:field uta:id="issRef"  uta:type="ASCII"		uta:length="lenIssRef"		uta:comment='Issuer Referral Number' />
+<!--03--><uta:field uta:id="issOpt1"  uta:type="byte"								uta:comment='Issuer Options 1' />
+<!--04--><uta:field uta:id="issOpt2"  uta:type="byte"								uta:comment='Issuer Options 2' />
+<!--05--><uta:field uta:id="issOpt3"  uta:type="byte"								uta:comment='Issuer Options 3' />
+<!--06--><uta:field uta:id="issOpt4"  uta:type="byte"								uta:comment='Issuer Options 4' />
+<!--07--><uta:field uta:id="issDefAcct"  uta:type="byte"								uta:comment='Issuer Default Account' />
+<!--08--><uta:field uta:id="issFloorLimit"  uta:type="word"								uta:comment="Floor Limit" />
+<!--09--><uta:field uta:id="issOpt5"  uta:type="byte"								uta:comment='Issuer Options 5' />
+<!--10--><uta:field uta:id="issPinOpt"  uta:type="byte"								uta:comment="Pin option" />
+   <!--mcy add for total by issuer -->            
+<!--11--><uta:field uta:id='issTotAppDbAmt'  uta:type='ASCII'  uta:length='lenTotAmt' 	uta:comment='Total Debit amount for issuer' /> 
+<!--12--><uta:field uta:id='issTotAppDbCnt'  uta:type='word'                    				uta:comment='Number Debits for issuer' /> 
+<!--13--><uta:field uta:id='issTotAppCrAmt'  uta:type='ASCII'  uta:length='lenTotAmt' 	uta:comment='Total Credit amount for issuer' /> 
+<!--14--><uta:field uta:id='issTotAppCrCnt'  uta:type='word'                         			uta:comment='Number Credits for issuer' /> 
+<!--15--><uta:field uta:id='issTotAppTpAmt'  uta:type='ASCII' uta:length='lenTotAmt' 	uta:comment='Total Tip amount for issuer' /> 
+<!--16--><uta:field uta:id='issTotAppTpCnt'  uta:type='word'                         			uta:comment='Number Tip for issuer' /> 
+<!--17--><uta:field uta:id='issTotAppSaleAmt'  uta:type='ASCII' uta:length='lenTotAmt' 	uta:comment='Total Sale amount of issuer' />   
+<!--18--><uta:field uta:id='issTotAppSaleCnt'  uta:type='word'                         			uta:comment='Number of Sale in application' />       
+<!--19--><uta:field uta:id='issTotAppRefundAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Refund amount of issuer' />   
+<!--20--><uta:field uta:id='issTotAppRefundCnt'  uta:type='word'                         		uta:comment='Number of refund in application' />       
+<!--21--><uta:field uta:id='issTotAppOfflineAmt'  uta:type='ASCII' uta:length='lenTotAmt'	uta:comment='Total Offline amount of issuer' />   
+<!--22--><uta:field uta:id='issTotAppOfflineCnt'  uta:type='word'                         		uta:comment='Number of Offline in application' />       
+<!--23--><uta:field uta:id='issTotAppManualAmt'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Manual amount of issuer' />   
+<!--24--><uta:field uta:id='issTotAppManualCnt'  uta:type='word'                         		uta:comment='Number of Manual in application' />       
+<!--25--><uta:field uta:id='issTotAppVoidAmt'  uta:type='ASCII' uta:length='lenTotAmt' 	uta:comment='Total Void amount of issuer' />   
+<!--26--><uta:field uta:id='issTotAppVoidCnt'  uta:type='word'                         			uta:comment='Number of Void in application' />         
+
+<!--27--><uta:field uta:id='issTotAppAmtPrepaid'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Void amount of issuer' />   
+<!--28--><uta:field uta:id='issTotAppPrepaidCnt'  uta:type='word'                         		uta:comment='Number of Void in application' />         
+<!--29--><uta:field uta:id='issTotAppAmtPrepaidUpdate' 	uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Void amount of issuer' />   
+<!--30--><uta:field uta:id='issTotAppPrepaidCntUpdate'  	uta:type='word'                	uta:comment='Number of Void in application' />         
+ <!--MiniATM-->
+<!--31--><uta:field uta:id='issTotAppAmtTelkom'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Void amount of issuer' />   
+<!--32--><uta:field uta:id='issTotAppCntTelkom'  uta:type='word'                         		uta:comment='Number of Void in application' />   
+<!--33--> <uta:field uta:id='issTotAppAmtSatelindo'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Void amount of issuer' />   
+<!--34--> <uta:field uta:id='issTotAppCntSatelindo'  uta:type='word'                         		uta:comment='Number of Void in application' />   
+<!--35--> <uta:field uta:id='issTotAppAmtTelkomsel'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Void amount of issuer' />   
+<!--36--> <uta:field uta:id='issTotAppCntTelkomsel'  uta:type='word'                         		uta:comment='Number of Void in application' />   
+<!--37--> <uta:field uta:id='issTotAppAmtExcelcom'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Void amount of issuer' />   
+<!--38--> <uta:field uta:id='issTotAppCntExcelcom'  uta:type='word'                         		uta:comment='Number of Void in application' />   
+<!--39--> <uta:field uta:id='issTotAppAmtEsia'  uta:type='ASCII' uta:length='lenTotAmt' 	uta:comment='Total Void amount of issuer' />   
+<!--40--> <uta:field uta:id='issTotAppCntEsia'  uta:type='word'                         			uta:comment='Number of Void in application' />   
+<!--41--> <uta:field uta:id='issTotAppAmtPLN'  uta:type='ASCII' uta:length='lenTotAmt' 	uta:comment='Total Void amount of issuer' />   
+<!--42--> <uta:field uta:id='issTotAppCntPLN'  uta:type='word'                         			uta:comment='Number of Void in application' />   
+<!--43--> <uta:field uta:id='issTotAppAmtFirstMedia'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Void amount of issuer' />   
+<!--44--> <uta:field uta:id='issTotAppCntFirstMedia'  uta:type='word'                         		uta:comment='Number of Void in application' />   
+<!--45--><!--01--> <uta:field uta:id='issTotAppAmtIndovision'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Void amount of issuer' />   
+<!--46--> <uta:field uta:id='issTotAppCntIndovision'  uta:type='word'                         		uta:comment='Number of Void in application' />   
+<!--47-->  <uta:field uta:id='issTotAppAmtOtoMulti'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Void amount of issuer' />   
+<!--48--> <uta:field uta:id='issTotAppCntOtoMulti'  uta:type='word'                         		uta:comment='Number of Void in application' />    
+
+<!--49--> <uta:field uta:id='issTotAppAmtMAtm'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Void amount of issuer' />   
+<!--50--> <uta:field uta:id='issTotAppCntMAtm'  uta:type='word'                         uta:comment='Number of Void in application' />  
+
+ <!--Grace Period-->
+<!--51-->  <uta:field uta:id='issTotAppPrepaidAmtGP'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Void amount of issuer' />   
+<!--52-->  <uta:field uta:id='issTotAppPrepaidCntGP'  uta:type='word'                         uta:comment='Number of Void in application' />    
+<!--53-->  <uta:field uta:id='issTotAppAmtMiniAtm'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Void amount of issuer' />   
+<!--Grace Period End-->
+
+<!--Beg Fasa4-->
+<!--54--> <uta:field uta:id='issTotAppAmtTunai'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total CashWithdrawl amount of issuer' />   
+<!--55--> <uta:field uta:id='issTotAppCntTunai'  uta:type='word'                         uta:comment='Number of CashWithdrawl in application' />  
+<!--56-->  <uta:field uta:id='issTotAppAmtTransfer'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Transfer amount of issuer' />   
+<!--57--> <uta:field uta:id='issTotAppCntTransfer'  uta:type='word'                         uta:comment='Number of Transfer in application' />    
+<!--58--> <uta:field uta:id='issTotAppAmtCC'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total CC amount of issuer' />   
+<!--59--> <uta:field uta:id='issTotAppCntCC'  uta:type='word'                         uta:comment='Number of CC in application' />    
+
+<!--60--><uta:field uta:id='issTotAppAmtTransferUSD'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Transfer amount of issuer' />   
+<!--61--><uta:field uta:id='issTotAppCntTransferUSD'  uta:type='word'                         uta:comment='Number of Transfer in application' />    
+<!--62--><uta:field uta:id='issTotAppAmtTransferSGD'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Transfer amount of issuer' />   
+<!--63--><uta:field uta:id='issTotAppCntTransferSGD'  uta:type='word'                         uta:comment='Number of Transfer in application' />    
+<!--64--><uta:field uta:id='issTotAppAmtTransferJPN'  uta:type='ASCII' uta:length='lenTotAmt' uta:comment='Total Transfer amount of issuer' />   
+<!--65--><uta:field uta:id='issTotAppCntTransferJPN'  uta:type='word'                         uta:comment='Number of Transfer in application' />    
+
+<!--66--><uta:field uta:id='issTotAppCntComm'  uta:type='word'                         uta:comment='Number of Void in application' />  
+<!--End Fasa4-->
+
+   <!--mcy add for total by issuer -->   
+   
+   <!--mcy add for TMS iss Opt -->            
+<!--67--><uta:field uta:id="issAccSelect" uta:type="byte" />
+<!--68--><uta:field uta:id="issEMVFallback" uta:type="byte" />
+<!--69--><uta:field uta:id="issManual" uta:type="byte" />
+<!--70--><uta:field uta:id="issExpiryDatReq" uta:type="byte" />
+<!--71--><uta:field uta:id="issOffline" uta:type="byte" />
+<!--72--><uta:field uta:id="issRefferalDial" uta:type="byte" />
+<!--73--><uta:field uta:id="issProductCod" uta:type="byte" />
+<!--74--><uta:field uta:id="issAdjust" uta:type="byte" />
+<!--75--><uta:field uta:id="issDoModPAN" uta:type="byte" />
+<!--76--><uta:field uta:id="issROCNumReq" uta:type="byte" />
+<!--77--><uta:field uta:id="issPrintReceipt" uta:type="byte" />
+<!--78--><uta:field uta:id="issCapTxns" uta:type="byte" />
+<!--79--><uta:field uta:id="issCheckExpOff" uta:type="byte" />
+<!--80--><uta:field uta:id="issRefund" uta:type="byte" />
+<!--81--><uta:field uta:id="issPreauth" uta:type="byte" />
+<!--82--><uta:field uta:id="issVoid" uta:type="byte" />
+<!--83--><uta:field uta:id="issAdditionPrompts" uta:type="byte" />
+<!--84--><uta:field uta:id="issCheckExpAll" uta:type="byte" />
+<!--85--><uta:field uta:id="issCashOut" uta:type="byte" />
+<!--86--><uta:field uta:id="issTrack1" uta:type="byte" />
+<!--87--><uta:field uta:id="issBalance" uta:type="byte" />
+<!--88--><uta:field uta:id="issErrorReceipt" uta:type="byte" />
+<!--89--><uta:field uta:id="issOfflineROC" uta:type="byte" />
+<!--90--><uta:field uta:id="issExtServiceCod" uta:type="byte" />
+<!--91--><uta:field uta:id="issFullPAN" uta:type="byte" />
+<!--92--><uta:field uta:id="issExpiryDate" uta:type="byte" />
+<!--93--><uta:field uta:id="issManEntryCVV" uta:type="byte" />
+
+<!--94--><uta:field uta:id="issTotAppAmtMOnUs" uta:type='ASCII'  uta:length='lenTotAmt' 	uta:comment='Total amount for Master Card On Us' /> 
+<!--95--><uta:field uta:id="issTotAppCntMOnUs" uta:type='word'  						uta:comment='Total count for Master Card On Us' /> 
+<!--96--><uta:field uta:id="issTotAppAmtVOnUs" uta:type='ASCII'  uta:length='lenTotAmt' 	uta:comment='Total amount for Visa Card On Us' /> 
+<!--97--><uta:field uta:id="issTotAppCntVOnUs" uta:type='word'  						uta:comment='Total count for Visa Card On Us' /> 
+<!--98--><uta:field uta:id="issTotAppAmtMOffUs" uta:type='ASCII'  uta:length='lenTotAmt' 	uta:comment='Total amount for Master Card Off Us' /> 
+<!--99--><uta:field uta:id="issTotAppCntMOffUs" uta:type='word'  						uta:comment='Total count for Master Card Off Us' /> 
+<!--100--><uta:field uta:id="issTotAppAmtVOffUs" uta:type='ASCII'  uta:length='lenTotAmt' 	uta:comment='Total amount for Visa Card Off Us' /> 
+<!--101--><uta:field uta:id="issTotAppCntVOffUs" uta:type='word'  						uta:comment='Total count for Visa Card Off Us' /> 
+
+<!--102--><uta:field uta:id="issTotAppVoidAmtMOnUs" uta:type='ASCII'  uta:length='lenTotAmt' 	uta:comment='Total Void amount for Master Card On Us' /> 
+<!--103--><uta:field uta:id="issTotAppVoidCntMOnUs" uta:type='word'  						uta:comment='Total Void count for Master Card On Us' /> 
+<!--104--><uta:field uta:id="issTotAppVoidAmtVOnUs" uta:type='ASCII'  uta:length='lenTotAmt' 	uta:comment='Total Void amount for Visa Card On Us' /> 
+<!--105--><uta:field uta:id="issTotAppVoidCntVOnUs" uta:type='word'  						uta:comment='Total Void count for Visa Card On Us' /> 
+<!--106--><uta:field uta:id="issTotAppVoidAmtMOffUs" uta:type='ASCII'  uta:length='lenTotAmt' 	uta:comment='Total Void amount for Master Card Off Us' /> 
+<!--107--><uta:field uta:id="issTotAppVoidCntMOffUs" uta:type='word'  						uta:comment='Total Void count for Master Card Off Us' /> 
+<!--108--><uta:field uta:id="issTotAppVoidAmtVOffUs" uta:type='ASCII'  uta:length='lenTotAmt' 	uta:comment='Total Void amount for Visa Card Off Us' /> 
+<!--109--><uta:field uta:id="issTotAppVoidCntVOffUs" uta:type='word'  						uta:comment='Total Void count for Visa Card Off Us' /> 
+<!--110--><uta:field uta:id="issTotAppTipAmtMOnUs" uta:type='ASCII'  uta:length='lenTotAmt' 	uta:comment='Total Tip amount for Master Card On Us' /> 
+<!--111--><uta:field uta:id="issTotAppTipAmtVOnUs" uta:type='ASCII'  uta:length='lenTotAmt' 	uta:comment='Total Tip amount for Visa Card On Us' /> 
+<!--112--><uta:field uta:id="issTotAppTipAmtMOffUs" uta:type='ASCII'  uta:length='lenTotAmt' 	uta:comment='Total Tip amount for Master Card Off Us' /> 
+<!--113--><uta:field uta:id="issTotAppTipAmtVOffUs" uta:type='ASCII'  uta:length='lenTotAmt' 	uta:comment='Total Tip amount for Visa Card Off Us' /> 
+
+    <uta:data>
+    <!--00--><uta:instance uta:id="issIssuer1">
+<!--01--><uta:col uta:data='0' />
+<!--02--><uta:col uta:data='"MINIATM"'/>
+<!--03--><uta:col uta:data='0x9E' />				<!-- issOpt1: Issuer Options 1-->
+<!--04--><uta:col uta:data='0xDC' />				<!-- issOpt2: Issuer Options 2-->
+<!--05--><uta:col uta:data='0xD1' />				<!-- issOpt3: Issuer Options 3-->
+<!--06--><uta:col uta:data='0x01' />				<!-- issOpt4: Issuer Options 4-->
+<!--07--><uta:col uta:data='0' />					<!-- issDefAcct: Issuer Default Account-->
+<!--08--><uta:col uta:data='0' />					<!-- issFloorLimit: Floor Limit-->
+<!--09--><uta:col uta:data='0xF0' />				<!-- issOpt5: Issuer Options 5-->
+<!--10--><uta:col uta:data='0x31' />				<!-- issPinOpt: Pin Option-->
+   <!--mcy add for total by issuer -->            
+<!--11--><uta:col uta:data='"0"' />
+<!--12--><uta:col uta:data='0' />
+<!--13--><uta:col uta:data='"0"' />
+<!--14--><uta:col uta:data='0' />
+<!--15--><uta:col uta:data='"0"' /> 
+<!--16--><uta:col uta:data='0' />
+<!--17--><uta:col uta:data='"0"' />   
+<!--18--><uta:col uta:data='0' />
+<!--19--><uta:col uta:data='"0"' />   
+<!--20--><uta:col uta:data='0' />
+<!--21--><uta:col uta:data='"0"' />   
+<!--22--><uta:col uta:data='0' />
+<!--23--><uta:col uta:data='"0"' />   
+<!--24--><uta:col uta:data='0' />
+<!--25--><uta:col uta:data='"0"' />   
+<!--26--><uta:col uta:data='0' />
+
+<!--27--><uta:col uta:data='"0"' />   
+<!--28--><uta:col uta:data='0' />
+<!--29--><uta:col uta:data='"0"' />   
+<!--30--><uta:col uta:data='0' />
+ <!--MiniATM-->
+<!--31--><uta:col uta:data='"0"' />   
+<!--32--><uta:col uta:data='0' />
+<!--33--> <uta:col uta:data='"0"' />   
+<!--34--><uta:col uta:data='0' />
+<!--35--> <uta:col uta:data='"0"' />   
+<!--36--><uta:col uta:data='0' />
+<!--37--> <uta:col uta:data='"0"' />   
+<!--38--> <uta:col uta:data='0' />
+<!--39--> <uta:col uta:data='"0"' />   
+<!--40--> <uta:col uta:data='0' />
+<!--41--> <uta:col uta:data='"0"' />   
+<!--42--> <uta:col uta:data='0' />
+<!--43--> <uta:col uta:data='"0"' />   
+<!--44--> <uta:col uta:data='0' />
+<!--45--> <uta:col uta:data='"0"' />   
+<!--46--><uta:col uta:data='0' />
+<!--47-->  <uta:col uta:data='"0"' />   
+<!--48--> <uta:col uta:data='0' />
+
+<!--49--> <uta:col uta:data='"0"' />   
+<!--50--> <uta:col uta:data='0' />
+
+ <!--Grace Period-->
+<!--51-->  <uta:col uta:data='"0"' />   
+<!--52-->  <uta:col uta:data='0' />
+<!--53-->  <uta:col uta:data='"0"' />   
+<!--Grace Period End-->
+
+<!--Beg Fasa4-->
+<!--54--> <uta:col uta:data='"0"' />   
+<!--55--><uta:col uta:data='0' />
+<!--56-->  <uta:col uta:data='"0"' />   
+<!--57--><uta:col uta:data='0' />
+<!--58--> <uta:col uta:data='"0"' />   
+<!--59--><uta:col uta:data='0' />
+
+<!--60--><uta:col uta:data='"0"' />   
+<!--61--><uta:col uta:data='0' />
+<!--62--><uta:col uta:data='"0"' />   
+<!--63--><uta:col uta:data='0' />
+<!--64--><uta:col uta:data='"0"' />   
+<!--65--><uta:col uta:data='0' />
+
+<!--66--><uta:col uta:data='0' />
+<!--End Fasa4-->
+
+   <!--mcy add for total by issuer -->   
+   
+   <!--mcy add for TMS iss Opt -->            
+<!--67--><uta:col uta:data='0' />
+<!--68--><uta:col uta:data='0' />
+<!--69--><uta:col uta:data='0' />
+<!--70--><uta:col uta:data='0' />
+<!--71--><uta:col uta:data='0' />
+<!--72--><uta:col uta:data='0' />
+<!--73--><uta:col uta:data='0' />
+<!--74--><uta:col uta:data='0' />
+<!--75--><uta:col uta:data='0' />
+<!--76--><uta:col uta:data='0' />
+<!--77--><uta:col uta:data='0' />
+<!--78--><uta:col uta:data='0' />
+<!--79--><uta:col uta:data='0' />
+<!--80--><uta:col uta:data='0' />
+<!--81--><uta:col uta:data='0' />
+<!--82--><uta:col uta:data='0' />
+<!--83--><uta:col uta:data='0' />
+<!--84--><uta:col uta:data='0' />
+<!--85--><uta:col uta:data='0' />
+<!--86--><uta:col uta:data='0' />
+<!--87--><uta:col uta:data='0' />
+<!--88--><uta:col uta:data='0' />
+<!--89--><uta:col uta:data='0' />
+<!--90--><uta:col uta:data='0' />
+<!--91--><uta:col uta:data='0' />
+<!--92--><uta:col uta:data='0' />
+<!--93--><uta:col uta:data='0' />
+
+<!--94--><uta:col uta:data='"0"' />
+<!--95--><uta:col uta:data='0' /> 
+<!--96--><uta:col uta:data='"0"' /> 
+<!--97--><uta:col uta:data='0' /> 
+<!--98--><uta:col uta:data='"0"' /> 
+<!--99--><uta:col uta:data='0' /> 
+<!--100--><uta:col uta:data='"0"' /> 
+<!--101--><uta:col uta:data='0' /> 
+
+<!--102--><uta:col uta:data='"0"' /> 
+<!--103--><uta:col uta:data='0' /> 
+<!--104--><uta:col uta:data='"0"' /> 
+<!--105--><uta:col uta:data='0' /> 
+<!--106--><uta:col uta:data='"0"' /> 
+<!--107--><uta:col uta:data='0' /> 
+<!--108--><uta:col uta:data='"0"' /> 
+<!--109--><uta:col uta:data='0' /> 
+<!--110--><uta:col uta:data='"0"' /> 
+<!--111--><uta:col uta:data='"0"' /> 
+<!--112--><uta:col uta:data='"0"' /> 
+<!--113--><uta:col uta:data='"0"' /> 
+        </uta:instance>
+    </uta:data>
+</uta:record>

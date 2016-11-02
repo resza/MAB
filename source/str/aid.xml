@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!--
+Subversion reference
+$HeadURL: https://svn.ingenico.com/UTAPROJECTS/sea-partner/5W/trunk/ISO5WPH/str/aid.xml $
+$Id: aid.xml 1404 2009-01-22 09:59:34Z mpamintuan $
+-->
+<uta:record uta:id="aid" uta:dim="dimAID" uta:comment="list of EMV AIDs and related data" xmlns:uta="http://www.ingenico.com/xml/uta">
+  <uta:field uta:id="emvAid" uta:type="binary" uta:length="lenAID" uta:comment='4F Application Identifier' />
+  <uta:field uta:id='emvTACDft'     uta:type='binary' uta:length='lenTVR'        uta:data='"\x05\xD8\x40\x00\xA8\x00"'     uta:comment='DF03 Terminal Action Code Default' />
+  <uta:field uta:id='emvTACDen'     uta:type='binary' uta:length='lenTVR'        uta:data='"\x05\x00\x10\x00\x00\x00"'     uta:comment='DF04 Terminal Action Code Denial' />
+  <uta:field uta:id='emvTACOnl'     uta:type='binary' uta:length='lenTVR'        uta:data='"\x05\xD8\x40\x04\xF8\x00"'     uta:comment='DF05 Terminal Action Code Online' />
+  <uta:field uta:id='emvThrVal'     uta:type='binary' uta:length='lenThrVal'     uta:data='"\x04\x00\x00\x00\x00"'         uta:comment='DF07 Threshold value' />
+  <uta:field uta:id='emvTarPer'     uta:type='binary' uta:length='lenTarPer'     uta:data='"\x02\x00\x00"'                     uta:comment='DF08 Target percentage' />
+  <uta:field uta:id='emvMaxTarPer'  uta:type='binary' uta:length='lenMaxTarPer'  uta:data='"\x02\x00\x00"'                     uta:comment='DF09 Maximum target percentage' />
+  <uta:field uta:id='emvDftValDDOL' uta:type='binary' uta:length='lenDftValDDOL' uta:data='"\x0B\x9F\x37\x04\x9F\x47\x01\x8F\x01\x9F\x32\x01"' uta:comment='DF15 Default value for DDOL' />
+  <uta:field uta:id='emvDftValTDOL' uta:type='binary' uta:length='lenDftValTDOL' uta:data='"\x0F\x9F\x02\x06\x5F\x2A\x02\x9A\x03\x9C\x01\x95\x05\x9F\x37\x04"' uta:comment='DF15 Default value for DDOL' />
+  <uta:field uta:id='emvTrmAvn' uta:type='binary' uta:length='lenTrmAvn'         uta:data='"\x02\x00\x8C"'                     uta:comment='9F09 Application Version Number Terminal' />
+  <uta:field uta:id='emvAcqId' uta:type='binary' uta:length='lenAcqId' uta:comment='9F01 Acquirer Identifier (BIN)' />  
+  <uta:field uta:id='emvTrmFlrLim' uta:type='binary' uta:length='lenTrmFlrLim' uta:comment='9F1B Terminal Floor Limit' />
+  <uta:field uta:id='emvTCC'        uta:type='binary' uta:length='lenTCC'        uta:data='"\x01\x00"'                     uta:comment='9F53 Transaction Category Code' />
+  <uta:field uta:id="emvAidTxnType" uta:type="binary" uta:length="lenAIDTxnType" uta:comment='EMV AID Transaction Type' />
+  <uta:data>
+    <uta:instance> <!-- VSDC -->
+      <uta:col uta:data='(byte*)"\x05\xA0\x00\x00\x00\x03"' /> <!-- emvAid -->
+      <uta:col uta:data='(byte*)"\x05\xFC\x50\xAC\xA0\x00"' /> <!-- emvTACDft -->
+      <uta:col uta:data='(byte*)"\x05\x04\x00\x00\x00\x00"' /> <!-- emvTACDen -->
+      <uta:col uta:data='(byte*)"\x05\xF8\x50\xAC\xF8\x00"' /> <!-- emvTACOnl -->
+      <uta:col uta:data='(byte*)"\x04\x00\x00\x00\x00"' /> <!-- emvThrVal -->
+      <uta:col uta:data='(byte*)"\x01\x14"' /> <!-- emvTarPer -->
+      <uta:col uta:data='(byte*)"\x01\x32"' /> <!-- emvMaxTarPer -->
+      <uta:col uta:data='(byte*)"\x03\x9F\x37\x04"' /> <!-- emvDftValDDOL -->
+      <uta:col uta:data='(byte*)"\x0F\x9F\x02\x06\x5F\x2A\x02\x9A\x03\x9C\x01\x95\x05\x9F\x37\x04"' /> <!-- emvDftValTDOL -->
+      <uta:col uta:data='(byte*)"\x02\x00\x8C"' /> <!-- emvTrmAvn -->
+      <uta:col uta:data='(byte*)"\x05\x99\x99\x99\x99\x99"' />      
+      <uta:col uta:data='(byte*)"\x04\x00\x00\x01\x00"' /> <!-- emvTrmFlrLim -->
+      <uta:col uta:data='(byte*)"\x01\x52"' /> <!-- emvTCC -->
+      <uta:col uta:data='(byte*)"\x01\x00"' /> <!-- emvAidTxnType -->
+    </uta:instance>
+    <uta:instance> <!-- VSDC -->
+      <uta:col uta:data='(byte*)"\x07\xA0\x00\x00\x00\x03\x10\x10"' /> <!-- emvAid -->
+      <uta:col uta:data='(byte*)"\x05\xFC\x50\xAC\xA0\x00"' /> <!-- emvTACDft -->
+      <uta:col uta:data='(byte*)"\x05\x04\x00\x00\x00\x00"' /> <!-- emvTACDen -->
+      <uta:col uta:data='(byte*)"\x05\xF8\x50\xAC\xF8\x00"' /> <!-- emvTACOnl -->
+      <uta:col uta:data='(byte*)"\x04\x00\x00\x00\x00"' /> <!-- emvThrVal -->
+      <uta:col uta:data='(byte*)"\x01\x14"' /> <!-- emvTarPer -->
+      <uta:col uta:data='(byte*)"\x01\x32"' /> <!-- emvMaxTarPer -->
+      <uta:col uta:data='(byte*)"\x03\x9F\x37\x04"' /> <!-- emvDftValDDOL -->
+      <uta:col uta:data='(byte*)"\x0F\x9F\x02\x06\x5F\x2A\x02\x9A\x03\x9C\x01\x95\x05\x9F\x37\x04"' /> <!-- emvDftValTDOL -->
+      <uta:col uta:data='(byte*)"\x02\x00\x8C"' /> <!-- emvTrmAvn -->
+      <uta:col uta:data='(byte*)"\x05\x99\x99\x99\x99\x99"' />            
+      <uta:col uta:data='(byte*)"\x04\x00\x00\x01\x00"' /> <!-- emvTrmFlrLim -->
+      <uta:col uta:data='(byte*)"\x01\x52"' /> <!-- emvTCC -->
+      <uta:col uta:data='(byte*)"\x01\x00"' /> <!-- emvAidTxnType -->
+    </uta:instance>
+    <uta:instance> <!-- MasterCard -->
+      <uta:col uta:data='(byte*)"\x05\xA0\x00\x00\x00\x04\x10\x10"' /> <!-- emvAid -->
+      <uta:col uta:data='(byte*)"\x05\xFC\x50\xA8\xA0\x00"' /> <!-- emvTACDft -->
+      <uta:col uta:data='(byte*)"\x05\x04\x00\x00\x00\x00"' /> <!-- emvTACDen -->
+      <uta:col uta:data='(byte*)"\x05\xF8\x50\xA8\xF8\x00"' /> <!-- emvTACOnl -->
+      <uta:col uta:data='(byte*)"\x04\x00\x00\x00\x00"' /> <!-- emvThrVal -->
+      <uta:col uta:data='(byte*)"\x02\x00\x01"' /> <!-- emvTarPer -->
+      <uta:col uta:data='(byte*)"\x02\x00\x01"' /> <!-- emvMaxTarPer -->
+      <uta:col uta:data='(byte*)"\x03\x9F\x37\x04"' /> <!-- emvDftValDDOL -->
+      <uta:col uta:data='(byte*)"\x0F\x9F\x02\x06\x5F\x2A\x02\x9A\x03\x9C\x01\x95\x05\x9F\x37\x04"' /> <!-- emvDftValTDOL -->
+      <uta:col uta:data='(byte*)"\x02\x00\x02"' /> <!-- emvTrmAvn -->
+      <uta:col uta:data='(byte*)"\x05\x99\x99\x99\x99\x99"' />            
+      <uta:col uta:data='(byte*)"\x04\x00\x00\x01\xF4"' /> <!-- emvTrmFlrLim -->
+      <uta:col uta:data='(byte*)"\x01\x52"' /> <!-- emvTCC -->
+      <uta:col uta:data='(byte*)"\x01\x00"' /> <!-- emvAidTxnType -->
+    </uta:instance>
+  </uta:data>
+</uta:record>

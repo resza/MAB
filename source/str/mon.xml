@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!--
+Subversion reference
+$HeadURL: https://svn.ingenico.com/UTAPROJECTS/sea-partner/5W/trunk/ISO5WPH/str/mon.xml $
+$Id: mon.xml 1298 2009-01-17 09:39:06Z abarantsev $
+-->
+<uta:table uta:id="mon" uta:type='ASCII' uta:length="lenMon" uta:cache="yes" uta:comment="month names"
+ xmlns:uta="http://www.ingenico.com/xml/uta">
+  <uta:row uta:id="monSpr" uta:data='"-: "' />
+  <uta:row uta:id="monJan" uta:data='"JAN"' />
+  <uta:row uta:id="monFeb" uta:data='"FEB"' />
+  <uta:row uta:id="monMar" uta:data='"MAR"' />
+  <uta:row uta:id="monApr" uta:data='"APR"' />
+  <uta:row uta:id="monMay" uta:data='"MAY"' />
+  <uta:row uta:id="monJun" uta:data='"JUN"' />
+  <uta:row uta:id="monJul" uta:data='"JUL"' />
+  <uta:row uta:id="monAug" uta:data='"AUG"' />
+  <uta:row uta:id="monSep" uta:data='"SEP"' />
+  <uta:row uta:id="monOct" uta:data='"OCT"' />
+  <uta:row uta:id="monNov" uta:data='"NOV"' />
+  <uta:row uta:id="monDec" uta:data='"DEC"' />
+</uta:table>
