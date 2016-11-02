@@ -240,6 +240,10 @@ extern unsigned char flagprint;
 #include "brizzi.h"
 // end add cung
 
+//Pinterpay
+//#include "menu.h"
+//#include "Vector.h"
+
 //Bukopin
 #include "toolsBukopin.h"
 
@@ -272,6 +276,9 @@ extern unsigned char flagprint;
 #define ICC_USER		0
 
 #define MAX_EVENTBUF_SIZE		4096
+
+//Pinterpay Max response parameter
+#define MAX_PACKAGE				28
 
 // 密码类型 Password type
 enum {PWD_BANK, PWD_TERM, PWD_MERCHANT, PWD_VOID, PWD_REFUND, PWD_ADJUST, PWD_SETTLE, PWD_MAX};
@@ -1113,6 +1120,13 @@ typedef struct _tagISSUER
 	uchar	ucReserved;			// sReserved[1]
 }ISSUER;
 
+typedef struct _tagPackageList
+{
+	ushort		uiTotal;
+	ulong		price;
+	uchar		sPackageCode[MAX_PACKAGE];
+}PACKAGELIST;
+
 typedef struct _tagPHONE_INFO
 {
 	uchar	szTelNo[12*2+1];
@@ -1863,6 +1877,35 @@ typedef struct _tagTRAN_LOG							//irf, this is log, same like log key in log i
 	uchar		szTransName[24+1];
 	DATA_BUKOPIN	BUKOPIN;
 #endif
+//Pinterpay
+	ulong	ppaj;
+	uchar	szAdmin[12+1];
+	uchar	szToken[20+1];
+	uchar	szMemberId[16+1];
+	uchar	szKodeProduk[12+1];
+	uchar	szVoucher[7+1];
+	uchar	szKodePpob[3+1];
+	uchar	szProvider[3+1];
+	uchar	szTransNo[22+1];
+	uchar	szMerchName[50+1];
+	uchar	szMemberName[50+1];
+	uchar	szPackageName[50+1];
+	uchar	szTrxReff[22+1];
+	uchar	szPackagePrice[20+1];
+	uchar	szPackageDiscount[20+1];
+	uchar	szPackagePoin[20+1];
+	uchar	szParamName[22+1];
+	uchar	szParamValue[22+1];
+	uchar	szNilai[12+1];
+	uchar	szNoHP[12+1];
+	uchar	szRekening[4+1];
+	uchar	szAccount[12+1];
+	uchar	szNamaPelanggan[40+1];
+	uchar	szBaki[12+1];
+	uchar	szPokok[12+1];
+	uchar	szBunga[12+1];
+	uchar	szDenda[12+1];
+
 }TRAN_LOG;
 
 // 系统交易处理信息,不需要存储到文件系统
@@ -2369,6 +2412,9 @@ extern uchar PrivateLabelCardDetect;
 // diki add ATMB
 extern uchar MenuAtmbMerchantNasabah;
 
+extern PACKAGELIST		glPackageList[MAX_PACKAGE];
+extern uint 			counterPackage;
+extern uint 			responseCounter;
 
 
 #ifdef __cplusplus
